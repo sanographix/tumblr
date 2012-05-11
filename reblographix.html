@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--
-	Theme: Reblographix
-	by sanographix
+  Theme: Reblographix
+  by sanographix
   http://www.sanographix.net
 -->
 
@@ -96,8 +96,8 @@
           
           {block:Photo}
             <div class="post photo"{block:IndexPage} onClick="TINY.box.show({iframe:'{Permalink}',boxid:'frameless',width:700,top:0,fixed:true,maskid:'whitemask',maskopacity:93,closejs:function(){closeJS()}})"{/block:IndexPage}>
-            	{LinkOpenTag}
-            	<img src="{block:IndexPage}{PhotoURL-250}{/block:IndexPage}{block:PermalinkPage}{PhotoURL-500}{/block:PermalinkPage}" alt="{PhotoAlt}"/>
+              {LinkOpenTag}
+              <img src="{block:IndexPage}{PhotoURL-250}{/block:IndexPage}{block:PermalinkPage}{PhotoURL-500}{/block:PermalinkPage}" alt="{PhotoAlt}"/>
               {LinkCloseTag}
               {block:PermalinkPage}
                 {block:Caption}
@@ -122,7 +122,7 @@
             {block:PermalinkPage}
               {block:Caption}
               <div class="caption">
-              	{Caption}
+                {Caption}
                 {block:ContentSource}
                   <div class="meta">Source: <a href="{SourceURL}">{block:NoSourceLogo}{SourceTitle}{/block:NoSourceLogo}</a></div>
                 {/block:ContentSource}
@@ -143,7 +143,7 @@
 
               {block:Source}
               <div class="source">
-              	{Source}
+                {Source}
                 {block:NoteCount}
                   <div class="meta"><a href="{Permalink}">{NoteCount}</a> Notes</div>
                 {/block:NoteCount}
@@ -204,7 +204,7 @@
           {/block:Audio}
           
           {block:PermalinkPage}
-          	<div class="hom">
+            <div class="hom">
               <a href="/"><img src="http://static.tumblr.com/xlsgtjb/5NJm3vj7l/home.png">↩ほむ</a>
             </div>
           {/block:PermalinkPage}
