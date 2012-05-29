@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<!--
+  Theme: Memographix
+  by sanographix
+  http://www.sanographix.net
+-->
+<html>
+<head>
+<!-- Default Variables -->
+  <meta name="text:Google Analytics Tracking ID" content="UA-000000-00" />
+  <meta name="text:TypeSquare Embed Code" content="" />
+  <meta name="text:Hatena Star Token" content="" />
+  <meta name="if:Enable Hatena Star" content="0"/>
+<title>{block:PostTitle}{PostTitle} - {/block:PostTitle}{Title}</title>
+<meta name="viewport" content="width=device-width">
+<link rel="shortcut icon" href="{Favicon}">
+<link rel="alternate" type="application/rss+xml" href="{RSS}"><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+{block:Description}
+<meta name="description" content="{MetaDescription}" />
+{/block:Description}
+<link rel="stylesheet" media="screen" href="//static.tumblr.com/xlsgtjb/KhWm4si91/style.css" />
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="//static.tumblr.com/xlsgtjb/hX4m4sict/jquery-1.7.2.min.js"><\/script>')</script>
+<script src="//static.tumblr.com/xlsgtjb/Mwsm4q0ra/flautokerning.js"></script>
+<script src="//static.tumblr.com/xlsgtjb/53Hm4sfcv/jquery.tipsy.js"></script>
+<script src="//static.tumblr.com/xlsgtjb/glbm4sia0/options.js"></script>
+{block:IfEnableHatenaStar}
+<script type="text/javascript" src="http://s.hatena.ne.jp/js/HatenaStar.js"></script>
+<script type="text/javascript">
+Hatena.Strar.Token = '{text:Hatena Star Token}';
+</script>
+<script type="text/javascript">
+Hatena.Star.EntryLoader.headerTagAndClassName = ['h1','entry-title'];
+</script>
+{/block:IfEnableHatenaStar}
+<!--[if IE]> 
+<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<script src="//css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+<![endif]-->
+<!-- Google Analytics -->
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', '{text:Google Analytics Tracking ID}']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<!-- END Google Analytics -->
+{text:TypeSquare Embed Code}
+</head>
+<body onLoad="init()" class="{block:IndexPage}page-index{/block:IndexPage}{block:PermalinkPage}page-permalink{/block:PermalinkPage}">
+<style>
+{CustomCSS}
+</style>
+  <div id="wrapper">
+    <div id="wrapper-inner">
+
+      <header class="header">
+        <h1 class="blog-title"><a href="/">{Title}</a></h1>
+        {block:Description}
+          <p class="blog-description">{Description}</p>
+        {/block:Description}
+        <nav class="nav fade">
+          <a href="/">Home</a>
+          {block:HasPages}
+            {block:Pages}
+              <a href="{URL}">{Label}</a>
+            {/block:Pages}
+          {/block:HasPages}
+          <a href="/archive">Archive</a>
+          <a href="{RSS}">RSS</a>
+        </nav>
+      </header>
+      
+      <div id="container" class="autopagerize_page_element">
+        <div id="container-inner">  
+          {block:Posts}
+          
+            {block:Text}
+              <article class="post text">                
+                <header>
+                  {block:Title}
+                    <h1 class="entry-title"><a href="{Permalink}" class="permalink">{Title}</a></h1>
+                  {/block:Title}
+                  {block:HasTags}
+                    <div class="tags">
+                      Tags: 
+                      {block:Tags}
+                        <a href="{TagURL}">{Tag}</a>
+                      {/block:Tags}
+                    </div>
+                  {/block:HasTags}
+                </header>
+                <div class="entry-content">
+                  {Body}
+                </div>
+                <footer class="entry-footer">
+                  <div class="meta">
+                    <a href="{Permalink}">{TimeAgo}</a>
+                    {block:NoteCount}
+                      <span class="notecount"><a href="{Permalink}">{NoteCount} Notes</a></span>
+                    {/block:NoteCount}
+                  </div>
+                  {block:PostNotes}<div class="notecontainer">{PostNotes}</div>{/block:PostNotes}                  
+                </footer>
+              </article>
+            {/block:Text}
+            
+            {block:Photo}
+              <article class="post photo">
+                <div class="entry-content">
+                  {LinkOpenTag}
+                  <img src="{PhotoURL-500}" alt="{PhotoAlt}"/>
+                  {LinkCloseTag}
+                </div>
+                {block:Caption}
+                  <footer class="entry-footer">
+                    {Caption}
+                    {block:ContentSource}
+                      <div class="meta">Source: <a href="{SourceURL}">{block:NoSourceLogo}{SourceTitle}{/block:NoSourceLogo}</a></div>
+                    {/block:ContentSource}
+                    <div class="meta">
+                      <a href="{Permalink}">{TimeAgo}</a>
+                      {block:NoteCount}
+                        <a href="{Permalink}">{NoteCount} Notes</a>
+                      {/block:NoteCount}
+                    </div>
+                    {block:PostNotes}<div class="notecontainer">{PostNotes}</div>{/block:PostNotes}                    
+                  </footer>
+                {/block:Caption}
+              </article>
+            {/block:Photo}
+            
+            {block:Photoset}
+              <article class="post photoset">
+                <div class="entry-content">
+                  {Photoset-500}
+                </div>
+                {block:PermalinkPage}
+                  {block:Caption}
+                  <footer class="entry-footer">
+                    {Caption}
+                    {block:ContentSource}
+                      <div class="meta">Source: <a href="{SourceURL}">{block:NoSourceLogo}{SourceTitle}{/block:NoSourceLogo}</a></div>
+                    {/block:ContentSource}
+                    <div class="meta">
+                      <a href="{Permalink}">{TimeAgo}</a>                    
+                      {block:NoteCount}
+                        <a href="{Permalink}">{NoteCount} Notes</a>
+                      {/block:NoteCount}
+                    </div>
+                    {block:PostNotes}<div class="notecontainer">{PostNotes}</div>{/block:PostNotes}                    
+                  </footer>
+                  {/block:Caption}
+                {/block:PermalinkPage}
+              </article>
+            {/block:Photoset}
+            
+            {block:Quote}
+              <article class="post quote">
+                <div class="entry-content">
+                  {Quote}
+                </div>
+              {block:PermalinkPage}
+                {block:Source}
+                <footer class="entry-footer">
+                  {Source}
+                  <div class="meta">
+                    <a href="{Permalink}">{TimeAgo}</a>                                      
+                    {block:NoteCount}
+                      <a href="{Permalink}">{NoteCount} Notes</a>
+                    {/block:NoteCount}
+                  </div>   
+                  {block:PostNotes}<div class="notecontainer">{PostNotes}</div>{/block:PostNotes}                          
+                </footer>
+                {/block:Source}
+              {block:PermalinkPage}
+              </article>              
+            {/block:Quote}
+            
+            {block:Link}
+              <article class="post link">
+                <div class="entry-content">
+                  <a href="{URL}" class="link" {Target}>{Name}</a>          
+                  {block:Description}
+                  <div class="description">{Description}</div>
+                  {/block:Description}
+                </div>
+                <footer class="entry-footer">
+                  <div class="meta">
+                    <a href="{Permalink}">{TimeAgo}</a>                                      
+                    {block:NoteCount}
+                      <a href="{Permalink}">{NoteCount} Notes</a>
+                    {/block:NoteCount}
+                  </div>
+                  {block:PostNotes}<div class="notecontainer">{PostNotes}</div>{/block:PostNotes} 
+                </footer>          
+              </article>
+            {/block:Link}
+            
+            {block:Chat}
+              <article class="post chat">
+                <header>
+                  {block:Title}
+                  <h1><a href="{Permalink}">{Title}</a></h1>
+                  {/block:Title}
+                </header>
+                <div class="entry-content">
+                  <ul class="chat">
+                    {block:Lines}
+                    <li class="{Alt} user_{UserNumber}">
+                    {block:Label}
+                    <span class="label">{Label}</span>
+                    {/block:Label}
+                    {Line}
+                    </li>
+                    {/block:Lines}
+                  </ul>
+                </div>
+              </article>
+            {/block:Chat}
+            
+            {block:Video}
+              <article class="post video">
+                <div class="entry-content">
+                  {Video-500}          
+                </div>
+                <footer class="entry-footer">
+                  {block:Caption}
+                    <div class="caption">{Caption}</div>                 
+                  {/block:Caption}
+                </footer>
+              </article>
+            {/block:Video}
+            
+            {block:Audio}
+              <article class="post audio">
+                <div class="entry-content">
+                  {AudioPlayerBlack}          
+                </div>
+                <footer class="entry-footer">
+                  {block:Caption}
+                    <div class="caption">{Caption}</div>
+                  {/block:Caption}
+                </footer>
+              </article>
+            {/block:Audio}
+            
+          {/block:Posts}
+        </div>
+      </div>
+      <div id="pager">
+        {block:PreviousPage}
+          <a href="{PreviousPage}">Previous</a>
+        {/block:PreviousPage}
+        {block:NextPage}
+            <a href="{NextPage}" class="next" rel="next">Next</a>
+        {/block:NextPage}
+      </div>
+
+    </div>
+  </div>
+  
+</body>
+</html>
