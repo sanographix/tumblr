@@ -13,12 +13,10 @@
 
 * TypeSquare Embed Code
     * https://typesquare.com/alicense/script ←にあるコード
+		    * 今年一杯は無料で使えます
+		* 見出しが見出ゴMB31、本文が中ゴシックBBBになります
     * 何も入力しなかった場合はフォントがヒラギノとかになります
-    * 例）
-<pre><code>		
-    <script type='text/javascript' src='http://typesquare.com/accessor/script/typesquare.js?abcdefghijk' charset='utf-8'></script>
-</code></pre>
-
+		
 * Hatena Star Token
     * http://d.hatena.ne.jp/hatenastar/20070707/1184453490
     * Hatena.Star.Token = 'これ'
