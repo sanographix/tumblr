@@ -18,14 +18,14 @@
 {block:Description}
 <meta name="description" content="{MetaDescription}" />
 {/block:Description}
-<link rel="stylesheet" media="screen" href="//static.tumblr.com/xlsgtjb/KhWm4si91/style.css" />
+<link rel="stylesheet" media="screen" href="//static.tumblr.com/xlsgtjb/5mem4ucek/style.css" />
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="//static.tumblr.com/xlsgtjb/hX4m4sict/jquery-1.7.2.min.js"><\/script>')</script>
 <script src="//static.tumblr.com/xlsgtjb/Mwsm4q0ra/flautokerning.js"></script>
 <script src="//static.tumblr.com/xlsgtjb/53Hm4sfcv/jquery.tipsy.js"></script>
-<script src="//static.tumblr.com/xlsgtjb/glbm4sia0/options.js"></script>
+<script src="//static.tumblr.com/xlsgtjb/EU0m4ucbe/options.js"></script>
 {block:IfEnableHatenaStar}
-<script type="text/javascript" src="http://s.hatena.ne.jp/js/HatenaStar.js"></script>
+<script type="text/javascript" src="//s.hatena.ne.jp/js/HatenaStar.js"></script>
 <script type="text/javascript">
 Hatena.Strar.Token = '{text:Hatena Star Token}';
 </script>
@@ -76,11 +76,11 @@ Hatena.Star.EntryLoader.headerTagAndClassName = ['h1','entry-title'];
       </header>
       
       <div id="container" class="autopagerize_page_element">
-        <div id="container-inner">  
+        <div id="container-inner">
           {block:Posts}
           
             {block:Text}
-              <article class="post text">                
+              <article class="post text">
                 <header>
                   {block:Title}
                     <h1 class="entry-title"><a href="{Permalink}" class="permalink">{Title}</a></h1>
@@ -104,7 +104,7 @@ Hatena.Star.EntryLoader.headerTagAndClassName = ['h1','entry-title'];
                       <span class="notecount"><a href="{Permalink}">{NoteCount} Notes</a></span>
                     {/block:NoteCount}
                   </div>
-                  {block:PostNotes}<div class="notecontainer">{PostNotes}</div>{/block:PostNotes}                  
+                  {block:PostNotes}<div class="notecontainer">{PostNotes}</div>{/block:PostNotes}
                 </footer>
               </article>
             {/block:Text}
@@ -128,7 +128,7 @@ Hatena.Star.EntryLoader.headerTagAndClassName = ['h1','entry-title'];
                         <a href="{Permalink}">{NoteCount} Notes</a>
                       {/block:NoteCount}
                     </div>
-                    {block:PostNotes}<div class="notecontainer">{PostNotes}</div>{/block:PostNotes}                    
+                    {block:PostNotes}<div class="notecontainer">{PostNotes}</div>{/block:PostNotes}
                   </footer>
                 {/block:Caption}
               </article>
@@ -147,12 +147,12 @@ Hatena.Star.EntryLoader.headerTagAndClassName = ['h1','entry-title'];
                       <div class="meta">Source: <a href="{SourceURL}">{block:NoSourceLogo}{SourceTitle}{/block:NoSourceLogo}</a></div>
                     {/block:ContentSource}
                     <div class="meta">
-                      <a href="{Permalink}">{TimeAgo}</a>                    
+                      <a href="{Permalink}">{TimeAgo}</a>
                       {block:NoteCount}
                         <a href="{Permalink}">{NoteCount} Notes</a>
                       {/block:NoteCount}
                     </div>
-                    {block:PostNotes}<div class="notecontainer">{PostNotes}</div>{/block:PostNotes}                    
+                    {block:PostNotes}<div class="notecontainer">{PostNotes}</div>{/block:PostNotes}
                   </footer>
                   {/block:Caption}
                 {/block:PermalinkPage}
@@ -169,35 +169,35 @@ Hatena.Star.EntryLoader.headerTagAndClassName = ['h1','entry-title'];
                 <footer class="entry-footer">
                   {Source}
                   <div class="meta">
-                    <a href="{Permalink}">{TimeAgo}</a>                                      
+                    <a href="{Permalink}">{TimeAgo}</a>
                     {block:NoteCount}
                       <a href="{Permalink}">{NoteCount} Notes</a>
                     {/block:NoteCount}
                   </div>   
-                  {block:PostNotes}<div class="notecontainer">{PostNotes}</div>{/block:PostNotes}                          
+                  {block:PostNotes}<div class="notecontainer">{PostNotes}</div>{/block:PostNotes}
                 </footer>
                 {/block:Source}
               {block:PermalinkPage}
-              </article>              
+              </article>
             {/block:Quote}
             
             {block:Link}
               <article class="post link">
                 <div class="entry-content">
-                  <a href="{URL}" class="link" {Target}>{Name}</a>          
+                  <a href="{URL}" class="link" {Target}>{Name}</a>
                   {block:Description}
                   <div class="description">{Description}</div>
                   {/block:Description}
                 </div>
                 <footer class="entry-footer">
                   <div class="meta">
-                    <a href="{Permalink}">{TimeAgo}</a>                                      
+                    <a href="{Permalink}">{TimeAgo}</a>
                     {block:NoteCount}
                       <a href="{Permalink}">{NoteCount} Notes</a>
                     {/block:NoteCount}
                   </div>
-                  {block:PostNotes}<div class="notecontainer">{PostNotes}</div>{/block:PostNotes} 
-                </footer>          
+                  {block:PostNotes}<div class="notecontainer">{PostNotes}</div>{/block:PostNotes}
+                </footer>
               </article>
             {/block:Link}
             
@@ -226,11 +226,11 @@ Hatena.Star.EntryLoader.headerTagAndClassName = ['h1','entry-title'];
             {block:Video}
               <article class="post video">
                 <div class="entry-content">
-                  {Video-500}          
+                  {Video-500}
                 </div>
                 <footer class="entry-footer">
                   {block:Caption}
-                    <div class="caption">{Caption}</div>                 
+                    <div class="caption">{Caption}</div>
                   {/block:Caption}
                 </footer>
               </article>
@@ -239,7 +239,7 @@ Hatena.Star.EntryLoader.headerTagAndClassName = ['h1','entry-title'];
             {block:Audio}
               <article class="post audio">
                 <div class="entry-content">
-                  {AudioPlayerBlack}          
+                  {AudioPlayerBlack}
                 </div>
                 <footer class="entry-footer">
                   {block:Caption}
@@ -263,6 +263,6 @@ Hatena.Star.EntryLoader.headerTagAndClassName = ['h1','entry-title'];
 
     </div>
   </div>
-  
+
 </body>
 </html>
