@@ -1,4 +1,10 @@
-## 使い方
+## インストール
+
+* テーマガーデンからインストールできるようになりました
+* <a href="http://www.tumblr.com/theme/35964">http://www.tumblr.com/theme/35964</a>
+
+
+## 手動でインストールする
 
 * <a href="http://www.tumblr.com/customize">http://www.tumblr.com/customize</a>に行く
 * 「HTMLを編集」を押す
