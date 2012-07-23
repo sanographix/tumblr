@@ -1,18 +1,26 @@
-## �g����
+## インストール
 
-1. http://www.tumblr.com/customize�ɍs����edit html������
-2. ���Ƃ�html���폜������reblographix.html���R�s�y
+* テーマガーデンからインストールできるようになりました
+* <a href="http://www.tumblr.com/theme/35965">http://www.tumblr.com/theme/35965</a>
 
 
-## �I�v�V����
+## 手動でインストールする
+
+* <a href="http://www.tumblr.com/customize">http://www.tumblr.com/customize</a>に行く
+* 「HTMLを編集」を押す
+* （元のhtmlはバックアップを取っておいたほうが良いです）
+* もとのhtmlを削除してreblographix.htmlをコピペする
+
+
+## オプション
 
 * Google Analytics Tracking ID
-    * UA-000000-00�݂����Ȃ��
+    * 例）UA-000000-00
 * Your Domain
     * example.tumblr.com
-    * �w�b�_�̌����t�H�[��������google�ɔ�Ԃ����݂����ɂ��Ă�̂ł����Ŏg��
+    * ヘッダの検索フォーム用
 
 
-## �ڍאݒ�
+## 詳細設定
 
-* 1�y�[�W�����蓊�e����MAX�i15�j�ɂ���Ƃ悳����
+* 1ページあたり投稿数をMAX（15）にするとよさそう
