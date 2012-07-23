@@ -1,28 +1,33 @@
-## �g����
+## 使い方
 
-* http://www.tumblr.com/customize�ɍs����memographix.html���R�s�y
+* <a href="http://www.tumblr.com/customize">http://www.tumblr.com/customize</a>に行く
+* 「HTMLを編集」を押す
+* （元のhtmlはバックアップを取っておいたほうが良いです）
+* もとのhtmlを削除してmemographix.htmlをコピペする
 
 
-## �I�v�V����
+## オプション
 
 * Enable Hatena Star
-    * �X�^�[��\�����邩
+    * スターを表示するか
 
 * Google Analytics Tracking ID
-    * ��jUA-000000-00
+    * 例）UA-000000-00
 
 * TypeSquare Embed Code
-    * https://typesquare.com/alicense/script ���ɂ���R�[�h
-		* TypeSquare�͍��N��t�͖����Ŏg���܂�
-		* ���o�������o�SMB31�A�{�������S�V�b�NBBB�ɂȂ�܂�
-    * �������͂��Ȃ������ꍇ�̓t�H���g���q���M�m�Ƃ��ɂȂ�܂�
+    * <a href="https://typesquare.com/alicense/script">https://typesquare.com/alicense/script</a> ←にあるコード
+		* TypeSquareは今年一杯は無料で使えます
+		* 見出しが見出ゴMB31、本文が中ゴシックBBBになります
+    * 何も入力しなかった場合はフォントがヒラギノとかになります
 		
 * Hatena Star Token
-    * http://d.hatena.ne.jp/hatenastar/20070707/1184453490
-    * Hatena.Star.Token = '����'
-    * �g�[�N����ݒ肵�Ȃ��Ă��X�^�[�͎g���܂�
+    * 例）4238bd2ff9df2bb2a6ab11393da28c291ab022eb
+    * <a href="http://s.hatena.ne.jp/">http://s.hatena.ne.jp/</a>の「マイページ」でブログのURLを登録する
+    * Hatena.Star.Token = 'ここの文字列をtumblrのオプションにコピペしてください'
+    * スターについて詳しくは<a href="http://d.hatena.ne.jp/hatenastar/20070707/1184453490">http://d.hatena.ne.jp/hatenastar/20070707/1184453490</a>を参照
+    * トークンを設定しなくてもスターは使えます
 
-## �y�[�W�쐬
+## ページ作成
 
-* �u�y�[�W�ւ̃����N��\������v�Ƀ`�F�b�N������ƃw�b�_�̃i�r�Q�[�V�����Ƀ����N���\������܂�
-* About�y�[�W�Ƃ����Ƃ悢�����ł�
+* 「ページへのリンクを表示する」にチェックを入れると、ヘッダのメニューにリンクが追加されます
+* Aboutページとか作るとよいかもです。<a href="http://memo.sanographix.net/about">こういうやつ</a>
