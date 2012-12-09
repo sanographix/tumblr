@@ -7350,6 +7350,9 @@ h4 {
 #header h1 {
   font-size: 5em;
 }
+#header .btn {
+  margin: 0 5px;
+}
 /* グリッド */
 .span4 {
   margin-bottom: 20px;
