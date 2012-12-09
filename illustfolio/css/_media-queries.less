@@ -1,0 +1,70 @@
+/*--------------------------------------------------------------
+
+			Media Queries - Retina Display
+
+--------------------------------------------------------------*/
+
+@media only screen and (-webkit-min-device-pixel-ratio : 1.5),only screen and (min-device-pixel-ratio : 1.5) {
+
+}
+
+/* Large desktop */
+@media (min-width: 1200px) {
+  
+}
+ 
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+  
+}
+ 
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) { 
+
+    .jumbo {
+        // レスポンシブで幅100%にしたい要素に使う
+        margin-left: -20px;
+        margin-right: -20px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    #header,
+    #footer {
+        .jumbo;
+    }
+    
+    #header {
+        height: auto;
+    }
+    
+    .flexslider {
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+    
+    .flexslider,
+    .flexslider .slides li {
+        height: 200px;
+    }
+
+ }
+ 
+/* Landscape phones and down */
+@media (max-width: 480px) { 
+
+    #header {
+        h1,
+        .nav {
+            float: none;
+            text-align: center;
+        }
+    }
+
+    .flexslider,
+    .flexslider .slides li {
+        height: 150px;
+    }
+
+
+ }

@@ -1,0 +1,219 @@
+@import "_normalize.less";
+@import "_mixin.less";
+@import "_variable.less";
+@import "_bootstrap.less";
+@import "_bootstrap-responsive.less";
+@import "_font-awesome.less";
+
+
+/*  Primary Styles
+   Author:sanographix
+*/
+
+
+/* フォント */
+@font-face {
+    font-family: 'SourceSansProSemiboldItalic';
+    src: url('../fonts/SourceSansPro-SemiboldIt-webfont.eot');
+    src: url('../fonts/SourceSansPro-SemiboldIt-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/SourceSansPro-SemiboldIt-webfont.woff') format('woff'),
+         url('../fonts/SourceSansPro-SemiboldIt-webfont.ttf') format('truetype'),
+         url('../fonts/SourceSansPro-SemiboldIt-webfont.svg#SourceSansProSemiboldItalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'SourceSansProItalic';
+    src: url('../fonts/SourceSansPro-It-webfont.eot');
+    src: url('../fonts/SourceSansPro-It-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/SourceSansPro-It-webfont.woff') format('woff'),
+         url('../fonts/SourceSansPro-It-webfont.ttf') format('truetype'),
+         url('../fonts/SourceSansPro-It-webfont.svg#SourceSansProItalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/*common*/
+
+html,body {
+    font-family: 'SourceSansProItalic', 'Helvetica Neue', sans-serif;
+    color: @base;
+    font-size: 0.9em;
+    background: #fff;
+}
+
+a {
+    color: @link;
+    &:hover {
+      color: @hover;
+    }
+}
+
+::selection {
+    background: @selection;
+    color:#666666;
+}
+
+.section {
+    margin-bottom: 30px;
+}
+
+.profile-image {
+    .border-radius(4px);
+    vertical-align: top;
+}
+
+.icon-large {
+    font-size: 18px;
+    text-align: center;
+    padding-right: 6px;
+}
+
+.icon-ex-large {
+    font-size: 64px;
+    text-align: center;
+}
+
+/* Faded out hr */
+hr.soften {
+  height: 1px;
+  margin: 40px 0;
+  background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
+  background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
+  background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
+  background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
+  border: 0;
+}
+
+/* text-style */
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'SourceSansProSemiboldItalic', 'Helvetica Neue', sans-serif;
+    font-weight: normal;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    margin-top: 0;
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.2;
+}
+
+h4 {
+    margin-top: 0;
+    font-size: 1.3em;
+}
+
+
+/*ヘッダ*/
+
+body {
+}
+
+#header {
+    text-align: center;
+    margin-top: 30px;
+    h1 {
+        font-size: 5em;
+    }
+}
+
+
+/* グリッド */
+
+.span4 {
+    margin-bottom: 20px;
+}
+
+.thumb-icon {
+    text-align: center;
+    margin: 0 0 15px 0;
+}
+
+/* イントロ */
+
+.intro {
+    h1 {
+        margin-bottom: 50px;
+    }
+    
+    h3 {
+        text-align: center;
+        font-size: 1.1em;
+        font-weight: bold;
+    }
+}
+
+/* フッタ */
+
+#footer {
+    background: @footer-bg;
+    color: @footer;
+    padding-bottom: 30px;
+    line-height: 1.8;
+    
+    a {
+        color: @footer;
+        &:hover {
+            color: @link;
+            text-decoration: none;
+        }
+    }
+    
+    h4 {
+        margin: 30px 0 20px 0;
+    }
+    
+    .footer-content {
+        font-size: .85em;
+        
+        .profile-image {
+            width: 64px;
+            height: 64px;
+            .box-shadow(0,1px,0,rgba(255,255,255,.2));
+            float: left;
+            margin: 0 10px 10px 0;
+        }
+        
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        li {
+            padding: 0 0 10px 0;
+            line-height: 1.3;
+        }
+    }
+}
+
+
+
+/* End Primary Styles */
+
+
+
+// retina.less
+// A helper mixin for applying high-resolution background images (http://www.retinajs.com)
+
+.at2x(@path, @w: auto, @h: auto) {
+  background-image: url(@path);
+  @at2x_path: ~`"@{path}".split('.').slice(0, "@{path}".split('.').length - 1).join(".") + "@2x" + "." + "@{path}".split('.')["@{path}".split('.').length - 1]`;
+
+  @media all and (-webkit-min-device-pixel-ratio : 1.5) {
+    background-image: url(@at2x_path);
+    background-size: @w @h;
+  }  
+}
+@import "_media-queries.less";
