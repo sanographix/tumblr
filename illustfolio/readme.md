@@ -35,3 +35,17 @@ Tumblrに画像をアップロードするだけで簡単にポートフォリ�
 
 デモページは[火曜さん](http://twitter.com/kayou_bi)のイラストを使用させていただきました。ありがとうございます！  
 [http://www.pixiv.net/member_illust.php?id=62835](http://www.pixiv.net/member_illust.php?id=62835)
+
+
+## Known Issues
+
+* Firefoxでwebfont表示されない
+* IE8以下でおかしい
+* 画像以外も投稿したい
+
+
+## Changelog
+
+### 2012/12/09
+
+* 公開
