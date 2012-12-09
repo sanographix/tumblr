@@ -15,6 +15,17 @@ Tumblrに画像をアップロードするだけで簡単にポートフォリ�
 
 ## インストール
 
+### ポートフォリオ用に新しくブログを作成する場合（推奨）
+
+* [テーマのhtmlをコピー](https://github.com/sanographix/tumblr/blob/master/illustfolio/illustfolio.html)する
+* Tumblrでブログを新規作成する
+    * Tumblrは1つのアカウントで複数ブログ作れます
+* Tumblrのテーマカスタマイズ画面を開く
+* もとのhtmlを削除してillustfolio.htmlをコピペする
+
+
+### 既存のTumblrブログを使う場合
+
 * [テーマのhtmlをコピー](https://github.com/sanographix/tumblr/blob/master/illustfolio/illustfolio.html)する
 * Tumblrのテーマカスタマイズ画面を開く
 * （元のhtmlはバックアップを取っておいたほうが良いです）
