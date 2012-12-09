@@ -7359,10 +7359,17 @@ h4 {
   margin: 0 0 15px 0;
 }
 /* イントロ */
-.intro h1 {
+#intro {
+  text-align: center;
+}
+/* usage */
+.usage {
+  text-align: center;
+}
+.usage h1 {
   margin-bottom: 50px;
 }
-.intro h3 {
+.usage h3 {
   text-align: center;
   font-size: 1.1em;
   font-weight: bold;
