@@ -1,0 +1,895 @@
+/*! normalize.css 2012-03-11T12:53 UTC - http://github.com/necolas/normalize.css */
+/* =============================================================================
+   HTML5 display definitions
+   ========================================================================== */
+/*
+ * Corrects block display not defined in IE6/7/8/9 & FF3
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+  display: block;
+}
+/*
+ * Corrects inline-block display not defined in IE6/7/8/9 & FF3
+ */
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+/*
+ * Prevents modern browsers from displaying 'audio' without controls
+ * Remove excess height in iOS5 devices
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+/*
+ * Addresses styling for 'hidden' attribute not present in IE7/8/9, FF3, S4
+ * Known issue: no IE6 support
+ */
+[hidden] {
+  display: none;
+}
+/* =============================================================================
+   Base
+   ========================================================================== */
+/*
+ * 1. Corrects text resizing oddly in IE6/7 when body font-size is set using em units
+ *    http://clagnut.com/blog/348/#c790
+ * 2. Prevents iOS text size adjust after orientation change, without disabling user zoom
+ *    www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/
+ */
+html {
+  font-size: 100%;
+  /* 1 */
+
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+
+}
+/*
+ * Addresses font-family inconsistency between 'textarea' and other form elements.
+ */
+html,
+button,
+input,
+select,
+textarea {
+  font-family: sans-serif;
+}
+/*
+ * Addresses margins handled incorrectly in IE6/7
+ */
+body {
+  margin: 0;
+}
+/* =============================================================================
+   Links
+   ========================================================================== */
+/*
+ * Addresses outline displayed oddly in Chrome
+ */
+a:focus {
+  outline: thin dotted;
+}
+/*
+ * Improves readability when focused and also mouse hovered in all browsers
+ * people.opera.com/patrickl/experiments/keyboard/test
+ */
+a:hover,
+a:active {
+  outline: 0;
+}
+/* =============================================================================
+   Typography
+   ========================================================================== */
+/*
+ * Addresses font sizes and margins set differently in IE6/7
+ * Addresses font sizes within 'section' and 'article' in FF4+, Chrome, S5
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+h2 {
+  font-size: 1.5em;
+  margin: 0.83em 0;
+}
+h3 {
+  font-size: 1.17em;
+  margin: 1em 0;
+}
+h4 {
+  font-size: 1em;
+  margin: 1.33em 0;
+}
+h5 {
+  font-size: 0.83em;
+  margin: 1.67em 0;
+}
+h6 {
+  font-size: 0.75em;
+  margin: 2.33em 0;
+}
+/*
+ * Addresses styling not present in IE7/8/9, S5, Chrome
+ */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+/*
+ * Addresses style set to 'bolder' in FF3+, S4/5, Chrome
+*/
+b,
+strong {
+  font-weight: bold;
+}
+blockquote {
+  margin: 1em 40px;
+}
+/*
+ * Addresses styling not present in S5, Chrome
+ */
+dfn {
+  font-style: italic;
+}
+/*
+ * Addresses styling not present in IE6/7/8/9
+ */
+mark {
+  background: #ff0;
+  color: #000;
+}
+/*
+ * Addresses margins set differently in IE6/7
+ */
+p,
+pre {
+  margin: 1em 0;
+}
+/*
+ * Corrects font family set oddly in IE6, S4/5, Chrome
+ * en.wikipedia.org/wiki/User:Davidgothberg/Test59
+ */
+pre,
+code,
+kbd,
+samp {
+  font-family: monospace, serif;
+  _font-family: 'courier new', monospace;
+  font-size: 1em;
+}
+/*
+ * Improves readability of pre-formatted text in all browsers
+ */
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+/*
+ * 1. Addresses CSS quotes not supported in IE6/7
+ * 2. Addresses quote property not supported in S4
+ */
+/* 1 */
+q {
+  quotes: none;
+}
+/* 2 */
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+small {
+  font-size: 75%;
+}
+/*
+ * Prevents sub and sup affecting line-height in all browsers
+ * gist.github.com/413930
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+/* =============================================================================
+   Lists
+   ========================================================================== */
+/*
+ * Addresses margins set differently in IE6/7
+ */
+dl,
+menu,
+ol,
+ul {
+  margin: 1em 0;
+}
+dd {
+  margin: 0 0 0 40px;
+}
+/*
+ * Addresses paddings set differently in IE6/7
+ */
+menu,
+ol,
+ul {
+  padding: 0 0 0 40px;
+}
+/*
+ * Corrects list images handled incorrectly in IE7
+ */
+nav ul,
+nav ol {
+  list-style: none;
+  list-style-image: none;
+}
+/* =============================================================================
+   Embedded content
+   ========================================================================== */
+/*
+ * 1. Removes border when inside 'a' element in IE6/7/8/9, FF3
+ * 2. Improves image quality when scaled in IE7
+ *    code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/
+ */
+img {
+  border: 0;
+  /* 1 */
+
+  -ms-interpolation-mode: bicubic;
+  /* 2 */
+
+}
+/*
+ * Corrects overflow displayed oddly in IE9
+ */
+svg:not(:root) {
+  overflow: hidden;
+}
+/* =============================================================================
+   Figures
+   ========================================================================== */
+/*
+ * Addresses margin not present in IE6/7/8/9, S5, O11
+ */
+figure {
+  margin: 0;
+}
+/* =============================================================================
+   Forms
+   ========================================================================== */
+/*
+ * Corrects margin displayed oddly in IE6/7
+ */
+form {
+  margin: 0;
+}
+/*
+ * Define consistent border, margin, and padding
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+/*
+ * 1. Corrects color not being inherited in IE6/7/8/9
+ * 2. Corrects text not wrapping in FF3
+ * 3. Corrects alignment displayed oddly in IE6/7
+ */
+legend {
+  border: 0;
+  /* 1 */
+
+  padding: 0;
+  white-space: normal;
+  /* 2 */
+
+  *margin-left: -7px;
+  /* 3 */
+
+}
+/*
+ * 1. Corrects font size not being inherited in all browsers
+ * 2. Addresses margins set differently in IE6/7, FF3+, S5, Chrome
+ * 3. Improves appearance and consistency in all browsers
+ */
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  /* 1 */
+
+  margin: 0;
+  /* 2 */
+
+  vertical-align: baseline;
+  *vertical-align: middle;
+  /* 3 */
+
+}
+/*
+ * Addresses FF3/4 setting line-height on 'input' using !important in the UA stylesheet
+ */
+button,
+input {
+  line-height: normal;
+  /* 1 */
+
+}
+/*
+ * 1. Improves usability and consistency of cursor style between image-type 'input' and others
+ * 2. Corrects inability to style clickable 'input' types in iOS
+ * 3. Removes inner spacing in IE7 without affecting normal text inputs
+ *    Known issue: inner spacing remains in IE6
+ */
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  cursor: pointer;
+  /* 1 */
+
+  -webkit-appearance: button;
+  /* 2 */
+
+  *overflow: visible;
+  /* 3 */
+
+}
+/*
+ * Re-set default cursor for disabled elements
+ */
+button[disabled],
+input[disabled] {
+  cursor: default;
+}
+/*
+ * 1. Addresses box sizing set to content-box in IE8/9
+ * 2. Removes excess padding in IE8/9
+ * 3. Removes excess padding in IE7
+      Known issue: excess padding remains in IE6
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+
+  padding: 0;
+  /* 2 */
+
+  *height: 13px;
+  *width: 13px;
+  /* 3 */
+
+}
+/*
+ * 1. Addresses appearance set to searchfield in S5, Chrome
+ * 2. Addresses box-sizing set to border-box in S5, Chrome (include -moz to future-proof)
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+
+  box-sizing: content-box;
+}
+/*
+ * Removes inner padding and search cancel button in S5, Chrome on OS X
+ */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+/*
+ * Removes inner padding and border in FF3+
+ * www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+/*
+ * 1. Removes default vertical scrollbar in IE6/7/8/9
+ * 2. Improves readability and alignment in all browsers
+ */
+textarea {
+  overflow: auto;
+  /* 1 */
+
+  vertical-align: top;
+  /* 2 */
+
+}
+/* =============================================================================
+   Tables
+   ========================================================================== */
+/*
+ * Remove most spacing between table cells
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/*
+LESS Variables
+Author: sanographix
+*/
+/* Background color */
+/* Base text color */
+/* light text color */
+/* Button Color */
+/* Blue color(for Background) */
+/* dark background color *//*
+LESS Mixins
+*/
+/* box properties */
+.center {
+  text-align: center;
+  margin: 0px auto;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.nofloat {
+  float: none;
+}
+.clear {
+  clear: both;
+}
+.clearfix {
+  display: block;
+  *zoom: 1;
+}
+.clearfix:after {
+  display: block;
+  visibility: hidden;
+  font-size: 0;
+  height: 0;
+  clear: both;
+  content: ".";
+}
+.block {
+  display: block;
+}
+.inline {
+  display: inline;
+}
+.inline-block {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+.relative {
+  position: relative;
+}
+.absolute {
+  position: absolute;
+}
+.static {
+  position: static;
+}
+.fixed {
+  position: fixed;
+}
+.ellipsis {
+  white-space: nowrap;
+  -webkit-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.margin0 {
+  margin: 0 !important;
+}
+.padding0 {
+  padding: 0 !important;
+}
+/* text properties */
+.bold {
+  font-weight: bold;
+}
+.normal {
+  font-weight: normal;
+  font-style: normal;
+}
+.thin {
+  font-weight: 300;
+}
+.italic {
+  font-style: italic;
+}
+.nodeco {
+  text-decoration: none;
+}
+.underline {
+  text-decoration: underline;
+}
+.nolist {
+  list-style-type: none;
+}
+.disc {
+  list-style-type: disc;
+}
+.circle {
+  list-style-type: circle;
+}
+.textleft {
+  text-align: left;
+}
+.textright {
+  text-align: right;
+}
+/* CSS3 properties */
+/* Fonts */
+@font-face {
+  font-family: 'CodeLightRegular';
+  src: url('//sanographix.net/public/fonts/code_light/code_light-webfont.eot');
+  src: url('//sanographix.net/public/fonts/code_light/code_light-webfont.eot?#iefix') format('embedded-opentype'), url('//sanographix.net/public/fonts/code_light/code_light-webfont.woff') format('woff'), url('//sanographix.net/public/fonts/code_light/code_light-webfont.ttf') format('truetype'), url('//sanographix.net/public/fonts/code_light/code_light-webfont.svg#CodeLightRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'AlegreyaItalic';
+  src: url('//sanographix.net/public/fonts/alegreya/Alegreya-Italic-webfont.eot');
+  src: url('//sanographix.net/public/fonts/alegreya/Alegreya-Italic-webfont.eot?#iefix') format('embedded-opentype'), url('//sanographix.net/public/fonts/alegreya/Alegreya-Italic-webfont.woff') format('woff'), url('//sanographix.net/public/fonts/alegreya/Alegreya-Italic-webfont.ttf') format('truetype'), url('//sanographix.net/public/fonts/alegreya/Alegreya-Italic-webfont.svg#AlegreyaItalic') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+.helvetica {
+  font-family: 'Helvetica Neue', 'Helvetica', sans-serif;
+  font-weight: bold;
+}
+.alegreya {
+  font-family: 'AlegreyaItalic', serif;
+}
+/* tipsy */
+.tipsy {
+  padding: 5px;
+  font-size: 10px;
+  position: absolute;
+  z-index: 100000;
+}
+.tipsy-inner {
+  padding: 5px 8px 4px 8px;
+  background-color: black;
+  color: white;
+  max-width: 200px;
+  text-align: center;
+  line-height: 1.5;
+}
+.tipsy-inner {
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+}
+.tipsy-arrow {
+  position: absolute;
+  background: url('//static.tumblr.com/xlsgtjb/fd9m4sfih/tipsy.gif') no-repeat top left;
+  width: 9px;
+  height: 5px;
+}
+.tipsy-n .tipsy-arrow {
+  top: 0;
+  left: 50%;
+  margin-left: -4px;
+}
+.tipsy-nw .tipsy-arrow {
+  top: 0;
+  left: 10px;
+}
+.tipsy-ne .tipsy-arrow {
+  top: 0;
+  right: 10px;
+}
+.tipsy-s .tipsy-arrow {
+  bottom: 0;
+  left: 50%;
+  margin-left: -4px;
+  background-position: bottom left;
+}
+.tipsy-sw .tipsy-arrow {
+  bottom: 0;
+  left: 10px;
+  background-position: bottom left;
+}
+.tipsy-se .tipsy-arrow {
+  bottom: 0;
+  right: 10px;
+  background-position: bottom left;
+}
+.tipsy-e .tipsy-arrow {
+  top: 50%;
+  margin-top: -4px;
+  right: 0;
+  width: 5px;
+  height: 9px;
+  background-position: top right;
+}
+.tipsy-w .tipsy-arrow {
+  top: 50%;
+  margin-top: -4px;
+  left: 0;
+  width: 5px;
+  height: 9px;
+}
+/* Common */
+html,
+body {
+  background-color: #f8f8f8;
+  font-family: 'Gothic Medium BBB', 'Hiragino Kaku Gothic Pro', Meiryo, 'MS PGothic', sans-serif;
+  font-size: 100%;
+  color: #555555;
+}
+#wrapper {
+  border-top: 8px solid #666;
+}
+#wrapper #wrapper-inner {
+  width: 800px;
+  text-align: center;
+  margin: 0px auto;
+  text-align: left;
+}
+#tumblr_controls {
+  top: 8px !important;
+}
+/* Text */
+a {
+  color: #555555;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Midashi Go MB31', 'Hiragino Kaku Gothic Pro', Meiryo, 'MS PGothic', sans-serif;
+  font-weight: normal;
+}
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a {
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+p,
+.fade,
+article > * {
+  opacity: 0;
+  -webkit-transition: all 1s ease;
+  -webkit-transform: translate(0, 10px);
+  font-weight: normal;
+}
+.load h1,
+.load h2,
+.load h3,
+.load h4,
+.load p,
+.load .fade,
+.load article > * {
+  opacity: 1;
+  -webkit-transform: translate(0, 0);
+}
+/* Header */
+.header {
+  margin: 80px 0;
+  position: relative;
+}
+.header .blog-title {
+  font-family: 'CodeLightRegular', 'Midashi Go MB31', 'Hiragino Kaku Gothic Pro', Meiryo, 'MS PGothic', sans-serif;
+  font-size: 50px;
+  margin: 0;
+}
+.header .blog-description {
+  font-family: 'AlegreyaItalic', serif;
+  font-size: 85%;
+  margin: 0;
+  line-height: 1;
+  color: #999999;
+}
+.header nav {
+  position: absolute;
+  right: 0;
+  top: 35px;
+  font-size: 85%;
+  font-family: 'AlegreyaItalic', serif;
+}
+.header nav a {
+  text-decoration: none;
+  margin-left: 30px;
+  color: #999999;
+}
+.header nav a:hover {
+  color: #555555;
+}
+/* Article */
+article {
+  margin-bottom: 100px;
+}
+article header {
+  border-bottom: 1px solid #dddddd;
+}
+article header h1 {
+  font-size: 24px;
+  line-height: 1.5;
+  margin: 10px 0;
+}
+article header h1 .permalink {
+  margin-right: 5px;
+}
+article header .tags {
+  color: #999999;
+  font-family: 'AlegreyaItalic', serif;
+  font-size: 85%;
+  margin-bottom: 10px;
+}
+article header .tags a {
+  color: #999999;
+  text-decoration: none;
+  margin-right: 10px;
+}
+article header .tags a:hover {
+  text-decoration: underline;
+}
+article .entry-content {
+  font-size: 100%;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+article .entry-content img {
+  max-width: 788px;
+  height: auto;
+  border: 1px solid #dddddd;
+  padding: 5px;
+  background-color: #fcfcfc;
+}
+article .entry-content img.right {
+  float: right;
+  margin: 0 0 1em 1em;
+}
+article .entry-content img.left {
+  float: left;
+  margin: 0 1em 1em 0;
+}
+article .entry-content img[align="right"] {
+  margin: 0 0 1em 1em;
+}
+article .entry-content img[align="left"] {
+  margin: 0 1em 1em 0;
+}
+article .entry-content .amazlet-box {
+  background: #fcfcfc;
+  border: 1px solid #dddddd;
+  padding: 15px;
+}
+article .entry-footer {
+  color: #999999;
+  font-family: 'AlegreyaItalic', serif;
+  font-size: 85%;
+}
+article .entry-footer a {
+  color: #999999;
+  text-decoration: none;
+}
+article .entry-footer a:hover {
+  color: #555555;
+}
+article .entry-footer .notecount {
+  margin-left: 10px;
+}
+article .notecontainer {
+  margin: 30px 0;
+}
+article .notecontainer ol {
+  margin: 0;
+  padding: 0;
+}
+article .notecontainer ol li {
+  list-style: none;
+  border-bottom: 1px dashed #dddddd;
+  padding: 5px 0;
+}
+article .notecontainer ol li .avatar {
+  max-height: 16px;
+  width: auto;
+}
+#pager {
+  margin-bottom: 50px;
+  font-family: 'AlegreyaItalic', serif;
+  text-align: center;
+}
+#pager a {
+  color: #999999;
+  text-decoration: none;
+  font-size: 150%;
+  margin: 0 20px;
+}
+#pager a:hover {
+  color: #555555;
+}
+@media screen and (max-width: 860px) {
+  #wrapper #wrapper-inner {
+    width: auto;
+    margin: 0 30px;
+  }
+  article .entry-content img {
+    max-width: 98%;
+  }
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  article .entry-content img {
+    max-width: 696px;
+  }
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  #wrapper #wrapper-inner {
+    width: auto;
+    margin: 0 10px;
+  }
+  .header {
+    margin: 30px 0;
+  }
+  .header .blog-title {
+    font-size: 38px;
+  }
+  .header nav {
+    position: static;
+    margin-top: 10px;
+    font-size: 100%;
+  }
+  .header nav a {
+    margin: 0 20px 0 0;
+  }
+  article {
+    font-size: 95%;
+    margin-bottom: 50px;
+  }
+  article header h1 {
+    margin: 0 0;
+    line-height: 1.3;
+  }
+  article .entry-content {
+    word-wrap: break-word;
+    line-height: 1.6em;
+  }
+  article .entry-content p {
+    margin: 0.8em 0;
+  }
+  article .entry-content img {
+    max-width: 288px;
+  }
+}
