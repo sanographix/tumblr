@@ -15,7 +15,7 @@ Tumblrに画像をアップロードするだけで簡単にポートフォリ�
 
 ## インストール
 
-* [テーマをダウンロード]()する
+* [テーマのhtmlをコピー](https://github.com/sanographix/tumblr/blob/master/illustfolio/illustfolio.html)する
 * Tumblrのテーマカスタマイズ画面を開く
 * （元のhtmlはバックアップを取っておいたほうが良いです）
 * もとのhtmlを削除してillustfolio.htmlをコピペする
