@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+
+  <!-- 変数 -->
+  <meta name="if:Show Your Twitter Username" content="1"/>
+  <meta name="if:Show Your Facebook Username" content="1"/>
+  <meta name="if:Show Your Google Plus ID" content="1"/>
+  <meta name="if:Show Your Pixiv ID" content="1"/>
+  <meta name="if:Show Tweet Button" content="1"/>
+  <meta name="if:Show Like Button" content="1"/>
+  <meta name="if:Show Plus One Button" content="1"/>
+  <meta name="if:Show Pin It Button" content="1"/>
+
+  <!-- User info -->
+  <meta name="text:Your Name" content="Toshino Kyoko"/>
+  <meta name="text:Your Profile" content="I'm 14 years old." />
+  <meta name="text:Your Twitter Username" content="ToshinoKyoko"/>
+  <meta name="text:Your Facebook Username" content="ToshinoKyoko"/>
+  <meta name="text:Your Google Plus ID" content="1000000000000"/>
+  <meta name="text:Your Pixiv ID" content="000000"/>
+  <meta name="text:Google Analytics Tracking ID" content="UA-000000-00" />
+
+  <meta charset="utf-8">
+  <title>{block:PostTitle}{PostTitle} - {/block:PostTitle}{Title}</title>
+  {block:Description}
+    <meta name="description" content="{MetaDescription}" />
+  {/block:Description}
+  <meta name="keywords" content="" />
+  <meta name="viewport" content="width=device-width">
+  <link rel="alternate" type="application/rss+xml" href="{RSS}"><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link rel="stylesheet" media="screen" href="https://dl.dropbox.com/u/282961/illustfolio/css/style.css"  charset="utf-8"/>
+  <link rel="shortcut icon" href="{Favicon}">
+
+  <!--[if IE]>
+    <script src="https://dl.dropbox.com/u/282961/illustfolio/js/libs/html5shiv.js"></script>
+  <![endif]-->
+
+  <script src="https://dl.dropbox.com/u/282961/illustfolio/js/libs/jquery-1.8.3.min.js" charset="utf-8"></script>
+  <script src="https://dl.dropbox.com/u/282961/illustfolio/js/libs/jquery.easing.1.3.js" charset="utf-8"></script>
+  <script src="https://dl.dropbox.com/u/282961/illustfolio/js/libs/jquery.flexslider-min.js" charset="utf-8"></script>
+  <script src="https://dl.dropbox.com/u/282961/illustfolio/js/jquery.options.js" charset="utf-8"></script>
+  <!--Google Analytics -->
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-XXXXXXXX-X']); //Change UA-XXXXXXXX-X to be your site's ID
+    _gaq.push(['_trackPageview']);
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- Facebook SDK -->
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/ja_JP/all.js#xfbml=1";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+  <!-- END Facebook SDK -->
+
+<style>
+{CustomCSS}
+</style>
+
+<!--ヘッダ-->
+<header id="header" class="container">
+  <div class="row">
+    <div class="span12">
+      <h1>
+      <a href="/">
+        <img src="{PortraitURL-64}" class="profile-image" />
+        {Title}
+      </a>
+      </h1>
+      <nav class="nav">
+        <ul>
+          <li><a href="/">Home</a></li>
+          {block:HasPages}
+            {block:Pages}
+            <li>
+              <a href="{URL}">{Label}</a>
+            </li>
+            {/block:Pages}
+          {/block:HasPages}
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<!--ここからトップページ-->
+{block:IndexPage}
+
+<!--スライドショー-->
+<div class="flexslider">
+  <ul class="slides">
+    {block:Posts}
+    {block:Photo}
+    <li>
+      <a href="{Permalink}">
+        <div class="slide-img" style="background-image: url('{PhotoURL-HighRes}');"></div>
+      </a>
+    </li>
+    {/block:Photo}
+    {/block:Posts}
+  </ul>
+</div>
+
+<!--ポートフォリオ-->
+<div id="portfolio" class="section">
+  <div class="container">
+    <div class="row">
+      <div class="span12">
+        <h2>Portfolio</h2>
+      </div>
+      {block:Posts}
+      {block:Photo}
+
+      <div class="span4 item">
+        <a href="{Permalink}" data-class="{PhotoURL-HighRes}">
+          <div class="thumb" style="background-image: url('{PhotoURL-400}');"></div>
+          <div class="caption-wrapper">
+            <div class="caption">
+              {Caption}
+            </div>
+            <div class="detail">
+              <i class="icon-search"></i>View Detail
+            </div>
+          </div>
+        </a>
+      </div>
+      {/block:Photo}
+      {/block:Posts}
+    </div><!--row-->
+  </div><!--container-->
+</div><!--section-->
+
+<!-- ページャ -->
+{block:Pagination}
+<div id="pager" class="container">
+  <div class="row">
+    <div class="span12">
+      {block:PreviousPage}
+        <a href="{PreviousPage}"><i class="icon-chevron-left"></i>Previous</a>
+      {/block:PreviousPage}
+      {block:NextPage}
+          <a href="{NextPage}" class="next" rel="next">Next<i class="icon-chevron-right"></i></a>
+      {/block:NextPage}
+    </div>
+  </div>
+</div>
+{/block:Pagination}
+
+<!-- ここまでindex -->
+{/block:IndexPage}
+
+<!--パーマリンク-->
+{block:PermalinkPage}
+<div class="container page-permalink section">
+  <div class="row">
+    {block:Posts}
+    
+    {block:Photo}
+    <div class="span8">
+      {LinkOpenTag}
+      <img src="{PhotoURL-HighRes}" alt="{PhotoAlt}" />
+      {LinkCloseTag}
+
+    </div>
+    <div class="span4">
+      {block:Caption}
+      <div class="caption">
+        {Caption}
+      </div>
+      {/block:Caption}
+
+      <hr class="soften" />
+
+      <!-- メタ情報 -->
+      <div class="meta">
+        {block:Date}
+        <div class="date">
+          <i class="icon-time"></i>
+          {Month} {DayOfMonth}, {Year}
+        </div>
+        {/block:Date}
+        <div class="permalink">
+          <a href="{Permalink}"><i class="icon-link"></i>Permalink</a>
+        </div>
+        {block:HasTags}
+        <div class="tags">
+          <ul>
+            {block:Tags}
+          	<li><a href="{TagURL}"><i class="icon-tag"></i>{Tag}</a></li>
+            {/block:Tags}	
+          </ul>
+        </div>
+        {/block:HasTags}
+
+        <hr class="soften" />
+
+        <!--ソーシャルボタン-->
+        <ul class="socialbuttons">
+          <!--tw-->
+          {block:IfShowTweetButton}
+          <li>
+            <a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+          </li>
+          {/block:IfShowTweetButton}
+          <!--fb-->
+          {block:IfShowLikeButton}
+          <li>
+            <div class="fb-like" data-href="{Permalink}" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false"></div>
+          </li>
+          {/block:IfShowLikeButton}
+          <!--g+-->
+          {block:IfShowPlusOneButton}
+          <li>
+            <div class="g-plusone" data-size="medium" data-annotation="inline" data-width="200"></div>
+            <script type="text/javascript">
+              (function() {
+                var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                po.src = 'https://apis.google.com/js/plusone.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+              })();
+            </script>
+          </li>
+          {/block:IfShowPlusOneButton}
+          <!--pin-->
+          {block:IfShowPinItButton}
+          <li>
+            <a href="http://pinterest.com/pin/create/button/?url={Permalink}&media={PhotoURL-500}" class="pin-it-button" count-layout="horizontal"><img border="0" src="//assets.pinterest.com/images/PinExt.png" title="Pin It" /></a>
+          </li>
+          {/block:IfShowPinItButton}
+        </ul>
+
+        <hr class="soften" />
+
+        {block:NoteCount}
+        <div class="notecount">
+          <i class="icon-retweet"></i>{NoteCount} Notes
+        </div>
+        {/block:NoteCount}
+        {block:PostNotes}
+          <div class="notecontainer meta">
+            {PostNotes}
+          </div>
+        {/block:PostNotes}
+      </div>
+
+    </div>
+    {/block:Photo}
+    
+    <!--テキスト（固定ページ用）-->
+    {block:Text}
+      {block:Title}
+        <h2 class="entry-title"><a href="{Permalink}" class="permalink">{Title}</a></h2>
+      {/block:Title}
+      <div class="entry-content">
+        {Body}
+      </div>
+    {/block:Text}
+    
+    {/block:Posts}
+  </div>
+</div>
+{/block:PermalinkPage}
+<!--ここまでパーマリンク-->
+
+<!--フッタ-->
+<footer id="footer">
+  <div class="container">
+    <div class="row">
+      <div class="span4">
+        <h4>{Title}</h4>
+        <div class="footer-content">
+          <p>{Description}</p>
+        </div>
+      </div>
+      <div class="span4">
+        <h4>Profile</h4>
+        <div class="footer-content">
+          <img src="{PortraitURL-128}" class="profile-image" />
+          <h5>{text:Your Name}</h5>
+          <p>
+            {text:Your Profile}
+          </p>
+        </div>
+      </div>
+      <div class="span4">
+        <h4>Find me elsewhere</h4>
+        <div class="footer-content">
+          <ul>
+            {block:IfShowYourTwitterUsername}
+            <li><a href="http://twitter.com/{text:Your Twitter Username}" target="_blank">Twitter</a></li>
+            {/block:IfShowYourTwitterUsername}
+            {block:IfShowYourFacebookUsername}
+            <li><a href="http://www.facebook.com/{text:Your Facebook Username}" target="_blank">Facebook</a></li>
+            {/block:IfShowYourFacebookUsername}
+            {block:IfShowYourGooglePlusID}
+            <li><a href="http://plus.google.com/u/{text:Your Google Plus User ID}" target="_blank">Google+</a></li>
+            {/block:IfShowYourGooglePlusID}
+            {block:IfShowYourPixivID}
+            <li><a href="http://http://www.pixiv.net/member.php?id={text:Your Pixiv User ID}" target="_blank">Pixiv</a></li>
+            {/block:IfShowYourPixivID}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script type="text/javascript" src="//assets.pinterest.com/js/pinit.js"></script>
+</body>
+</html>
