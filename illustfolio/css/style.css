@@ -7471,7 +7471,7 @@ h4 {
     display: block;
     margin: 5px;
   }
-  #intro {
+  #intro h1 {
     font-size: 2em;
     line-height: 1.4em;
   }
