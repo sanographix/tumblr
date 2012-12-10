@@ -7329,7 +7329,6 @@ h6 {
 }
 h1 {
   text-align: center;
-  line-height: 1.3em;
 }
 h2 {
   margin-top: 0;
@@ -7355,6 +7354,9 @@ h4 {
   margin: 0 5px;
 }
 /* グリッド */
+#intro h1 {
+  line-height: 1.3em;
+}
 .span4 {
   margin-bottom: 20px;
 }
