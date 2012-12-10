@@ -7329,6 +7329,7 @@ h6 {
 }
 h1 {
   text-align: center;
+  line-height: 1.3em;
 }
 h2 {
   margin-top: 0;
@@ -7466,8 +7467,12 @@ h4 {
     float: none;
     text-align: center;
   }
-  .flexslider,
-  .flexslider .slides li {
-    height: 150px;
+  #header .btn {
+    display: block;
+    margin: 5px;
+  }
+  #intro {
+    font-size: 2em;
+    line-height: 1.4em;
   }
 }
