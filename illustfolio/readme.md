@@ -3,7 +3,8 @@
 #### Free responsive tumblr theme for doujin creators
 
 llustfolioは、イラストのポートフォリオサイトに特化した無料Tumblrテンプレートです。  
-Tumblrに画像をアップロードするだけで簡単にポートフォリオサイトが作れます。
+Tumblrに画像をアップロードするだけで簡単にポートフォリオサイトが作れます。  
+[@sanographix](http://www.sanographix.net)がデザインしています。
 
 ## Demo
 
