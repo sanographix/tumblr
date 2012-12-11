@@ -45,40 +45,32 @@ Tumblrに画像をアップロードするだけで簡単にポートフォリ�
 
 ### デザイン設定
 
-- Show Like Button
-	- イラスト詳細ページにFacebookの「いいね！」ボタンを表示します。
-- Show Pin It Button
-	- イラスト詳細ページにPinterestの「Pin It」ボタンを表示します。
-- Show Plus One Button
-	- イラスト詳細ページにGoogle+の「+1」ボタンを表示します。
-- Show Tweet Button
-	- イラスト詳細ページにツイートボタンを表示します。
-<hr>
-    
-- Show Your Facebook Username
-	- ページのフッタにあなたのFacebookアカウントのリンクを表示します。
-- Show Your Twitter Username
-	- ページのフッタにあなたのTwitterアカウントへのリンクを表示します。
-- Show Your Google Plus ID
-	- ページのフッタにあなたのGoogle+アカウントへのリンクを表示します。
-- Show Your Pixiv ID
-	- ページのフッタにあなたのPixivアカウントへのリンクを表示します。
-<hr>
+| 設定項目 | 説明 |
+|-------|-----|
+|Show Like Button|イラスト詳細ページにFacebookの「いいね！」ボタンを表示します。|
+|Show Pin It Button|イラスト詳細ページにPinterestの「Pin It」ボタンを表示します。|
+|Show Plus One Button|イラスト詳細ページにGoogle+の「+1」ボタンを表示します。|
+|Show Tweet Button|イラスト詳細ページにツイートボタンを表示します。|
 
-- Your Name
-	- あなたのハンドルネームを入力してください。
-- Your Profile
-	- 自己紹介を入力してください。    
-- Your Facebook Username
-	- あなたのFacebookアカウントを入力してください。
-- Your Twitter Username
-	- あなたのTwitterアカウントを入力してください。
-- Your Google Plus ID
-	- あなたのGoogle+ IDを入力してください。
-- Your Pixiv ID
-	- あなたのPixiv IDを入力してください。
-- Google Analytics Tracking ID- 
-	- Googleアナリティクスを使いたい場合は、ここにトラッキングIDを入力してください。
+
+| 設定項目 | 説明 |
+|-------|-----|
+|Show Your Facebook Username|ページのフッタにあなたのFacebookアカウントのリンクを表示します。|
+|Show Your Twitter Username|ページのフッタにあなたのTwitterアカウントへのリンクを表示します。|
+|Show Your Google Plus ID|ページのフッタにあなたのGoogle+アカウントへのリンクを表示します。|
+|Show Your Pixiv ID|ページのフッタにあなたのPixivアカウントへのリンクを表示します。|
+
+| 設定項目 | 説明 |
+|-------|-----|
+|Your Name|あなたのハンドルネームを入力してください。|
+|Your Profile|自己紹介を入力してください。|
+|Your Facebook Username|あなたのFacebookアカウントを入力してください。|
+|Your Twitter Username|あなたのTwitterアカウントを入力してください。|
+|Your Google Plus ID|あなたのGoogle+ IDを入力してください。|
+|Your Profile|自己紹介を入力してください。|
+|Your Pixiv ID|あなたのPixiv IDを入力してください。|
+|Google Analytics Tracking ID|Googleアナリティクスを使いたい場合は、ここにトラッキングIDを入力してください。|
+
 
 ### ページ管理
 
