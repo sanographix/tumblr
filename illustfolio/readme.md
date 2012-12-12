@@ -87,8 +87,7 @@ Tumblrに画像をアップロードするだけで簡単にポートフォリ�
 
 ## Known Issues
 
-* Firefoxでwebfont表示されない
-* IE8以下でおかしい
+* IE7以下でFont Awesomeが表示されない
 * 画像以外も投稿したい
 
 
@@ -96,7 +95,8 @@ Tumblrに画像をアップロードするだけで簡単にポートフォリ�
 
 ### 2012/12/12
 
-* Pixiv IDとGoogle+ IDが反映されない問題を修正
+* Pixiv IDとGoogle+ IDが反映されない不具合を修正
+* FirefoxとIE9でwebfontが表示されない不具合を修正
 
 ### 2012/12/10
 
