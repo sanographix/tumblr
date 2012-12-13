@@ -115,7 +115,7 @@ Tumblrに画像をアップロードするだけで簡単にポートフォリ�
 
 #### Illustfolio is free responsive tumblr theme for illustrators.
 
-## features
+## Features
 
 * Easy to create illustrator's portfolio
 * Customizable
@@ -134,7 +134,7 @@ Tumblrに画像をアップロードするだけで簡単にポートフォリ�
 
 ## Options
 
-### Recommended Settings
+### Recommended settings
 
 * **9 entries** per page
 * **Don't** use mobile layout
