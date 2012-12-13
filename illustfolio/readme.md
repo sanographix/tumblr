@@ -107,3 +107,45 @@ Tumblrに画像をアップロードするだけで簡単にポートフォリ�
 ### 2012/12/09
 
 * 公開
+
+
+<hr />
+
+# Illustfolio
+
+#### Illustfolio is free responsive tumblr theme for illustrators.
+
+## features
+
+* Easy to create illustrator's portfolio
+* Customizable
+* Retina ready
+* Responsive design
+* Including slideshow module
+
+
+## Usage
+
+1. [Copy this HTML file](https://github.com/sanographix/tumblr/blob/master/illustfolio/illustfolio.html).
+2. Create a new tumblr blog, and open design settings.
+3. Press "Edit HTML", delete current HTML and paste Illustfolio HTML.
+4. Select **"Photo post"**, post your works to tumblr.
+
+
+## Options
+
+### Recommended Settings
+
+* **9 entries** per page
+* **Don't** use mobile layout
+
+
+## Author
+
+#### Showkaku Sano (sanographix)
+
+Graphic designer from Kyoto.
+
+* [http://www.sanographix.net/](http://www.sanographix.net/)
+* [Twitter: @sanographix](https://twitter.com/sanographix)
+* [GitHub: sanographix](https://github.com/sanographix)
