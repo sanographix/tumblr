@@ -148,8 +148,8 @@
         <h2>Portfolio</h2>
       </div>
       {block:Posts}
-      {block:Photo}
 
+      {block:Photo}
       <div class="span4 item">
         <a href="{Permalink}" data-class="{PhotoURL-HighRes}">
           <div class="thumb" style="background-image: url('{PhotoURL-400}');"></div>
@@ -164,6 +164,21 @@
         </a>
       </div>
       {/block:Photo}
+
+      {block:Photoset}
+      <div class="span4 item">
+        {Photoset-400}
+        <div class="caption-wrapper">
+          <div class="caption">
+            {Caption}
+          </div>
+          <div class="detail">
+            <i class="icon-search"></i>View Photoset
+          </div>
+        </div>
+      </div>
+      {/block:Photoset}
+
       {/block:Posts}
     </div><!--row-->
   </div><!--container-->
@@ -198,7 +213,7 @@
     <article class="post photo">
       <div class="span8">
         {LinkOpenTag}
-        <img src="{PhotoURL-HighRes}" alt="{PhotoAlt}" />
+        <img src="{PhotoURL-HighRes}" alt="{PhotoAlt}">
         {LinkCloseTag}
       </div>
       <div class="span4">
@@ -286,7 +301,7 @@
       </div>
     </article>
     {/block:Photo}
-    
+
     <!--テキスト（固定ページ用）-->
     {block:Text}
     <article class="post text">
@@ -304,6 +319,23 @@
     {/block:Posts}
   </div>
 </div>
+
+<!-- ページャ -->
+{block:PermalinkPagination}
+<div id="pager" class="container">
+  <div class="row">
+    <div class="span12">
+      {block:PreviousPost}
+        <a href="{PreviousPost}"><i class="icon-chevron-left"></i>Previous</a>
+      {/block:PreviousPost}
+      {block:NextPost}
+          <a href="{NextPost}" class="next" rel="next">Next<i class="icon-chevron-right"></i></a>
+      {/block:NextPost}
+    </div>
+  </div>
+</div>
+{/block:PermalinkPagination}
+
 {/block:PermalinkPage}
 <!--ここまでパーマリンク-->
 
@@ -330,7 +362,7 @@
       <div class="span4">
         <h4>Find me elsewhere</h4>
         <div class="footer-content">
-          <ul>
+          <ul class="bigger">
             {block:IfShowYourTwitterUsername}
             <li><a href="http://twitter.com/{text:Your Twitter Username}" target="_blank">Twitter</a></li>
             {/block:IfShowYourTwitterUsername}
