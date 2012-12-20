@@ -68,7 +68,6 @@ Tumblrに画像をアップロードするだけで簡単にポートフォリ�
 |Your Facebook Username|あなたのFacebookアカウントを入力してください。|
 |Your Twitter Username|あなたのTwitterアカウントを入力してください。|
 |Your Google Plus ID|あなたのGoogle+ IDを入力してください。|
-|Your Profile|自己紹介を入力してください。|
 |Your Pixiv ID|あなたのPixiv IDを入力してください。|
 |Google Analytics Tracking ID|Googleアナリティクスを使いたい場合は、ここにトラッキングIDを入力してください。|
 
@@ -122,7 +121,7 @@ Tumblrに画像をアップロードするだけで簡単にポートフォリ�
 
 ## Features
 
-* Easy to create illustrator's portfolio
+* Easy to create portfolio for illustrators
 * Customizable
 * Retina ready
 * Responsive design
