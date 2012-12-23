@@ -7418,6 +7418,24 @@ h4 {
   padding: 0 0 10px 0;
   line-height: 1.3;
 }
+.c83banner {
+  margin-bottom: 30px;
+}
+.c83banner .mobile {
+  display: none;
+}
+@media screen and (max-width: 420px) {
+  .c83banner {
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  .c83banner .pc {
+    display: none;
+  }
+  .c83banner .mobile {
+    display: inline;
+  }
+}
 /* End Primary Styles */
 /*--------------------------------------------------------------
 
