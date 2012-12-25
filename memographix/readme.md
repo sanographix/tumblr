@@ -1,15 +1,19 @@
-## インストール
+# Memographix
 
-* テーマガーデンからインストールできるようになりました
+#### Simple, Single column theme for Tumblr.
+
+
+## テーマガーデン版をインストール
+
+* テーマガーデンからインストールできるようになりました。通常はこちらを使ってください
 * <a href="http://www.tumblr.com/theme/35964">http://www.tumblr.com/theme/35964</a>
 
 
-## 手動でインストールする
+## GitHub版を手動でインストールする
 
-* <a href="http://www.tumblr.com/customize">http://www.tumblr.com/customize</a>に行く
-* 「HTMLを編集」を押す
-* （元のhtmlはバックアップを取っておいたほうが良いです）
-* もとのhtmlを削除してmemographix.htmlをコピペする
+* [このHTMLをコピーしてTumblrに貼り付けて](https://github.com/sanographix/tumblr/blob/master/memographix/memographix.html)ください。
+* GitHub版は[@sanographix](https://twitter.com/sanographix)がたまにデザインの修正・変更を行います。いきなり勝手に見た目が変わったりします。
+* それでもいいという場合のみご利用ください。
 
 
 ## オプション
@@ -37,3 +41,15 @@
 
 * 「ページへのリンクを表示する」にチェックを入れると、ヘッダのメニューにリンクが追加されます
 * Aboutページとか作るとよいかもです。<a href="http://memo.sanographix.net/about">こういうやつ</a>
+
+
+# Changelog
+
+### 1.1 (2012.12.26)
+
+* 見た目を大幅に変更
+  * タイトルをセンタリング
+  * リンク色
+  * フォント色を緑に
+  * フォントファミリをOpen Sans + ヒラギノに
+  * はてなスターの出る位置をフッタに

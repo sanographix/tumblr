@@ -6,36 +6,43 @@
 -->
 <html>
 <head>
+
 <!-- Default Variables -->
-  <meta name="text:Google Analytics Tracking ID" content="UA-000000-00" />
-  <meta name="text:TypeSquare Embed Code" content="" />
-  <meta name="text:Hatena Star Token" content="" />
-  <meta name="if:Enable Hatena Star" content="0"/>
+<meta name="text:Google Analytics Tracking ID" content="UA-000000-00" />
+<meta name="text:Hatena Star Token" content="" />
+<meta name="if:Enable Hatena Star" content="0"/>
+
 <title>{block:PostTitle}{PostTitle} - {/block:PostTitle}{Title}</title>
+
 <meta name="viewport" content="width=device-width">
 <link rel="shortcut icon" href="{Favicon}">
 <link rel="alternate" type="application/rss+xml" href="{RSS}"><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
 {block:Description}
 <meta name="description" content="{MetaDescription}" />
 {/block:Description}
+
 <link rel="stylesheet" type="text/css" media="screen" href="//sanographix.github.com/public/tumblr/memographix/css/style.css" />
+
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-<script src="//sanographix.github.com/public/tumblr/memographix/js/FLAutoKerning.js"></script>
 <script src="//sanographix.github.com/public/tumblr/memographix/js/jquery.tipsy.js"></script>
 <script src="//sanographix.github.com/public/tumblr/memographix/js/options.js"></script>
+
 {block:IfEnableHatenaStar}
 <script type="text/javascript" src="//s.hatena.ne.jp/js/HatenaStar.js"></script>
 <script type="text/javascript">
 Hatena.Strar.Token = '{text:Hatena Star Token}';
 </script>
 <script type="text/javascript">
-Hatena.Star.EntryLoader.headerTagAndClassName = ['h1','entry-title'];
+Hatena.Star.EntryLoader.headerTagAndClassName = ['div','meta'];
 </script>
 {/block:IfEnableHatenaStar}
+
 <!--[if IE]> 
 <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <script src="//css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
 <![endif]-->
+
 <!-- Google Analytics -->
 <script type="text/javascript">
   var _gaq = _gaq || [];
@@ -48,12 +55,14 @@ Hatena.Star.EntryLoader.headerTagAndClassName = ['h1','entry-title'];
   })();
 </script>
 <!-- END Google Analytics -->
-{text:TypeSquare Embed Code}
+
 </head>
-<body onLoad="init()" class="{block:IndexPage}page-index{/block:IndexPage}{block:PermalinkPage}page-permalink{/block:PermalinkPage}">
+<body class="{block:IndexPage}page-index{/block:IndexPage}{block:PermalinkPage}page-permalink{/block:PermalinkPage}">
+
 <style>
 {CustomCSS}
 </style>
+
   <div id="wrapper">
     <div id="wrapper-inner">
 
