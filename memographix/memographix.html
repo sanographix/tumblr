@@ -23,6 +23,7 @@
 {/block:Description}
 
 <link rel="stylesheet" type="text/css" media="screen" href="//sanographix.github.com/public/tumblr/memographix/css/style.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="//weloveiconfonts.com/api/?family=entypo|fontawesome" />
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 <script src="//sanographix.github.com/public/tumblr/memographix/js/jquery.tipsy.js"></script>
@@ -38,7 +39,7 @@ Hatena.Star.EntryLoader.headerTagAndClassName = ['div','meta'];
 </script>
 {/block:IfEnableHatenaStar}
 
-<!--[if IE]> 
+<!--[if IE]>
 <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <script src="//css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
 <![endif]-->
@@ -82,116 +83,240 @@ Hatena.Star.EntryLoader.headerTagAndClassName = ['div','meta'];
           <a href="{RSS}">RSS</a>
         </nav>
       </header>
-      
+
       <div id="container" class="autopagerize_page_element">
         <div id="container-inner">
+          <!-- START POSTS -->
           {block:Posts}
-          
+
+            <!-- Text -->
             {block:Text}
               <article class="post text">
                 <header>
                   {block:Title}
                     <h1 class="entry-title"><a href="{Permalink}" class="permalink">{Title}</a></h1>
                   {/block:Title}
-                  {block:HasTags}
-                    <div class="tags">
-                      Tags: 
-                      {block:Tags}
-                        <a href="{TagURL}">{Tag}</a>
-                      {/block:Tags}
-                    </div>
-                  {/block:HasTags}
                 </header>
                 <hr/>
                 <div class="entry-content">
                   {Body}
                 </div>
+                <!-- Content Source -->
+                {block:ContentSource}
+                    <div class="cont content_source">
+                        <a href="{SourceURL}">
+                            {lang:Source}:
+                            {block:SourceLogo}
+                                <img src="{BlackLogoURL}" width="{LogoWidth}" height="{LogoHeight}" alt="{SourceTitle}" />
+                            {/block:SourceLogo}
+                            {block:NoSourceLogo}
+                                {SourceTitle}
+                            {/block:NoSourceLogo}
+                        </a>
+                    </div>
+                {/block:ContentSource}
+
+                <!-- meta（重複してるので避けたい） -->
                 <footer class="entry-footer">
                   <div class="meta">
-                    <a href="{Permalink}">{TimeAgo}</a>
+                    <span class="meta-elements">
+                      <i class="entypo-clock"></i> {TimeAgo}
+                    </span>
+                    {block:RebloggedFrom}
+                      <span class="meta-elements">
+                        <i class="entypo-loop"></i> Reblogged from <a href="{ReblogParentURL}">{ReblogParentName}</a>
+                      </span>
+                    {/block:RebloggedFrom}
                     {block:NoteCount}
-                      <span class="notecount"><a href="{Permalink}">{NoteCount} Notes</a></span>
+                      <span class="meta-elements">
+                        <i class="fontawesome-heart"></i> <a href="{Permalink}">{NoteCount} Notes</a>
+                      </span>
                     {/block:NoteCount}
+                    {block:HasTags}
+                      <span class="meta-elements">
+                        <i class="fontawesome-tag"></i>
+                        {block:Tags}
+                          <a href="{TagURL}">#{Tag}</a>
+                        {/block:Tags}
+                      </span>
+                    {/block:HasTags}
+                    <span class="meta-elements">
+                      <i class="fontawesome-link"></i> <a href="{Permalink}">Permalink</a>
+                    </span>
                   </div>
-                  {block:PostNotes}<div class="notecontainer">{PostNotes}</div>{/block:PostNotes}
+                  {block:PostNotes}
+                    <div class="notecontainer">{PostNotes}</div>
+                  {/block:PostNotes}
                 </footer>
               </article>
             {/block:Text}
-            
+
+            <!-- Photo -->
             {block:Photo}
               <article class="post photo">
+                <header>
+                  <h1 class="entry-title"><a href="{Permalink}" class="permalink"><i class="fontawesome-picture"></i></a></h1>
+                </header>
+                <hr/>
                 <div class="entry-content">
                   {LinkOpenTag}
-                  <img src="{PhotoURL-500}" alt="{PhotoAlt}"/>
+                    <img src="{PhotoURL-500}" alt="{PhotoAlt}"/>
                   {LinkCloseTag}
                 </div>
-                {block:Caption}
-                  <footer class="entry-footer">
-                    {Caption}
-                    {block:ContentSource}
-                      <div class="meta">Source: <a href="{SourceURL}">{block:NoSourceLogo}{SourceTitle}{/block:NoSourceLogo}</a></div>
-                    {/block:ContentSource}
-                    <div class="meta">
-                      <a href="{Permalink}">{TimeAgo}</a>
-                      {block:NoteCount}
-                        <a href="{Permalink}">{NoteCount} Notes</a>
-                      {/block:NoteCount}
+                <footer class="entry-footer">
+                  {block:Caption}
+                    <div class="meta caption">
+                      {Caption}
                     </div>
-                    {block:PostNotes}<div class="notecontainer">{PostNotes}</div>{/block:PostNotes}
-                  </footer>
-                {/block:Caption}
+                  {/block:Caption}
+                  {block:ContentSource}
+                    <div class="meta">
+                      <i class="entypo-share"></i> Source: <a href="{SourceURL}">{block:NoSourceLogo}{SourceTitle}{/block:NoSourceLogo}</a>
+                    </div>
+                  {/block:ContentSource}
+                  <div class="meta">
+                    <span>
+                      <i class="fontawesome-link"></i> <a href="{Permalink}">Permalink</a>
+                    </span>
+                    <span>
+                      <i class="entypo-clock"></i> {TimeAgo}
+                    </span>
+                    {block:RebloggedFrom}
+                      <span>
+                        <i class="entypo-loop"></i> Reblogged from <a href="{ReblogParentURL}">{ReblogParentName}</a>
+                      </span>
+                    {/block:RebloggedFrom}
+                    {block:NoteCount}
+                      <span>
+                        <i class="fontawesome-heart"></i> <a href="{Permalink}">{NoteCount} Notes</a>
+                      </span>
+                    {/block:NoteCount}
+                    {block:HasTags}
+                      <span>
+                        <i class="fontawesome-tag"></i>
+                        {block:Tags}
+                          <a href="{TagURL}">#{Tag}</a>
+                        {/block:Tags}
+                      </span>
+                    {/block:HasTags}
+                  </div>
+                  {block:PostNotes}
+                    <div class="notecontainer">{PostNotes}</div>
+                  {/block:PostNotes}
+                </footer>
               </article>
             {/block:Photo}
-            
+
+            <!-- Photoset -->
             {block:Photoset}
               <article class="post photoset">
+                <header>
+                  <h1 class="entry-title"><a href="{Permalink}" class="permalink"><i class="entypo-picture"></i></a></h1>
+                </header>
+                <hr/>
                 <div class="entry-content">
                   {Photoset-500}
                 </div>
-                {block:PermalinkPage}
+                <footer class="entry-footer">
                   {block:Caption}
-                  <footer class="entry-footer">
-                    {Caption}
-                    {block:ContentSource}
-                      <div class="meta">Source: <a href="{SourceURL}">{block:NoSourceLogo}{SourceTitle}{/block:NoSourceLogo}</a></div>
-                    {/block:ContentSource}
-                    <div class="meta">
-                      <a href="{Permalink}">{TimeAgo}</a>
-                      {block:NoteCount}
-                        <a href="{Permalink}">{NoteCount} Notes</a>
-                      {/block:NoteCount}
+                    <div class="meta caption">
+                      {Caption}
                     </div>
-                    {block:PostNotes}<div class="notecontainer">{PostNotes}</div>{/block:PostNotes}
-                  </footer>
                   {/block:Caption}
-                {/block:PermalinkPage}
+                  {block:ContentSource}
+                    <div class="meta">
+                      <i class="entypo-share"></i> Source: <a href="{SourceURL}">{block:NoSourceLogo}{SourceTitle}{/block:NoSourceLogo}</a>
+                    </div>
+                  {/block:ContentSource}
+                  <div class="meta">
+                    <span>
+                      <i class="fontawesome-link"></i> <a href="{Permalink}">Permalink</a>
+                    </span>
+                    <span>
+                      <i class="entypo-clock"></i> {TimeAgo}
+                    </span>
+                    {block:RebloggedFrom}
+                      <span>
+                        <i class="entypo-loop"></i> Reblogged from <a href="{ReblogParentURL}">{ReblogParentName}</a>
+                      </span>
+                    {/block:RebloggedFrom}
+                    {block:NoteCount}
+                      <span>
+                        <i class="fontawesome-heart"></i> <a href="{Permalink}">{NoteCount} Notes</a>
+                      </span>
+                    {/block:NoteCount}
+                    {block:HasTags}
+                      <span>
+                        <i class="fontawesome-tag"></i>
+                        {block:Tags}
+                          <a href="{TagURL}">#{Tag}</a>
+                        {/block:Tags}
+                      </span>
+                    {/block:HasTags}
+                  </div>
+                  {block:PostNotes}
+                    <div class="notecontainer">{PostNotes}</div>
+                  {/block:PostNotes}
+                </footer>
               </article>
             {/block:Photoset}
-            
+
+            <!-- Quote -->
             {block:Quote}
               <article class="post quote">
+                <header>
+                  <h1 class="entry-title"><a href="{Permalink}" class="permalink"><i class="entypo-quote"></i></a></h1>
+                </header>
+                <hr/>
                 <div class="entry-content">
-                  {Quote}
+                  “{Quote}”
                 </div>
-              {block:PermalinkPage}
-                {block:Source}
                 <footer class="entry-footer">
-                  {Source}
+                  {block:Source}
+                    <div class="meta">
+                      <i class="entypo-share"></i> {Source}
+                    </div>
+                  {/block:Source}
                   <div class="meta">
-                    <a href="{Permalink}">{TimeAgo}</a>
+                    <span>
+                      <i class="fontawesome-link"></i> <a href="{Permalink}">Permalink</a>
+                    </span>
+                    <span>
+                      <i class="entypo-clock"></i> {TimeAgo}
+                    </span>
+                    {block:RebloggedFrom}
+                      <span>
+                        <i class="entypo-loop"></i> Reblogged from <a href="{ReblogParentURL}">{ReblogParentName}</a>
+                      </span>
+                    {/block:RebloggedFrom}
                     {block:NoteCount}
-                      <a href="{Permalink}">{NoteCount} Notes</a>
+                      <span>
+                        <i class="fontawesome-heart"></i> <a href="{Permalink}">{NoteCount} Notes</a>
+                      </span>
                     {/block:NoteCount}
-                  </div>   
-                  {block:PostNotes}<div class="notecontainer">{PostNotes}</div>{/block:PostNotes}
+                    {block:HasTags}
+                      <span>
+                        <i class="fontawesome-tag"></i>
+                        {block:Tags}
+                          <a href="{TagURL}">#{Tag}</a>
+                        {/block:Tags}
+                      </span>
+                    {/block:HasTags}
+                  </div>
+                  {block:PostNotes}
+                    <div class="notecontainer">{PostNotes}</div>
+                  {/block:PostNotes}
                 </footer>
-                {/block:Source}
-              {block:PermalinkPage}
               </article>
             {/block:Quote}
-            
+
+            <!-- Link -->
             {block:Link}
               <article class="post link">
+                <header>
+                  <h1 class="entry-title"><a href="{Permalink}" class="permalink"><i class="fontawesome-link"></i></a></h1>
+                </header>
+                <hr/>
                 <div class="entry-content">
                   <a href="{URL}" class="link" {Target}>{Name}</a>
                   {block:Description}
@@ -209,16 +334,19 @@ Hatena.Star.EntryLoader.headerTagAndClassName = ['div','meta'];
                 </footer>
               </article>
             {/block:Link}
-            
+
+            <!-- Chat -->
             {block:Chat}
               <article class="post chat">
                 <header>
-                  {block:Title}
-                  <h1><a href="{Permalink}">{Title}</a></h1>
-                  {/block:Title}
+                  <h1 class="entry-title"><a href="{Permalink}" class="permalink"><i class="fontawesome-comments-alt"></i></a></h1>
                 </header>
+                <hr/>
                 <div class="entry-content">
-                  <ul class="chat">
+                  {block:Title}
+                    <h2>{Title}</h2>
+                  {/block:Title}
+                  <ul class="ul-chat">
                     {block:Lines}
                     <li class="{Alt} user_{UserNumber}">
                     {block:Label}
@@ -231,9 +359,14 @@ Hatena.Star.EntryLoader.headerTagAndClassName = ['div','meta'];
                 </div>
               </article>
             {/block:Chat}
-            
+
+            <!-- Video -->
             {block:Video}
               <article class="post video">
+                <header>
+                  <h1 class="entry-title"><a href="{Permalink}" class="permalink"><i class="entypo-video"></i></a></h1>
+                </header>
+                <hr/>
                 <div class="entry-content">
                   {Video-500}
                 </div>
@@ -244,9 +377,14 @@ Hatena.Star.EntryLoader.headerTagAndClassName = ['div','meta'];
                 </footer>
               </article>
             {/block:Video}
-            
+
+            <!-- Audio -->
             {block:Audio}
               <article class="post audio">
+                <header>
+                  <h1 class="entry-title"><a href="{Permalink}" class="permalink"><i class="fontawesome-headphones"></i></a></h1>
+                </header>
+                <hr/>
                 <div class="entry-content">
                   {AudioPlayerBlack}
                 </div>
@@ -258,7 +396,39 @@ Hatena.Star.EntryLoader.headerTagAndClassName = ['div','meta'];
               </article>
             {/block:Audio}
 
+            <!-- Answer (途中) -->
+            {block:Answer}
+                <section class="caption group">
+                    <div class="cont group">
+
+                        <div class="question bubble">
+                            {Question}
+                            <span class="arrow border"></span>
+                            <span class="arrow fill"></span>
+                        </div>
+                        <div class="asker group">
+                            <img src="{AskerPortraitURL-24}" width="24" height="24" /> {Asker}
+                        </div>
+                        <div class="answer cont">{Answer}</div>
+                    </div>
+                    {block:ContentSource}
+                        <div class="cont content_source">
+                            <a href="{SourceURL}">
+                                {lang:Source}:
+                                {block:SourceLogo}
+                                    <img src="{BlackLogoURL}" width="{LogoWidth}" height="{LogoHeight}" alt="{SourceTitle}" />
+                                {/block:SourceLogo}
+                                {block:NoSourceLogo}
+                                    {SourceTitle}
+                                {/block:NoSourceLogo}
+                            </a>
+                        </div>
+                    {/block:ContentSource}
+                </section>
+            {/block:Answer}
+
           {/block:Posts}
+          <!-- END POSTS -->
         </div>
       </div>
       <div id="pager">
@@ -269,6 +439,12 @@ Hatena.Star.EntryLoader.headerTagAndClassName = ['div','meta'];
             <a href="{NextPage}" class="next" rel="next">Next</a>
         {/block:NextPage}
       </div>
+
+      <div class="copyright">
+        ©{CopyrightYears} {Title}<br/>
+        <a href="https://github.com/sanographix/tumblr/tree/master/memographix" target="_blank">Memographix</a> theme designed by <a href="http://www.sanographix.net/" target="_blank">SANOGRAPHIX.NET</a>
+      </div>
+
 
     </div>
   </div>

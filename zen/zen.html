@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<!--
+  Theme: Zen
+  by @sanographix
+  http://www.sanographix.net
+-->
+<html lang="ja"
+      xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="http://www.facebook.com/2008/fbml">
+<head>
+
+  <!-- デフォルトの変数 -->
+  <meta name="text:Google Analytics Tracking ID" content="UA-000000-00" />
+  <meta name="text:OGP Facebook Admin Number" content="100000000000" />
+  <meta name="text:Hatena Star Token" content="" />
+  <meta name="if:Enable Hatena Star" content="0"/>
+
+  <title>{block:PostTitle}{PostTitle} - {/block:PostTitle}{Title}</title>
+
+  <meta name="viewport" content="width=device-width">
+  <link rel="shortcut icon" href="{Favicon}">
+  <link rel="alternate" type="application/rss+xml" href="{RSS}"><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link rel="apple-touch-icon" href="{PortraitURL-128}">
+
+  {block:Description}
+  <meta name="description" content="{MetaDescription}" />
+  {/block:Description}
+
+  <!-- OGP -->
+  <meta property="og:title" content="{block:PostTitle}{PostTitle} - {/block:PostTitle}{Title}" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="{Permalink}" />
+  <!-- photo だったら og-iamge はphotoURLにする -->
+  {block:Posts}
+    {block:Photo}
+      <meta property="og:image" content="{PhotoURL-400}" />
+    {/block:Photo}
+  {/block:Posts}
+  <meta property="og:site_name" content="{Title}" />
+  <meta property="og:description" content="{block:Description}{MetaDescription}{/block:Description}">
+  <meta property="fb:admins" content="{text:OGP Facebook Admin Number}" />
+
+  <link rel="stylesheet" type="text/css" media="screen" href="https://dl.dropbox.com/u/282961/zen/css/style.css" />
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+  <script src="js/options.js"></script>
+
+  {block:IfEnableHatenaStar}
+    <script type="text/javascript" src="//s.hatena.ne.jp/js/HatenaStar.js"></script>
+    <script type="text/javascript">
+      Hatena.Strar.Token = '{text:Hatena Star Token}';
+    </script>
+    <script type="text/javascript">
+      Hatena.Star.EntryLoader.headerTagAndClassName = ['div','meta'];
+    </script>
+  {/block:IfEnableHatenaStar}
+
+  <!--[if IE]>
+  <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <script src="//css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+  <![endif]-->
+
+  <!-- Google Analytics -->
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', '{text:Google Analytics Tracking ID}']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+  <!-- END Google Analytics -->
+
+</head>
+<body class="{block:IndexPage}page-index{/block:IndexPage}{block:PermalinkPage}page-permalink{/block:PermalinkPage}">
+
+<style>
+{CustomCSS}
+</style>
+
+  <div id="wrapper">
+
+    <header class="header">
+      <h1 class="blog-title"><a href="/">{Title}</a></h1>
+      {block:Description}
+        <p class="blog-description">{Description}</p>
+      {/block:Description}
+      <nav class="nav">
+        <a href="/">Home</a>
+        {block:HasPages}
+          {block:Pages}
+            <a href="{URL}">{Label}</a>
+          {/block:Pages}
+        {/block:HasPages}
+        <a href="/archive">Archive</a>
+        <a href="{RSS}">RSS</a>
+      </nav>
+    </header>
+
+    <div id="container" class="autopagerize_page_element">
+      <!-- post 開始 -->
+      {block:Posts}
+        <article class="post {TagsAsClasses}">
+
+          {block:Text}
+            <header class="entry-header">
+              {block:Title}
+                <h1 class="entry-title"><a href="{Permalink}">{Title}</a></h1>
+              {/block:Title}
+            </header>
+            <div class="entry-content">
+              {Body}
+            </div>
+            <!-- Content Source -->
+            {block:ContentSource}
+              <div class="cont content_source">
+                  <a href="{SourceURL}">
+                      {lang:Source}:
+                      {block:SourceLogo}
+                          <img src="{BlackLogoURL}" width="{LogoWidth}" height="{LogoHeight}" alt="{SourceTitle}" />
+                      {/block:SourceLogo}
+                      {block:NoSourceLogo}
+                          {SourceTitle}
+                      {/block:NoSourceLogo}
+                  </a>
+              </div>
+            {/block:ContentSource}
+          {/block:Text}
+
+          {block:Photo}
+            <div class="entry-content">
+              {LinkOpenTag}
+                <img src="{PhotoURL-HighRes}" alt="{PhotoAlt}"/>
+              {LinkCloseTag}
+            </div>
+            {block:Caption}
+              <div class="meta caption">
+                {Caption}
+              </div>
+            {/block:Caption}
+            {block:ContentSource}
+              <div class="meta">
+                <i class="entypo-share"></i> Source: <a href="{SourceURL}">{block:NoSourceLogo}{SourceTitle}{/block:NoSourceLogo}</a>
+              </div>
+            {/block:ContentSource}
+          {/block:Photo}
+
+          {block:Photoset}
+              <div class="entry-content">
+                {Photoset-500}
+              </div>
+              <footer class="entry-footer">
+                {block:Caption}
+                  <div class="meta caption">
+                    {Caption}
+                  </div>
+                {/block:Caption}
+                {block:ContentSource}
+                  <div class="meta">
+                    <i class="entypo-share"></i> Source: <a href="{SourceURL}">{block:NoSourceLogo}{SourceTitle}{/block:NoSourceLogo}</a>
+                  </div>
+                {/block:ContentSource}
+              </footer>
+          {/block:Photoset}
+
+          {block:Quote}
+              <div class="entry-content">
+                “{Quote}”
+              </div>
+              <footer class="entry-footer">
+                {block:Source}
+                  <div class="meta">
+                    <i class="entypo-share"></i> {Source}
+                  </div>
+                {/block:Source}
+              </footer>
+          {/block:Quote}
+
+          {block:Link}
+              <div class="entry-content">
+                <a href="{URL}" class="link" {Target}>{Name}</a>
+                {block:Description}
+                <div class="description">{Description}</div>
+                {/block:Description}
+              </div>
+          {/block:Link}
+
+          {block:Chat}
+              <div class="entry-content">
+                {block:Title}
+                  <h2>{Title}</h2>
+                {/block:Title}
+                <ul class="ul-chat">
+                  {block:Lines}
+                  <li class="{Alt} user_{UserNumber}">
+                  {block:Label}
+                  <span class="label">{Label}</span>
+                  {/block:Label}
+                  {Line}
+                  </li>
+                  {/block:Lines}
+                </ul>
+              </div>
+          {/block:Chat}
+
+          {block:Video}
+              <div class="entry-content">
+                {Video-500}
+              </div>
+          {/block:Video}
+
+          {block:Audio}
+              <div class="entry-content">
+                {AudioPlayerBlack}
+              </div>
+              <footer class="entry-footer">
+                {block:Caption}
+                  <div class="caption">{Caption}</div>
+                {/block:Caption}
+              </footer>
+          {/block:Audio}
+
+          <!-- Answer (途中) -->
+          {block:Answer}
+              <section class="caption group">
+                  <div class="cont group">
+
+                      <div class="question bubble">
+                          {Question}
+                          <span class="arrow border"></span>
+                          <span class="arrow fill"></span>
+                      </div>
+                      <div class="asker group">
+                          <img src="{AskerPortraitURL-24}" width="24" height="24" /> {Asker}
+                      </div>
+                      <div class="answer cont">{Answer}</div>
+                  </div>
+                  {block:ContentSource}
+                      <div class="cont content_source">
+                          <a href="{SourceURL}">
+                              {lang:Source}:
+                              {block:SourceLogo}
+                                  <img src="{BlackLogoURL}" width="{LogoWidth}" height="{LogoHeight}" alt="{SourceTitle}" />
+                              {/block:SourceLogo}
+                              {block:NoSourceLogo}
+                                  {SourceTitle}
+                              {/block:NoSourceLogo}
+                          </a>
+                      </div>
+                  {/block:ContentSource}
+              </section>
+          {/block:Answer}
+
+          <!-- 記事フッタ -->
+          <footer class="entry-footer">
+            <div class="meta">
+              <span class="meta-elements">
+                {TimeAgo}
+              </span>
+              {block:RebloggedFrom}
+                <span class="meta-elements">
+                  Reblogged from <a href="{ReblogParentURL}">{ReblogParentName}</a>
+                </span>
+              {/block:RebloggedFrom}
+              {block:NoteCount}
+                <span class="meta-elements">
+                  <a href="{Permalink}">{NoteCount} Notes</a>
+                </span>
+              {/block:NoteCount}
+              {block:HasTags}
+                <span class="meta-elements">
+                  {block:Tags}
+                    <a href="{TagURL}">#{Tag}</a>
+                  {/block:Tags}
+                </span>
+              {/block:HasTags}
+              <span class="meta-elements">
+                <a href="{Permalink}">Permalink</a>
+              </span>
+            </div>
+            {block:PostNotes}
+              <div class="notecontainer">{PostNotes}</div>
+            {/block:PostNotes}
+          </footer>
+
+        </article>
+      {/block:Posts}
+      <!-- END POSTS -->
+    </div>
+
+    <div id="pager">
+      {block:PreviousPage}
+        <a href="{PreviousPage}">Previous</a>
+      {/block:PreviousPage}
+      {block:NextPage}
+          <a href="{NextPage}" class="next" rel="next">Next</a>
+      {/block:NextPage}
+    </div>
+
+    <footer class="footer">
+      <span class="copyright">
+        ©{CopyrightYears} {Title}
+      </span>
+      <a href="https://github.com/sanographix/tumblr/tree/master/zen" target="_blank">Zen</a> theme designed by <a href="http://www.sanographix.net/" target="_blank">SANOGRAPHIX.NET</a>
+    </footer>
+
+  </div>
+
+</body>
+</html>
