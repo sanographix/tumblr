@@ -10,20 +10,27 @@
   <!-- 変数いろいろ -->
   <meta name="text:Google Analytics ID" content="" />
   <meta name="text:Introduction" content="" />
+  <meta name="text:Introduction Heading" content="Introduction" />
   <meta name="text:Youtube Embed Code" content="" />
   <meta name="text:Soundcloud Embed Code" content="" />
   <meta name="text:Nicovideo Embed Code" content="" />
   <meta name="text:Footer Text" content="" />
 
-  <meta name="text:Store URL" content="" />
   <meta name="text:Circle Name" content="" />
   <meta name="text:Circle URL" content="" />
   <meta name="text:Spec" content="" />
   <meta name="text:Release Date" content="" />
   <meta name="text:Event Space Number" content="" />
   <meta name="text:Price" content="" />
-  <meta name="text:Consignment" content="" />
-  <meta name="text:Consignment URL" content="" />
+
+  <meta name="text:Store01 Name" content="" />
+  <meta name="text:Store01 URL" content="" />
+  <meta name="text:Store02 Name" content="" />
+  <meta name="text:Store02 URL" content="" />
+  <meta name="text:Store03 Name" content="" />
+  <meta name="text:Store03 URL" content="" />
+  <meta name="text:Store04 Name" content="" />
+  <meta name="text:Store04 URL" content="" />
 
   <meta name="text:Track01 Title" content="" />
   <meta name="text:Track01 Description" content="" />
@@ -88,9 +95,7 @@
   <meta name="image:Banner1" content=""/>
   <meta name="image:Banner2" content=""/>
   <meta name="image:Background" content=""/>
-
   <meta name="font:Font" content="'Open Sans', 'Helvetica', 'Arial', 'Hiragino Kaku Gothic Pro', Meiryo, 'MS PGothic', sans-serif"/>
-
   <!-- END 変数 -->
 
   <meta charset="utf-8">
@@ -221,11 +226,11 @@
               </script>
             </li>
             {/block:IfEnablePlus1Button}
+            {block:IfStore01Name}
             <li>
-              {block:IfStoreURL}
-              <a href="" target="_blank" class="btn btn-primary"><i class="icon-shopping-cart"></i> 購入する</a>
-              {/block:IfStoreURL}
+              <a href="#buy" class="btn btn-primary"><i class="icon-shopping-cart"></i> 購入する</a>
             </li>
+            {/block:IfStore01Name}
           </ul>
         </div>
       </div>
@@ -238,7 +243,7 @@
             </h1>
           </div>
           {block:IfIntroduction}
-          <h3>Introduction</h3>
+          <h3>{text:Introduction Heading}</h3>
           <p class="introduction">
             {text:Introduction}
           </p>
@@ -263,13 +268,8 @@
                 NOW PRINTING
               </div>
             {/block:IfNotJacketImage}
-            {block:IfStoreURL}
-            <div class="button-buy">
-              <a href="" class="btn btn-large btn-primary" target="_blank"><i class="icon-shopping-cart"></i> 購入する</a>
-            </div>
-            {/block:IfStoreURL}
           </div>
-          <table class="table">
+          <table class="table" id="buy">
             <tbody>
               <tr>
                 <th>タイトル</th>
@@ -295,13 +295,51 @@
                 <th>価格</th>
                 <td>{text:Price}</td>
               </tr>
+              {block:IfStore01Name}
               <tr>
-                <th>委託</th>
-                <td>{block:IfConsignmentURL}<a href="{text:Consignment URL}" target="_blank">{/block:IfConsignmentURL}{text:Consignment}{block:IfConsignmentURL}</a>{/block:IfConsignmentURL}</td>
+                <th>購入</th>
+                <td>
+                  <ul>
+                    <li>
+                      <a href="{text:Store01 URL}" target="_blank">{text:Store01 Name}</a>
+                    </li>
+                    {block:IfStore02Name}
+                    <li>
+                      <a href="{text:Store02 URL}" target="_blank">{text:Store02 Name}</a>
+                    </li>
+                    {/block:IfStore02Name}
+                    {block:IfStore03Name}
+                    <li>
+                      <a href="{text:Store03 URL}" target="_blank">{text:Store03 Name}</a>
+                    </li>
+                    {/block:IfStore03Name}
+                    {block:IfStore04Name}
+                    <li>
+                      <a href="{text:Store04 URL}" target="_blank">{text:Store04 Name}</a>
+                    </li>
+                    {/block:IfStore04Name}
+                  </ul>
+                </td>
+              {block:IfStore01Name}
               </tr>
+              {/block:IfStore01Name}
             </tbody>
           </table>
         </section>
+        {block:IfYoutubeEmbedCode}
+        <section class="section" id="youtube">
+          <h3>Youtube</h3>
+          <div id="youtube-iframe">
+            <iframe width="300" height="169" src="http://www.youtube.com/embed/{text:Youtube Embed Code}" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </section>
+        {/block:IfYoutubeEmbedCode}
+        {block:IfNicovideoEmbedCode}
+        <section class="section" id="nicovideo">
+          <h3>NicoNico</h3>
+          <script type="text/javascript" src="http://ext.nicovideo.jp/thumb_watch/{text:Nicovideo Embed Code}"></script>
+        </section>
+        {/block:IfNicovideoEmbedCode}
         {block:IfSoundcloudEmbedCode}
         <section class="section" id="demo">
           <h3>Soundcloud</h3>
@@ -310,7 +348,7 @@
         {/block:IfSoundcloudEmbedCode}
         <section class="section" id="tracklist">
           <div class="page-header">
-            <h1>Track List</h1>
+            <h1>Tracklist</h1>
           </div>
           <table class="table">
             <tbody>
@@ -407,20 +445,6 @@
             </tbody>
           </table>
         </section>
-        {block:IfYoutubeEmbedCode}
-        <section class="section" id="youtube">
-          <h3>Youtube</h3>
-          <div id="youtube-iframe">
-            <iframe width="853" height="480" src="http://www.youtube.com/embed/{text:Youtube Embed Code}" frameborder="0" allowfullscreen></iframe>
-          </div>
-        </section>
-        {/block:IfYoutubeEmbedCode}
-        {block:IfNicovideoEmbedCode}
-        <section class="section" id="nicovideo">
-          <h3>NicoNico</h3>
-          <script type="text/javascript" src="http://ext.nicovideo.jp/thumb_watch/{text:Nicovideo Embed Code}"></script>
-        </section>
-        {/block:IfNicovideoEmbedCode}
         <section class="section" id="staff">
           <div class="page-header">
             <h1>Staff</h1>
