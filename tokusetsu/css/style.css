@@ -7724,6 +7724,7 @@ hr.soften {
 }
 #key-features .span4 {
   text-align: center;
+  margin-bottom: 50px;
 }
 #key-features h2 {
   font-size: 24px;
@@ -7800,7 +7801,6 @@ hr.soften {
   #footer {
     padding-left: 10px;
     padding-right: 10px;
-    font-size: 90%;
   }
   .section h1,
   .navbar-inner h1,

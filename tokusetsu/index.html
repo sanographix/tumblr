@@ -34,6 +34,15 @@
 </head>
 <body>
 
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/ja_JP/all.js#xfbml=1";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+
   <div class="navbar theme-dark">
     <div class="navbar-inner">
       <div class="container">
@@ -71,7 +80,7 @@
         </li>
         <li class="social-button">
           <iframe src="http://ghbtns.com/github-btn.html?user=sanographix&repo=tumblr&type=follow&count=true"
-  allowtransparency="true" frameborder="0" scrolling="0" width="150" height="20"></iframe>
+  allowtransparency="true" frameborder="0" scrolling="0" width="180" height="20"></iframe>
         </li>
         <li class="social-button">
           <div class="fb-like" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false"></div>
@@ -108,7 +117,7 @@
   </div>
   <hr class="soften">
   <div id="key-features" class="container section">
-    <div class="row section">
+    <div class="row">
       <div class="span4">
         <div class="icon">
           <i class="icon-cogs icon-large"></i>
