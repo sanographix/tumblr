@@ -1,0 +1,265 @@
+@import "_normalize.less";
+@import "_mixin.less";
+@import "_variable.less";
+@import "_bootstrap.less";
+@import "_bootstrap-responsive.less";
+@import "_font-awesome.less";
+
+
+/*  Primary Styles
+   Author:sanographix
+*/
+
+
+/*common*/
+
+html,body {
+    font-family: 'Helvetica Neue', sans-serif;
+    color: @base;
+    background: #fff;
+}
+
+a {
+    color: @link;
+    &:hover {
+      color: @hover;
+    }
+}
+
+p {
+    line-height: 1.6;
+}
+
+::selection {
+    background: @selection;
+    color:#666666;
+}
+
+.section {
+    margin-bottom: 30px;
+}
+
+.profile-image {
+    .border-radius(4px);
+    vertical-align: top;
+}
+
+.icon-large {
+    font-size: 40px;
+    text-align: center;
+    line-height: 1;
+    color: @link;
+}
+
+.icon-ex-large {
+    font-size: 64px;
+    text-align: center;
+}
+
+/* Faded out hr */
+hr.soften {
+  height: 1px;
+  margin: 40px 0;
+  background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
+  background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
+  background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
+  background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
+  border: 0;
+}
+
+/* Primary-style */
+
+// navbar
+
+.navbar {
+    margin-bottom: 0;
+}
+
+.navbar-inner {
+    .border-radius(0);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+
+    .brand {
+        font-weight: bold;
+    }
+
+    .social-button {
+        padding: 10px 5px 10px;
+        height: 20px;
+        a {
+            padding: 0 !important;
+        }
+    }
+
+}
+
+// header
+
+#header {
+    text-align: center;
+    .gradient(#454545,#454545,#252525);
+    padding: 30px 0;
+    color: #fff;
+    .text-shadow(0,-2px,0,rgba(0,0,0,.3));
+
+    h1,h2 {
+        line-height: 1;
+    }
+
+    h1 {
+        font-size: 80px;
+    }
+
+    h2 {
+        font-size: 24px;
+        font-weight: 200;
+    }
+
+    .btn-wrapper {
+        margin: 20px 0 10px;
+    }
+
+    p {
+        color: @light;
+    }
+
+    .version {
+        margin-left: 1em;
+    }
+}
+
+// social-buttons
+
+.social-buttons {
+    margin-bottom: 30px;
+
+    .navbar-inner {
+        border-top: 1px solid @border;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .nav {
+        float: none;
+        text-align: center;
+        margin: 0 0 0 0;
+
+        li {
+            .inline-block;
+            float: none !important;
+        }
+
+        .btn {
+            color: #fff;
+            .text-shadow(0,-1px,0,rgba(0,0,0,.2));
+            padding: 4px 10px;
+            font-size: 12px;
+            margin: 0 0 0 0;
+            position: relative;
+            top: -3px;
+            &:hover {
+                color: #fff;
+            }
+        }
+
+    }
+
+    iframe,
+    .fb-like {
+        vertical-align: text-bottom;
+        display: inline-block;
+    }
+}
+
+.section {
+    text-align: center;
+    h1 {
+        font-weight: 200;
+        font-size: 46px;
+        line-height: 1;
+    }
+
+    p {
+        color: @light;
+    }
+}
+
+#key-features {
+    .span4 {
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 24px;
+        font-weight: 200;
+    }
+
+    p {
+        font-weight: 200;
+        color: @light;
+    }
+}
+
+
+// theme-dark( グローバルヘッダ)
+
+.theme-dark {
+
+    .navbar-inner {
+        .gradient(#555555,#555555,#444444);
+        color: #999;
+        border-top: 1px solid #333;
+        border-bottom: 1px solid #222;
+
+        .brand {
+            .text-shadow(0,-1px,0,#222);
+            &:hover {
+                color: #aaa;
+            }
+        }
+
+        .nav li a {
+            color: #999;
+            .text-shadow(0,-1px,0,#222);
+            &:hover {
+                color: #aaa;
+            }
+        }
+
+        .btn {
+            .text-shadow(0,-1px,0,rgba(0,0,0,.2)) !important;
+            color: #fff !important;
+        }
+    }
+}
+
+// footer
+
+#footer {
+    border-top: 1px solid @border;
+    background: @bg-light;
+    color: @light;
+    font-size: 90%;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* End Primary Styles */
+
+
+
+// retina.less
+// A helper mixin for applying high-resolution background images (http://www.retinajs.com)
+
+.at2x(@path, @w: auto, @h: auto) {
+  background-image: url(@path);
+  @at2x_path: ~`"@{path}".split('.').slice(0, "@{path}".split('.').length - 1).join(".") + "@2x" + "." + "@{path}".split('.')["@{path}".split('.').length - 1]`;
+
+  @media all and (-webkit-min-device-pixel-ratio : 1.5) {
+    background-image: url(@at2x_path);
+    background-size: @w @h;
+  }
+}
+@import "_media-queries.less";

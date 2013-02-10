@@ -1,0 +1,59 @@
+/*--------------------------------------------------------------
+
+			Media Queries - Retina Display
+
+--------------------------------------------------------------*/
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+  
+}
+/* Large desktop */
+@media (min-width: 1200px) {
+  
+}
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+  
+}
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+  .jumbo {
+    margin-left: -20px;
+    margin-right: -20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  #header,
+  #footer {
+    margin-left: -20px;
+    margin-right: -20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  #header {
+    height: auto;
+  }
+  .flexslider {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+  .flexslider,
+  .flexslider .slides li {
+    height: 200px;
+  }
+}
+/* Landscape phones and down */
+@media (max-width: 480px) {
+  #header h1,
+  #header .nav {
+    float: none;
+    text-align: center;
+  }
+  #header .btn {
+    display: block;
+    margin: 5px;
+  }
+  #intro h1 {
+    font-size: 2em;
+    line-height: 1.4em;
+  }
+}
