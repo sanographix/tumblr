@@ -2,7 +2,7 @@
 
 #### Free responsive tumblr template
 
-ENは、Tumblrで普通に日記を書く用途にこだわったテンプレートです。  
+ZENは、Tumblrで普通に日記を書く用途にこだわったテンプレートです。  
 [@sanographix](http://www.sanographix.net)がデザインしています。
 
 ## Demo
