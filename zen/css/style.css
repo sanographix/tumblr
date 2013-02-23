@@ -7967,6 +7967,9 @@ h5 {
 .navbar-inner .social-button a {
   padding: 0 !important;
 }
+#header {
+  margin-bottom: 30px;
+}
 #header h1 {
   font-size: 180px;
   font-family: 'Lato';
@@ -8010,7 +8013,7 @@ h5 {
 #footer {
   padding: 0 0  20px 0;
   color: #aaaaaa;
-  font-size: 80%;
+  font-size: 90%;
 }
 /*--------------------------------------------------------------
 
