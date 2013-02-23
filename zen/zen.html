@@ -17,6 +17,8 @@
   <meta name="text:Hatena Star Token" content="" />
   <meta name="text:Google Author" content="">
 
+  <meta name="image:Title Logo" content=""/>
+
   <meta name="if:Show Description" content="1"/>
   <meta name="if:Show Profile Image" content="0"/>
   <meta name="if:Enable Hatena Star" content="0"/>
@@ -125,7 +127,12 @@
         <img src="{PortraitURL-128}" class="profile-image" />
       {/block:IfShowProfileImage}
       <h1 class="blog-title">
-        <a href="/">{Title}</a>
+        {block:IfTitleLogoImage}
+          <a href="/"><img src="{image:Title Logo}" alt="{Title}"></a>
+        {/block:IfTitleLogoImage}
+        {block:IfNotTitleLogoImage}
+          <a href="/">{Title}</a>
+        {/block:IfNotTitleLogoImage}
       </h1>
       {block:IfShowDescription}
         <h2 class="blog-description">{Description}</h2>
