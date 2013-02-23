@@ -7825,15 +7825,15 @@ ul.icons li [class*=" icon-"] {
 /*common*/
 html,
 body {
-  font-family: 'RobotoRegular', 'Helvetica Neue', sans-serif;
+  font-family: 'RobotoLight', 'Shin Go Light', 'Helvetica Neue', sans-serif;
   color: #898989;
   background: #fff;
 }
 a {
-  color: #369ecf;
+  color: #53b4c5;
 }
 a:hover {
-  color: #036fa1;
+  color: #3e919f;
 }
 p {
   line-height: 1.6;
@@ -7867,10 +7867,10 @@ p {
   vertical-align: top;
 }
 .icon-large {
-  font-size: 40px;
+  font-size: 30px;
   text-align: center;
   line-height: 1;
-  color: #369ecf;
+  color: #ccc;
 }
 .icon-ex-large {
   font-size: 64px;
@@ -7888,7 +7888,7 @@ hr.soften {
 }
 h1,
 h2 {
-  font-family: 'RobotoThin';
+  font-family: 'RobotoThin', 'Shin Go ExLight';
   line-height: 1.1;
   font-weight: normal;
   color: #666666;
@@ -7896,10 +7896,30 @@ h2 {
 h3,
 h4,
 h5 {
-  font-family: 'RobotoLight';
+  font-family: 'RobotoLight', 'Shin Go ExLight';
   line-height: 1.3;
   font-weight: normal;
   color: #666666;
+}
+.btn {
+  background: #ffffff;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#f5f5f5));
+  background: -ms-linear-gradient(top, #ffffff, #f5f5f5);
+  background: -moz-linear-gradient(top, #ffffff 0%, #f5f5f5 100%);
+  color: #53b4c5;
+}
+.btn:hover {
+  background: #f5f5f5;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#f0f0f0));
+  background: -ms-linear-gradient(top, #ffffff, #f0f0f0);
+  background: -moz-linear-gradient(top, #ffffff 0%, #f0f0f0 100%);
+  color: #3e919f;
+}
+.btn-large {
+  padding: 20px 50px;
+  font-size: 35px;
+  line-height: 35px;
+  font-family: 'RobotoThin';
 }
 /* Primary-style */
 .navbar {
@@ -7927,6 +7947,11 @@ h5 {
   border-top: none;
   border-left: none;
   border-right: none;
+  background: #ffffff;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#ffffff));
+  background: -ms-linear-gradient(top, #ffffff, #ffffff);
+  background: -moz-linear-gradient(top, #ffffff 0%, #ffffff 100%);
+  font-family: 'RobotoLight';
 }
 .navbar-inner .brand {
   font-weight: bold;
@@ -7939,12 +7964,17 @@ h5 {
   padding: 0 !important;
 }
 #header h1 {
-  font-size: 200px;
+  font-size: 180px;
   font-family: 'Lato';
   line-height: 1;
+  margin: 40px 0 20px 0;
 }
 #header h2 {
-  font-size: 45px;
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+#header .btn-wrapper {
+  margin-bottom: 10px;
 }
 .container {
   text-align: center;
@@ -7955,15 +7985,28 @@ h5 {
 #intro h1 {
   letter-spacing: .3em;
   font-size: 40px;
-  font-family: 'Shin Go ExLight';
 }
 #key-features h2 {
   font-size: 20px;
   letter-spacing: .2em;
-  font-family: 'Shin Go ExLight';
 }
 #key-features p {
   font-size: 13px;
+}
+.social-buttons {
+  text-align: center;
+}
+.social-buttons li {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  padding: 10px 5px 10px;
+  height: 20px;
+}
+#footer {
+  padding: 0 0  20px 0;
+  color: #aaaaaa;
+  font-size: 80%;
 }
 /*--------------------------------------------------------------
 
@@ -8009,13 +8052,24 @@ h5 {
 }
 /* Landscape phones and down */
 @media (max-width: 480px) {
+  .container {
+    font-size: 90%;
+  }
+  .btn {
+    display: block;
+    margin: 5px;
+  }
+  .btn-large {
+    font-size: 24px;
+    line-height: 24px;
+    padding: 10px 0;
+  }
   #header h1,
   #header .nav {
     float: none;
     text-align: center;
   }
-  #header .btn {
-    display: block;
-    margin: 5px;
+  #intro h1 {
+    font-size: 24px;
   }
 }
