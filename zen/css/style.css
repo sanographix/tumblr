@@ -8053,6 +8053,9 @@ h5 {
   #header h2 {
     font-size: 20px;
   }
+  [class*="span"] {
+    margin-bottom: 40px;
+  }
 }
 /* Landscape phones and down */
 @media (max-width: 480px) {
