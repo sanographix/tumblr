@@ -56,6 +56,13 @@ ZENは、Tumblrで普通に日記を書く用途にこだわったテンプレ�
 
 ## Changelog
 
+### 1.0.1 (2013/2/24)
+
+* [class="btn" で記事中にボタンを出せる](http://memo.sanographix.net/post/43857022608)
+* [i class="icon-hoge" で記事中にアイコンを出せる](http://memo.sanographix.net/post/43857022608)
+* Font-Awesome のIE7対応
+* CSS調整
+
 
 ### 1.0.0 (2013/2/23)
 
