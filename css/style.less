@@ -1,0 +1,131 @@
+@import "_normalize.less";
+@import "_mixin.less";
+@import "_variable.less";
+@import "_bootstrap.less";
+@import "_bootstrap-responsive.less";
+@import "_font-awesome.less";
+@import "_font.less";
+
+/*  Primary Styles
+   Author:sanographix
+*/
+
+
+/*common*/
+
+html,body {
+    font-family: 'Helvetica Neue', sans-serif;
+    color: @base;
+    background: @bg-light;
+}
+
+a {
+    color: @link;
+    &:hover {
+      color: @hover;
+    }
+}
+
+p {
+    line-height: 1.6;
+}
+
+::selection {
+    background: @selection;
+    color:#666666;
+}
+
+.section {
+    margin-bottom: 30px;
+}
+
+.profile-image {
+    .border-radius(4px);
+    vertical-align: top;
+}
+
+.icon-large {
+    font-size: 30px;
+    text-align: center;
+    line-height: 1;
+    color: #ccc;
+}
+
+.icon-ex-large {
+    font-size: 64px;
+    text-align: center;
+}
+
+/* Faded out hr */
+hr.soften {
+  height: 1px;
+  margin: 40px 0;
+  background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
+  background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
+  background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
+  background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
+  border: 0;
+}
+
+.btn {
+    .gradient(#fff,#fff,#f5f5f5);
+    color: @link;
+    &:hover {
+      .gradient(#f5f5f5,#fff,#f0f0f0);
+      color: @hover;
+    }
+}
+
+.btn-large {
+    padding: 20px 50px;
+    font-size: 35px;
+    line-height: 35px;
+    font-family: 'RobotoThin';
+}
+
+h1,h2,h3,h4,h5,h6 {
+    line-height: 1.3;
+}
+
+
+/* Primary-style */
+
+#header {
+    margin: 40px 0;
+    text-align: center;
+    h1 {
+        font-size: 100px;
+        margin: 0;
+        letter-spacing: -2px;
+    }
+
+    h2 {
+        font-size: 20px;
+        font-weight: 200;
+        margin: 0;
+    }
+}
+
+.thumbnail {
+    background: #fff;
+
+    h3 {
+        font-size: 100%;
+        color: @base;
+        margin: 0 0 5px 0;
+        line-height: 1.3;
+    }
+    p {
+        font-size: 12px;
+        color: @light;
+        margin: 0;
+    }
+}
+
+#footer {
+    margin: 20px 0;
+    text-align: center;
+    color: @light;
+}
+
+@import "_media-queries.less";
