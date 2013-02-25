@@ -126,7 +126,7 @@ body {
     h1 {
         font-size: 5em;
     }
-    
+
     .btn {
         margin: 0 5px;
     }
@@ -159,11 +159,11 @@ body {
 
 .usage {
     text-align: center;
-    
+
     h1 {
         margin-bottom: 50px;
     }
-    
+
     h3 {
         text-align: center;
         font-size: 1.1em;
@@ -178,7 +178,7 @@ body {
     color: @footer;
     padding-bottom: 30px;
     line-height: 1.8;
-    
+
     a {
         color: @footer;
         &:hover {
@@ -186,14 +186,14 @@ body {
             text-decoration: none;
         }
     }
-    
+
     h4 {
         margin: 30px 0 20px 0;
     }
-    
+
     .footer-content {
         font-size: .85em;
-        
+
         .profile-image {
             width: 64px;
             height: 64px;
@@ -201,13 +201,13 @@ body {
             float: left;
             margin: 0 10px 10px 0;
         }
-        
+
         ul {
             list-style: none;
             margin: 0;
             padding: 0;
         }
-        
+
         li {
             padding: 0 0 10px 0;
             line-height: 1.3;
@@ -220,7 +220,7 @@ body {
 
 .c83banner {
     margin-bottom: 30px;
-    
+
     .mobile {
         display: none;
     }
@@ -231,16 +231,40 @@ body {
 .c83banner {
     margin-bottom: 15px;
     text-align: center;
-    
+
     .pc {
         display: none;
     }
-    
+
     .mobile {
         display: inline;
     }
 }
 
+}
+
+
+
+// related
+
+#related {
+    .thumbnail {
+        background: #fff;
+        text-align: left;
+        margin-top: 20px;
+
+        h3 {
+            font-size: 14px;
+            color: @base;
+            margin: 0 0 5px 0;
+            line-height: 1.3;
+        }
+        p {
+            font-size: 12px;
+            color: @light;
+            margin: 0;
+        }
+    }
 }
 
 /* End Primary Styles */
@@ -257,6 +281,6 @@ body {
   @media all and (-webkit-min-device-pixel-ratio : 1.5) {
     background-image: url(@at2x_path);
     background-size: @w @h;
-  }  
+  }
 }
 @import "_media-queries.less";
