@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <!--
   Theme: Reblographix
-  by sanographix
+  by @sanographix
   http://www.sanographix.net
+  (c) 2012 Showkaku Sano [sanographix@gmail.com]
+  releated under the MIT license
+  Please leave at least ONE credit link. Do not delete this box.
 -->
 
 <html>
@@ -10,7 +13,7 @@
 <!-- Default Variables -->
   <meta name="text:Google Analytics Tracking ID" content="UA-000000-00" />
   <meta name="text:Your Domain" content="hoge.tumblr.com" />
-    
+
 <title>{block:PostTitle}{PostTitle} - {/block:PostTitle}{Title}</title>
 
 <meta name="viewport" content="width=device-width">
@@ -28,7 +31,7 @@
 <script type="text/javascript" src="http://static.tumblr.com/xlsgtjb/oFhm3vj32/tinybox.js"></script>
 <script type="text/javascript" src="http://static.tumblr.com/xlsgtjb/0Dsm3vj3k/jquery.nanoscroller.min.js"></script>
 <script type="text/javascript" src="http://static.tumblr.com/xlsgtjb/EJHm3vj4n/options.js"></script>
-<!--[if IE]> 
+<!--[if IE]>
 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
 <![endif]-->
@@ -59,31 +62,31 @@
         <a href="{RSS}"><img src="http://static.tumblr.com/xlsgtjb/tYkm3vj6e/rss.png"></a>
         <a href="/archive"><img src="http://static.tumblr.com/xlsgtjb/uLem3vj6w/drawers-alt-1.png"></a>
       </nav>
-      
+
       <div id="cse">
       <form id="search" method="get" action="http://www.google.co.jp/search">
         <input id="stext" name="q" type="text" value="">
-        <input type="image" src="http://static.tumblr.com/xlsgtjb/80hm3vj5r/search.png" alt="Search" name="searchBtn" id="searchBtn" />  
+        <input type="image" src="http://static.tumblr.com/xlsgtjb/80hm3vj5r/search.png" alt="Search" name="searchBtn" id="searchBtn" />
         <input name="domains" type="hidden" value="{text:Your Domain}">
         <input name="sitesearch" type="hidden" value="{text:Your Domain}">
       </form>
       </div>
-      
+
       <h1 class="heading blog-title"><a href="/">{Title}</a></h1>
       {block:Description}
         <!--<p class="blog-description">{Description}</p>-->
       {/block:Description}
-    </header>  
+    </header>
     {/block:IndexPage}
     <div id="container-outer">
-      <div id="container">  
+      <div id="container">
         {block:Posts}
-        
+
           {block:Text}
             <div class="post text"{block:IndexPage} onClick="TINY.box.show({iframe:'{Permalink}',boxid:'frameless',width:700,top:0,fixed:true,maskid:'whitemask',maskopacity:93,closejs:function(){closeJS()}})"{/block:IndexPage}>
               {block:Title}
               <h3><a href="{Permalink}">{Title}</a></h3>
-              {/block:Title}          
+              {/block:Title}
               {Body}
               <div class="caption">
               {block:NoteCount}
@@ -93,7 +96,7 @@
               </div>
             </div>
           {/block:Text}
-          
+
           {block:Photo}
             <div class="post photo"{block:IndexPage} onClick="TINY.box.show({iframe:'{Permalink}',boxid:'frameless',width:700,top:0,fixed:true,maskid:'whitemask',maskopacity:93,closejs:function(){closeJS()}})"{/block:IndexPage}>
               {LinkOpenTag}
@@ -111,11 +114,11 @@
                     {/block:NoteCount}
                     {block:PostNotes}<div class="notecontainer">{PostNotes}</div>{/block:PostNotes}
                   </div>
-                {/block:Caption}              
+                {/block:Caption}
               {/block:PermalinkPage}
             </div>
           {/block:Photo}
-          
+
           {block:Photoset}
             <div class="post photoset"{block:IndexPage} onClick="TINY.box.show({iframe:'{Permalink}',boxid:'frameless',width:700,top:0,fixed:true,maskid:'whitemask',maskopacity:93,closejs:function(){closeJS()}})"{/block:IndexPage}>
             {block:IndexPage}{Photoset-250}{/block:IndexPage}{block:PermalinkPage}{Photoset-500}{/block:PermalinkPage}
@@ -135,7 +138,7 @@
             {/block:PermalinkPage}
             </div>
           {/block:Photoset}
-          
+
           {block:Quote}
             <div class="post quote"{block:IndexPage} onClick="TINY.box.show({iframe:'{Permalink}',boxid:'frameless',width:700,top:0,fixed:true,maskid:'whitemask',maskopacity:93,closejs:function(){closeJS()}})"{/block:IndexPage}>
             “{Quote}”
@@ -147,26 +150,26 @@
                 {block:NoteCount}
                   <div class="meta"><a href="{Permalink}">{NoteCount}</a> Notes</div>
                 {/block:NoteCount}
-                {block:PostNotes}<div class="notecontainer">{PostNotes}</div>{/block:PostNotes}             
+                {block:PostNotes}<div class="notecontainer">{PostNotes}</div>{/block:PostNotes}
               </div>
               {/block:Source}
             {block:PermalinkPage}
-            </div>              
+            </div>
           {/block:Quote}
-          
+
           {block:Link}
             <div class="post link"{block:IndexPage} onClick="TINY.box.show({iframe:'{Permalink}',boxid:'frameless',width:700,top:0,fixed:true,maskid:'whitemask',maskopacity:93,closejs:function(){closeJS()}})"{/block:IndexPage}>
-            <a href="{URL}" class="link" {Target}>{Name}</a>          
+            <a href="{URL}" class="link" {Target}>{Name}</a>
             {block:Description}
             <div class="description">{Description}</div>
             {/block:Description}
             {block:NoteCount}
               <div class="meta"><a href="{Permalink}">{NoteCount}</a> Notes</div>
             {/block:NoteCount}
-            {block:PostNotes}<div class="notecontainer">{PostNotes}</div>{/block:PostNotes}            
+            {block:PostNotes}<div class="notecontainer">{PostNotes}</div>{/block:PostNotes}
             </div>
           {/block:Link}
-          
+
           {block:Chat}
             <div class="post chat"{block:IndexPage} onClick="TINY.box.show({iframe:'{Permalink}',boxid:'frameless',width:700,top:0,fixed:true,maskid:'whitemask',maskopacity:93,closejs:function(){closeJS()}})"{/block:IndexPage}>
             {block:Title}
@@ -184,36 +187,36 @@
             </ul>
             </div>
           {/block:Chat}
-          
+
           {block:Video}
             <div class="post video"{block:IndexPage} onClick="TINY.box.show({iframe:'{Permalink}',boxid:'frameless',width:700,top:0,fixed:true,maskid:'whitemask',maskopacity:93,closejs:function(){closeJS()}})"{/block:IndexPage}>
-            {Video-500}          
+            {Video-500}
             {block:Caption}
             <div class="caption">{Caption}</div>
             {/block:Caption}
             </div>
           {/block:Video}
-          
+
           {block:Audio}
             <div class="post audio"{block:IndexPage} onClick="TINY.box.show({iframe:'{Permalink}',boxid:'frameless',width:700,top:0,fixed:true,maskid:'whitemask',maskopacity:93,closejs:function(){closeJS()}})"{/block:IndexPage}>
-            {AudioPlayerBlack}          
+            {AudioPlayerBlack}
             {block:Caption}
             <div class="caption">{Caption}</div>
             {/block:Caption}
             </div>
           {/block:Audio}
-          
+
           {block:PermalinkPage}
             <div class="hom">
               <a href="/"><img src="http://static.tumblr.com/xlsgtjb/5NJm3vj7l/home.png">↩ほむ</a>
             </div>
           {/block:PermalinkPage}
-          
+
         {/block:Posts}
       </div>
     </div>
     <div id="pagination">
-      {block:PreviousPage}      
+      {block:PreviousPage}
         <a href="{PreviousPage}">&#171; Previous</a>
       {/block:PreviousPage}
       {block:NextPage}

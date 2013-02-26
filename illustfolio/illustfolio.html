@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <!--
   Theme: Illustfolio
-  by sanographix
+  by @sanographix
   http://www.sanographix.net
+  (c) 2012-2013 Showkaku Sano [sanographix@gmail.com]
+  releated under the MIT license
+  Please leave at least ONE credit link. Do not delete this box.
 -->
 <html lang="ja">
 <head>
@@ -208,7 +211,7 @@
 <div class="container section">
   <div class="row">
     {block:Posts}
-    
+
     {block:Photo}
     <article class="post photo">
       <div class="span8">
@@ -222,9 +225,9 @@
           {Caption}
         </div>
         {/block:Caption}
-  
+
         <hr class="soften" />
-  
+
         <!-- メタ情報 -->
         <div class="meta">
           {block:Date}
@@ -241,13 +244,13 @@
             <ul>
               {block:Tags}
             	<li><a href="{TagURL}"><i class="icon-tag"></i>{Tag}</a></li>
-              {/block:Tags}	
+              {/block:Tags}
             </ul>
           </div>
           {/block:HasTags}
-  
+
           <hr class="soften" />
-  
+
           <!--ソーシャルボタン-->
           <ul class="socialbuttons">
             <!--tw-->
@@ -283,9 +286,9 @@
             </li>
             {/block:IfShowPinItButton}
           </ul>
-  
+
           <hr class="soften" />
-  
+
           {block:NoteCount}
           <div class="notecount">
             <i class="icon-retweet"></i>{NoteCount} Notes
@@ -297,7 +300,7 @@
             </div>
           {/block:PostNotes}
         </div>
-  
+
       </div>
     </article>
     {/block:Photo}
@@ -315,7 +318,7 @@
       </div>
     </article>
     {/block:Text}
-    
+
     {/block:Posts}
   </div>
 </div>
