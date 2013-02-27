@@ -56,6 +56,12 @@ ZENは、Tumblrで普通に日記を書く用途にこだわったテンプレ�
 
 ## Changelog
 
+### 1.0.4 (2013/2/27)
+
+* code タグの中をシンタックスハイライトするようにした（[google-code-prettify](https://code.google.com/p/google-code-prettify/)）
+	* テーマHTMLの更新が必要です
+
+
 ### 1.0.3 (2013/2/25)
 
 * はてなスターの表示位置をタイトルじゃなくて記事下にした
