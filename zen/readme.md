@@ -45,7 +45,7 @@ ZENは、Tumblrで普通に日記を書く用途にこだわったテンプレ�
 | Google Author | ここに自分のGoogle+プロフィールURLを入力することで、Google検索結果に著者情報を表示させることができます。詳しい情報は[Googleのヘルプ](http://support.google.com/webmasters/bin/answer.py?hl=ja&answer=1408986)を参照してください。 |
 | Hatena Star Token | ここにはてなスターのトークンを入力することで、記事にスターがついたときに通知が届くようになります。詳しい設定方法は[はてなスターのヘルプ](http://d.hatena.ne.jp/hatenastar/20070707/1184453490)を参照してください。 |
 | OGP Facebook Admin Number | Facebok Admin ID を入力します。 Admin IDの調べ方は検索するといろいろ出てきます。 |
-
+| Enable Syntax Highlight | シンタックスハイライトを有効にします。 |
 
 ## 3. ページを追加する
 
@@ -58,7 +58,7 @@ ZENは、Tumblrで普通に日記を書く用途にこだわったテンプレ�
 
 ### 1.0.4 (2013/2/27)
 
-* code タグの中をシンタックスハイライトするようにした（[google-code-prettify](https://code.google.com/p/google-code-prettify/)）
+* pre タグの中をシンタックスハイライトするようにした（[google-code-prettify](https://code.google.com/p/google-code-prettify/)）
 	* テーマHTMLの更新が必要です
 
 
