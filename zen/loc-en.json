@@ -8,7 +8,13 @@
     "normal-heading": "Useful, Customizable",
     "normal-p": "Support all post types of tumblr. In addition, you can customize your blog title image and social buttons.",
     "responsive-heading": "Responsive",
-    "responsive-p": "Optimized according to the width of the browser. And also supports browsing tablet and smartphones."
+    "responsive-p": "Optimized according to the width of the browser. And also supports browsing tablet and smartphones.",
+    "ogp": "Configured OGP",
+    "syntax": "Automatic syntax highlighting",
+    "logo": "Title logo can be set",
+    "star": "Hatena Star support",
+    "author": "Google Author support",
+    "analytics": "Google Analytics support"
   }
-
+  "getstarted": "Why do not you write a diary. Details on how to make these settings, please read the Readme."
 }
