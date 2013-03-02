@@ -1,3 +1,14 @@
 {
-  "heading": "Write Simply, Anyway."
+  "heading": "Write Simply, Anyway.",
+  "intro": "ZEN is free responsive tumblr theme.",
+  "viewdemo": "View demo",
+  "feature": {
+    "simple-heading": "Super simple",
+    "simple-p": "Simple is best. Since this is a design that suppress most decorated, you can write a diary of calm.",
+    "normal-heading": "Useful, Customizable",
+    "normal-p": "Support all post types of tumblr. In addition, you can customize your blog title image and social buttons.",
+    "responsive-heading": "Responsive",
+    "responsive-p": "Optimized according to the width of the browser. And also supports browsing tablet and smartphones."
+  }
+
 }
