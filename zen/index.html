@@ -27,7 +27,7 @@
 
   <script src="js/libs/jquery-1.8.3.min.js" charset="utf-8"></script>
   <script src="js/libs/jquery.easing.1.3.js" charset="utf-8"></script>
-  <!--script src="js/libs/jquery.localize.js" charset="utf-8"></script-->
+  <script src="js/libs/jquery.localize.js" charset="utf-8"></script>
 
 
   <!--Google Analytics -->
@@ -43,6 +43,14 @@
       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
     })();
 
+  </script>
+
+
+  <!-- Localize -->
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $("[data-localize]").localize("loc")
+    });
   </script>
 
 <!--
@@ -64,7 +72,7 @@ script type="text/javascript" src="http://typesquare.com/accessor/script/typesqu
   <div class="navbar">
     <div class="navbar-inner">
       <div class="container">
-        <a class="brand" href="">ZEN</a>
+        <a class="brand" href="/">ZEN</a>
         <ul class="nav">
           <li><a href="http://zen-theme.tumblr.com/" target="_blank">View demo</a></li>
           <li><a href="https://github.com/sanographix/tumblr/tree/master/zen" target="_blank">Download</a></li>
@@ -92,7 +100,7 @@ script type="text/javascript" src="http://typesquare.com/accessor/script/typesqu
   </header>
 
   <div class="container section" id="intro">
-    <h1>普通の日記を普通に書こう</h1>
+    <h1 data-localize="heading">普通の日記を普通に書こう</h1>
     <p>ZENは、Tumblrで普通に日記を書く用途にこだわった無料テーマ（テンプレート）です。<br/>
       あなたも普通の日記を普通に書いてみませんか。
     </p>
