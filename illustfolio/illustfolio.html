@@ -170,15 +170,19 @@
 
       {block:Photoset}
       <div class="span4 item">
-        {Photoset-400}
-        <div class="caption-wrapper">
-          <div class="caption">
-            {Caption}
+        <a href="{Permalink}">
+          {block:Photos}
+            <div class="thumb" style="background-image: url('{PhotoURL-400}');"></div>
+          {/block:Photos}
+          <div class="caption-wrapper">
+            <div class="caption">
+              {Caption}
+            </div>
+            <div class="detail">
+              <i class="icon-search"></i>View Photoset
+            </div>
           </div>
-          <div class="detail">
-            <i class="icon-search"></i>View Photoset
-          </div>
-        </div>
+        </a>
       </div>
       {/block:Photoset}
 
@@ -304,6 +308,100 @@
       </div>
     </article>
     {/block:Photo}
+
+    <!-- Photoset -->
+    {block:Photoset}
+    <article class="post photo">
+      <div class="span8">
+        {block:Photos}
+          <img src="{PhotoURL-500}" class="img-photoset"/>
+        {/block:Photos}
+      </div>
+      <div class="span4">
+        {block:Caption}
+        <div class="caption">
+          {Caption}
+        </div>
+        {/block:Caption}
+
+        <hr class="soften" />
+
+        <!-- メタ情報 -->
+        <div class="meta">
+          {block:Date}
+          <div class="date">
+            <i class="icon-time"></i>
+            {Month} {DayOfMonth}, {Year}
+          </div>
+          {/block:Date}
+          <div class="permalink">
+            <a href="{Permalink}"><i class="icon-link"></i>Permalink</a>
+          </div>
+          {block:HasTags}
+          <div class="tags">
+            <ul>
+              {block:Tags}
+              <li><a href="{TagURL}"><i class="icon-tag"></i>{Tag}</a></li>
+              {/block:Tags}
+            </ul>
+          </div>
+          {/block:HasTags}
+
+          <hr class="soften" />
+
+          <!--ソーシャルボタン-->
+          <ul class="socialbuttons">
+            <!--tw-->
+            {block:IfShowTweetButton}
+            <li>
+              <a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+              <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+            </li>
+            {/block:IfShowTweetButton}
+            <!--fb-->
+            {block:IfShowLikeButton}
+            <li>
+              <div class="fb-like" data-href="{Permalink}" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false"></div>
+            </li>
+            {/block:IfShowLikeButton}
+            <!--g+-->
+            {block:IfShowPlusOneButton}
+            <li>
+              <div class="g-plusone" data-size="medium" data-annotation="inline" data-width="200"></div>
+              <script type="text/javascript">
+                (function() {
+                  var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                  po.src = 'https://apis.google.com/js/plusone.js';
+                  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+                })();
+              </script>
+            </li>
+            {/block:IfShowPlusOneButton}
+            <!--pin-->
+            {block:IfShowPinItButton}
+            <li>
+              <a href="http://pinterest.com/pin/create/button/?url={Permalink}&media={PhotoURL-500}" class="pin-it-button" count-layout="horizontal"><img border="0" src="//assets.pinterest.com/images/PinExt.png" title="Pin It" /></a>
+            </li>
+            {/block:IfShowPinItButton}
+          </ul>
+
+          <hr class="soften" />
+
+          {block:NoteCount}
+          <div class="notecount">
+            <i class="icon-retweet"></i>{NoteCount} Notes
+          </div>
+          {/block:NoteCount}
+          {block:PostNotes}
+            <div class="notecontainer meta">
+              {PostNotes}
+            </div>
+          {/block:PostNotes}
+        </div>
+
+      </div>
+    </article>
+    {/block:Photoset}
 
     <!--テキスト（固定ページ用）-->
     {block:Text}
