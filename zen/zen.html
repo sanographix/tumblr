@@ -142,7 +142,9 @@
       {/block:IfShowProfileImage}
       <h1 class="blog-title">
         {block:IfTitleLogoImage}
-          <a href="/"><img src="{image:Title Logo}" alt="{Title}"></a>
+          <div class="title-logo">
+            <a href="/"><img src="{image:Title Logo}" alt="{Title}" class="logo-image"></a>
+          </div>
         {/block:IfTitleLogoImage}
         {block:IfNotTitleLogoImage}
           <a href="/">{Title}</a>
