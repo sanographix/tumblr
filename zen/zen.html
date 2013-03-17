@@ -17,8 +17,10 @@
   <!-- Variables -->
   <meta name="text:Google Analytics ID" content="" />
   <meta name="text:OGP Facebook Admin Number" content="" />
+  <meta name="text:OGP Toppage URL" content="">
   <meta name="text:Hatena Star Token" content="" />
   <meta name="text:Google Author" content="">
+  <meta name='text:Disqus Shortname' content='' />
 
   <meta name="image:Title Logo" content=""/>
 
@@ -37,11 +39,13 @@
   <link rel="shortcut icon" href="{Favicon}">
   <link rel="alternate" type="application/rss+xml" href="{RSS}"><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <link rel="apple-touch-icon" href="{PortraitURL-128}">
+  <link rel="canonical" href="{Permalink}"/>
 
   <!-- OGP -->
   <meta property="og:title" content="{block:PostTitle}{PostTitle} - {/block:PostTitle}{Title}" />
   <meta property="og:type" content="article" />
-  <meta property="og:url" content="{Permalink}" />
+  <meta property="og:url" content="{block:IndexPage}{text:OGP Toppage URL}{/block:IndexPage}{block:PermalinkPage}{Permalink}{/block:PermalinkPage}" />
+  <meta property="og:image" content="{PortraitURL-128}" />
   <!-- photo だったら og-image はphotoURLにする -->
   {block:Posts}
     {block:Photo}
@@ -221,8 +225,8 @@
 
           <!-- post: 引用 -->
           {block:Quote}
-            <div class="entry-content">
-              <h3>“{Quote}”</h3>
+            <div class="entry-content {Length}">
+              <blockquote>“{Quote}”</blockquote>
               {block:Source}
                 <div class="quote-source">
                   {Source}
@@ -320,16 +324,21 @@
 
           <!-- 記事フッタ -->
           <footer class="entry-footer">
+            <div class="meta meta-reblog">
+              {block:RebloggedFrom}
+                <span class="meta-elements rebloggedfrom">
+                  Reblogged from <a href="{ReblogParentURL}"><img
+src="{ReblogParentPortraitURL-16}" class="favicon"/> {ReblogParentName}</a>
+                 ·
+                  Originally posted by <a href="{ReblogRootURL}"><img
+src="{ReblogRootPortraitURL-16}" class="favicon"/> {ReblogRootName}</a>
+                </span>
+              {/block:RebloggedFrom}
+            </div>
             <div class="meta">
               <span class="meta-elements timeago">
                 <a href="{Permalink}">{TimeAgo}</a>
               </span>
-              {block:RebloggedFrom}
-                 ·
-                <span class="meta-elements rebloggedfrom">
-                  Reblogged from <a href="{ReblogParentURL}">{ReblogParentName}</a>
-                </span>
-              {/block:RebloggedFrom}
               {block:NoteCount}
                  ·
                 <span class="meta-elements notecount">
@@ -376,6 +385,26 @@
                   </li>
                   {/block:IfEnablePlus1Button}
                 </ul>
+
+                {block:IfDisqusShortname}
+
+                <div id="disqus_thread"></div>
+                <script type="text/javascript">
+                    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+                    var disqus_shortname = '{text:Disqus Shortname}'; // Required - Replace example with your forum shortname
+
+                    /* * * DON'T EDIT BELOW THIS LINE * * */
+                    (function() {
+                        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                    })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+                {/block:IfDisqusShortname}
+
             {/block:PermalinkPage}
 
             {block:PostNotes}
