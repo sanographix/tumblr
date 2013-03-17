@@ -13,6 +13,7 @@
     "syntax": "Automatic syntax highlighting",
     "logo": "Title logo can be set",
     "star": "Hatena Star support",
+    "disqus": "Disqus support",
     "author": "Google Author support",
     "analytics": "Google Analytics support"
   },
