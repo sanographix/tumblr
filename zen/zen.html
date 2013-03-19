@@ -46,12 +46,21 @@
   <meta property="og:type" content="article" />
   <meta property="og:url" content="{block:IndexPage}{text:OGP Toppage URL}{/block:IndexPage}{block:PermalinkPage}{Permalink}{/block:PermalinkPage}" />
   <meta property="og:image" content="{PortraitURL-128}" />
+  <!-- Twitter tags -->
+  <meta name="twitter:image" content="{PortraitURL-128}" />
   <!-- photo だったら og-image はphotoURLにする -->
-  {block:Posts}
-    {block:Photo}
-      <meta property="og:image" content="{PhotoURL-400}" />
-    {/block:Photo}
-  {/block:Posts}
+  {block:PermalinkPage}
+    {block:Posts}
+      {block:Photo}
+        <meta property="og:image" content="{PhotoURL-400}" />
+      {/block:Photo}
+      {block:Photoset}
+        {block:Photos}
+        <meta property="og:image" content="{PhotoURL-400}" />
+        {/block:Photos}
+      {/block:Photoset}
+    {/block:Posts}
+  {/block:PermalinkPage}
   <meta property="og:site_name" content="{Title}" />
   <meta property="og:description" content="{block:Description}{MetaDescription}{/block:Description}">
   <meta property="fb:admins" content="{text:OGP Facebook Admin Number}" />

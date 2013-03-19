@@ -5,12 +5,14 @@
 ZENは、Tumblrで普通に日記を書く用途にこだわったテンプレートです。  
 [@sanographix](http://www.sanographix.net)がデザインしています。
 
+詳細はこちらの詳細ページをご覧ください。  
+[http://sanographix.github.com/tumblr/zen](http://sanographix.github.com/tumblr/zen)
+
 ## Demo
 
 デモページはこちらです
 
 [http://zen-theme.tumblr.com/](http://zen-theme.tumblr.com/)
-
 
 
 ## 1. インストールする
@@ -65,6 +67,10 @@ ZENは、Tumblrで普通に日記を書く用途にこだわったテンプレ�
 
 
 ## Changelog
+
+### 1.1.1 (2013/3/19)
+
+* Twitter Cards の`twitter:image`にユーザーアイコンを出す
 
 ### 1.1.0 (2013/3/17)
 
