@@ -45,7 +45,7 @@ ZENは、Tumblrで普通に日記を書く用途にこだわったテンプレ�
 | Title Logo | ブログタイトルのかわりに表示するタイトルロゴをアップロードできます。 |
 | Google Analytics ID | Google Analytics を使う場合はここにトラッキングIDを入力します。 |
 | Google Author | ここに自分のGoogle+プロフィールURLを入力することで、Google検索結果に著者情報を表示させることができます。詳しい情報は[Googleのヘルプ](http://support.google.com/webmasters/bin/answer.py?hl=ja&answer=1408986)を参照してください。 |
-| Hatena Star Token | ここにはてなスターのトークンを入力することで、記事にスターがついたときに通知が届くようになります。詳しい設定方法は[はてなスターのヘルプ](http://d.hatena.ne.jp/hatenastar/20070707/1184453490)を参照してください。 |
+| Hatena Star Token | ここにはてなスターのトークンを入力します。詳しい設定方法は[はてなスターのヘルプ](http://d.hatena.ne.jp/hatenastar/20070707/1184453490)を参照してください。 |
 | OGP Facebook Admin Number | Facebok Admin ID を入力します。 Admin IDの調べ方は検索するといろいろ出てきます。 |
 | OGP Toppage URL | トップページのURLを`http://~~`から入力します（http://example.tumblr.com）。`og:url`でトップページのURLを認識させる必要があるため、なるべく入力してください。 |
 | Enable Syntax Highlight | シンタックスハイライトを有効にします。 |
@@ -77,7 +77,7 @@ ZENは、Tumblrで普通に日記を書く用途にこだわったテンプレ�
 
 * 「もっと読む」にスタイルをあてた
 * `hBookmark-widget-counter` （○users の画像）には影をつけない
-
+* はてなスターの設定が正しく行われていなかった不具合を修正
 
 ### 1.1.1 (2013/3/19)
 

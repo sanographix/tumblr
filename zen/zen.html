@@ -81,6 +81,17 @@
       Hatena.Strar.Token = '{text:Hatena Star Token}';
     </script>
     <script type="text/javascript">
+    Hatena.Star.SiteConfig = {
+      entryNodes: {
+        'article.post': {
+          uri: '.entry-title a',
+          title: '.entry-title',
+          container: 'div.meta'
+        }
+      }
+    };
+    </script>
+    <script type="text/javascript">
       Hatena.Star.EntryLoader.headerTagAndClassName = ['div','meta'];
     </script>
   {/block:IfEnableHatenaStar}
