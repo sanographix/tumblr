@@ -5,7 +5,7 @@
 ZENは、Tumblrで普通に日記を書く用途にこだわったテンプレートです。  
 [@sanographix](http://www.sanographix.net)がデザインしています。
 
-詳細はこちらの詳細ページをご覧ください。  
+詳細はこちらの紹介ページをご覧ください。  
 [http://sanographix.github.com/tumblr/zen](http://sanographix.github.com/tumblr/zen)
 
 ## Demo
