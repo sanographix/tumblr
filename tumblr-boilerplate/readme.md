@@ -1,1 +1,3 @@
-# Tumblr Boilerplate (途中)
+# Tumblr Boilerplate
+
+ Boilerplate for Tumblr theme.
