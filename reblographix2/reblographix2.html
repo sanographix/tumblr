@@ -18,7 +18,6 @@
   <meta name="text:Hatena Star Token" content="" />
   <meta name="text:Google Author" content="" />
 
-  <meta name="if:Enable Hatena Star" content="0" />
   <meta name="if:Enable Facebook Button" content="1" />
   <meta name="if:Enable Tweet Button" content="1" />
   <meta name="if:Enable Plus1 Button" content="1" />
@@ -57,32 +56,12 @@
   <meta property="fb:admins" content="{text:OGP Facebook Admin Number}" />
   <link rel="author" href="{text:Google Author}" />
 
-  <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="https://dl.dropbox.com/u/282961/reblographix2/css/style.css" />
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-
-  <!-- はてなスター -->
-  {block:IfEnableHatenaStar}
-    <script type="text/javascript" src="//s.hatena.ne.jp/js/HatenaStar.js"></script>
-    <script type="text/javascript">
-      Hatena.Strar.Token = '{text:Hatena Star Token}';
-    </script>
-    <script type="text/javascript">
-    Hatena.Star.SiteConfig = {
-      entryNodes: {
-        'article.post': {
-          uri: '.entry-title a',
-          title: '.entry-title',
-          container: 'div.meta'
-        }
-      }
-    };
-    </script>
-    <script type="text/javascript">
-      Hatena.Star.EntryLoader.headerTagAndClassName = ['div','meta'];
-    </script>
-  {/block:IfEnableHatenaStar}
+  <script src="//cdnjs.cloudflare.com/ajax/libs/masonry/2.1.08/jquery.masonry.min.js"></script>
+  <script src="https://dl.dropbox.com/u/282961/reblographix2/js/options.js"></script>
 
   <!--[if IE]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -120,21 +99,16 @@
     }(document, 'script', 'facebook-jssdk'));</script>
   {/block:IfEnableFacebookButton}
 
+  <header id="header">
+    <h1 class="blog-title">
+      <a href="/">{Title}</a>
+    </h1>
+  </header>
+
   <div id="container">
 
-    <header id="header">
-      <h1 class="blog-title">
-        <a href="/">{Title}</a>
-      </h1>
-      {block:Description}
-        <h2 class="blog-description">{Description}</h2>
-      {/block:Description}
-    </header>
-
-    <div id="main" class="autopagerize_page_element">
-
       {block:TagPage}
-          <h2 class="tagged">Posts tagged "{Tag}"</h2>
+        <h2 class="tagged">Posts tagged "{Tag}"</h2>
       {/block:TagPage}
 
       <!-- index page -->
@@ -153,12 +127,6 @@
           {block:Audio}audio{/block:Audio}
           {block:Answer}answer{/block:Answer}
           ">
-            {block:Date}
-            <div class="date">
-              {block:NewDayDate}<p><a href="{Permalink}">{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}</a></p>{/block:NewDayDate}
-              {block:SameDayDate}<p><a href="{Permalink}">{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}</a></p>{/block:SameDayDate}
-            </div>
-            {/block:Date}
 
             <!-- post: テキスト -->
             {block:Text}
@@ -260,198 +228,200 @@
               </div>
             {/block:Answer}
           </article>
+        {/block:Posts}
       {/block:IndexPage}
 
-      <!-- 投稿 -->
-      {block:Posts}
-        <article class="post {TagsAsClasses}
-        {block:Text}text{/block:Text}
-        {block:Photo}photo{/block:Photo}
-        {block:Photoset}photoset{/block:Photoset}
-        {block:Quote}quote{/block:Quote}
-        {block:Link}link{/block:Link}
-        {block:Chat}chat{/block:Chat}
-        {block:Video}video{/block:Video}
-        {block:Audio}audio{/block:Audio}
-        {block:Answer}answer{/block:Answer}
-        ">
-          {block:Date}
-          <div class="date">
-            {block:NewDayDate}<p><a href="{Permalink}">{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}</a></p>{/block:NewDayDate}
-            {block:SameDayDate}<p><a href="{Permalink}">{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}</a></p>{/block:SameDayDate}
-          </div>
-          {/block:Date}
+      <!-- パーマリンク -->
+      {block:PermalinkPage}
 
-          <!-- post: テキスト -->
-          {block:Text}
-            <header class="entry-header">
-              {block:Title}
-                <h1 class="entry-title"><a href="{Permalink}">{Title}</a></h1>
-              {/block:Title}
-            </header>
-            <div class="entry-content">
-              {Body}
+        <!-- 投稿 -->
+        {block:Posts}
+          <article class="post {TagsAsClasses}
+          {block:Text}text{/block:Text}
+          {block:Photo}photo{/block:Photo}
+          {block:Photoset}photoset{/block:Photoset}
+          {block:Quote}quote{/block:Quote}
+          {block:Link}link{/block:Link}
+          {block:Chat}chat{/block:Chat}
+          {block:Video}video{/block:Video}
+          {block:Audio}audio{/block:Audio}
+          {block:Answer}answer{/block:Answer}
+          ">
+            {block:Date}
+            <div class="date">
+              {block:NewDayDate}<p><a href="{Permalink}">{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}</a></p>{/block:NewDayDate}
+              {block:SameDayDate}<p><a href="{Permalink}">{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}</a></p>{/block:SameDayDate}
             </div>
-          {/block:Text}
+            {/block:Date}
 
-          <!-- post: 画像 -->
-          {block:Photo}
-            <div class="entry-content">
-              {LinkOpenTag}
-                <img src="{PhotoURL-HighRes}" alt="{PhotoAlt}"/>
-              {LinkCloseTag}
-              {block:Caption}
-                <div class="caption">
-                  {Caption}
-                </div>
-              {/block:Caption}
-            </div>
-          {/block:Photo}
-
-          <!-- post: フォトセット -->
-          {block:Photoset}
+            <!-- post: テキスト -->
+            {block:Text}
+              <header class="entry-header">
+                {block:Title}
+                  <h1 class="entry-title"><a href="{Permalink}">{Title}</a></h1>
+                {/block:Title}
+              </header>
               <div class="entry-content">
-                {Photoset-700}
+                {Body}
+              </div>
+            {/block:Text}
+
+            <!-- post: 画像 -->
+            {block:Photo}
+              <div class="entry-content">
+                {LinkOpenTag}
+                  <img src="{PhotoURL-HighRes}" alt="{PhotoAlt}"/>
+                {LinkCloseTag}
                 {block:Caption}
                   <div class="caption">
                     {Caption}
                   </div>
                 {/block:Caption}
               </div>
-          {/block:Photoset}
+            {/block:Photo}
 
-          <!-- post: 引用 -->
-          {block:Quote}
-            <div class="entry-content {Length}">
-              <blockquote>“{Quote}”</blockquote>
-              {block:Source}
-                <div class="quote-source">
-                  {Source}
+            <!-- post: フォトセット -->
+            {block:Photoset}
+                <div class="entry-content">
+                  {Photoset-700}
+                  {block:Caption}
+                    <div class="caption">
+                      {Caption}
+                    </div>
+                  {/block:Caption}
                 </div>
-              {/block:Source}
-            </div>
-          {/block:Quote}
+            {/block:Photoset}
 
-          <!-- post: リンク -->
-          {block:Link}
-            <header class="entry-header">
-              <h1 class="entry-title">
-                <a href="{URL}" class="link-url" {Target}>{Name}</a>
-              </h1>
-            </header>
-            <div class="entry-content">
-                {block:Description}
-                  <div class="link-description">{Description}</div>
-                {/block:Description}
-            </div>
-          {/block:Link}
-
-          <!-- post: チャット -->
-          {block:Chat}
-            <div class="entry-content">
-              {block:Title}
-                <h1 class="entry-title"><a href="{Permalink}">{Title}</a></h1>
-              {/block:Title}
-              <ul class="ul-chat">
-                {block:Lines}
-                <li class="{Alt} user_{UserNumber}">
-                {block:Label}
-                <span class="label">{Label}</span>
-                {/block:Label}
-                {Line}
-                </li>
-                {/block:Lines}
-              </ul>
-            </div>
-          {/block:Chat}
-
-          <!-- post: ビデオ -->
-          {block:Video}
-            <div class="entry-content video-iframe">
-              {Video-700}
-              {block:Caption}
-                <div class="caption">
-                  {Caption}
-                </div>
-              {/block:Caption}
-            </div>
-          {/block:Video}
-
-          <!-- post: オーディオ -->
-          {block:Audio}
-            <div class="entry-content">
-              {AudioPlayerBlack}
-              {block:Caption}
-                <div class="caption">
-                  {Caption}
-                </div>
-              {/block:Caption}
-            </div>
-          {/block:Audio}
-
-          <!-- post: Answer -->
-          {block:Answer}
-            <div class="entry-content">
-              <div class="question bubble">
-                {Question}
+            <!-- post: 引用 -->
+            {block:Quote}
+              <div class="entry-content {Length}">
+                <blockquote>“{Quote}”</blockquote>
+                {block:Source}
+                  <div class="quote-source">
+                    {Source}
+                  </div>
+                {/block:Source}
               </div>
-              <div class="asker-group">
-                <img src="{AskerPortraitURL-24}" width="24" height="24" /> {Asker}
+            {/block:Quote}
+
+            <!-- post: リンク -->
+            {block:Link}
+              <header class="entry-header">
+                <h1 class="entry-title">
+                  <a href="{URL}" class="link-url" {Target}>{Name}</a>
+                </h1>
+              </header>
+              <div class="entry-content">
+                  {block:Description}
+                    <div class="link-description">{Description}</div>
+                  {/block:Description}
               </div>
-              <div class="answer cont">{Answer}</div>
-            </div>
-          {/block:Answer}
+            {/block:Link}
 
-          <!-- Content Source -->
-          {block:ContentSource}
-            <div class="cont content_source">
-              <a href="{SourceURL}">
-                {lang:Source}:
-                {block:SourceLogo}
-                  <img src="{BlackLogoURL}" width="{LogoWidth}" height="{LogoHeight}" alt="{SourceTitle}" />
-                {/block:SourceLogo}
-                {block:NoSourceLogo}
-                    {SourceTitle}
-                {/block:NoSourceLogo}
-              </a>
-            </div>
-          {/block:ContentSource}
+            <!-- post: チャット -->
+            {block:Chat}
+              <div class="entry-content">
+                {block:Title}
+                  <h1 class="entry-title"><a href="{Permalink}">{Title}</a></h1>
+                {/block:Title}
+                <ul class="ul-chat">
+                  {block:Lines}
+                  <li class="{Alt} user_{UserNumber}">
+                  {block:Label}
+                  <span class="label">{Label}</span>
+                  {/block:Label}
+                  {Line}
+                  </li>
+                  {/block:Lines}
+                </ul>
+              </div>
+            {/block:Chat}
 
-          <!-- 記事フッタ -->
-          <footer class="entry-footer">
-            <div class="meta meta-reblog">
-              {block:RebloggedFrom}
-                <span class="meta-elements rebloggedfrom">
-                  Reblogged from <a href="{ReblogParentURL}"><img
-src="{ReblogParentPortraitURL-16}" class="favicon"/> {ReblogParentName}</a>
-                 ·
-                  Originally posted by <a href="{ReblogRootURL}"><img
-src="{ReblogRootPortraitURL-16}" class="favicon"/> {ReblogRootName}</a>
-                </span>
-              {/block:RebloggedFrom}
-            </div>
-            <div class="meta">
-              <span class="meta-elements timeago">
-                <a href="{Permalink}">{TimeAgo}</a>
-              </span>
-              {block:NoteCount}
-                 ·
-                <span class="meta-elements notecount">
-                  <a href="{Permalink}">{NoteCount} Notes</a>
-                </span>
-              {/block:NoteCount}
-              {block:HasTags}
-                 ·
-                <span class="meta-elements hastags">
-                  {block:Tags}
-                    <a href="{TagURL}">#{Tag}</a>
-                  {/block:Tags}
-                </span>
-              {/block:HasTags}
-            </div>
+            <!-- post: ビデオ -->
+            {block:Video}
+              <div class="entry-content video-iframe">
+                {Video-700}
+                {block:Caption}
+                  <div class="caption">
+                    {Caption}
+                  </div>
+                {/block:Caption}
+              </div>
+            {/block:Video}
 
-            <!-- パーマリンクだけソーシャルボタン出す -->
-            {block:PermalinkPage}
+            <!-- post: オーディオ -->
+            {block:Audio}
+              <div class="entry-content">
+                {AudioPlayerBlack}
+                {block:Caption}
+                  <div class="caption">
+                    {Caption}
+                  </div>
+                {/block:Caption}
+              </div>
+            {/block:Audio}
+
+            <!-- post: Answer -->
+            {block:Answer}
+              <div class="entry-content">
+                <div class="question bubble">
+                  {Question}
+                </div>
+                <div class="asker-group">
+                  <img src="{AskerPortraitURL-24}" width="24" height="24" /> {Asker}
+                </div>
+                <div class="answer cont">{Answer}</div>
+              </div>
+            {/block:Answer}
+
+            <!-- Content Source -->
+            {block:ContentSource}
+              <div class="cont content_source">
+                <a href="{SourceURL}">
+                  {lang:Source}:
+                  {block:SourceLogo}
+                    <img src="{BlackLogoURL}" width="{LogoWidth}" height="{LogoHeight}" alt="{SourceTitle}" />
+                  {/block:SourceLogo}
+                  {block:NoSourceLogo}
+                      {SourceTitle}
+                  {/block:NoSourceLogo}
+                </a>
+              </div>
+            {/block:ContentSource}
+
+            <!-- 記事フッタ -->
+            <footer class="entry-footer">
+              <div class="meta meta-reblog">
+                {block:RebloggedFrom}
+                  <span class="meta-elements rebloggedfrom">
+                    Reblogged from <a href="{ReblogParentURL}"><img
+  src="{ReblogParentPortraitURL-16}" class="favicon"/> {ReblogParentName}</a>
+                   ·
+                    Originally posted by <a href="{ReblogRootURL}"><img
+  src="{ReblogRootPortraitURL-16}" class="favicon"/> {ReblogRootName}</a>
+                  </span>
+                {/block:RebloggedFrom}
+              </div>
+              <div class="meta">
+                <span class="meta-elements timeago">
+                  <a href="{Permalink}">{TimeAgo}</a>
+                </span>
+                {block:NoteCount}
+                   ·
+                  <span class="meta-elements notecount">
+                    <a href="{Permalink}">{NoteCount} Notes</a>
+                  </span>
+                {/block:NoteCount}
+                {block:HasTags}
+                   ·
+                  <span class="meta-elements hastags">
+                    {block:Tags}
+                      <a href="{TagURL}">#{Tag}</a>
+                    {/block:Tags}
+                  </span>
+                {/block:HasTags}
+              </div>
+
               <ul class="social-buttons">
                 {block:IfEnableTweetButton}
                 <li class="social-button">
@@ -479,39 +449,39 @@ src="{ReblogRootPortraitURL-16}" class="favicon"/> {ReblogRootName}</a>
                 </li>
                 {/block:IfEnablePlus1Button}
               </ul>
-            {/block:PermalinkPage}
-
-            {block:PostNotes}
-              <div class="notecontainer">{PostNotes}</div>
-            {/block:PostNotes}
-          </footer>
-        </article>
-      {/block:Posts}
-    </div>
-
-    {block:PermalinkPagination}
-      <div id="pager">
-        <!-- パーマリンク -->
-        {block:PreviousPost}
-          <a href="{PreviousPost}">Prev</a>
-        {/block:PreviousPost}
-        {block:NextPost}
-          <a href="{NextPost}" class="next" rel="next">Next</a>
-        {/block:NextPost}
+              {block:PostNotes}
+                <div class="notecontainer">{PostNotes}</div>
+              {/block:PostNotes}
+            </footer>
+          </article>
+        {/block:Posts}
       </div>
-    {/block:PermalinkPagination}
 
-    {block:Pagination}
-      <div id="pager">
-        <!-- ページごと -->
-        {block:PreviousPage}
-          <a href="{PreviousPage}">Prev</a>
-        {/block:PreviousPage}
-        {block:NextPage}
-          <a href="{NextPage}" class="next" rel="next">Next</a>
-        {/block:NextPage}
-      </div>
-    {/block:Pagination}
+      {block:PermalinkPagination}
+        <div id="pager">
+          <!-- パーマリンク -->
+          {block:PreviousPost}
+            <a href="{PreviousPost}">Prev</a>
+          {/block:PreviousPost}
+          {block:NextPost}
+            <a href="{NextPost}" class="next" rel="next">Next</a>
+          {/block:NextPost}
+        </div>
+      {/block:PermalinkPagination}
+
+      {block:Pagination}
+        <div id="pager">
+          <!-- ページごと -->
+          {block:PreviousPage}
+            <a href="{PreviousPage}">Prev</a>
+          {/block:PreviousPage}
+          {block:NextPage}
+            <a href="{NextPage}" class="next" rel="next">Next</a>
+          {/block:NextPage}
+        </div>
+      {/block:Pagination}
+
+    {/block:PermalinkPage}
 
     <footer id="footer">
       <span class="copyright">
