@@ -13,19 +13,13 @@
 
   <!-- Variables -->
   <meta name="text:Google Analytics ID" content="" />
-  <meta name="text:OGP Facebook Admin Number" content="" />
-  <meta name="text:OGP Toppage URL" content="" />
-  <meta name="text:Hatena Star Token" content="" />
-  <meta name="text:Google Author" content="" />
-
-  <meta name="if:Enable Facebook Button" content="1" />
-  <meta name="if:Enable Tweet Button" content="1" />
-  <meta name="if:Enable Plus1 Button" content="1" />
+  <meta name="text:Blog Domain" content="foo.tumblr.com" />
+  <meta name="if:Disable Tumblr Controls" content="1" />
 
   <title>{block:PostTitle}{PostTitle} - {/block:PostTitle}{Title}</title>
 
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width">
+  <meta name="viewport" content="width = device-width, initial-scale = 1, user-scalable = no">
   <link rel="shortcut icon" href="{Favicon}">
   <link rel="alternate" type="application/rss+xml" href="{RSS}">
   <link rel="apple-touch-icon" href="{PortraitURL-128}">
@@ -34,7 +28,6 @@
   <!-- OGP -->
   <meta property="og:title" content="{block:PostTitle}{PostTitle} - {/block:PostTitle}{Title}" />
   <meta property="og:type" content="article" />
-  <meta property="og:url" content="{block:IndexPage}{text:OGP Toppage URL}{/block:IndexPage}{block:PermalinkPage}{Permalink}{/block:PermalinkPage}" />
   <meta property="og:image" content="{PortraitURL-128}" />
   <!-- Twitter tags -->
   <meta name="twitter:image" content="{PortraitURL-128}" />
@@ -53,19 +46,39 @@
   {/block:PermalinkPage}
   <meta property="og:site_name" content="{Title}" />
   <meta property="og:description" content="{block:Description}{MetaDescription}{/block:Description}">
-  <meta property="fb:admins" content="{text:OGP Facebook Admin Number}" />
-  <link rel="author" href="{text:Google Author}" />
 
-  <link rel="stylesheet" type="text/css" media="screen" href="https://dl.dropbox.com/u/282961/reblographix2/css/style.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="//sanographix.github.com/public/tumblr/reblographix2/css/style.css" />
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/masonry/2.1.08/jquery.masonry.min.js"></script>
-  <script src="https://dl.dropbox.com/u/282961/reblographix2/js/options.js"></script>
-
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.nanoscroller/0.6.8/jquery.nanoscroller.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/fitvids/1.0.1/jquery.fitvids.min.js"></script>
+  <script src="//sanographix.github.com/public/tumblr/reblographix2/js/jquery.infinitescroll.js"></script>
+  <script src="//sanographix.github.com/public/tumblr/reblographix2/js/tinybox.js"></script>
+  <script src="//sanographix.github.com/public/tumblr/reblographix2/js/options.min.js"></script>
+  <script>
+  window.onload = function () {
+  document.body.insertAdjacentHTML( 'beforeEnd', '<iframe id="my-like-frame" style="display:none;"></iframe>' );
+  document.addEventListener( 'click', function ( event ) {
+      var myLike = event.target;
+      if( myLike.className.indexOf( 'my-like' ) > -1 ) {
+          var frame = document.getElementById( 'my-like-frame' ),
+              liked = ( myLike.className == 'my-liked' ),
+              command = liked ? 'unlike' : 'like',
+              reblog = myLike.getAttribute( 'data-reblog' ),
+              id = myLike.getAttribute( 'data-id' ),
+              oauth = reblog.slice( -8 );
+          frame.src = 'http://www.tumblr.com/' + command + '/' + oauth + '?id=' + id;
+          liked ? myLike.className = 'my-like' : myLike.className = 'my-liked';
+      };
+  }, false );
+  };
+  </script>
   <!--[if IE]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <script src="//css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="//sanographix.github.com/public/tumblr/reblographix2/css/fuck-ie.css" charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="//sanographix.github.com/public/tumblr/reblographix2/css/font-awesome-ie7.min.css" charset="utf-8"/>
   <![endif]-->
 
   <!-- Google Analytics -->
@@ -82,244 +95,160 @@
   <!-- END Google Analytics -->
 
 </head>
-<body class="{block:IndexPage}page-index{/block:IndexPage}{block:PermalinkPage}page-permalink page-{PostID}{/block:PermalinkPage}">
+<body class="{block:IndexPage}page-index{/block:IndexPage}{block:PermalinkPage}page-permalink nano" id="scrollbar{/block:PermalinkPage}">
 
   <style>
   {CustomCSS}
+
+  {block:IfDisableTumblrControls}
+    #tumblr_controls {
+      display: none;
+    }
+  {/block:IfDisableTumblrControls}
+
   </style>
 
-  {block:IfEnableFacebookButton}
-    <div id="fb-root"></div>
-    <script>(function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/ja_JP/all.js#xfbml=1";
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
-  {/block:IfEnableFacebookButton}
+  <!-- facebook SDK -->
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/ja_JP/all.js#xfbml=1";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
 
-  <header id="header">
-    <h1 class="blog-title">
-      <a href="/">{Title}</a>
-    </h1>
-  </header>
+  <!-- ここから index page -->
+  {block:IndexPage}
 
-  <div id="container">
+    <div class="header-wrapper">
+      <header id="header">
+        <a id="nav" href="#sidr" class="first btn btn-dark"><i class="icon-reorder icon-large"></i></a>
+        <h1 class="blog-title">
+          <a href="/">{Title}</a>
+        </h1>
+      </header>
+    </div>
 
-      {block:TagPage}
-        <h2 class="tagged">Posts tagged "{Tag}"</h2>
-      {/block:TagPage}
+    <!-- iOSっぽい横から出てくるメニュー -->
+    <nav id="sidr">
 
-      <!-- index page -->
-      {block:IndexPage}
+      <div id="cse">
+        <form id="search" method="get" action="http://www.google.co.jp/search" target="_blank">
+          <input type="submit" id="searchBtn" value="Search"  />
+          <input type="text" id="stext" name="q" value="" placeholder="Search">
+          <input name="domains" type="hidden" value="{text:Blog Domain}">
+          <input name="sitesearch" type="hidden" value="{text:Blog Domain}">
+        </form>
+      </div>
 
-        <!-- 投稿 -->
-        {block:Posts}
-          <article class="post {TagsAsClasses}
-          {block:Text}text{/block:Text}
-          {block:Photo}photo{/block:Photo}
-          {block:Photoset}photoset{/block:Photoset}
-          {block:Quote}quote{/block:Quote}
-          {block:Link}link{/block:Link}
-          {block:Chat}chat{/block:Chat}
-          {block:Video}video{/block:Video}
-          {block:Audio}audio{/block:Audio}
-          {block:Answer}answer{/block:Answer}
-          ">
+      <ul class="list blog-title">
+        <li>
+          <img src="{PortraitURL-48}" class="portrait-image">{Title}
+          {block:Description}
+            <div class="blog-description">{Description}</div>
+          {/block:Description}
+        </li>
+      </ul>
+      <h3>MENU</h3>
+      <ul class="list">
+        {block:HasPages}
+          {block:Pages}
+          <li>
+            <a href="{URL}"><i class="icon-info-sign"></i> {Label}</a>
+          </li>
+          {/block:Pages}
+        {/block:HasPages}
+        <li>
+          <a href="/archive"><i class="icon-calendar"></i> Archive</a>
+        </li>
+        <li>
+          <a href="{RSS}"><i class="icon-rss"></i> RSS</a>
+        </li>
+        <li>
+          <a href="http://www.tumblr.com/dashboard"><i class="icon-dashboard"></i> Dashboard</a>
+        </li>
+      </ul>
+      <footer id="footer">
+        <span class="copyright">
+          ©{CopyrightYears} {Title}
+        </span>
+        <a href="http://sanographix.github.com/tumblr/reblographix2/" target="_blank">Reblographix 2</a> designed by <a href="http://www.sanographix.net/" target="_blank">@sanographix</a>
+      </footer>
+    </nav>
 
-            <!-- post: テキスト -->
-            {block:Text}
-              <header class="entry-header">
-                {block:Title}
-                  <h1 class="entry-title"><a href="{Permalink}">{Title}</a></h1>
-                {/block:Title}
-              </header>
+    {block:TagPage}
+      <h2 class="tagged">Posts tagged "{Tag}"</h2>
+    {/block:TagPage}
+
+    <div id="container">
+
+      <!-- 投稿 -->
+      {block:Posts}
+        <article class="post {TagsAsClasses}
+        {block:Text}text{/block:Text}
+        {block:Photo}photo{/block:Photo}
+        {block:Photoset}photoset{/block:Photoset}
+        {block:Quote}quote{/block:Quote}
+        {block:Link}link{/block:Link}
+        {block:Chat}chat{/block:Chat}
+        {block:Video}video{/block:Video}
+        {block:Audio}audio{/block:Audio}
+        {block:Answer}answer{/block:Answer}
+        "
+        onClick="TINY.box.show({iframe:'{Permalink}',boxid:'frameless',width:700,top:0,fixed:true,maskid:'whitemask',maskopacity:100,closejs:function(){closeJS()}})">
+
+
+          <!-- post: テキスト -->
+          {block:Text}
+            <div class="post-thumb">
+              {block:Title}
+                <h1 class="entry-title"><a href="{Permalink}">{Title}</a></h1>
+              {/block:Title}
               <div class="entry-content">
                 {Body}
               </div>
-            {/block:Text}
-
-            <!-- post: 画像 -->
-            {block:Photo}
-              <div class="entry-content">
-                <img src="{PhotoURL-250}" alt="{PhotoAlt}"/>
-              </div>
-            {/block:Photo}
-
-            <!-- post: フォトセット -->
-            {block:Photoset}
-                <div class="entry-content">
-                </div>
-            {/block:Photoset}
-
-            <!-- post: 引用 -->
-            {block:Quote}
-              <div class="entry-content {Length}">
-                <blockquote>“{Quote}”</blockquote>
-                {block:Source}
-                  <div class="quote-source">
-                    {Source}
-                  </div>
-                {/block:Source}
-              </div>
-            {/block:Quote}
-
-            <!-- post: リンク -->
-            {block:Link}
-              <div class="entry-content">
-                <a href="{URL}" class="link-url" {Target}>{Name}</a>
-              </div>
-            {/block:Link}
-
-            <!-- post: チャット -->
-            {block:Chat}
-              <div class="entry-content">
-                {block:Title}
-                  <h1 class="entry-title"><a href="{Permalink}">{Title}</a></h1>
-                {/block:Title}
-                <ul class="ul-chat">
-                  {block:Lines}
-                  <li class="{Alt} user_{UserNumber}">
-                  {block:Label}
-                  <span class="label">{Label}</span>
-                  {/block:Label}
-                  {Line}
-                  </li>
-                  {/block:Lines}
-                </ul>
-              </div>
-            {/block:Chat}
-
-            <!-- post: ビデオ -->
-            {block:Video}
-              <div class="entry-content video-iframe">
-                {Video-700}
-                {block:Caption}
-                  <div class="caption">
-                    {Caption}
-                  </div>
-                {/block:Caption}
-              </div>
-            {/block:Video}
-
-            <!-- post: オーディオ -->
-            {block:Audio}
-              <div class="entry-content">
-                {AudioPlayerBlack}
-                {block:Caption}
-                  <div class="caption">
-                    {Caption}
-                  </div>
-                {/block:Caption}
-              </div>
-            {/block:Audio}
-
-            <!-- post: Answer -->
-            {block:Answer}
-              <div class="entry-content">
-                <div class="question bubble">
-                  {Question}
-                </div>
-                <div class="asker-group">
-                  <img src="{AskerPortraitURL-24}" width="24" height="24" /> {Asker}
-                </div>
-                <div class="answer cont">{Answer}</div>
-              </div>
-            {/block:Answer}
-          </article>
-        {/block:Posts}
-      {/block:IndexPage}
-
-      <!-- パーマリンク -->
-      {block:PermalinkPage}
-
-        <!-- 投稿 -->
-        {block:Posts}
-          <article class="post {TagsAsClasses}
-          {block:Text}text{/block:Text}
-          {block:Photo}photo{/block:Photo}
-          {block:Photoset}photoset{/block:Photoset}
-          {block:Quote}quote{/block:Quote}
-          {block:Link}link{/block:Link}
-          {block:Chat}chat{/block:Chat}
-          {block:Video}video{/block:Video}
-          {block:Audio}audio{/block:Audio}
-          {block:Answer}answer{/block:Answer}
-          ">
-            {block:Date}
-            <div class="date">
-              {block:NewDayDate}<p><a href="{Permalink}">{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}</a></p>{/block:NewDayDate}
-              {block:SameDayDate}<p><a href="{Permalink}">{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}</a></p>{/block:SameDayDate}
             </div>
-            {/block:Date}
+          {/block:Text}
 
-            <!-- post: テキスト -->
-            {block:Text}
-              <header class="entry-header">
-                {block:Title}
-                  <h1 class="entry-title"><a href="{Permalink}">{Title}</a></h1>
-                {/block:Title}
-              </header>
+          <!-- post: 画像 -->
+          {block:Photo}
+            <div class="photo-thumb" style="background-image:url({PhotoURL-250});">
+            </div>
+          {/block:Photo}
+
+          <!-- post: フォトセット -->
+          {block:Photoset}
+            {block:Photos}
+              <div class="photo-thumb" style="background-image: url('{PhotoURL-250}');">
+              </div>
+            {/block:Photos}
+          {/block:Photoset}
+
+          <!-- post: 引用 -->
+          {block:Quote}
+            <div class="post-thumb">
+              <blockquote>“{Quote}”</blockquote>
+            </div>
+          {/block:Quote}
+
+          <!-- post: リンク -->
+          {block:Link}
+            <div class="post-thumb">
+              <h1 class="entry-title">
+                <a href="{URL}" class="link-url" {Target}>{Name}</a>
+              </h1>
               <div class="entry-content">
-                {Body}
+                {block:Description}
+                  <div class="link-description">{Description}</div>
+                {/block:Description}
               </div>
-            {/block:Text}
+            </div>
+          {/block:Link}
 
-            <!-- post: 画像 -->
-            {block:Photo}
-              <div class="entry-content">
-                {LinkOpenTag}
-                  <img src="{PhotoURL-HighRes}" alt="{PhotoAlt}"/>
-                {LinkCloseTag}
-                {block:Caption}
-                  <div class="caption">
-                    {Caption}
-                  </div>
-                {/block:Caption}
-              </div>
-            {/block:Photo}
-
-            <!-- post: フォトセット -->
-            {block:Photoset}
-                <div class="entry-content">
-                  {Photoset-700}
-                  {block:Caption}
-                    <div class="caption">
-                      {Caption}
-                    </div>
-                  {/block:Caption}
-                </div>
-            {/block:Photoset}
-
-            <!-- post: 引用 -->
-            {block:Quote}
-              <div class="entry-content {Length}">
-                <blockquote>“{Quote}”</blockquote>
-                {block:Source}
-                  <div class="quote-source">
-                    {Source}
-                  </div>
-                {/block:Source}
-              </div>
-            {/block:Quote}
-
-            <!-- post: リンク -->
-            {block:Link}
-              <header class="entry-header">
-                <h1 class="entry-title">
-                  <a href="{URL}" class="link-url" {Target}>{Name}</a>
-                </h1>
-              </header>
-              <div class="entry-content">
-                  {block:Description}
-                    <div class="link-description">{Description}</div>
-                  {/block:Description}
-              </div>
-            {/block:Link}
-
-            <!-- post: チャット -->
-            {block:Chat}
+          <!-- post: チャット -->
+          {block:Chat}
+            <div class="post-thumb">
               <div class="entry-content">
                 {block:Title}
                   <h1 class="entry-title"><a href="{Permalink}">{Title}</a></h1>
@@ -335,161 +264,322 @@
                   {/block:Lines}
                 </ul>
               </div>
-            {/block:Chat}
+            </div>
+          {/block:Chat}
 
-            <!-- post: ビデオ -->
-            {block:Video}
-              <div class="entry-content video-iframe">
-                {Video-700}
-                {block:Caption}
-                  <div class="caption">
-                    {Caption}
-                  </div>
-                {/block:Caption}
+          <!-- post: ビデオ -->
+          {block:Video}
+            <i class="icon-film"></i>
+            {block:Caption}
+              <div class="post-thumb">
+                <div class="caption">
+                  {Caption}
+                </div>
               </div>
-            {/block:Video}
+            {/block:Caption}
+          {/block:Video}
 
-            <!-- post: オーディオ -->
-            {block:Audio}
-              <div class="entry-content">
-                {AudioPlayerBlack}
-                {block:Caption}
-                  <div class="caption">
-                    {Caption}
-                  </div>
-                {/block:Caption}
+          <!-- post: オーディオ -->
+          {block:Audio}
+            <i class="icon-music"></i>
+            {block:Caption}
+              <div class="post-thumb">
+                <div class="caption">
+                  {Caption}
+                </div>
               </div>
-            {/block:Audio}
+            {/block:Caption}
+          {/block:Audio}
 
-            <!-- post: Answer -->
-            {block:Answer}
+          <!-- post: Answer -->
+          {block:Answer}
+            <div class="post-thumb">
               <div class="entry-content">
                 <div class="question bubble">
                   {Question}
                 </div>
                 <div class="asker-group">
-                  <img src="{AskerPortraitURL-24}" width="24" height="24" /> {Asker}
+                  <img src="{AskerPortraitURL-24}" width="24" height="24" class="user-icon" /> {Asker}
                 </div>
+                <hr/>
                 <div class="answer cont">{Answer}</div>
               </div>
-            {/block:Answer}
+            </div>
+          {/block:Answer}
 
-            <!-- Content Source -->
-            {block:ContentSource}
-              <div class="cont content_source">
-                <a href="{SourceURL}">
-                  {lang:Source}:
-                  {block:SourceLogo}
-                    <img src="{BlackLogoURL}" width="{LogoWidth}" height="{LogoHeight}" alt="{SourceTitle}" />
-                  {/block:SourceLogo}
-                  {block:NoSourceLogo}
-                      {SourceTitle}
-                  {/block:NoSourceLogo}
-                </a>
+        </article>
+      {/block:Posts}
+
+    </div><!-- container -->
+
+    <!-- ページャ -->
+    {block:Pagination}
+      <div id="pager">
+        {block:PreviousPage}
+          <a href="{PreviousPage}">Prev</a>
+        {/block:PreviousPage}
+        {block:NextPage}
+          <a href="{NextPage}" class="next" rel="next">Next</a>
+        {/block:NextPage}
+      </div>
+    {/block:Pagination}
+
+    <!-- iOSっぽいサイドバーメニュー -->
+    <script src="http://static.tumblr.com/xlsgtjb/kCemks9ds/jquery.pageslide.min.js"></script>
+    <script>
+      $("a.first").pageslide();
+    </script>
+
+  {/block:IndexPage}
+  <!-- ここまで index page -->
+
+  <!-- ここからパーマリンクページ -->
+  {block:PermalinkPage}
+    <div class="content"><!-- nanoscroller 用 -->
+      <div id="container">
+
+        <!-- 投稿 -->
+        {block:Posts}
+          <article class="post {TagsAsClasses}
+          {block:Text}text{/block:Text}
+          {block:Photo}photo{/block:Photo}
+          {block:Photoset}photoset{/block:Photoset}
+          {block:Quote}quote{/block:Quote}
+          {block:Link}link{/block:Link}
+          {block:Chat}chat{/block:Chat}
+          {block:Video}video{/block:Video}
+          {block:Audio}audio{/block:Audio}
+          {block:Answer}answer{/block:Answer}
+          ">
+
+          <!-- post: テキスト -->
+          {block:Text}
+            <header class="entry-header">
+              {block:Title}
+                <h1 class="entry-title"><a href="{Permalink}">{Title}</a></h1>
+              {/block:Title}
+            </header>
+            <div class="entry-content">
+              {Body}
+            </div>
+          {/block:Text}
+
+            <!-- post: 画像 -->
+            {block:Photo}
+              <div class="entry-content">
+                <div class="photo-image">
+                  {LinkOpenTag}
+                    <img src="{PhotoURL-500}" alt="{PhotoAlt}"/>
+                  {LinkCloseTag}
+                </div>
+                {block:Caption}
+                  <div class="caption">
+                    {Caption}
+                  </div>
+                {/block:Caption}
               </div>
-            {/block:ContentSource}
+            {/block:Photo}
+
+            <!-- post: フォトセット -->
+            {block:Photoset}
+              <div class="entry-content">
+                <div class="photo-image">
+                  {Photoset-500}
+                </div>
+                {block:Caption}
+                  <div class="caption">
+                    {Caption}
+                  </div>
+                {/block:Caption}
+              </div>
+            {/block:Photoset}
+
+          <!-- post: 引用 -->
+          {block:Quote}
+            <div class="entry-content {Length}">
+              <blockquote>“{Quote}”</blockquote>
+              {block:Source}
+                <div class="quote-source">
+                  {Source}
+                </div>
+              {/block:Source}
+            </div>
+          {/block:Quote}
+
+          <!-- post: リンク -->
+          {block:Link}
+            <header class="entry-header">
+              <h1 class="entry-title">
+                <a href="{URL}" class="link-url" {Target}>{Name}</a>
+              </h1>
+            </header>
+            <div class="entry-content">
+                {block:Description}
+                  <div class="link-description">{Description}</div>
+                {/block:Description}
+            </div>
+          {/block:Link}
+
+          <!-- post: チャット -->
+          {block:Chat}
+            <div class="entry-content">
+              {block:Title}
+                <h1 class="entry-title"><a href="{Permalink}">{Title}</a></h1>
+              {/block:Title}
+              <ul class="ul-chat">
+                {block:Lines}
+                <li class="{Alt} user_{UserNumber}">
+                {block:Label}
+                <span class="label">{Label}</span>
+                {/block:Label}
+                {Line}
+                </li>
+                {/block:Lines}
+              </ul>
+            </div>
+          {/block:Chat}
+
+          <!-- post: ビデオ -->
+          {block:Video}
+            <div class="entry-content video-iframe">
+              {Video-700}
+              {block:Caption}
+                <div class="caption">
+                  {Caption}
+                </div>
+              {/block:Caption}
+            </div>
+          {/block:Video}
+
+          <!-- post: オーディオ -->
+          {block:Audio}
+            <div class="entry-content">
+              {AudioPlayerBlack}
+              {block:Caption}
+                <div class="caption">
+                  {Caption}
+                </div>
+              {/block:Caption}
+            </div>
+          {/block:Audio}
+
+          <!-- post: Answer -->
+          {block:Answer}
+            <div class="entry-content">
+              <div class="question bubble">
+                {Question}
+              </div>
+              <div class="asker-group">
+                <img src="{AskerPortraitURL-24}" width="24" height="24" class="user-icon" /> {Asker}
+              </div>
+              <hr/>
+              <div class="answer cont">{Answer}</div>
+            </div>
+          {/block:Answer}
 
             <!-- 記事フッタ -->
             <footer class="entry-footer">
-              <div class="meta meta-reblog">
-                {block:RebloggedFrom}
-                  <span class="meta-elements rebloggedfrom">
-                    Reblogged from <a href="{ReblogParentURL}"><img
-  src="{ReblogParentPortraitURL-16}" class="favicon"/> {ReblogParentName}</a>
-                   ·
-                    Originally posted by <a href="{ReblogRootURL}"><img
-  src="{ReblogRootPortraitURL-16}" class="favicon"/> {ReblogRootName}</a>
-                  </span>
-                {/block:RebloggedFrom}
+
+              <!-- Content Source -->
+              {block:ContentSource}
+                <div class="meta content-source">
+                  <a href="{SourceURL}">
+                    {lang:Source}:
+                    {block:SourceLogo}
+                      <img src="{BlackLogoURL}" width="{LogoWidth}" height="{LogoHeight}" alt="{SourceTitle}" />
+                    {/block:SourceLogo}
+                    {block:NoSourceLogo}
+                        {SourceTitle}
+                    {/block:NoSourceLogo}
+                  </a>
+                </div>
+              {/block:ContentSource}
+
+              <div class="meta buttons">
+                <a href="{ReblogURL}" class="btn" target="_blank"><i class="icon-retweet"></i> Reblog</a>
+                <div class="my-like btn" data-reblog="{ReblogURL}" data-id="{PostID}" title="Like"><i class="icon-heart"></i> like</div>
+                <div class="pull-right">
+                  <span class="btn btn-share"><i class="icon-share"></i> Share</span>
+                </div>
               </div>
-              <div class="meta">
-                <span class="meta-elements timeago">
-                  <a href="{Permalink}">{TimeAgo}</a>
+
+              <!-- ソーシャルボタン -->
+              <div class="meta social-buttons">
+                <ul class="social-buttons-ul">
+                  <li class="social-button">
+                    <a href="https://twitter.com/share" class="twitter-share-button" data-lang="ja">ツイート</a>
+                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                  </li>
+                  <li class="social-button">
+                    <div class="fb-like" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false"></div>
+                  </li>
+                  <li class="social-button">
+                    <div class="g-plusone" data-size="medium"></div>
+                    <script type="text/javascript">
+                      window.___gcfg = {lang: 'ja'};
+
+                      (function() {
+                        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                        po.src = 'https://apis.google.com/js/plusone.js';
+                        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+                      })();
+                    </script>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="meta timeago">
+                {TimeAgo}
+                <span class="date">
+                  {block:NewDayDate} ({Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}){/block:NewDayDate}
+                  {block:SameDayDate} ({Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}){/block:SameDayDate}
                 </span>
-                {block:NoteCount}
-                   ·
-                  <span class="meta-elements notecount">
-                    <a href="{Permalink}">{NoteCount} Notes</a>
-                  </span>
-                {/block:NoteCount}
-                {block:HasTags}
-                   ·
-                  <span class="meta-elements hastags">
-                    {block:Tags}
-                      <a href="{TagURL}">#{Tag}</a>
-                    {/block:Tags}
-                  </span>
-                {/block:HasTags}
               </div>
 
-              <ul class="social-buttons">
-                {block:IfEnableTweetButton}
-                <li class="social-button">
-                  <a href="https://twitter.com/share" class="twitter-share-button" data-lang="ja">ツイート</a>
-                  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-                </li>
-                {/block:IfEnableTweetButton}
-                {block:IfEnableFacebookButton}
-                <li class="social-button">
-                  <div class="fb-like" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false"></div>
-                </li>
-                {/block:IfEnableFacebookButton}
-                {block:IfEnablePlus1Button}
-                <li class="social-button">
-                  <div class="g-plusone" data-size="medium"></div>
-                  <script type="text/javascript">
-                    window.___gcfg = {lang: 'ja'};
+              {block:RebloggedFrom}
+                <div class="meta reblog">
+                  <div class="meta-from">
+                    <a href="{ReblogParentURL}"><img src="{ReblogParentPortraitURL-64}" class="favicon"/></a>
+                    <span class="label"><i class="icon-retweet"></i> Reblogged from</span>
+                    <a href="{ReblogParentURL}" class="reblog-user-name">{ReblogParentName}</a>
+                  </div>
+                  <div class="meta-originally">
+                    <a href="{ReblogRootURL}"><img src="{ReblogRootPortraitURL-64}" class="favicon"/></a>
+                    <span class="label">Originally posted by</span>
+                    <a href="{ReblogRootURL}" class="reblog-user-name">{ReblogRootName}</a>
+                  </div>
+                </div>
+              {/block:RebloggedFrom}
 
-                    (function() {
-                      var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-                      po.src = 'https://apis.google.com/js/plusone.js';
-                      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-                    })();
-                  </script>
-                </li>
-                {/block:IfEnablePlus1Button}
-              </ul>
+              {block:HasTags}
+                <div class="meta hastags">
+                  <i class="icon-tag icon-large"></i>
+                  {block:Tags}
+                    <a href="{TagURL}">#{Tag}</a>
+                  {/block:Tags}
+                </div>
+              {/block:HasTags}
+
+              {block:NoteCount}
+                <div class="meta notecount">
+                  <strong>{NoteCount}</strong> Notes
+                </div>
+              {/block:NoteCount}
               {block:PostNotes}
                 <div class="notecontainer">{PostNotes}</div>
               {/block:PostNotes}
+
+              <div class="meta home">
+                <a href="/" class="btn"><i class="icon-home"></i> Home</a>
+              </div>
             </footer>
           </article>
         {/block:Posts}
+
       </div>
-
-      {block:PermalinkPagination}
-        <div id="pager">
-          <!-- パーマリンク -->
-          {block:PreviousPost}
-            <a href="{PreviousPost}">Prev</a>
-          {/block:PreviousPost}
-          {block:NextPost}
-            <a href="{NextPost}" class="next" rel="next">Next</a>
-          {/block:NextPost}
-        </div>
-      {/block:PermalinkPagination}
-
-      {block:Pagination}
-        <div id="pager">
-          <!-- ページごと -->
-          {block:PreviousPage}
-            <a href="{PreviousPage}">Prev</a>
-          {/block:PreviousPage}
-          {block:NextPage}
-            <a href="{NextPage}" class="next" rel="next">Next</a>
-          {/block:NextPage}
-        </div>
-      {/block:Pagination}
-
-    {/block:PermalinkPage}
-
-    <footer id="footer">
-      <span class="copyright">
-        ©{CopyrightYears} {Title}
-      </span>
-    </footer>
-
-  </div>
+    </div>
+  {/block:PermalinkPage}
+  <!-- ここまでパーマリンクページ -->
 
 </body>
 </html>
