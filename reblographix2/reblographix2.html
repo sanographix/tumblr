@@ -50,30 +50,33 @@
   <link rel="stylesheet" type="text/css" media="screen" href="//sanographix.github.io/public/tumblr/reblographix2/css/style.css" />
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.nanoscroller/0.6.8/jquery.nanoscroller.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/fitvids/1.0.1/jquery.fitvids.min.js"></script>
-  <script src="//sanographix.github.io/public/tumblr/reblographix2/js/jquery.infinitescroll.js"></script>
-  <script src="//sanographix.github.io/public/tumblr/reblographix2/js/tinybox.js"></script>
   <script src="//sanographix.github.io/public/tumblr/reblographix2/js/options.min.js"></script>
+  {block:IndexPage}
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.nanoscroller/0.6.8/jquery.nanoscroller.min.js"></script>
+    <script src="//sanographix.github.io/public/tumblr/reblographix2/js/jquery.infinitescroll.js"></script>
+    <script src="//sanographix.github.io/public/tumblr/reblographix2/js/tinybox.js"></script>
+  {/block:IndexPage}
+  {block:PermalinkPage}
   <script>
-  window.onload = function () {
-  document.body.insertAdjacentHTML( 'beforeEnd', '<iframe id="my-like-frame" style="display:none;"></iframe>' );
-  document.addEventListener( 'click', function ( event ) {
-      var myLike = event.target;
-      if( myLike.className.indexOf( 'my-like' ) > -1 ) {
-          var frame = document.getElementById( 'my-like-frame' ),
-              liked = ( myLike.className == 'my-liked' ),
-              command = liked ? 'unlike' : 'like',
-              reblog = myLike.getAttribute( 'data-reblog' ),
-              id = myLike.getAttribute( 'data-id' ),
-              oauth = reblog.slice( -8 );
-          frame.src = 'http://www.tumblr.com/' + command + '/' + oauth + '?id=' + id;
-          liked ? myLike.className = 'my-like' : myLike.className = 'my-liked';
-      };
-  }, false );
-  };
+    window.onload = function () {
+    document.body.insertAdjacentHTML( 'beforeEnd', '<iframe id="my-like-frame" style="display:none;"></iframe>' );
+    document.addEventListener( 'click', function ( event ) {
+        var myLike = event.target;
+        if( myLike.className.indexOf( 'my-like' ) > -1 ) {
+            var frame = document.getElementById( 'my-like-frame' ),
+                liked = ( myLike.className == 'my-liked' ),
+                command = liked ? 'unlike' : 'like',
+                reblog = myLike.getAttribute( 'data-reblog' ),
+                id = myLike.getAttribute( 'data-id' ),
+                oauth = reblog.slice( -8 );
+            frame.src = 'http://www.tumblr.com/' + command + '/' + oauth + '?id=' + id;
+            liked ? myLike.className = 'my-like' : myLike.className = 'my-liked';
+        };
+    }, false );
+    };
   </script>
+  {/block:PermalinkPage}
   <!--[if IE]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <script src="//css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
@@ -107,16 +110,6 @@
   {/block:IfDisableTumblrControls}
 
   </style>
-
-  <!-- facebook SDK -->
-  <div id="fb-root"></div>
-  <script>(function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = "//connect.facebook.net/ja_JP/all.js#xfbml=1";
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));</script>
 
   <!-- ここから index page -->
   {block:IndexPage}
@@ -498,34 +491,6 @@
               <div class="meta buttons">
                 <a href="{ReblogURL}" class="btn" target="_blank"><i class="icon-retweet"></i> Reblog</a>
                 <div class="my-like btn" data-reblog="{ReblogURL}" data-id="{PostID}" title="Like"><i class="icon-heart"></i> like</div>
-                <div class="pull-right">
-                  <span class="btn btn-share"><i class="icon-share"></i> Share</span>
-                </div>
-              </div>
-
-              <!-- ソーシャルボタン -->
-              <div class="meta social-buttons">
-                <ul class="social-buttons-ul">
-                  <li class="social-button">
-                    <a href="https://twitter.com/share" class="twitter-share-button" data-lang="ja">ツイート</a>
-                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-                  </li>
-                  <li class="social-button">
-                    <div class="fb-like" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false"></div>
-                  </li>
-                  <li class="social-button">
-                    <div class="g-plusone" data-size="medium"></div>
-                    <script type="text/javascript">
-                      window.___gcfg = {lang: 'ja'};
-
-                      (function() {
-                        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-                        po.src = 'https://apis.google.com/js/plusone.js';
-                        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-                      })();
-                    </script>
-                  </li>
-                </ul>
               </div>
 
               <div class="meta timeago">
