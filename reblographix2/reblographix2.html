@@ -170,11 +170,11 @@
       </footer>
     </nav>
 
-    {block:TagPage}
-      <h2 class="tagged">Posts tagged "{Tag}"</h2>
-    {/block:TagPage}
-
     <div id="container">
+
+      {block:TagPage}
+        <h3 class="tagged">Posts tagged "{Tag}"</h3>
+      {/block:TagPage}
 
       <!-- 投稿 -->
       {block:Posts}
