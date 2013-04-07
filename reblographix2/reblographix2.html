@@ -52,8 +52,8 @@
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/fitvids/1.0.1/jquery.fitvids.min.js"></script>
   <script src="//sanographix.github.io/public/tumblr/reblographix2/js/options.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.nanoscroller/0.6.8/jquery.nanoscroller.min.js"></script>
   {block:IndexPage}
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.nanoscroller/0.6.8/jquery.nanoscroller.min.js"></script>
     <script src="//sanographix.github.io/public/tumblr/reblographix2/js/jquery.infinitescroll.js"></script>
     <script src="//sanographix.github.io/public/tumblr/reblographix2/js/tinybox.js"></script>
   {/block:IndexPage}
@@ -189,7 +189,7 @@
         {block:Audio}audio{/block:Audio}
         {block:Answer}answer{/block:Answer}
         "
-        onClick="TINY.box.show({iframe:'{Permalink}',boxid:'frameless',width:700,top:0,fixed:true,maskid:'whitemask',maskopacity:100,closejs:function(){closeJS()}})">
+        onClick="TINY.box.show({iframe:'{Permalink}',boxid:'frameless',width:700,top:0,fixed:true,maskid:'whitemask',maskopacity:100,animate:false,closejs:function(){closeJS()}})">
 
 
           <!-- post: テキスト -->
