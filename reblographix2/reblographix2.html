@@ -14,7 +14,7 @@
   <!-- Variables -->
   <meta name="text:Google Analytics ID" content="" />
   <meta name="text:Blog Domain" content="foo.tumblr.com" />
-  <meta name="if:Disable Tumblr Controls" content="1" />
+  <meta name="if:Hide Tumblr Controls" content="1" />
 
   <title>{block:PostTitle}{PostTitle} - {/block:PostTitle}{Title}</title>
 
@@ -103,11 +103,11 @@
   <style>
   {CustomCSS}
 
-  {block:IfDisableTumblrControls}
+  {block:IfHideTumblrControls}
     #tumblr_controls {
       display: none;
     }
-  {/block:IfDisableTumblrControls}
+  {/block:IfHideTumblrControls}
 
   </style>
 
