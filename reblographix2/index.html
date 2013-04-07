@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>Reblograpghix 2 - ReblogジャンキーのためのTumblrテーマ</title>
+  <meta name="description" content="Reblograpghix 2 は、画像を大量にReblogする人のための無料テーマ（テンプレート）です。" />
+  <meta name="keywords" content="Reblographix,Tumblr,画像,Photo,テーマ,テンプレート" />
+  <meta name="viewport" content="width=device-width">
+
+  <meta property="og:title" content="Reblograpghix 2 - ReblogジャンキーのためのTumblrテーマ" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="http://sanographix.github.io/tumblr/reblographix2/" />
+  <meta property="og:image" content="http://sanographix.github.io/tumblr/reblographix/images/og-image.jpg" />
+  <meta property="og:site_name" content="Reblograpghix 2 - ReblogジャンキーのためのTumblrテーマ" />
+  <meta property="og:description" content="Reblograpghix 2 は、画像を大量にReblogする人のための無料テーマ（テンプレート）です。">
+  <meta property="fb:admins" content="100000611255516" />
+
+  <link rel="stylesheet" media="screen" href="css/style.css" />
+  <link rel="shortcut icon" href="images/favicon.ico">
+
+  <!-- Google Author -->
+  <link rel="author" href="https://plus.google.com/109963703491503474788" />
+
+  <!--[if IE]>
+    <script src="js/libs/html5shiv.js"></script>
+  <![endif]-->
+
+  <script src="js/libs/jquery-1.8.3.min.js" charset="utf-8"></script>
+  <script src="js/libs/jquery.easing.1.3.js" charset="utf-8"></script>
+  <script src="js/libs/jquery.localize.js" charset="utf-8"></script>
+
+
+  <!--Google Analytics -->
+  <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-36621684-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+  </script>
+
+  <!-- Localize -->
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $("[data-localize]").localize("loc", { skipLanguage: "ja" })
+    });
+  </script>
+
+
+</head>
+<body>
+
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/ja_JP/all.js#xfbml=1";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+
+  <div class="navbar">
+    <div class="navbar-inner">
+      <div class="container">
+        <a class="brand" href="/">Reblographix 2</a>
+        <ul class="nav">
+          <li><a href="http://reblographix.tumblr.com/" target="_blank">View demo</a></li>
+          <li><a href="https://github.com/sanographix/tumblr/tree/master/reblographix" target="_blank"  onClick="_gaq.push(['_trackEvent', 'reblographix2-download', 'Click', 'navbar']);">Download</a></li>
+        </ul>
+        <ul class="nav pull-right">
+          <li><a href="http://sanographix.github.io/tumblr/">Tumblr Themes by sanographix</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="header-wrapper">
+    <header class="container" id="header">
+      <h1>Reblographix 2</h1>
+      <h2>An HTML5 Responsive Tumblr Theme for Reblog Monkeys</h2>
+      <div class="btn-wrapper">
+        <a href="https://github.com/sanographix/tumblr/tree/master/reblographix2" target="_blank" class="btn btn-large" onClick="_gaq.push(['_trackEvent', 'reblographix2-download', 'Click', 'header']);">Download Reblographix 2</a>
+      </div>
+      <p>
+        <i class="icon-github"></i> <a href="https://github.com/sanographix/tumblr/tree/master/reblographix2" onClick="_gaq.push(['_trackEvent', 'reblographix2-download', 'Click', 'viewgithub']);">View GitHub</a>
+        <span class="version">version 2.0 beta</span>
+      </p>
+    </header>
+  </div>
+
+  <div class="section container header-image">
+    <a href="http://reblographix.tumblr.com/" target="_blank"><img src="images/heading-large.jpg"/></a>
+  </div>
+
+  <div class="container section" id="intro">
+    <h1 data-localize="heading">Reblogジャンキーのみなさまへ。</h1>
+    <p data-localize="intro">Reblographix 2 は、大量に画像を Reblog する人のための無料 Tumblr テーマ（テンプレート）です。
+    </p>
+    </p>
+      <a href="http://reblographix.tumblr.com/" class="btn" data-localize="viewdemo" target="_blank"><i class="icon-external-link"></i> デモページを見る</a>
+    </p>
+  </div>
+  <hr class="soften">
+  <div id="key-features" class="container section">
+    <div class="row section">
+      <div class="span4">
+        <h2 data-localize="feature.simple-heading">無限スクロール</h2>
+        <div class="key-features-image scroll"></div>
+        <p data-localize="feature.simple-p">大きめのサムネイル画像が画面いっぱいに並びます。無限スクロール機能で、次のページを自動的に 読み込みます。</p>
+      </div>
+      <div class="span4">
+        <h2 data-localize="feature.normal-heading">改善されたパーマリンク</h2>
+        <div class="key-features-image permalink"></div>
+        <p data-localize="feature.normal-p">その場でパーマリンクが開くのでページ遷移せずに閲覧できます。バージョン 2.0 では Reblog 元や Notes 数もわかりやすく表示するよう改善しました。</p>
+      </div>
+      <div class="span4">
+        <h2 data-localize="feature.responsive-heading">ナビゲーションバー</h2>
+        <div class="key-features-image navigation"></div>
+        <p data-localize="feature.responsive-p">メニューや検索フォームは、ナビゲーションバーを押すと表示されます。普段は隠れているので見た目もすっきり。</p>
+      </div>
+    </div>
+    <div class="row section features">
+      <div class="span4">
+        <div class="icon">
+          <i class="icon-mobile-phone icon-large"></i>
+        </div>
+        <div class="features-content">
+          <h3 data-localize="feature.ogp">スマートフォン対応</h3>
+          <p>レスポンシブデザインで、ブラウザ幅に合わせて最適化された見た目になります。スマートフォンの閲覧にも対応。</p>
+        </div>
+      </div>
+      <div class="span4">
+        <div class="icon">
+          <i class="icon-edit icon-large"></i>
+        </div>
+        <div class="features-content">
+          <h3 data-localize="feature.syntax">すべての投稿タイプに対応</h3>
+          <p>Tumblr のすべての投稿タイプに対応しています。</p>
+        </div>
+      </div>
+      <div class="span4">
+        <div class="icon">
+          <i class="icon-copy icon-large"></i>
+        </div>
+        <div class="features-content">
+          <h3 data-localize="feature.syntax">固定ページ対応</h3>
+          <p>固定ページを何個でも作成できます。ページへのリンクは自動的にナビゲーションに追加されます。</p>
+        </div>
+      </div>
+    </div>
+    <div class="row section features">
+      <div class="span4">
+        <div class="icon">
+          <i class="icon-signal icon-large"></i>
+        </div>
+        <div class="features-content">
+          <h3 data-localize="feature.syntax">Google Analytics 対応</h3>
+          <p>Google Analytics トラッキングコードがあらかじめ挿入されています。</p>
+        </div>
+      </div>
+      <div class="span4">
+        <div class="icon">
+          <i class="icon-magic icon-large"></i>
+        </div>
+        <div class="features-content">
+          <h3 data-localize="feature.syntax">リニューアルされたデザイン</h3>
+          <p><a href="http://www.tumblr.com/theme/35965">Reblographix</a> のコンセプトはそのままに、コードとデザインを一新しました。</p>
+        </div>
+      </div>
+      <div class="span4">
+        <div class="icon">
+          <i class="icon-eye-open icon-large"></i>
+        </div>
+        <div class="features-content">
+          <h3 data-localize="feature.syntax">Retina ディスプレイのサポート</h3>
+          <p>Retina ディスプレイに最適化されています。アイコンは web フォントになっており、画面を拡大してもギザギザしません。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="getstarted-wrapper section">
+    <div class="container" id="getstarted">
+      <h1>Get started</h1>
+      <p data-localize="getstarted">詳しい設定方法はReadmeをお読みください。
+      </p>
+      <div class="btn-wrapper">
+        <a href="https://github.com/sanographix/tumblr/tree/master/reblographix2" target="_blank" class="btn btn-large btn-info" onClick="_gaq.push(['_trackEvent', 'reblographix2-download', 'Click', 'bottom']);">Download Reblographix 2</a>
+      </div>
+    </div>
+    <ul class="nav social-buttons">
+      <li class="social-button">
+        <iframe src="http://ghbtns.com/github-btn.html?user=sanographix&repo=tumblr&type=watch&count=true"
+    allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>
+      </li>
+      <li class="social-button">
+        <iframe src="http://ghbtns.com/github-btn.html?user=sanographix&repo=tumblr&type=follow&count=true"
+    allowtransparency="true" frameborder="0" scrolling="0" width="180" height="20"></iframe>
+      </li>
+      <li class="social-button">
+        <div class="fb-like" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false"></div>
+      </li>
+      <li class="social-button">
+        <a href="https://twitter.com/share" class="twitter-share-button" data-lang="ja">ツイート</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+      </li>
+      <li class="social-button">
+        <a href="http://b.hatena.ne.jp/entry/" class="hatena-bookmark-button" data-hatena-bookmark-layout="standard-balloon" title="このエントリーをはてなブックマークに追加"><img src="http://b.st-hatena.com/images/entry-button/button-only.gif" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="http://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+      </li>
+      <li class="social-button">
+        <div class="g-plusone" data-size="medium"></div>
+        <script type="text/javascript">
+          window.___gcfg = {lang: 'ja'};
+
+          (function() {
+            var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+            po.src = 'https://apis.google.com/js/plusone.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+          })();
+        </script>
+      </li>
+    </ul>
+  </div>
+  <!--more-->
+  <div class="container section" id="related">
+    <h1>Get more themes</h1>
+    <ul class="thumbnails">
+      <li class="span3">
+        <a href="http://sanographix.github.io/tumblr/zen/" class="thumbnail">
+          <img src="http://sanographix.github.io/tumblr/images/theme-thumb-zen.jpg">
+          <div class="caption">
+            <h3>ZEN</h3>
+            <p>普通に日記を書く用途にこだわったTumblrテーマ</p>
+          </div>
+        </a>
+      </li>
+      <li class="span3">
+        <a href="http://sanographix.github.io/tumblr/tokusetsu/" class="thumbnail">
+          <img src="http://sanographix.github.io/tumblr/images/theme-thumb-tokusetsu.jpg">
+          <div class="caption">
+            <h3>Tokusetsu</h3>
+            <p>同人音楽CDの特設サイトが一瞬で作れるTumblrテーマ</p>
+          </div>
+        </a>
+      </li>
+      <li class="span3">
+        <a href="http://sanographix.github.io/tumblr/illustfolio/" class="thumbnail">
+          <img src="http://sanographix.github.io/tumblr/images/theme-thumb-illustfolio.jpg">
+          <div class="caption">
+            <h3>Illustfolio</h3>
+            <p>イラストポートフォリオサイトが一瞬で作れるTumblrテーマ</p>
+          </div>
+        </a>
+      </li>
+      <li class="span3">
+        <a href="http://www.tumblr.com/theme/35964" class="thumbnail">
+          <img src="http://sanographix.github.io/tumblr/images/theme-thumb-memographix.jpg">
+          <div class="caption">
+            <h3>Memographix</h3>
+            <p>普通に日記を書くときに普通な感じになるテーマ</p>
+          </div>
+        </a>
+      </li>
+    </ul>
+    <a href="http://sanographix.github.io/tumblr/" class="btn">Get more themes</a>
+  </div>
+
+  <div class="container likebox_container">
+    <div class="fb-like-box" data-href="http://www.facebook.com/sanographix.net" data-width="292" data-show-faces="true" data-stream="false" data-border-color="#ddd" data-header="false"></div>
+  </div>
+
+  <!--フッタ-->
+  <hr class="soften">
+  <footer id="footer">
+    <div class="container">
+      <p>
+        <a href="http://sanographix.github.io/tumblr/reblographix2/" target="_blank">Reblographix 2</a> theme designed by <a href="http://www.sanographix.net/" target="_blank">SANOGRAPHIX.NET</a>
+      </p>
+      <p>
+        <a href="http://twitter.com/sanographix">Twitter</a> · <a href="http://facebook.com/sanographix.net">Facebook</a>
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>

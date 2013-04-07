@@ -1,0 +1,137 @@
+/*--------------------------------------------------------------
+
+			Media Queries - Retina Display
+
+--------------------------------------------------------------*/
+
+@media only screen and (-webkit-min-device-pixel-ratio : 1.5),only screen and (min-device-pixel-ratio : 1.5) {
+
+.key-features-image {
+    background-size: 300px 200px !important;
+
+    &.scroll {
+        background: url(../images/key-features-scroll@2x.jpg);
+    }
+
+    &.permalink {
+        background: url(../images/key-features-permalink@2x.jpg);
+    }
+
+    &.navigation {
+        background: url(../images/key-features-navigation@2x.jpg);
+    }
+}
+
+}
+
+/* Large desktop */
+@media (min-width: 1200px) {
+
+.key-features-image {
+    height: 247px;
+    background-size: 370px 247px !important;
+
+    &.scroll {
+        background: url(../images/key-features-scroll@2x.jpg);
+    }
+
+    &.permalink {
+        background: url(../images/key-features-permalink@2x.jpg);
+    }
+
+    &.navigation {
+        background: url(../images/key-features-navigation@2x.jpg);
+    }
+
+}
+}
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+.key-features-image {
+    height: 152px;
+    background-size: 228px 152px !important;
+}
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+
+    body {
+        padding: 0;
+    }
+
+    .section,
+    .navbar-inner,
+    .likebox_container,
+    #footer {
+        padding-left: 10px;
+        padding-right: 10px;
+
+        h1 {
+            font-size: 30px;
+        }
+
+    }
+
+    .header-image {
+        .border-radius(0px,0,0,0px);
+    }
+
+    #header {
+        padding: 10px 0;
+
+        h1 {
+            font-size: 40px;
+        }
+
+        h2 {
+            font-size: 14px;
+        }
+    }
+
+    [class*="span"] {
+        margin-bottom: 40px;
+    }
+
+    .key-features-image {
+        width: 300px;
+        height: 200px;
+    }
+
+ }
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+
+    .container {
+        font-size: 90%;
+    }
+
+    .btn {
+        display: block;
+        margin: 5px;
+    }
+
+    .btn-large {
+        font-size: 24px;
+        line-height: 24px;
+        padding: 10px 0;
+    }
+
+    #header {
+        h1,
+        .nav {
+            float: none;
+            text-align: center;
+        }
+    }
+
+    #intro {
+        h1 {
+            font-size: 24px;
+        }
+    }
+
+
+ }
