@@ -345,8 +345,8 @@
 
           <!-- 記事フッタ -->
           <footer class="entry-footer">
-            <div class="meta meta-reblog">
-              {block:RebloggedFrom}
+            {block:RebloggedFrom}
+              <div class="meta meta-reblog">
                 <span class="meta-elements rebloggedfrom">
                   Reblogged from <a href="{ReblogParentURL}"><img
 src="{ReblogParentPortraitURL-16}" class="favicon"/> {ReblogParentName}</a>
@@ -354,8 +354,8 @@ src="{ReblogParentPortraitURL-16}" class="favicon"/> {ReblogParentName}</a>
                   Originally posted by <a href="{ReblogRootURL}"><img
 src="{ReblogRootPortraitURL-16}" class="favicon"/> {ReblogRootName}</a>
                 </span>
-              {/block:RebloggedFrom}
-            </div>
+              </div>
+            {/block:RebloggedFrom}
             <div class="meta">
               <span class="meta-elements timeago">
                 <a href="{Permalink}">{TimeAgo}</a>
@@ -374,10 +374,16 @@ src="{ReblogRootPortraitURL-16}" class="favicon"/> {ReblogRootName}</a>
                   {/block:Tags}
                 </span>
               {/block:HasTags}
+
             </div>
 
             <!-- パーマリンクだけソーシャルボタン出す -->
             {block:PermalinkPage}
+
+                <ul class="like_and_reblog_buttons">
+                  <li>{ReblogButton size="16"}</li>
+                  <li>{LikeButton size="16"}</li>
+                </ul>
 
                 <ul class="social-buttons">
                   {block:IfEnableTweetButton}
