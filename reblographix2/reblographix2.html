@@ -57,26 +57,7 @@
   {block:IndexPage}
     <script src="//sanographix.github.io/public/tumblr/reblographix2/js/tinybox.js"></script>
   {/block:IndexPage}
-  {block:PermalinkPage}
-  <script>
-    window.onload = function () {
-    document.body.insertAdjacentHTML( 'beforeEnd', '<iframe id="my-like-frame" style="display:none;"></iframe>' );
-    document.addEventListener( 'click', function ( event ) {
-        var myLike = event.target;
-        if( myLike.className.indexOf( 'my-like' ) > -1 ) {
-            var frame = document.getElementById( 'my-like-frame' ),
-                liked = ( myLike.className == 'my-liked' ),
-                command = liked ? 'unlike' : 'like',
-                reblog = myLike.getAttribute( 'data-reblog' ),
-                id = myLike.getAttribute( 'data-id' ),
-                oauth = reblog.slice( -8 );
-            frame.src = 'http://www.tumblr.com/' + command + '/' + oauth + '?id=' + id;
-            liked ? myLike.className = 'my-like' : myLike.className = 'my-liked';
-        };
-    }, false );
-    };
-  </script>
-  {/block:PermalinkPage}
+
   <!--[if IE]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <script src="//css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
@@ -489,8 +470,14 @@
               {/block:ContentSource}
 
               <div class="meta buttons">
-                <a href="{ReblogURL}" class="btn" target="_blank"><i class="icon-retweet"></i> Reblog</a>
-                <div class="my-like btn" data-reblog="{ReblogURL}" data-id="{PostID}" title="Like"><i class="icon-heart"></i> like</div>
+                <div class="btn-group">
+                  <span class="btn">
+                    {LikeButton}
+                  </span>
+                  <span class="btn">
+                    {ReblogButton}
+                  </span>
+                </div>
               </div>
 
               <div class="meta timeago">

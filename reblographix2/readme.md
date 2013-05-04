@@ -50,6 +50,10 @@ Reblographix 2 は、大量の画像を Reblog する人のための Tumblr テ�
 
 ## Changelog
 
+### 2.1 (2013/05/04)
+
+* Like & Reblog ボタンを [Tumblr 公式のもの](http://nihongo.tumblr.com/post/49435671970)に変更
+
 
 ### 2.0.1 beta (2013/04/07)
 
