@@ -26,10 +26,10 @@ ZENは、Tumblrで普通に日記を書く用途にこだわったテンプレ�
 
 テーマカスタマイズ画面でカスタマイズできます。
 
-### はじめに行う設定
+### はじめに行うおすすめ設定
 
 * 「▾ 詳細設定」の「モバイルレイアウトを使用する」の **チェックを外す**
-	* このチェックが外れていないとレスポンシブ的なデザインにならないです。
+	* このチェックを外すとレスポンシブ的なデザインになります。Tumblr 純正モバイルレイアウトを使いたい場合はチェックを入れたままにしてください。
 
 
 ### デザイン設定
@@ -44,12 +44,12 @@ ZENは、Tumblrで普通に日記を書く用途にこだわったテンプレ�
 | Show Profile Image | ブログタイトルの隣にプロフィール画像を表示します。 |
 | Title Logo | ブログタイトルのかわりに表示するタイトルロゴをアップロードできます。 |
 | Google Analytics ID | Google Analytics を使う場合はここにトラッキングIDを入力します。 |
-| Google Author | ここに自分のGoogle+プロフィールURLを入力することで、Google検索結果に著者情報を表示させることができます。詳しい情報は[Googleのヘルプ](http://support.google.com/webmasters/bin/answer.py?hl=ja&answer=1408986)を参照してください。 |
+| Google Author | ここに自分のGoogle+プロフィールURLを入力することで、Google検索結果に著者情報を表示させることができます。（例：`https://plus.google.com/109963703491503474788`）詳しい情報は[Googleのヘルプ](http://support.google.com/webmasters/bin/answer.py?hl=ja&answer=1408986)を参照してください。 |
 | Hatena Star Token | ここにはてなスターのトークンを入力します。詳しい設定方法は[はてなスターのヘルプ](http://d.hatena.ne.jp/hatenastar/20070707/1184453490)を参照してください。 |
 | OGP Facebook Admin Number | Facebok Admin ID を入力します。 Admin IDの調べ方は検索するといろいろ出てきます。 |
-| OGP Toppage URL | トップページのURLを`http://~~`から入力します（http://example.tumblr.com）。`og:url`でトップページのURLを認識させる必要があるため、なるべく入力してください。 |
+| OGP Toppage URL | トップページのURLを`http://~~`から入力します（`http://example.tumblr.com`）。`og:url`でトップページのURLを認識させる必要があるため、なるべく入力してください。 |
 | Enable Syntax Highlight | シンタックスハイライトを有効にします。 |
-| Disqus Shortname | Disqus を有効にしたい場合は Disqus Shortname を入力します。 |
+| Disqus Shortname | 記事にコメント欄を設置したい場合は、ここに Disqus Shortname を入力します。 |
 
 
 ## 3. ページを追加する
