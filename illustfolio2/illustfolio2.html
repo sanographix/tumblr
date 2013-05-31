@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+
+<!--
+  Theme: Illustfolio 2
+  by @sanographix
+  http://www.sanographix.net
+  (c) 2013 Showkaku Sano [sanographix@gmail.com]
+  Free to use under the MIT license.
+  Please leave at least ONE credit link. Do not delete this comment.
+-->
+
+<html lang="ja" prefix="og: http://ogp.me/ns# fb: http://www.facebook.com/2008/fbml">
+<head>
+
+  <!-- Variables -->
+  <meta name="text:Google Analytics ID" content="UA-000000-00" />
+
+  <!-- User info -->
+  <meta name="text:Your Name" content=""/>
+  <meta name="text:Your Twitter Username" content=""/>
+  <meta name="text:Your Facebook Username" content=""/>
+  <meta name="text:Your Google Plus ID" content=""/>
+  <meta name="text:Your Pixiv ID" content=""/>
+  <meta name="text:Tumblr API Key" content="" />
+  <meta name="text:Blog Domain" content="foo.tumblr.com" />
+  <meta name="text:Disqus Shortname" content="" />
+
+  <meta name="if:Show Exif" content="1" />
+
+  <meta name="image:Background" content=""/>
+
+  <title>{block:PostSummary}{PostSummary} - {/block:PostSummary}{Title}</title>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="shortcut icon" href="{Favicon}">
+  <link rel="alternate" type="application/rss+xml" href="{RSS}">
+  <link rel="apple-touch-icon" href="{PortraitURL-128}">
+  <link rel="canonical" href="{Permalink}"/>
+
+  <!-- OGP -->
+  <meta property="og:title" content="{block:PostTitle}{PostTitle} - {/block:PostTitle}{Title}" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="{block:IndexPage}http://{text:Blog Domain}{/block:IndexPage}{block:PermalinkPage}{Permalink}{/block:PermalinkPage}" />
+  <meta property="og:image" content="{PortraitURL-128}" />
+  <!-- Twitter tags -->
+  <meta name="twitter:image" content="{PortraitURL-128}" />
+
+  <!-- photo だったら og-image はphotoURLにする -->
+  {block:PermalinkPage}
+    {block:Posts}
+      {block:Photo}
+        <meta property="og:image" content="{PhotoURL-400}" />
+      {/block:Photo}
+      {block:Photoset}
+        {block:Photos}
+        <meta property="og:image" content="{PhotoURL-400}" />
+        {/block:Photos}
+      {/block:Photoset}
+    {/block:Posts}
+  {/block:PermalinkPage}
+
+  <meta property="og:site_name" content="{Title}" />
+  <meta property="og:description" content="{block:Description}{MetaDescription}{/block:Description}">
+  {block:IfYourGooglePlusID}
+    <link rel="author" href="http://plus.google.com/{text:Your Google Plus ID}" />
+  {/block:IfYourGooglePlusID}
+
+  <link rel="stylesheet" type="text/css" media="screen" href="//sanographix.github.io/public/tumblr/illustfolio2/css/style.css" charset="utf-8"/>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js" charset="utf-8"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/fitvids/1.0.1/jquery.fitvids.min.js" charset="utf-8"></script>
+
+  <script src="//sanographix.github.io/public/tumblr/illustfolio2/js/jquery.class.min.js" charset="utf-8"></script>
+  <script src="//sanographix.github.io/public/tumblr/illustfolio2/js/tumblrposts.js" charset="utf-8"></script>
+  <script src="//sanographix.github.io/public/tumblr/illustfolio2/js/jquery.skOuterClick.js" charset="utf-8"></script>
+  <script src="//sanographix.github.io/public/tumblr/illustfolio2/js/jquery.flexslider-min.js" charset="utf-8"></script>
+  <script src="//sanographix.github.io/public/tumblr/illustfolio2/js/jquery.tumblr_post_list.js"></script>
+  <script src="//sanographix.github.io/public/tumblr/illustfolio2/js/options.js" charset="utf-8"></script>
+
+  <script type="text/javascript">
+    // 最近の記事出す
+    $(function(){
+      $("#related").jq_tumblrPostList({
+        api_key:"{text:Tumblr API Key}",
+        domain:"{text:Blog Domain}", //取得先となるTumblrサイトのドメイン
+        limit:3 //記事の数
+      });
+    });
+  </script>
+
+  <script type="text/javascript">
+    // タグリスト記事出す
+    (function() {
+      var posts = new TumblrPosts({
+        // ドメインと取得する最大記事数
+        domain:"{text:Blog Domain}",
+        maxNum:300
+      });
+      posts.bind(posts.EVENT_COMPLETE, function(e) {
+        var that = this;
+        // getTags() でタグリストを取得
+        $.each(this.getTags(), function(i, tag) {
+          var html = '<li class="level' + (tag.count % 6 + 1) + '">'
+          + '<span class="sharp">#</span><a href="/tagged/' + tag.name + '">' + tag.name + '</a></li>';
+          $(html).appendTo($("ul#tags"));
+        });
+      });
+      posts.run();
+    })();
+  </script>
+
+  <!--[if IE]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="//css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="//sanographix.github.io/public/tumblr/illustfolio2/css/fuck-ie.css" charset="utf-8">
+    <link rel="stylesheet" type="text/css" media="screen" href="//sanographix.github.io/public/tumblr/illustfolio2/css/font-awesome-ie7.min.css" charset="utf-8">
+  <![endif]-->
+
+  <!-- Google Analytics -->
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', '{text:Google Analytics ID}']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+  <!-- END Google Analytics -->
+
+</head>
+<body class="{block:IndexPage}page-index{/block:IndexPage}{block:PermalinkPage} page-permalink page-{PostID}{/block:PermalinkPage}{block:HasPages} page-custompages{/block:HasPages}">
+
+  <style>
+    body {
+        background-image: url('{image:Background}');
+    }
+    @media (-webkit-min-device-pixel-ratio: 2) {
+        body {
+            background-image: url('{image:Background}');
+        }
+    }
+    {CustomCSS}
+  </style>
+
+  <header id="header">
+    <div class="header-inner">
+      <ul class="header-nav nav-left">
+        <li>
+          <h1 class="blog-title">
+            <a href="/">{Title}</a>
+          </h1>
+        </li>
+      </ul>
+      <!-- モバイル用 -->
+      <div class="mobile-nav-panel">
+        <i class="icon-reorder icon-large"></i>
+      </div>
+      <ul class="header-nav pull-right">
+        {block:HasPages}
+          {block:Pages}
+            <li>
+              <a href="{URL}">{Label}</a>
+            </li>
+          {/block:Pages}
+        {/block:HasPages}
+        <li><a href="/archive">Archive</a></li>
+        <li class="header-tags"><a href="">Tags</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- タグリスト -->
+  <div class="tag-list">
+    <div class="container">
+      <h3>Tags</h3>
+      <ul id="tags" class="tagCloud"></ul>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <!-- Index ページ -->
+    {block:IndexPage}
+
+      <!--スライドショー-->
+      <div class="flexslider">
+        <ul class="slides">
+          {block:Posts}
+            {block:Photo}
+            <li>
+              <a href="{Permalink}">
+                <div class="slide-img" style="background-image: url('{PhotoURL-HighRes}');"></div>
+              </a>
+            </li>
+            {/block:Photo}
+          {/block:Posts}
+        </ul>
+      </div>
+
+      {block:TagPage}
+        <h3 class="tagged">Posts tagged "{Tag}"</h3>
+      {/block:TagPage}
+
+      <!-- 投稿 -->
+      <div class="post-thumb-wrapper autopagerize_page_element">
+        {block:Posts}
+
+          <article class="post {TagsAsClasses}
+          {block:Text}text{/block:Text}
+          {block:Photo}photo{/block:Photo}
+          {block:Photoset}photoset{/block:Photoset}
+          {block:Quote}quote{/block:Quote}
+          {block:Link}link{/block:Link}
+          {block:Chat}chat{/block:Chat}
+          {block:Video}video{/block:Video}
+          {block:Audio}audio{/block:Audio}
+          {block:Answer}answer{/block:Answer}
+          ">
+
+            <!-- post: テキスト -->
+            {block:Text}
+              <a href="{Permalink}">
+                <div class="post-thumb">
+                  <i class="icon-file-alt"></i>
+                  {block:Title}
+                    <h1 class="entry-title">{Title}</h1>
+                  {/block:Title}
+                </div>
+              </a>
+            {/block:Text}
+
+            <!-- post: 画像 -->
+            {block:Photo}
+              <a href="{Permalink}">
+                <div class="photo-thumb" style="background-image:url({PhotoURL-400});">
+                </div>
+              </a>
+            {/block:Photo}
+
+            <!-- post: フォトセット -->
+            {block:Photoset}
+              {block:Photos}
+                <a href="{Permalink}">
+                  <div class="photo-thumb" style="background-image: url('{PhotoURL-400}');">
+                  </div>
+                </a>
+              {/block:Photos}
+            {/block:Photoset}
+
+            <!-- post: 引用 -->
+            {block:Quote}
+              <a href="{Permalink}">
+                <div class="post-thumb">
+                  <i class="icon-quote-left"></i>
+                  <h1 class="entry-title">
+                    {block:NewDayDate}{Year}{MonthNumberWithZero}{DayOfMonthWithZero}{/block:NewDayDate}
+                    {block:SameDayDate}{Year}{MonthNumberWithZero}{DayOfMonthWithZero}{/block:SameDayDate}<br/>
+                    Quote
+                  </h1>
+                </div>
+              </a>
+            {/block:Quote}
+
+            <!-- post: リンク -->
+            {block:Link}
+              <a href="{Permalink}">
+                <div class="post-thumb">
+                  <i class="icon-link"></i>
+                  <h1 class="entry-title">
+                    {block:NewDayDate}{Year}{MonthNumberWithZero}{DayOfMonthWithZero}{/block:NewDayDate}
+                    {block:SameDayDate}{Year}{MonthNumberWithZero}{DayOfMonthWithZero}{/block:SameDayDate}<br/>
+                    Link
+                  </h1>
+                </div>
+              </a>
+            {/block:Link}
+
+            <!-- post: チャット -->
+            {block:Chat}
+              <a href="{Permalink}">
+                <div class="post-thumb">
+                  <i class="icon-comments"></i>
+                  <h1 class="entry-title">
+                    {block:NewDayDate}{Year}{MonthNumberWithZero}{DayOfMonthWithZero}{/block:NewDayDate}
+                    {block:SameDayDate}{Year}{MonthNumberWithZero}{DayOfMonthWithZero}{/block:SameDayDate}<br/>
+                    Chat
+                  </h1>
+                </div>
+              </a>
+            {/block:Chat}
+
+            <!-- post: ビデオ -->
+            {block:Video}
+              <a href="{Permalink}">
+                <div class="post-thumb">
+                  <i class="icon-film"></i>
+                  <h1 class="entry-title">
+                    {block:NewDayDate}{Year}{MonthNumberWithZero}{DayOfMonthWithZero}{/block:NewDayDate}
+                    {block:SameDayDate}{Year}{MonthNumberWithZero}{DayOfMonthWithZero}{/block:SameDayDate}<br/>
+                    Video
+                  </h1>
+                </div>
+              </a>
+            {/block:Video}
+
+            <!-- post: オーディオ -->
+            {block:Audio}
+              <a href="{Permalink}">
+                <div class="post-thumb">
+                  <i class="icon-music"></i>
+                  <h1 class="entry-title">
+                    {block:NewDayDate}{Year}{MonthNumberWithZero}{DayOfMonthWithZero}{/block:NewDayDate}
+                    {block:SameDayDate}{Year}{MonthNumberWithZero}{DayOfMonthWithZero}{/block:SameDayDate}<br/>
+                    Audio
+                  </h1>
+                </div>
+              </a>
+            {/block:Audio}
+
+            <!-- post: Answer -->
+            {block:Answer}
+              <a href="{Permalink}">
+                <div class="post-thumb">
+                  <i class="icon-question-sign"></i>
+                  <h1 class="entry-title">
+                    {block:NewDayDate}{Year}{MonthNumberWithZero}{DayOfMonthWithZero}{/block:NewDayDate}
+                    {block:SameDayDate}{Year}{MonthNumberWithZero}{DayOfMonthWithZero}{/block:SameDayDate}<br/>
+                    Answer
+                  </h1>
+                </div>
+              </a>
+            {/block:Answer}
+          </article>
+        {/block:Posts}
+      </div>
+
+      <!-- indexページのページャ -->
+      {block:Pagination}
+        <div id="pager">
+          {block:PreviousPage}
+            <a href="{PreviousPage}" class="btn">Prev</a>
+          {/block:PreviousPage}
+          <span class="number">
+            {CurrentPage}/{TotalPages}
+          </span>
+          {block:NextPage}
+            <a href="{NextPage}" class="next btn" rel="next">Next</a>
+          {/block:NextPage}
+        </div>
+      {/block:Pagination}
+
+
+    {/block:IndexPage}
+
+
+    <!-- パーマリンク -->
+    {block:PermalinkPage}
+
+      <!-- pager -->
+      {block:PermalinkPagination}
+        <div id="pager">
+          <div class="main">
+            <div class="btn-group">
+              {block:PreviousPost}
+                <a href="{PreviousPost}" class="btn"><i class="icon-double-angle-left"></i> Prev</a>
+              {/block:PreviousPost}
+              {block:NextPost}
+                <a href="{NextPost}" class="next btn" rel="next">Next <i class="icon-double-angle-right"></i></a>
+              {/block:NextPost}
+            </div>
+          </div>
+        </div>
+      {/block:PermalinkPagination}
+
+      {block:Posts}
+        <div class="main">
+
+          <article class="post {TagsAsClasses}
+          {block:Text}text{/block:Text}
+          {block:Photo}photo{/block:Photo}
+          {block:Photoset}photoset{/block:Photoset}
+          {block:Quote}quote{/block:Quote}
+          {block:Link}link{/block:Link}
+          {block:Chat}chat{/block:Chat}
+          {block:Video}video{/block:Video}
+          {block:Audio}audio{/block:Audio}
+          {block:Answer}answer{/block:Answer}
+          ">
+
+            <!-- post: 画像 -->
+            {block:Photo}
+              {block:HighRes}
+                 <a href="{PhotoURL-HighRes}" class="btn highres"><i class="icon-zoom-in"></i> View in High-Res</a>
+              {/block:HighRes}
+              <div class="photo-image">
+                {LinkOpenTag}
+                  <img src="{PhotoURL-1280}" alt="{PhotoAlt}">
+                {LinkCloseTag}
+              </div>
+              {block:Caption}
+              <div class="card caption">
+                <div class="card-section entry-content">
+                  {Caption}
+                </div>
+              </div>
+              {/block:Caption}
+            {/block:Photo}
+
+            <!-- post: フォトセット -->
+            {block:Photoset}
+              <div class="photo-image">
+                {Photoset-700}
+              </div>
+              {block:Caption}
+                <div class="card caption">
+                  <div class="card-section entry-content">
+                    {Caption}
+                  </div>
+                </div>
+              {/block:Caption}
+            {/block:Photoset}
+
+            <!-- post: テキスト -->
+            {block:Text}
+              <div class="card">
+                <div class="card-section">
+                  <header class="entry-header">
+                    {block:Title}
+                      <h1 class="entry-title"><a href="{Permalink}">{Title}</a></h1>
+                    {/block:Title}
+                  </header>
+                  <div class="entry-content">
+                    {Body}
+                  </div>
+                </div>
+              </div>
+            {/block:Text}
+
+            <!-- post: 引用 -->
+            {block:Quote}
+              <div class="card">
+                <div class="card-section">
+                  <div class="entry-content {Length}">
+                    <blockquote>“{Quote}”</blockquote>
+                    {block:Source}
+                      <div class="quote-source">
+                        {Source}
+                      </div>
+                    {/block:Source}
+                  </div>
+                </div>
+              </div>
+            {/block:Quote}
+
+            <!-- post: リンク -->
+            {block:Link}
+              <div class="card">
+                <div class="card-section">
+                  <header class="entry-header">
+                    <h1 class="entry-title">
+                      <a href="{URL}" class="link-url" {Target}>{Name}</a>
+                    </h1>
+                  </header>
+                  <div class="entry-content">
+                    {block:Description}
+                      <div class="link-description">{Description}</div>
+                    {/block:Description}
+                  </div>
+                </div>
+              </div>
+            {/block:Link}
+
+            <!-- post: チャット -->
+            {block:Chat}
+              <div class="card">
+                <div class="card-section">
+                  <div class="entry-content">
+                    {block:Title}
+                      <h1 class="entry-title"><a href="{Permalink}">{Title}</a></h1>
+                    {/block:Title}
+                    <ul class="ul-chat">
+                      {block:Lines}
+                      <li class="{Alt} user_{UserNumber}">
+                      {block:Label}
+                      <span class="label">{Label}</span>
+                      {/block:Label}
+                      {Line}
+                      </li>
+                      {/block:Lines}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            {/block:Chat}
+
+            <!-- post: ビデオ -->
+            {block:Video}
+              <div class="video-iframe">
+                {Video-700}
+              </div>
+              {block:Caption}
+                <div class="card">
+                  <div class="card-section caption">
+                    {Caption}
+                  </div>
+                </div>
+              {/block:Caption}
+            {/block:Video}
+
+            <!-- post: オーディオ -->
+            {block:Audio}
+               <div class="card">
+                <div class="card-section">
+                  <div class="entry-content">
+                    {AudioPlayerBlack}
+                    {block:Caption}
+                      <div class="caption">
+                        {Caption}
+                      </div>
+                    {/block:Caption}
+                  </div>
+                </div>
+              </div>
+            {/block:Audio}
+
+            <!-- post: Answer -->
+            {block:Answer}
+              <div class="card">
+                <div class="card-section">
+                  <div class="entry-content">
+                    <div class="question bubble">
+                      {Question}
+                    </div>
+                    <div class="asker-group">
+                      <img src="{AskerPortraitURL-24}" width="24" height="24" class="user-icon" /> {Asker}
+                    </div>
+                    <hr/>
+                    <div class="answer cont">{Answer}</div>
+                  </div>
+                </div>
+              </div>
+            {/block:Answer}
+
+          </article>
+
+          {block:IfDisqusShortname}
+            <div class="card">
+              <div class="card-section">
+                <div id="disqus_thread"></div>
+              </div>
+            </div>
+            <script type="text/javascript">
+                /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+                var disqus_shortname = '{text:Disqus Shortname}'; // Required - Replace example with your forum shortname
+                /* * * DON'T EDIT BELOW THIS LINE * * */
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+          {/block:IfDisqusShortname}
+
+        </div>
+        <div class="sidebar">
+
+          <div class="card postedby">
+            <img src="{PortraitURL-128}" class="user-icon">
+            <div class="card-section">
+              <h2 class="user-name">
+                <a href="/">{text:Your Name}</a>
+              </h2>
+              <div class="user-findme">
+                <ul>
+                  {block:IfYourTwitterUsername}
+                    <li>
+                      <a href="http://twitter.com/{text:Your Twitter Username}" target="_blank"><i class="icon-twitter"></i></a>
+                    </li>
+                  {/block:IfYourTwitterUsername}
+                  {block:IfYourFacebookUsername}
+                    <li>
+                      <a href="http://www.facebook.com/{text:Your Facebook Username}" target="_blank"><i class="icon-facebook-sign"></i></a>
+                    </li>
+                  {/block:IfYourFacebookUsername}
+                  {block:IfYourGooglePlusID}
+                    <li>
+                      <a href="http://plus.google.com/{text:Your Google Plus ID}?rel=author" target="_blank"><i class="icon-google-plus-sign"></i></a>
+                    </li>
+                  {/block:IfYourGooglePlusID}
+                  {block:IfYourPixivID}
+                    <li><a href="http://www.pixiv.net/member.php?id={text:Your Pixiv ID}" target="_blank"><i class="icon-pixiv"></i></a></li>
+                  {/block:IfYourPixivID}
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          {block:RebloggedFrom}
+            <div class="card reblog">
+              <div class="card-section rebloggedfrom">
+                <a href="{ReblogParentURL}">
+                  <img src="{ReblogParentPortraitURL-128}" class="user-icon" alt="{ReblogParentName}">
+                </a>
+                <span class="label">
+                   <i class="icon-retweet"></i> Reblogged from
+                </span>
+                <a href="{ReblogParentURL}" class="user-name">
+                  {ReblogParentName}
+                </a>
+              </div>
+              <div class="card-section original">
+                <a href="{ReblogRootURL}">
+                  <img src="{ReblogRootPortraitURL-128}" class="user-icon" alt="{ReblogRootName}">
+                </a>
+                <span class="label">
+                   Originally posted by
+                </span>
+                <a href="{ReblogRootURL}"  class="user-name">
+                  {ReblogRootName}
+                </a>
+              </div>
+            </div>
+          {/block:RebloggedFrom}
+
+          <div class="card like-reblog-card">
+            <div class="card-section">
+              <ul class="like-reblog-buttons">
+                <li class="reblog-button"><a href="{ReblogURL}" class="btn"><i class="icon-retweet"></i> Reblog</a></li>
+                <li class="like-button btn">{LikeButton size="16"}</li>
+                <li class="share-button"><span class="btn"><i class="icon-share"></i></span>
+                  <!-- シェアボタン押したときのプルダウン -->
+                  <div class="share-pulldown">
+                    <ul class="list">
+                      <li>
+                        <a href="http://twitter.com/intent/tweet?text={block:PostSummary}{PostSummary}{/block:PostSummary}&url={Permalink}"><i class="icon-twitter"></i> Tweet</a>
+                      </li>
+                      <li>
+                        <a href="http://www.facebook.com/sharer.php?u={Permalink}&t={block:PostSummary}{PostSummary}{/block:PostSummary}"><i class="icon-facebook-sign"></i> Facebook</a>
+                      </li>
+                      <li>
+                        <a href="mailto:?subject={Title}&amp;body={block:PostSummary}{PostSummary}{/block:PostSummary}%0D%0A{Permalink}" target="_blank"><i class="icon-envelope"></i> Email</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card meta">
+            <div class="card-section">
+              <table><tbody>
+                {block:ContentSource}
+                  <tr>
+                    <th>Source</th>
+                    <td>
+                      <a href="{SourceURL}">
+                        {block:SourceLogo}
+                          <img src="{BlackLogoURL}" width="{LogoWidth}" height="{LogoHeight}" alt="{SourceTitle}" />
+                        {/block:SourceLogo}
+                        {block:NoSourceLogo}
+                            {SourceTitle}
+                        {/block:NoSourceLogo}
+                      </a>
+                    </td>
+                  </tr>
+                {/block:ContentSource}
+                <tr>
+                  <th>Published</th>
+                  <td>
+                    {block:NewDayDate}{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}{/block:NewDayDate}
+                    {block:SameDayDate}{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}{/block:SameDayDate}
+                  </td>
+                </tr>
+                {block:HasTags}
+                <tr>
+                  <th>Tag</th>
+                  <td>
+                    {block:Tags}
+                      <a href="{TagURL}">#{Tag}</a>
+                    {/block:Tags}
+                  </td>
+                </tr>
+                {/block:HasTags}
+              </tbody></table>
+            </div>
+          </div>
+
+          <div id="related">
+          </div>
+
+          {block:IfShowExif}
+            {block:Exif}
+              <div class="card meta exif">
+                <div class="card-section">
+                  <table><tbody>
+                    {block:Camera}
+                      <tr>
+                        <th>Camera</th>
+                        <td>{Camera}</td>
+                      </tr>
+                    {/block:Camera}
+                    {block:Aperture}
+                    <tr>
+                      <th>Aperture</th>
+                      <td>{Aperture}</td>
+                    </tr>
+                    {block:Aperture}
+                    {block:Exposure}
+                    <tr>
+                      <th>Tag</th>
+                      <td>{Exposure}</td>
+                    </tr>
+                    {/block:Exposure}
+                    {block:FocalLength}
+                    <tr>
+                      <th>Focal length</th>
+                      <td>{FocalLength}</td>
+                    </tr>
+                    {/block:FocalLength}
+                  </tbody></table>
+                </div>
+              </div>
+            {/block:Exif}
+          {/block:IfShowExif}
+
+          {block:NoteCount}
+            <div class="card notecount">
+              <h4>
+                <strong>{NoteCount}</strong> Notes
+              </h4>
+              {block:PostNotes}
+                <div class="card-section">
+                  <div class="notecontainer">{PostNotes}</div>
+                </div>
+              {/block:PostNotes}
+            </div>
+          {/block:NoteCount}
+
+        </div>
+
+      {/block:Posts}
+
+    {/block:PermalinkPage}
+
+  </div>
+
+  <!--フッタ-->
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright">
+        ©{CopyrightYears} {Title}<br/>
+        <a href="http://sanographix.github.io/tumblr/illustfolio2/" target="_blank">Illustfolio 2</a> theme designed by <a href="http://www.sanographix.net/" target="_blank">SANOGRAPHIX.NET</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
