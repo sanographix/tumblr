@@ -361,9 +361,9 @@
     {block:PermalinkPage}
 
       <!-- pager -->
-      {block:PermalinkPagination}
-        <div id="pager">
-          <div class="main">
+      <div id="pager">
+        <div class="main">
+          {block:PermalinkPagination}
             <div class="btn-group">
               {block:PreviousPost}
                 <a href="{PreviousPost}" class="btn"><i class="icon-double-angle-left"></i> Prev</a>
@@ -372,9 +372,9 @@
                 <a href="{NextPost}" class="next btn" rel="next">Next <i class="icon-double-angle-right"></i></a>
               {/block:NextPost}
             </div>
-          </div>
+          {/block:PermalinkPagination}
         </div>
-      {/block:PermalinkPagination}
+      </div>
 
       {block:Posts}
         <div class="main">
