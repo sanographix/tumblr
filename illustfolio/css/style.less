@@ -281,6 +281,97 @@ div.likebox_container .fb_iframe_widget span{
 /* End Primary Styles */
 
 
+// illustfolio 2 の告知
+
+.navbar {
+    margin-bottom: 0;
+}
+
+.illustfolio2-container {
+    background: url(../images/header-bg.jpg) repeat center -20px;
+    font-family: 'proxima-nova', 'Helvetica Neue', sans-serif;
+}
+
+#illustfolio2-header {
+    text-align: center;
+    padding: 30px 0;
+    border-bottom: 1px solid #dfdfdf;
+
+    h1,h2 {
+        font-weight: 100;
+        margin: 0;
+        line-height: 1.2;
+    }
+
+    h1 {
+        font-size: 70px;
+        letter-spacing: -0.01em;
+    }
+
+    h2 {
+        font-size: 30px;
+        margin-bottom: 20px;
+        margin-top: 0;
+    }
+
+    .btn-wrapper {
+        margin-bottom: 10px;
+    }
+
+
+    .btn {
+        .inline-block;
+        padding: 4px 10px 4px;
+        margin-bottom: 0;
+        font-size: 14px;
+        font-weight: bold;
+        line-height: 20px;
+        text-align: center;
+        vertical-align: middle;
+        cursor: pointer;
+        text-decoration: none !important;
+        text-shadow: 0 1px 1px #fff;
+        box-shadow: 0 1px 1px rgba(255,255,255,.4), 0 1px 0 #fff inset;
+        border-style: solid;
+        border-width: 1px;
+        border-color: rgba(0, 0, 0, 0.15);
+        color: #454545;
+        .gradient(#f8f8f8,#f8f8f8,#ececec);
+        .border-radius(4px);
+        &:hover {
+            color: #2f9dc6;
+            .gradient(#f0f0f0,#fff,#ebebeb);
+            text-decoration: none !important;
+            border-color: rgba(0, 0, 0, 0.2);
+        }
+    }
+
+    .btn-large {
+        padding: 20px 50px;
+        font-size: 25px;
+        line-height: 25px;
+    }
+
+    .btn-primary {
+        background: #1abc9c;
+        box-shadow: 0 0 0 #fff inset;
+        color: #fff;
+        text-shadow: none;
+        &:hover {
+            background: #0eab8c;
+            color: #fff;
+        }
+    }
+
+}
+
+@media (max-width: 767px) {
+.illustfolio2-container {
+    margin-left: -20px;
+    margin-right: -20px;
+}
+}
+
 
 // retina.less
 // A helper mixin for applying high-resolution background images (http://www.retinajs.com)
