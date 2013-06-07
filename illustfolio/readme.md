@@ -1,3 +1,14 @@
+
+## [おしらせ] Illustfolio 2 を作りました
+
+Illustfolio をベースに、新しいデザインと多数の新機能を盛り込んだ [Illustfolio 2](http://sanographix.github.io/tumblr/illustfolio2/) を作りました。これから Illustfolio を使いはじめるなら Illustfolio 2 をおすすめします。
+
+紹介ページ→ [http://sanographix.github.io/tumblr/illustfolio2/](http://sanographix.github.io/tumblr/illustfolio2/)
+
+
+<hr/>
+
+
 ## Illustfolio
 
 #### Free responsive tumblr theme for illustrators
@@ -6,11 +17,6 @@ llustfolioは、イラストのポートフォリオサイトに特化した無�
 Tumblrに画像をアップロードするだけで簡単にポートフォリオサイトが作れます。  
 [@sanographix](http://www.sanographix.net)がデザインしています。
 
-## [NEW!] Illustfolio 2 を作りました
-
-Illustfolio をベースに、新しいデザインと多数の新機能を盛り込んだ [Illustfolio 2](http://sanographix.github.io/tumblr/illustfolio2/) を作りました。これから Illustfolio を使いはじめるなら Illustfolio 2 をおすすめします。
-
-紹介ページ→ [http://sanographix.github.io/tumblr/illustfolio2/](http://sanographix.github.io/tumblr/illustfolio2/)
 
 ## Demo
 
