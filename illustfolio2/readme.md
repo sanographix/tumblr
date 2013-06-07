@@ -15,16 +15,19 @@ Tumblr に画像をアップロードするだけで簡単にポートフォリ�
 
 ## インストール手順
 
-1. [テーマのhtmlをコピー](https://github.com/sanographix/tumblr/blob/master/illustfolio2/illustfolio2.html)します。
+1. [テーマのhtmlファイル](https://github.com/sanographix/tumblr/blob/master/illustfolio2/illustfolio2.html)をコピーします。[ここからコピー](https://raw.github.com/sanographix/tumblr/master/illustfolio2/illustfolio2.html)するとやりやすい
 2. Tumblr の[テーマカスタマイズ画面](http://www.tumblr.com/customize)を開いて、「HTMLを編集」を押します。
 3. (オプション) 元の html のバックアップをとっておきます。
 4. もとの html を削除して `illustfolio2.html` を貼り付けて保存します。
+5. 下記の「カスタマイズ手順」に従って設定を行います。
 
 #### Illustfolio 1 からアップグレードする方への注意
 
 * Illustfolio 1 にあるカスタマイズ項目「Your Profile」は、 Illustfolio 2 では廃止されました。上記手順"4"のHTMLを上書き保存すると項目ごと削除されます。必要であれば自己紹介文のバックアップをとってください。Illustfolio 2 で自己紹介ページを作りたい場合は固定ページを作ってください。
 
 ## カスタマイズ手順
+
+テーマの機能を正しく使用できるようにするため、ステップ1から順に必ず設定を行なってください。
 
 ### ステップ1: テーマカスタマイズ画面
 
@@ -43,7 +46,7 @@ Tumblr の[テーマカスタマイズ画面](http://www.tumblr.com/customize)�
 2. 下図のように「Application name」「Administrative contact email」「Default callback URL」のフォームを埋めて「Register」を押します。
 3. OAuth Consumer Key: ○○ と書いてある文字列をメモします。
  
-<img src="http://static.tumblr.com/xlsgtjb/kW8mnm6oj/b5f2fe5c93e5fe6d5ac43df5e9298209.png" width="300px">
+<img src="http://static.tumblr.com/xlsgtjb/BoXmo0i85/apikey-register.png" width="300px">
 
 
 ### ステップ3: テーマカスタマイズ画面のデザイン設定
@@ -126,11 +129,12 @@ Tumblrは画像投稿にタイトルを設定できません。そこで、キ�
 
 ## FAQ
 
-* Q:ライセンスは何ですか？
+* Q: Video とか Link 投稿だと index ページでタイトルもサムネイルも出ないんだけど？
+	* A: 仕様です。
+* Q: ライセンスは何ですか？
 	* A: MIT ライセンスです。
-* Q:このテーマを Wordpress に移植していいですか？
-	* A:歓迎します。
-
+* Q: このテーマを Wordpress に移植していいですか？
+	* A: 歓迎します。
 
 ## Author
 
@@ -141,3 +145,5 @@ Graphic designer from Kyoto.
 * [http://www.sanographix.net/](http://www.sanographix.net/)
 * [Twitter: @sanographix](https://twitter.com/sanographix)
 * [GitHub: sanographix](https://github.com/sanographix)
+
+本テーマの利用に関するいかなる被害・損害について、作者は一切の責任を負わないものとします。
