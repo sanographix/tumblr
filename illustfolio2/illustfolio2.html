@@ -27,7 +27,8 @@
 
   <meta name="if:Show Exif" content="1" />
 
-  <meta name="image:Background" content=""/>
+  <meta name="image:Background" content="" />
+  <meta name="font:Font" content="" />
 
   <title>{block:PostSummary}{PostSummary} - {/block:PostSummary}{Title}</title>
 
@@ -137,6 +138,7 @@
   <style>
     body {
         background-image: url('{image:Background}');
+      font-family: {font:Font};
     }
     @media (-webkit-min-device-pixel-ratio: 2) {
         body {
