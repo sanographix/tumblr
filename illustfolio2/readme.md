@@ -1,3 +1,5 @@
+![](http://sanographix.github.io/tumblr/illustfolio2/images/screenshot-mini.png)
+
 # Illustfolio 2
 
 #### Free responsive tumblr theme for illustrators
