@@ -15,6 +15,8 @@ Tumblr に画像をアップロードするだけで簡単にポートフォリ�
 
 ## インストール手順
 
+事前に [tumblr のユーザー登録](https://www.tumblr.com/register)を行なってください。
+
 1. [テーマのhtmlファイル](https://github.com/sanographix/tumblr/blob/master/illustfolio2/illustfolio2.html)をコピーします。[ここからコピー](https://raw.github.com/sanographix/tumblr/master/illustfolio2/illustfolio2.html)するとやりやすい
 2. Tumblr の[テーマカスタマイズ画面](http://www.tumblr.com/customize)を開いて、「HTMLを編集」を押します。
 3. (オプション) 元の html のバックアップをとっておきます。
