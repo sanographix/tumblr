@@ -22,7 +22,7 @@
   <meta name="text:Your Google Plus ID" content=""/>
   <meta name="text:Your Pixiv ID" content=""/>
   <meta name="text:Tumblr API Key" content="" />
-  <meta name="text:Blog Domain" content="foo.tumblr.com" />
+  <meta name="text:Blog Domain" content="" />
   <meta name="text:Disqus Shortname" content="" />
 
   <meta name="if:Show Exif" content="1" />
@@ -85,7 +85,7 @@
     $(function(){
       $("#related").jq_tumblrPostList({
         api_key:"{text:Tumblr API Key}",
-        domain:"{text:Blog Domain}", //取得先となるTumblrサイトのドメイン
+        domain: location.host, //取得先となるTumblrサイトのドメイン
         limit:3 //記事の数
       });
     });
@@ -96,7 +96,7 @@
     (function() {
       var posts = new TumblrPosts({
         // ドメインと取得する最大記事数
-        domain:"{text:Blog Domain}",
+        domain: location.host,
         maxNum:300
       });
       posts.bind(posts.EVENT_COMPLETE, function(e) {

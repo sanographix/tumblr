@@ -59,7 +59,7 @@ Tumblr の[テーマカスタマイズ画面](http://www.tumblr.com/customize)�
 
 | 設定項目 | 説明 |
 |-------|-----|
-|Blog Domain|タグ一覧や最新記事取得のためにブログドメインを入力してください。（例： foo.tumblr.com）|
+|Blog Domain|あなたのブログドメインを入力してください。（例： illustfolio2.tumblr.com）|
 |Disqus Shortname|記事にコメント欄を設置したい場合は、ここに Disqus Shortname を入力します。|
 |Google Analytics ID|Googleアナリティクスを使いたい場合は、ここにトラッキングIDを入力します。（例： UA-0000000-0）|
 |Tumblr API Key|ステップ2で取得した API キーを入力します。|
@@ -119,6 +119,10 @@ Markdown については[こちらの解説記事](http://blog.2310.net/archives
 
 
 ## Changelog
+
+### 2.1.0 (2013/07/03)
+
+* タグリストと関連記事を自動で表示するようにした
 
 ### 2.0.3 (2013/06/11)
 
