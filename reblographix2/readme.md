@@ -37,7 +37,7 @@ Reblographix 2 は、大量の画像を Reblog する人のための Tumblr テ�
 
 | 設定項目 | 説明 |
 |-------|-----|-----|
-| Hide Tumblr Controls | 右上の「ダッシュボード」とか「リブログ」とか書いてある黒いリンクを非表示にします。（モバイルで見た時デザインの都合上邪魔だったのでデフォルトで消しています） |
+| Hide Tumblr Controls | 右上の「ダッシュボード」とか「リブログ」とか書いてある黒いリンクを非表示にします。（モバイルで見た時デザインの都合上邪魔なので消せるようにしています） |
 | Blog Domain | 検索フォーム用に自分のブログURLを入力します。（例：foo.tumblr.com） |
 | Google Analytics ID | Google Analytics を使う場合はここにトラッキングIDを入力します。 |
 
@@ -61,6 +61,11 @@ Reblographix 2 は、大量の画像を Reblog する人のための Tumblr テ�
 
 
 ## Changelog
+
+### 2.1.1 (2013/07/18)
+
+* Tumblr Control を消すのをデフォルトではオフにした
+
 
 ### 2.1 (2013/05/04)
 
