@@ -48,6 +48,8 @@ ZENは、Tumblrで普通に日記を書く用途にこだわったテンプレ�
 | Hatena Star Token | ここにはてなスターのトークンを入力します。詳しい設定方法は[はてなスターのヘルプ](http://d.hatena.ne.jp/hatenastar/20070707/1184453490)を参照してください。 |
 | OGP Facebook Admin Number | Facebok Admin ID を入力します。 Admin IDの調べ方は検索するといろいろ出てきます。 |
 | OGP Toppage URL | トップページのURLを`http://~~`から入力します（`http://example.tumblr.com`）。`og:url`でトップページのURLを認識させる必要があるため、なるべく入力してください。 |
+| OGP Facebook Page URL | Facebook ページ持ってる人はここに Facebook ページの URL を入力してください。ブログ記事が Fb にシェアされたときに「いいね！」ボタンを表示できるみたいです。[詳しくは Fb 開発ブログ参照。](https://developers.facebook.com/blog/post/2013/06/19/platform-updates--new-open-graph-tags-for-media-publishers-and-more/)これか後述の`OGP Facebook URL`の**どちらか**を入力してください。 |
+| OGP Facebook URL | Facebook アカウント持ってる人はここに Facebook の URL を入力してください。ブログ記事が Fb にシェアされたときに「フィードを購読」ボタンを表示できるみたいです。[詳しくは Fb 開発ブログ参照。](https://developers.facebook.com/blog/post/2013/06/19/platform-updates--new-open-graph-tags-for-media-publishers-and-more/)これか先述の`OGP Facebook Page URL`の**どちらか**を入力してください。 |
 | Enable Syntax Highlight | シンタックスハイライトを有効にします。 |
 | Disqus Shortname | 記事にコメント欄を設置したい場合は、ここに Disqus Shortname を入力します。 |
 
@@ -84,6 +86,9 @@ ZENは、Tumblrで普通に日記を書く用途にこだわったテンプレ�
 
 ## Changelog
 
+### 1.2.5 (2013/07/25)
+
+* Facebook の新しい OGP `article:publisher` とかに対応
 
 ### 1.2.4 (2013/06/27)
 

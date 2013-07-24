@@ -18,6 +18,8 @@
   <meta name="text:Google Analytics ID" content="" />
   <meta name="text:OGP Facebook Admin Number" content="" />
   <meta name="text:OGP Toppage URL" content="" />
+  <meta name="text:OGP Facebook Page URL" content="" />
+  <meta name="text:OGP Facebook URL" content="" />
   <meta name="text:Hatena Star Token" content="" />
   <meta name="text:Google Author" content="" />
   <meta name="text:Disqus Shortname" content="" />
@@ -68,6 +70,12 @@
   <meta property="og:site_name" content="{Title}" />
   <meta property="og:description" content="{block:Description}{MetaDescription}{/block:Description}">
   <meta property="fb:admins" content="{text:OGP Facebook Admin Number}" />
+  {block:IfOGPFacebookPageURL}
+    <meta property="article:publisher" content="{text:OGP Facebook Page URL}" />
+  {/block:IfOGPFacebookPageURL}
+  {block:IfOGPFacebookURL}
+    <meta property="article:author" content="{text:OGP Facebook URL}" />
+  {/block:IfOGPFacebookURL}
   <link rel="author" href="{text:Google Author}" />
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
