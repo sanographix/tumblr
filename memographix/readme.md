@@ -71,3 +71,16 @@
 ### テーマガーデン版
 
 * テーマガーデン版は1.0のまま変更しません
+
+
+## Author
+
+#### Showkaku Sano (sanographix)
+
+Graphic designer from Kyoto.
+
+* [http://www.sanographix.net/](http://www.sanographix.net/)
+* [Twitter: @sanographix](https://twitter.com/sanographix)
+* [GitHub: sanographix](https://github.com/sanographix)
+
+本テーマの利用に関するいかなる被害・損害について、作者は一切の責任を負わないものとします。

@@ -77,8 +77,8 @@ ZENは、Tumblrで普通に日記を書く用途にこだわったテンプレ�
 ##### Q: 商用利用してもいいですか？
 * 問題ありません。どんどん利用してください。ただし Tumblr の利用規約に違反するコンテンツには使えません。
 
-##### Q: ライセンスは何ですか？
-* MIT ライセンスです。
+##### Q: HTML とか CSS を改変してもいいですか？
+* はい。MIT ライセンスですのでライセンスの範囲内で自由にカスタマイズできます。
 
 ##### Q: このテーマを Wordpress に移植していいですか？
 * はい、歓迎します。
@@ -191,6 +191,19 @@ ZENは、Tumblrで普通に日記を書く用途にこだわったテンプレ�
 * 公開
 
 
+## Author
+
+#### Showkaku Sano (sanographix)
+
+Graphic designer from Kyoto.
+
+* [http://www.sanographix.net/](http://www.sanographix.net/)
+* [Twitter: @sanographix](https://twitter.com/sanographix)
+* [GitHub: sanographix](https://github.com/sanographix)
+
+本テーマの利用に関するいかなる被害・損害について、作者は一切の責任を負わないものとします。
+
+
 <hr />
 
 # ZEN
@@ -217,12 +230,12 @@ ZENは、Tumblrで普通に日記を書く用途にこだわったテンプレ�
 * **Don't** use mobile layout
 
 
-## Author
+## License
 
-#### Showkaku Sano (sanographix)
+Copyright (c) SANOGRAPHIX.NET
 
-Graphic designer from Kyoto.
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
-* [http://www.sanographix.net/](http://www.sanographix.net/)
-* [Twitter: @sanographix](https://twitter.com/sanographix)
-* [GitHub: sanographix](https://github.com/sanographix)
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.

@@ -91,6 +91,19 @@ Reblographix 2 は、大量の画像を Reblog する人のための Tumblr テ�
 	* Retina ディスプレイのサポート
 	* よりネイティブアプリ感のある見た目
 
+
+## Author
+
+#### Showkaku Sano (sanographix)
+
+Graphic designer from Kyoto.
+
+* [http://www.sanographix.net/](http://www.sanographix.net/)
+* [Twitter: @sanographix](https://twitter.com/sanographix)
+* [GitHub: sanographix](https://github.com/sanographix)
+
+本テーマの利用に関するいかなる被害・損害について、作者は一切の責任を負わないものとします。
+
 <hr />
 
 # Reblographix 2
@@ -111,12 +124,3 @@ Reblographix 2 は、大量の画像を Reblog する人のための Tumblr テ�
 * **Don't** use mobile layout
 
 
-## Author
-
-#### Showkaku Sano (sanographix)
-
-Graphic designer from Kyoto.
-
-* [http://www.sanographix.net/](http://www.sanographix.net/)
-* [Twitter: @sanographix](https://twitter.com/sanographix)
-* [GitHub: sanographix](https://github.com/sanographix)
