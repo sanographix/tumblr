@@ -86,6 +86,11 @@ ZENは、Tumblrで普通に日記を書く用途にこだわったテンプレ�
 
 ## Changelog
 
+### 1.2.6 (2013/08/24)
+
+* IE10で`img.noshadow`が効かない不具合を修正
+* オプションから「Enable Image Shadow」で画像の影の有無を指定できるようにした
+
 ### 1.2.5 (2013/07/25)
 
 * Facebook の新しい OGP `article:publisher` とかに対応
