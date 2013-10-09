@@ -228,15 +228,17 @@ Graphic designer from Kyoto.
 ## Usage
 
 1. [Copy this HTML file](https://github.com/sanographix/tumblr/blob/master/zen/zen.html).
-2. Go to Tumblr dashboard, and open design settings.
+2. Go to Tumblr dashboard, and open [design settings](http://www.tumblr.com/customize).
 3. Press "Edit HTML", delete current HTML and paste ZEN HTML.
+4. Press "Save".
+    - Notice: Previous theme settings will be deleted.
 
 
 ## Options
 
 ### Recommended settings
 
-* **Don't** use mobile layout
+* Go to "▾ ADVANCED", and **Uncheck** "Use optimized mobile layout"
 
 
 ## License
