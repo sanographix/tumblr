@@ -1,5 +1,7 @@
 # ZEN
 
+(<a href="#zen-1">In English</a>)
+
 #### Free responsive tumblr template
 
 ZENは、Tumblrで普通に日記を書く用途にこだわったテンプレートです。  
