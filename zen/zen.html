@@ -33,7 +33,6 @@
   <meta name="if:Enable Tweet Button" content="1" />
   <meta name="if:Enable Plus1 Button" content="1" />
   <meta name="if:Enable Syntax Highlight" content="1" />
-  <meta name="if:Enable Image Shadow" content="1" />
 
   <title>{block:PostSummary}{PostSummary} - {/block:PostSummary}{Title}</title>
 
@@ -45,32 +44,33 @@
   <link rel="shortcut icon" href="{Favicon}">
   <link rel="alternate" type="application/rss+xml" href="{RSS}">
   <link rel="apple-touch-icon" href="{PortraitURL-128}">
-  <link rel="canonical" href="{Permalink}"/>
-  <link rel="stylesheet" type="text/css" media="screen" href="//sanographix.github.io/public/tumblr/zen/2.x/css/style.css" charset="utf-8"/>
+  <link rel="canonical" href="{block:IndexPage}{text:OGP Toppage URL}{/block:IndexPage}{block:PermalinkPage}{Permalink}{/block:PermalinkPage}"/>
+  <link  href="//sanographix.github.io/public/tumblr/zen/2.x/css/style.css" rel="stylesheet" type="text/css" media="screen" charset="utf-8"/>
   <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
 
   <!-- OGP -->
   <meta property="og:title" content="{block:PostTitle}{PostTitle} - {/block:PostTitle}{Title}" />
   <meta property="og:type" content="article" />
   <meta property="og:url" content="{block:IndexPage}{text:OGP Toppage URL}{/block:IndexPage}{block:PermalinkPage}{Permalink}{/block:PermalinkPage}" />
-  <meta property="og:image" content="{PortraitURL-128}" />
   <!-- Twitter tags -->
   <meta name="twitter:image" content="{PortraitURL-128}" />
   <!-- photo だったら og-image は photoURL にする -->
   {block:PermalinkPage}
     {block:Posts}
       {block:Photo}
-        <meta property="og:image" content="{PhotoURL-400}" />
+        <meta property="og:image" content="{PhotoURL-HighRes}" />
       {/block:Photo}
       {block:Photoset}
         {block:Photos}
-        <meta property="og:image" content="{PhotoURL-400}" />
+        <meta property="og:image" content="{PhotoURL-HighRes}" />
         {/block:Photos}
       {/block:Photoset}
     {/block:Posts}
   {/block:PermalinkPage}
   <meta property="og:site_name" content="{Title}" />
-  <meta property="og:description" content="{block:Description}{MetaDescription}{/block:Description}">
+  {block:Description}
+    <meta property="og:description" content="{MetaDescription}">
+  {/block:Description}
   <meta property="fb:admins" content="{text:OGP Facebook Admin Number}" />
   {block:IfOGPFacebookPageURL}
     <meta property="article:publisher" content="{text:OGP Facebook Page URL}" />
@@ -79,7 +79,6 @@
     <meta property="article:author" content="{text:OGP Facebook URL}" />
   {/block:IfOGPFacebookURL}
   <link rel="author" href="{text:Google Author}" />
-
 
   <!--[if lt IE 9]>
     <script src="//sanographix.github.io/public/tumblr/zen/2.x/js/_ie-html5.min.js"></script>
@@ -137,9 +136,7 @@
       {/block:IfShowDescription}
     </header>
 
-    <div id="main" class="autopagerize_page_element
-      {block:IfNotEnableImageShadow}noshadow{/block:IfNotEnableImageShadow}
-    ">
+    <div id="main" class="autopagerize_page_element">
 
       {block:TagPage}
           <h2 class="tagged">Posts tagged "{Tag}"</h2>
@@ -412,10 +409,10 @@ src="{ReblogRootPortraitURL-16}" class="favicon"/> {ReblogRootName}</a>
       <div id="pager">
         <!-- パーマリンク -->
         {block:PreviousPost}
-          <a href="{PreviousPost}">Prev</a>
+          <a href="{PreviousPost}">OLDER</a>
         {/block:PreviousPost}
         {block:NextPost}
-          <a href="{NextPost}" class="next" rel="next">Next</a>
+          <a href="{NextPost}" class="next" rel="next">NEWER</a>
         {/block:NextPost}
       </div>
     {/block:PermalinkPagination}
@@ -424,10 +421,10 @@ src="{ReblogRootPortraitURL-16}" class="favicon"/> {ReblogRootName}</a>
       <div id="pager">
         <!-- ページごと -->
         {block:PreviousPage}
-          <a href="{PreviousPage}">Prev</a>
+          <a href="{PreviousPage}">NEWER</a>
         {/block:PreviousPage}
         {block:NextPage}
-          <a href="{NextPage}" class="next" rel="next">Next</a>
+          <a href="{NextPage}" class="next" rel="next">OLDER</a>
         {/block:NextPage}
       </div>
     {/block:Pagination}
@@ -445,7 +442,7 @@ src="{ReblogRootPortraitURL-16}" class="favicon"/> {ReblogRootName}</a>
 
   <script src="//sanographix.github.io/public/tumblr/zen/2.x/js/zen-js.min.js"></script>
   {block:IfEnableSyntaxHighlight}
-    <script src="//sanographix.github.io/public/tumblr/zen/2.x/js/prettify.min.js"></script>
+    <script src="//sanographix.github.io/public/tumblr/zen/2.x/js/prettify.js"></script>
   {/block:IfEnableSyntaxHighlight}
 
   <!-- Google Analytics -->
@@ -455,7 +452,7 @@ src="{ReblogRootPortraitURL-16}" class="favicon"/> {ReblogRootName}</a>
     _gaq.push(['_trackPageview']);
     (function() {
       var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
     })();
   </script>
