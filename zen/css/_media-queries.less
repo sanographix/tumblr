@@ -6,6 +6,7 @@
 
 @media only screen and (-webkit-min-device-pixel-ratio : 1.5),only screen and (min-device-pixel-ratio : 1.5) {
 
+
 }
 
 /* Large desktop */
@@ -25,32 +26,12 @@
         padding: 0;
     }
 
-    .section,
-    .navbar-inner,
-    #footer {
-        padding-left: 10px;
-        padding-right: 10px;
-
-        h1 {
-            font-size: 30px;
-        }
-
-    }
-
     #header {
-        padding: 10px 0;
-
-        h1 {
-            font-size: 70px;
-        }
-
-        h2 {
-            font-size: 20px;
-        }
+        font-size: 85%;
     }
 
-    [class*="span"] {
-        margin-bottom: 40px;
+    .btn-lg {
+        font-size: 150%;
     }
 
  }
@@ -58,32 +39,40 @@
 /* Landscape phones and down */
 @media (max-width: 480px) {
 
+    .mobile-br {
+        display: inline;
+    }
+
     .container {
         font-size: 90%;
     }
 
     .btn {
         display: block;
-        margin: 5px;
+        margin: 5px 0;
+        white-space: normal;
     }
 
-    .btn-large {
-        font-size: 24px;
-        line-height: 24px;
-        padding: 10px 0;
+    .btn-lg {
+        padding: 10px 5px;
     }
 
     #header {
-        h1,
-        .nav {
-            float: none;
-            text-align: center;
+        padding-left: 10px;
+        padding-right: 10px;
+
+        .introducing {
+            letter-spacing: 1em;
+        }
+
+        h1 {
+            font-size: 700%;
         }
     }
 
-    #intro {
+    .container {
         h1 {
-            font-size: 24px;
+            font-size: 250% !important;
         }
     }
 
