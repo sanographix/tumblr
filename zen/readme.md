@@ -1,4 +1,4 @@
-# ZEN
+# ZEN 2.0
 
 (<a href="#zen-1">In English</a>)
 
@@ -47,9 +47,9 @@ ZENは、Tumblrで普通に日記を書く用途にこだわったテンプレ�
 | Title Logo | ブログタイトルのかわりに表示するタイトルロゴをアップロードできます。 |
 | Google Analytics ID | Google Analytics を使う場合はここにトラッキングIDを入力します。 |
 | Google Author | ここに自分のGoogle+プロフィールURLを入力することで、Google検索結果に著者情報を表示させることができます。（例：`https://plus.google.com/109963703491503474788`）詳しい情報は[Googleのヘルプ](http://support.google.com/webmasters/bin/answer.py?hl=ja&answer=1408986)を参照してください。 |
-| Hatena Star Token | ここにはてなスターのトークンを入力します。詳しい設定方法は[はてなスターのヘルプ](http://d.hatena.ne.jp/hatenastar/20070707/1184453490)を参照してください。 |
-| OGP Facebook Admin Number | Facebok Admin ID を入力します。 Admin IDの調べ方は検索するといろいろ出てきます。 |
-| OGP Toppage URL | トップページのURLを`http://~~`から入力します（`http://example.tumblr.com`）。`og:url`でトップページのURLを認識させる必要があるため、なるべく入力してください。 |
+| Hatena Star Token | ここにはてなスターのトークンを入力すると、スターが押されたときにはてなの「あなたへのお知らせ」に通知が届くようになります。詳しい設定方法は[はてなスターのヘルプ](http://d.hatena.ne.jp/hatenastar/20070707/1184453490)を参照してください。 |
+| OGP Facebook Admin Number | Facebok Admin ID（**fb:admins**） を入力します。自分の Admin IDの調べ方は、「fb:admins」とかで検索すると分かると思います。 |
+| Blog Domain | トップページのURLを`http://~~`を**抜いて**入力します（例：`example.tumblr.com`）。ここの入力がないとサイト内検索フォームが動作しません。 |
 | OGP Facebook Page URL | Facebook ページ持ってる人はここに Facebook ページの URL を入力してください。ブログ記事が Fb にシェアされたときに「いいね！」ボタンを表示できるみたいです。[詳しくは Fb 開発ブログ参照。](https://developers.facebook.com/blog/post/2013/06/19/platform-updates--new-open-graph-tags-for-media-publishers-and-more/)これか後述の`OGP Facebook URL`の**どちらか**を入力してください。 |
 | OGP Facebook URL | Facebook アカウント持ってる人はここに Facebook の URL を入力してください。ブログ記事が Fb にシェアされたときに「フィードを購読」ボタンを表示できるみたいです。[詳しくは Fb 開発ブログ参照。](https://developers.facebook.com/blog/post/2013/06/19/platform-updates--new-open-graph-tags-for-media-publishers-and-more/)これか先述の`OGP Facebook Page URL`の**どちらか**を入力してください。 |
 | Enable Syntax Highlight | シンタックスハイライトを有効にします。 |
@@ -75,7 +75,7 @@ ZENは、Tumblrで普通に日記を書く用途にこだわったテンプレ�
 
 	
 ## よくある質問
-
+ 
 ##### Q: 商用利用してもいいですか？
 * 問題ありません。どんどん利用してください。ただし Tumblr の利用規約に違反するコンテンツには使えません。
 
@@ -85,8 +85,40 @@ ZENは、Tumblrで普通に日記を書く用途にこだわったテンプレ�
 ##### Q: このテーマを Wordpress に移植していいですか？
 * はい、歓迎します。
 
+##### Q: ページが何も表示されない
+* Tumblr か GitHub Pages が落ちていると思われます。しばらく待ってから再度開いてみてください。
+
+##### Q: 検索フォームが動かない
+* オプションの`Blog Domain`が未入力ではありませんか？
+
+##### Q: Disqusコメントフォームが真っ白なんですけど
+* Disqus設定画面で、カラースキームが「for Light Background」になっているか確認してください。まれに「Dark」になっている場合があるようです。
+
+##### Q: 作者に寄付したいです
+* お待ちしています → <http://www.amazon.co.jp/registry/wishlist/2QLOE7F0CGUSX>
+
 
 ## Changelog
+
+### 2.0.0 (2013/10/29)
+
+* これまでで最大のアップデートです
+* 新機能
+	* CSS, JS をチューニングしてページ読み込み速度を大幅に高速化
+	* 新しい`.btn`デザイン
+	* 新しい`blockquote`デザイン
+	* 新しい`hr`デザイン
+	* 新しい`pre`デザイン
+	* ブラウザ幅に合わせて文字サイズが変化
+* 仕様変更
+	* 画像に影をつけるのをやめた
+	* og-image をより大きい画像に
+	* like, reblog ボタンを少し大きく
+	* font-awesome を読み込まないようにした
+	* canonical, og:description が正しく表示されないことがあったのを修正
+	* tagページ、dayページは検索エンジンにインデックスしないように
+	* htmlの主要な要素に`role`属性を付与
+	* オプションの名称を`{text:OGP Toppage URL}`から`{text:Blog Domain}`に変更
 
 ### 1.2.8 (2013/10/22)
 

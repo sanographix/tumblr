@@ -17,12 +17,12 @@
   <!-- Variables -->
   <meta name="text:Google Analytics ID" content="" />
   <meta name="text:OGP Facebook Admin Number" content="" />
+  <meta name="text:OGP Toppage URL" content="" />
   <meta name="text:OGP Facebook Page URL" content="" />
   <meta name="text:OGP Facebook URL" content="" />
   <meta name="text:Hatena Star Token" content="" />
   <meta name="text:Google Author" content="" />
   <meta name="text:Disqus Shortname" content="" />
-  <meta name="text:Blog Domain" content="" />
 
   <meta name="image:Title Logo" content="" />
 
@@ -33,15 +33,9 @@
   <meta name="if:Enable Tweet Button" content="1" />
   <meta name="if:Enable Plus1 Button" content="1" />
   <meta name="if:Enable Syntax Highlight" content="1" />
+  <meta name="if:Enable Image Shadow" content="1" />
 
   <title>{block:PostSummary}{PostSummary} - {/block:PostSummary}{Title}</title>
-
-  {block:TagPage}
-    <meta name="robots" content="noindex,follow"/>
-  {/block:TagPage}
-  {block:DayPage}
-    <meta name="robots" content="noindex,follow"/>
-  {/block:DayPage}
 
   <meta charset="UTF-8">
   {block:Description}
@@ -51,33 +45,31 @@
   <link rel="shortcut icon" href="{Favicon}">
   <link rel="alternate" type="application/rss+xml" href="{RSS}">
   <link rel="apple-touch-icon" href="{PortraitURL-128}">
-  <link rel="canonical" href="{block:IndexPage}http://{text:Blog Domain}{/block:IndexPage}{block:PermalinkPage}{Permalink}{/block:PermalinkPage}"/>
-  <link  href="//sanographix.github.io/public/tumblr/zen/2.x/css/style.css" rel="stylesheet" type="text/css" media="screen" charset="utf-8"/>
-  <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+  <link rel="canonical" href="{Permalink}"/>
+  <link rel="stylesheet" type="text/css" media="screen" href="//sanographix.github.io/public/tumblr/zen/css/style.css" charset="utf-8"/>
 
   <!-- OGP -->
   <meta property="og:title" content="{block:PostTitle}{PostTitle} - {/block:PostTitle}{Title}" />
   <meta property="og:type" content="article" />
-  <meta property="og:url" content="{block:IndexPage}http://{text:Blog Domain}{/block:IndexPage}{block:PermalinkPage}{Permalink}{/block:PermalinkPage}" />
+  <meta property="og:url" content="{block:IndexPage}{text:OGP Toppage URL}{/block:IndexPage}{block:PermalinkPage}{Permalink}{/block:PermalinkPage}" />
+  <meta property="og:image" content="{PortraitURL-128}" />
   <!-- Twitter tags -->
   <meta name="twitter:image" content="{PortraitURL-128}" />
   <!-- photo だったら og-image は photoURL にする -->
   {block:PermalinkPage}
     {block:Posts}
       {block:Photo}
-        <meta property="og:image" content="{PhotoURL-HighRes}" />
+        <meta property="og:image" content="{PhotoURL-400}" />
       {/block:Photo}
       {block:Photoset}
         {block:Photos}
-        <meta property="og:image" content="{PhotoURL-HighRes}" />
+        <meta property="og:image" content="{PhotoURL-400}" />
         {/block:Photos}
       {/block:Photoset}
     {/block:Posts}
   {/block:PermalinkPage}
   <meta property="og:site_name" content="{Title}" />
-  {block:Description}
-    <meta property="og:description" content="{MetaDescription}">
-  {/block:Description}
+  <meta property="og:description" content="{block:Description}{MetaDescription}{/block:Description}">
   <meta property="fb:admins" content="{text:OGP Facebook Admin Number}" />
   {block:IfOGPFacebookPageURL}
     <meta property="article:publisher" content="{text:OGP Facebook Page URL}" />
@@ -87,9 +79,53 @@
   {/block:IfOGPFacebookURL}
   <link rel="author" href="{text:Google Author}" />
 
-  <!--[if lt IE 9]>
-    <script src="//sanographix.github.io/public/tumblr/zen/2.x/js/html5shiv.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+  {block:IfEnableSyntaxHighlight}
+    <script src="//cdnjs.cloudflare.com/ajax/libs/prettify/r224/prettify.js"></script>
+  {/block:IfEnableSyntaxHighlight}
+  <script src="//sanographix.github.io/public/tumblr/zen/js/jquery.options.min.js"></script>
+
+  {block:IfEnableHatenaStar}
+    <script type="text/javascript" src="http://s.hatena.ne.jp/js/HatenaStar.js"></script>
+    <script type="text/javascript">
+      Hatena.Star.Token = '{text:Hatena Star Token}';
+    </script>
+    <script type="text/javascript">
+    Hatena.Star.SiteConfig = {
+      entryNodes: {
+        'article.post': {
+          uri: '.entry-title a',
+          title: '.entry-title',
+          container: 'div.meta'
+        }
+      }
+    };
+    </script>
+    <script type="text/javascript">
+      Hatena.Star.EntryLoader.headerTagAndClassName = ['div','meta'];
+    </script>
+  {/block:IfEnableHatenaStar}
+
+  <!--[if IE]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="//css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="//sanographix.github.io/public/tumblr/zen/css/fuck-ie.css" charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="//sanographix.github.io/public/tumblr/zen/css/font-awesome-ie7.min.css" charset="utf-8"/>
   <![endif]-->
+
+  <!-- Google Analytics -->
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', '{text:Google Analytics ID}']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+  <!-- END Google Analytics -->
 
 </head>
 <body onload="prettyPrint()" class="{block:IndexPage}page-index{/block:IndexPage}{block:PermalinkPage}page-permalink page-{PostID}{/block:PermalinkPage}">
@@ -98,12 +134,23 @@
 {CustomCSS}
 </style>
 
+  {block:IfEnableFacebookButton}
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/ja_JP/all.js#xfbml=1";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+  {/block:IfEnableFacebookButton}
+
   <div id="container">
 
    <div class="mobile-nav-panel">
       <i class="icon-reorder icon-large"></i>
     </div>
-    <nav class="nav" role="navigation">
+    <nav class="nav">
       <ul>
         <li>
           <a href="/">Home</a>
@@ -124,7 +171,7 @@
       </ul>
     </nav>
 
-    <header id="header" role="banner">
+    <header id="header">
       {block:IfShowProfileImage}
         <img src="{PortraitURL-128}" class="profile-image" />
       {/block:IfShowProfileImage}
@@ -143,7 +190,9 @@
       {/block:IfShowDescription}
     </header>
 
-    <div id="main" class="autopagerize_page_element" role="main">
+    <div id="main" class="autopagerize_page_element
+      {block:IfNotEnableImageShadow}noshadow{/block:IfNotEnableImageShadow}
+    ">
 
       {block:TagPage}
           <h2 class="tagged">Posts tagged "{Tag}"</h2>
@@ -306,7 +355,7 @@
           {/block:ContentSource}
 
           <!-- 記事フッタ -->
-          <footer class="entry-footer" role="contentinfo">
+          <footer class="entry-footer">
             {block:RebloggedFrom}
               <div class="meta meta-reblog">
                 <span class="meta-elements rebloggedfrom">
@@ -355,14 +404,6 @@ src="{ReblogRootPortraitURL-16}" class="favicon"/> {ReblogRootName}</a>
                   </li>
                   {/block:IfEnableTweetButton}
                   {block:IfEnableFacebookButton}
-                  <div id="fb-root"></div>
-                  <script>(function(d, s, id) {
-                    var js, fjs = d.getElementsByTagName(s)[0];
-                    if (d.getElementById(id)) return;
-                    js = d.createElement(s); js.id = id;
-                    js.src = "//connect.facebook.net/ja_JP/all.js#xfbml=1";
-                    fjs.parentNode.insertBefore(js, fjs);
-                  }(document, 'script', 'facebook-jssdk'));</script>
                   <li class="social-button">
                     <div class="fb-like" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false"></div>
                   </li>
@@ -416,10 +457,10 @@ src="{ReblogRootPortraitURL-16}" class="favicon"/> {ReblogRootName}</a>
       <div id="pager">
         <!-- パーマリンク -->
         {block:PreviousPost}
-          <a href="{PreviousPost}">OLDER</a>
+          <a href="{PreviousPost}">Prev</a>
         {/block:PreviousPost}
         {block:NextPost}
-          <a href="{NextPost}" class="next" rel="next">NEWER</a>
+          <a href="{NextPost}" class="next" rel="next">Next</a>
         {/block:NextPost}
       </div>
     {/block:PermalinkPagination}
@@ -428,10 +469,10 @@ src="{ReblogRootPortraitURL-16}" class="favicon"/> {ReblogRootName}</a>
       <div id="pager">
         <!-- ページごと -->
         {block:PreviousPage}
-          <a href="{PreviousPage}">NEWER</a>
+          <a href="{PreviousPage}">Prev</a>
         {/block:PreviousPage}
         {block:NextPage}
-          <a href="{NextPage}" class="next" rel="next">OLDER</a>
+          <a href="{NextPage}" class="next" rel="next">Next</a>
         {/block:NextPage}
       </div>
     {/block:Pagination}
@@ -441,50 +482,10 @@ src="{ReblogRootPortraitURL-16}" class="favicon"/> {ReblogRootName}</a>
         ©{CopyrightYears} {Title}
       </span>
       <!-- ↓ Please do not delete this anchor. -->
-      <a href="http://sanographix.github.io/tumblr/zen/" target="_blank">ZEN 2</a> theme designed by <a href="http://www.sanographix.net/" target="_blank">SANOGRAPHIX.NET</a>
+      <a href="http://sanographix.github.io/tumblr/zen/" target="_blank">Zen</a> theme designed by <a href="http://www.sanographix.net/" target="_blank">SANOGRAPHIX.NET</a>
     </footer>
 
   </div>
-
-
-  <script src="//sanographix.github.io/public/tumblr/zen/2.x/js/zen-js.min.js"></script>
-  {block:IfEnableSyntaxHighlight}
-    <script src="//sanographix.github.io/public/tumblr/zen/2.x/js/prettify.js"></script>
-  {/block:IfEnableSyntaxHighlight}
-
-  <!-- Google Analytics -->
-  <script type="text/javascript">
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', '{text:Google Analytics ID}']);
-    _gaq.push(['_trackPageview']);
-    (function() {
-      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-  </script>
-  <!-- END Google Analytics -->
-
-  {block:IfEnableHatenaStar}
-    <script type="text/javascript" src="http://s.hatena.ne.jp/js/HatenaStar.js"></script>
-    <script type="text/javascript">
-      Hatena.Star.Token = '{text:Hatena Star Token}';
-    </script>
-    <script type="text/javascript">
-      Hatena.Star.SiteConfig = {
-        entryNodes: {
-          'article.post': {
-            uri: '.entry-title a',
-            title: 'document.title',
-            container: 'div.meta'
-          }
-        }
-      };
-    </script>
-    <script type="text/javascript">
-      Hatena.Star.EntryLoader.headerTagAndClassName = ['div','meta'];
-    </script>
-  {/block:IfEnableHatenaStar}
 
 </body>
 </html>
