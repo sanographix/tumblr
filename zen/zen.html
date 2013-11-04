@@ -17,12 +17,12 @@
   <!-- Variables -->
   <meta name="text:Google Analytics ID" content="" />
   <meta name="text:OGP Facebook Admin Number" content="" />
-  <meta name="text:OGP Toppage URL" content="" />
   <meta name="text:OGP Facebook Page URL" content="" />
   <meta name="text:OGP Facebook URL" content="" />
   <meta name="text:Hatena Star Token" content="" />
   <meta name="text:Google Author" content="" />
   <meta name="text:Disqus Shortname" content="" />
+  <meta name="text:Blog Domain" content="" />
 
   <meta name="image:Title Logo" content="" />
 
@@ -36,6 +36,13 @@
 
   <title>{block:PostSummary}{PostSummary} - {/block:PostSummary}{Title}</title>
 
+  {block:TagPage}
+    <meta name="robots" content="noindex,follow"/>
+  {/block:TagPage}
+  {block:DayPage}
+    <meta name="robots" content="noindex,follow"/>
+  {/block:DayPage}
+
   <meta charset="UTF-8">
   {block:Description}
     <meta name="description" content="{MetaDescription}" />
@@ -44,14 +51,14 @@
   <link rel="shortcut icon" href="{Favicon}">
   <link rel="alternate" type="application/rss+xml" href="{RSS}">
   <link rel="apple-touch-icon" href="{PortraitURL-128}">
-  <link rel="canonical" href="{block:IndexPage}{text:OGP Toppage URL}{/block:IndexPage}{block:PermalinkPage}{Permalink}{/block:PermalinkPage}"/>
+  <link rel="canonical" href="{block:IndexPage}http://{text:Blog Domain}{/block:IndexPage}{block:PermalinkPage}{Permalink}{/block:PermalinkPage}"/>
   <link  href="//sanographix.github.io/public/tumblr/zen/2.x/css/style.css" rel="stylesheet" type="text/css" media="screen" charset="utf-8"/>
   <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
 
   <!-- OGP -->
   <meta property="og:title" content="{block:PostTitle}{PostTitle} - {/block:PostTitle}{Title}" />
   <meta property="og:type" content="article" />
-  <meta property="og:url" content="{block:IndexPage}{text:OGP Toppage URL}{/block:IndexPage}{block:PermalinkPage}{Permalink}{/block:PermalinkPage}" />
+  <meta property="og:url" content="{block:IndexPage}http://{text:Blog Domain}{/block:IndexPage}{block:PermalinkPage}{Permalink}{/block:PermalinkPage}" />
   <!-- Twitter tags -->
   <meta name="twitter:image" content="{PortraitURL-128}" />
   <!-- photo だったら og-image は photoURL にする -->
@@ -434,7 +441,7 @@ src="{ReblogRootPortraitURL-16}" class="favicon"/> {ReblogRootName}</a>
         ©{CopyrightYears} {Title}
       </span>
       <!-- ↓ Please do not delete this anchor. -->
-      <a href="http://sanographix.github.io/tumblr/zen/" target="_blank">Zen</a> theme designed by <a href="http://www.sanographix.net/" target="_blank">SANOGRAPHIX.NET</a>
+      <a href="http://sanographix.github.io/tumblr/zen/" target="_blank">ZEN 2</a> theme designed by <a href="http://www.sanographix.net/" target="_blank">SANOGRAPHIX.NET</a>
     </footer>
 
   </div>
