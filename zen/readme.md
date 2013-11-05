@@ -265,7 +265,7 @@ Graphic designer from Kyoto.
 
 ## Usage
 
-1. [Copy this HTML file](https://raw.github.com/sanographix/tumblr/zen-en/zen/zen-en.html).
+1. [Copy this HTML file](https://raw.github.com/sanographix/tumblr/master/zen/1.x/zen-en.html).
 2. Go to Tumblr dashboard, and open [design settings](http://www.tumblr.com/customize).
 3. Press "Edit HTML", delete current HTML and paste ZEN HTML.
 4. Press "Save".
