@@ -32,6 +32,7 @@
   <meta name="if:Enable Facebook Button" content="1" />
   <meta name="if:Enable Tweet Button" content="1" />
   <meta name="if:Enable Plus1 Button" content="1" />
+  <meta name="if:Enable Pocket Button" content="0" />
   <meta name="if:Enable Syntax Highlight" content="1" />
 
   <title>{block:PostSummary}{PostSummary} - {/block:PostSummary}{Title}</title>
@@ -381,6 +382,17 @@ src="{ReblogRootPortraitURL-16}" class="favicon"/> {ReblogRootName}</a>
                     </script>
                   </li>
                   {/block:IfEnablePlus1Button}
+                  {block:IfEnablePocketButton}
+                  <li class="social-button">
+                    <a data-pocket-label="pocket" data-pocket-count="horizontal" class="pocket-btn" data-lang="en"></a>
+                    <script type="text/javascript">!function(d,i){
+                        if(!d.getElementById(i)){
+                        var j=d.createElement("script");j.id=i;j.src="https://widgets.getpocket.com/v1/j/btn.js?v=1";var w=d.getElementById(i);d.body.appendChild(j);
+                        }
+                      }(document,"pocket-btn-js");
+                    </script>
+                  </li>
+                  {/block:IfEnablePocketButton}
                 </ul>
 
                 {block:IfDisqusShortname}
