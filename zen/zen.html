@@ -91,8 +91,20 @@
     <script src="//sanographix.github.io/public/tumblr/zen/2.x/js/html5shiv.js"></script>
   <![endif]-->
 
+  <!-- Google Analytics -->
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', '{text:Google Analytics ID}']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
 </head>
-<body onload="prettyPrint()" class="{block:IndexPage}page-index{/block:IndexPage}{block:PermalinkPage}page-permalink page-{PostID}{/block:PermalinkPage}">
+<body class="{block:IndexPage}page-index{/block:IndexPage}{block:PermalinkPage}page-permalink page-{PostID}{/block:PermalinkPage}">
 
 <style>
 {CustomCSS}
@@ -351,18 +363,9 @@ src="{ReblogRootPortraitURL-16}" class="favicon"/> {ReblogRootName}</a>
                   {block:IfEnableTweetButton}
                   <li class="social-button">
                     <a href="https://twitter.com/share" class="twitter-share-button" data-lang="ja">ツイート</a>
-                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
                   </li>
                   {/block:IfEnableTweetButton}
                   {block:IfEnableFacebookButton}
-                  <div id="fb-root"></div>
-                  <script>(function(d, s, id) {
-                    var js, fjs = d.getElementsByTagName(s)[0];
-                    if (d.getElementById(id)) return;
-                    js = d.createElement(s); js.id = id;
-                    js.src = "//connect.facebook.net/ja_JP/all.js#xfbml=1";
-                    fjs.parentNode.insertBefore(js, fjs);
-                  }(document, 'script', 'facebook-jssdk'));</script>
                   <li class="social-button">
                     <div class="fb-like" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false"></div>
                   </li>
@@ -370,36 +373,24 @@ src="{ReblogRootPortraitURL-16}" class="favicon"/> {ReblogRootName}</a>
                   {block:IfEnablePlus1Button}
                   <li class="social-button">
                     <div class="g-plusone" data-size="medium"></div>
-                    <script type="text/javascript">
-                      window.___gcfg = {lang: 'ja'};
-
-                      (function() {
-                        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-                        po.src = 'https://apis.google.com/js/plusone.js';
-                        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-                      })();
-                    </script>
                   </li>
                   {/block:IfEnablePlus1Button}
                 </ul>
 
                 {block:IfDisqusShortname}
-
-                <div id="disqus_thread"></div>
-                <script type="text/javascript">
-                    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-                    var disqus_shortname = '{text:Disqus Shortname}'; // Required - Replace example with your forum shortname
-
-                    /* * * DON'T EDIT BELOW THIS LINE * * */
-                    (function() {
-                        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-                        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-                    })();
-                </script>
-                <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-                <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
-
+                  <div id="disqus_thread"></div>
+                  <script type="text/javascript">
+                      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+                      var disqus_shortname = '{text:Disqus Shortname}'; // Required - Replace example with your forum shortname
+                      /* * * DON'T EDIT BELOW THIS LINE * * */
+                      (function() {
+                          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                      })();
+                  </script>
+                  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                  <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
                 {/block:IfDisqusShortname}
 
             {/block:PermalinkPage}
@@ -446,24 +437,25 @@ src="{ReblogRootPortraitURL-16}" class="favicon"/> {ReblogRootName}</a>
 
   </div>
 
-
   <script src="//sanographix.github.io/public/tumblr/zen/2.x/js/zen-js.min.js"></script>
   {block:IfEnableSyntaxHighlight}
     <script src="//sanographix.github.io/public/tumblr/zen/2.x/js/prettify.js"></script>
+    <script>prettyPrint();</script>
   {/block:IfEnableSyntaxHighlight}
 
-  <!-- Google Analytics -->
-  <script type="text/javascript">
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', '{text:Google Analytics ID}']);
-    _gaq.push(['_trackPageview']);
-    (function() {
-      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
+  <div id="fb-root"></div>
+  <script>
+    (function(d, s) {
+      var js, fjs = d.getElementsByTagName(s)[0], load = function(url, id) {
+        if (d.getElementById(id)) {return;}
+        js = d.createElement(s); js.src = url; js.id = id;
+        fjs.parentNode.insertBefore(js, fjs);
+      };
+      load('//connect.facebook.net/ja_JP/all.js#xfbml=1', 'fbjssdk');
+      load('https://apis.google.com/js/plusone.js', 'gplus1js');
+      load('//platform.twitter.com/widgets.js', 'tweetjs');
+    }(document, 'script'));
   </script>
-  <!-- END Google Analytics -->
 
   {block:IfEnableHatenaStar}
     <script type="text/javascript" src="http://s.hatena.ne.jp/js/HatenaStar.js"></script>
