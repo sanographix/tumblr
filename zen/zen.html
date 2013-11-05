@@ -443,19 +443,21 @@ src="{ReblogRootPortraitURL-16}" class="favicon"/> {ReblogRootName}</a>
     <script>$(function(){prettyPrint()});</script>
   {/block:IfEnableSyntaxHighlight}
 
-  <div id="fb-root"></div>
-  <script>
-    (function(d, s) {
-      var js, fjs = d.getElementsByTagName(s)[0], load = function(url, id) {
-        if (d.getElementById(id)) {return;}
-        js = d.createElement(s); js.src = url; js.id = id;
-        fjs.parentNode.insertBefore(js, fjs);
-      };
-      load('//connect.facebook.net/ja_JP/all.js#xfbml=1', 'fbjssdk');
-      load('https://apis.google.com/js/plusone.js', 'gplus1js');
-      load('//platform.twitter.com/widgets.js', 'tweetjs');
-    }(document, 'script'));
-  </script>
+  {block:PermalinkPage}
+    <div id="fb-root"></div>
+    <script>
+      (function(d, s) {
+        var js, fjs = d.getElementsByTagName(s)[0], load = function(url, id) {
+          if (d.getElementById(id)) {return;}
+          js = d.createElement(s); js.src = url; js.id = id;
+          fjs.parentNode.insertBefore(js, fjs);
+        };
+        load('//connect.facebook.net/ja_JP/all.js#xfbml=1', 'fbjssdk');
+        load('https://apis.google.com/js/plusone.js', 'gplus1js');
+        load('//platform.twitter.com/widgets.js', 'tweetjs');
+      }(document, 'script'));
+    </script>
+  {/block:PermalinkPage}
 
   {block:IfEnableHatenaStar}
     <script type="text/javascript" src="http://s.hatena.ne.jp/js/HatenaStar.js"></script>
