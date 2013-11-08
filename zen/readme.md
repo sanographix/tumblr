@@ -42,6 +42,7 @@ ZENは、Tumblrで普通に日記を書く用途にこだわったテンプレ�
 | Enable Hatena Star | 記事にはてなスターボタンを表示します。 |
 | Enable Plus1 Button | 記事パーマリンクにGoogle +1ボタンを表示します。 |
 | Enable Tweet Button | 記事パーマリンクにツイートボタンを表示します。 |
+| Enable Pocket Button | 記事パーマリンクにPocketボタンを表示します。 |
 | Show Description | 「説明」欄に入力したテキストを、ブログタイトル下に表示します。 |
 | Show Profile Image | ブログタイトルの隣にプロフィール画像を表示します。 |
 | Title Logo | ブログタイトルのかわりに表示するタイトルロゴをアップロードできます。 |
