@@ -1,6 +1,6 @@
 # ZEN 2.0
 
-(<a href="#zen-1">In English</a>)
+(<a href="https://github.com/sanographix/tumblr/blob/master/zen/readme.md#zen-is-free-responsive-minimal-tumblr-template">In English</a>)
 
 #### Free responsive tumblr template
 
@@ -8,7 +8,7 @@ ZENは、Tumblrで普通に日記を書く用途にこだわったテンプレ�
 [@sanographix](http://www.sanographix.net)がデザインしています。
 
 詳細はこちらの紹介ページをご覧ください。  
-[http://sanographix.github.com/tumblr/zen](http://sanographix.github.com/tumblr/zen)
+<http://sanographix.github.io/tumblr/zen>
 
 ## Demo
 
@@ -19,10 +19,11 @@ ZENは、Tumblrで普通に日記を書く用途にこだわったテンプレ�
 
 ## 1. インストールする
 
-* [テーマのhtmlをコピー](https://github.com/sanographix/tumblr/blob/master/zen/zen.html)する
-* Tumblrのダッシュボードから、設定 -> テーマカスタマイズ画面を開く
+* [テーマのhtmlをコピー](https://github.com/sanographix/tumblr/blob/master/zen/zen.html)します。[ここからコピー](https://raw.github.com/sanographix/tumblr/master/zen/zen.html)するとやりやすい
+* Tumblrのテーマカスタマイズ画面を開いて、「HTMLを編集」を押します。
 * （元のhtmlはバックアップを取っておいたほうが良いです）
-* もとのhtmlを削除してzen.htmlを貼り付けて保存する
+* もとのhtmlを削除してzen.htmlを貼り付けて保存します。
+    * 保存すると以前のテーマの設定はすべて消えます。
 
 ## 2. カスタマイズする
 
@@ -36,6 +37,8 @@ ZENは、Tumblrで普通に日記を書く用途にこだわったテンプレ�
 
 ### デザイン設定
 
+下記の設定がカスタマイズできます。
+
 | 設定項目 | 説明 |
 |-------|-----|-----|
 | Enable Facebook Button | 記事パーマリンクにFacebookボタンを表示します。 |
@@ -46,7 +49,7 @@ ZENは、Tumblrで普通に日記を書く用途にこだわったテンプレ�
 | Show Description | 「説明」欄に入力したテキストを、ブログタイトル下に表示します。 |
 | Show Profile Image | ブログタイトルの隣にプロフィール画像を表示します。 |
 | Title Logo | ブログタイトルのかわりに表示するタイトルロゴをアップロードできます。 |
-| Google Analytics ID | Google Analytics を使う場合はここにトラッキングIDを入力します。 |
+| Google Analytics ID | Google Analytics を使う場合はここにトラッキングIDを入力します。（例： UA-0000000-0） |
 | Google Author | ここに自分のGoogle+プロフィールURLを入力することで、Google検索結果に著者情報を表示させることができます。（例：`https://plus.google.com/109963703491503474788`）詳しい情報は[Googleのヘルプ](http://support.google.com/webmasters/bin/answer.py?hl=ja&answer=1408986)を参照してください。 |
 | Hatena Star Token | ここにはてなスターのトークンを入力すると、スターが押されたときにはてなの「あなたへのお知らせ」に通知が届くようになります。詳しい設定方法は[はてなスターのヘルプ](http://d.hatena.ne.jp/hatenastar/20070707/1184453490)を参照してください。 |
 | OGP Facebook Admin Number | Facebok Admin ID（**fb:admins**） を入力します。自分の Admin IDの調べ方は、「fb:admins」とかで検索すると分かると思います。 |
@@ -63,12 +66,6 @@ ZENは、Tumblrで普通に日記を書く用途にこだわったテンプレ�
 - 「ページへのリンクを表示する」チェックボックスを入れると、ヘッダにそのページへのリンクが追加されます。
 
 ## 4. Tips
-
-### 画像に影をつけないオプション
-
-画像を貼るときに class="noshadow" と指定すると影がつきません。
-
-	<img src="~~~.jpg" class="noshadow">
 
 ### 投稿タイプ「テキスト」で大きい画像を貼る
 
