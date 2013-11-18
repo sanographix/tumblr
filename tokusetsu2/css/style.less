@@ -1,0 +1,259 @@
+@import "_bootstrap.min.less";
+@import "_font-awesome.min.less";
+@import "_variable.less";
+@import "_mixin.less";
+
+body {
+    font-family: 'Source Sans Pro','Helvetica Neue',sans-serif;
+    color: @base;
+    background: #fff;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Source Sans Pro','Helvetica Neue',sans-serif;
+    color: @red;
+    font-weight: normal;
+    line-height: 1.3;
+    margin: 0 0 .1em 0;
+}
+
+hr.soften {
+    height: 1px;
+    margin: 40px 0;
+    background-image: -webkit-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.15),rgba(0,0,0,0));
+    background-image: -moz-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.15),rgba(0,0,0,0));
+    background-image: -ms-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.15),rgba(0,0,0,0));
+    background-image: -o-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.15),rgba(0,0,0,0));
+    border: 0;
+}
+
+a {
+    color: @red;
+    &:hover {
+        color: @red-hover;
+    }
+}
+
+.section {
+    padding: 40px 0;
+    &.red-bg {
+        background-color: #f5e9eb;
+    }
+    img {
+        max-width: 100%;
+    }
+}
+
+.label-info {
+    background-color: #74c1b2;
+    font-size: 12px;
+}
+
+.mobile-br {
+    display: none;
+}
+
+.btn-lg {
+    border-radius: 0;
+}
+
+.btn-primary {
+    border: none;
+    background: @red;
+    padding: 15px 35px;
+    font-size: 160%;
+    &:hover {
+        background: @red-darker;
+    }
+}
+
+// header
+
+.navbar-default {
+    background-color: @red-darkest;
+    border-width: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    a {
+        color: #fff !important;
+    }
+}
+
+#header {
+    color: #fff;
+    padding: 20px 0;
+    background: @red url('../images/header-bg@2x.gif') repeat center top;
+    background-size: 1400px auto;
+    text-align: center;
+
+    h1,h2,h3,h4,h5,h6,a {
+        color: #fff;
+    }
+
+    .introducing {
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: .5em;
+    }
+
+    h1 {
+        font-size: 400%;
+        font-weight: 200;
+        line-height: 1;
+        margin: 0;
+    }
+
+    h2 {
+        font-size: 100%;
+    }
+
+    .btn-wrapper {
+        margin: 10px 0;
+    }
+
+    .btn-primary {
+        background-color: @red-darkest;
+        &:hover {
+            background: @red-darker;
+        }
+    }
+
+}
+
+#social-button-section {
+    background: @bg-light;
+    padding: 20px 0;
+}
+
+.social-buttons {
+    list-style: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    li {
+        display: inline-block;
+        padding: 10px 5px 10px;
+        height: 20px;
+    }
+}
+
+
+// features
+
+#main-features {
+    overflow: hidden;
+
+    .introduction {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+    .features-element {
+        margin-bottom: 40px;
+        margin-left: 70px;
+        position: relative;
+        .clearfix;
+        &:first-child {
+            margin-top: 20px;
+        }
+        img {
+            position: absolute;
+            top: 0;
+            left: -70px;
+            width: 50px;
+        }
+    }
+}
+
+// sub-features
+
+#sub-features {
+
+    h2 {
+        text-align: center;
+        font-weight: bold;
+        font-size: 110%;
+        letter-spacing: .5em;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    }
+
+    .features-element {
+        margin-left: 60px;
+        margin-bottom: 20px;
+        position: relative;
+        .clearfix;
+        img {
+            position: absolute;
+            top: 0;
+            left: -60px;
+            width: 40px;
+        }
+    }
+}
+
+// getstart
+
+#getstarted,
+#getmorethemes {
+    text-align: center;
+    h2 {
+        font-weight: 200;
+    }
+}
+
+div.likebox-container .fbcomments,
+div.likebox-container .fb_iframe_widget,
+div.likebox-container .fb_iframe_widget[style],
+div.likebox-container .fb_iframe_widget iframe[style],
+div.likebox-container .fbcomments iframe[style],
+div.likebox-container .fb_iframe_widget span{
+    width: 100% !important;
+}
+
+// getmorethemes
+
+#getmorethemes {
+    background: #f1f3f8;
+}
+
+.thumbnail {
+    text-align: left;
+    p {
+        margin-bottom: 0;
+        color: #555;
+        font-size: 90%;
+    }
+}
+
+/* footer */
+
+#footer {
+    background-color: #f7f8fb;
+    text-align: center;
+    font-size: 90%;
+    border-top: 1px solid #eaeaea;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    p {
+        color: #aaa;
+
+        a {
+            color: #555;
+        }
+    }
+}
+
+// c85
+
+.c85 {
+    text-align: center;
+}
+
+
+@import "_media-queries.less";
