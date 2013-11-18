@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<!--
+  Theme: Tokusetsu 2
+  by @sanographix
+  http://www.sanographix.net
+  (c) 2013 Showkaku Sano [sanographix@gmail.com]
+  Free to use under the MIT license.
+  Please leave at least ONE credit link. Do not delete this box.
+-->
+
+<html lang="ja" prefix="og: http://ogp.me/ns# fb: http://www.facebook.com/2008/fbml">
+<head>
+  <meta charset="utf-8">
+
+  <!-- Variables -->
+  <meta name="select:ThemeColor" content="red" title="Strawberry">
+  <meta name="select:ThemeColor" content="green" title="Turquoise">
+  <meta name="select:ThemeColor" content="blue" title="Blue">
+  <meta name="select:ThemeColor" content="gray" title="Smoke">
+
+  <meta name="text:Introduction" content="" />
+  <meta name="text:Introduction Heading" content="Introduction" />
+  <meta name="text:Youtube Embed Code" content="" />
+  <meta name="text:Soundcloud Embed Code" content="" />
+  <meta name="text:Nicovideo Embed Code" content="" />
+  <meta name="text:Footer Text" content="" />
+
+  <meta name="text:Circle Name" content="" />
+  <meta name="text:Circle URL" content="" />
+  <meta name="text:Spec" content="" />
+  <meta name="text:Release Date" content="" />
+  <meta name="text:Event Booth Number" content="" />
+  <meta name="text:Price" content="" />
+
+  <meta name="text:Store01 Name" content="" />
+  <meta name="text:Store01 URL" content="" />
+  <meta name="text:Store02 Name" content="" />
+  <meta name="text:Store02 URL" content="" />
+  <meta name="text:Store03 Name" content="" />
+  <meta name="text:Store03 URL" content="" />
+  <meta name="text:Store04 Name" content="" />
+  <meta name="text:Store04 URL" content="" />
+
+  <meta name="text:Track01 Title" content="" />
+  <meta name="text:Track01 Description" content="" />
+  <meta name="text:Track02 Title" content="" />
+  <meta name="text:Track02 Description" content="" />
+  <meta name="text:Track03 Title" content="" />
+  <meta name="text:Track03 Description" content="" />
+  <meta name="text:Track04 Title" content="" />
+  <meta name="text:Track04 Description" content="" />
+  <meta name="text:Track05 Title" content="" />
+  <meta name="text:Track05 Description" content="" />
+  <meta name="text:Track06 Title" content="" />
+  <meta name="text:Track06 Description" content="" />
+  <meta name="text:Track07 Title" content="" />
+  <meta name="text:Track07 Description" content="" />
+  <meta name="text:Track08 Title" content="" />
+  <meta name="text:Track08 Description" content="" />
+  <meta name="text:Track09 Title" content="" />
+  <meta name="text:Track09 Description" content="" />
+  <meta name="text:Track10 Title" content="" />
+  <meta name="text:Track10 Description" content="" />
+
+  <meta name="text:Staff01 Name" content="" />
+  <meta name="text:Staff01 Role" content="" />
+  <meta name="text:Staff01 URL" content="" />
+  <meta name="text:Staff02 Name" content="" />
+  <meta name="text:Staff02 Role" content="" />
+  <meta name="text:Staff02 URL" content="" />
+  <meta name="text:Staff03 Name" content="" />
+  <meta name="text:Staff03 Role" content="" />
+  <meta name="text:Staff03 URL" content="" />
+  <meta name="text:Staff04 Name" content="" />
+  <meta name="text:Staff04 Role" content="" />
+  <meta name="text:Staff04 URL" content="" />
+  <meta name="text:Staff05 Name" content="" />
+  <meta name="text:Staff05 Role" content="" />
+  <meta name="text:Staff05 URL" content="" />
+  <meta name="text:Staff06 Name" content="" />
+  <meta name="text:Staff06 Role" content="" />
+  <meta name="text:Staff06 URL" content="" />
+  <meta name="text:Staff07 Name" content="" />
+  <meta name="text:Staff07 Role" content="" />
+  <meta name="text:Staff07 URL" content="" />
+  <meta name="text:Staff08 Name" content="" />
+  <meta name="text:Staff08 Role" content="" />
+  <meta name="text:Staff08 URL" content="" />
+  <meta name="text:Staff09 Name" content="" />
+  <meta name="text:Staff09 Role" content="" />
+  <meta name="text:Staff09 URL" content="" />
+  <meta name="text:Staff10 Name" content="" />
+  <meta name="text:Staff10 Role" content="" />
+  <meta name="text:Staff10 URL" content="" />
+
+  <meta name="if:Enable Facebook Button" content="1"/>
+  <meta name="if:Enable Tweet Button" content="1"/>
+  <meta name="if:Enable Bookmark Button" content="1"/>
+  <meta name="if:Enable Plus1 Button" content="1"/>
+
+  <meta name="text:Blog Domain" content="" />
+  <meta name="image:Main Image" content="//sanographix.github.io/public/tumblr/tokusetsu2/images/header-template.jpg"/>
+  <meta name="image:Jacket" content=""/>
+  <meta name="image:Banner1" content=""/>
+  <meta name="image:Banner2" content=""/>
+
+  <title>{block:PostTitle}{PostTitle} - {/block:PostTitle}{Title}{block:IndexPage} - {text:Circle Name}{/block:IndexPage}</title>
+  {block:TagPage}
+    <meta name="robots" content="noindex,follow"/>
+  {/block:TagPage}
+  {block:DayPage}
+    <meta name="robots" content="noindex,follow"/>
+  {/block:DayPage}
+  {block:Description}
+    <meta name="description" content="{MetaDescription}" />
+  {/block:Description}
+  <meta name="viewport" content="width=device-width">
+
+  <meta property="og:title" content="{block:PostTitle}{PostTitle} - {/block:PostTitle}{Title}{block:IndexPage} - {text:Circle Name}{/block:IndexPage}" />
+  <meta property="og:type" content="website" />
+  {block:IfMainImageImage}
+    <meta property="og:image" content="{image:Main Image}" />
+  {/block:IfMainImageImage}
+  <meta property="og:url" content="{block:IndexPage}http://{text:Blog Domain}{/block:IndexPage}{block:PermalinkPage}{Permalink}{/block:PermalinkPage}" />
+  <meta property="og:site_name" content="{Title}" />
+  {block:Description}
+    <meta property="og:description" content="{MetaDescription}">
+  {/block:Description}
+
+  <link rel="stylesheet" href="//sanographix.github.io/public/tumblr/tokusetsu2/css/style.css" />
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,700,300italic' rel='stylesheet' type='text/css'>
+  <link rel="shortcut icon" href="{Favicon}">
+  <link rel="canonical" href="{block:IndexPage}http://{text:Blog Domain}{/block:IndexPage}{block:PermalinkPage}{Permalink}{/block:PermalinkPage}"/>
+
+  <!--[if lt IE 9]>
+    <script src="//sanographix.github.io/public/tumblr/tokusetsu2/js/html5shiv.js"></script>
+  <![endif]-->
+
+  <!-- Google Analytics -->
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', '{text:Google Analytics ID}']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+  <style>
+  {CustomCSS}
+  </style>
+
+</head>
+<body class="{select:ThemeColor}">
+
+  <header id="globalheader">
+    <div class="globalheader-inner content">
+      <h1>
+        <a href="/">{Title}</a>
+      </h1>
+        <nav class="header-nav">
+          <ul>
+            {block:IndexPage}
+              <li>
+                <a href="#tracklist">Tracklist</a>
+              </li>
+              <li>
+                <a href="#staff">Staff</a>
+              </li>
+            {/block:IndexPage}
+            {block:HasPages}
+              {block:Pages}
+                <li>
+                  <a href="{URL}">{Label}</a>
+                </li>
+              {/block:Pages}
+            {/block:HasPages}
+          </ul>
+        </nav>
+    </div>
+  </header>
+
+  {block:IndexPage}<!-- ここから Index ページ -->
+
+  <section id="header-image">
+    <div class="header-image-content" style="background-image:url('{image:Main Image}');"></div>
+    <div class="header-image-mask"></div>
+  </section>
+
+  <div class="section-wrapper">
+
+    <section id="spec" class="section">
+      <div class="content">
+        {block:IfIntroduction}
+          <h2>{text:Introduction Heading}</h2>
+          <p class="introduction">
+            {text:Introduction}
+          </p>
+        {/block:IfIntroduction}
+        <div class="jacket-image">
+          {block:IfJacketImage}
+            <img src="{image:Jacket}" alt="{Title}">
+          {/block:IfJacketImage}
+          {block:IfNotJacketImage}
+            <div class="jacket-noimage">
+              NOW PRINTING
+            </div>
+          {/block:IfNotJacketImage}
+        </div>
+        <table class="table" id="spec-table">
+          <tbody>
+            <tr>
+              <th>タイトル</th>
+              <td>{Title}</td>
+            </tr>
+            <tr>
+              <th>サークル</th>
+              <td>{block:IfCircleURL}<a href="{text:Circle URL}" target="_blank">{/block:IfCircleURL}{text:Circle Name}{block:IfCircleURL}</a>{/block:IfCircleURL}</td>
+            </tr>
+            <tr>
+              <th>仕様</th>
+              <td>{text:Spec}</td>
+            </tr>
+            <tr>
+              <th>頒布日</th>
+              <td>{text:Release Date}</td>
+            </tr>
+            <tr>
+              <th>頒布場所</th>
+              <td>{text:Event Booth Number}</td>
+            </tr>
+            <tr>
+              <th>価格</th>
+              <td>{text:Price}</td>
+            </tr>
+            {block:IfStore01Name}
+              <tr>
+                <th>購入</th>
+                <td>
+                  <ul>
+                    <li>
+                      <a href="{text:Store01 URL}" target="_blank">{text:Store01 Name}</a>
+                    </li>
+                    {/block:IfStore01Name}
+                    {block:IfStore02Name}
+                      <li>
+                        <a href="{text:Store02 URL}" target="_blank">{text:Store02 Name}</a>
+                      </li>
+                    {/block:IfStore02Name}
+                    {block:IfStore03Name}
+                      <li>
+                        <a href="{text:Store03 URL}" target="_blank">{text:Store03 Name}</a>
+                      </li>
+                    {/block:IfStore03Name}
+                    {block:IfStore04Name}
+                      <li>
+                        <a href="{text:Store04 URL}" target="_blank">{text:Store04 Name}</a>
+                      </li>
+                    {/block:IfStore04Name}
+                    {block:IfStore01Name}
+                  </ul>
+                </td>
+              </tr>
+            {/block:IfStore01Name}
+          </tbody>
+        </table>
+        {block:IfStore01Name}
+          <div class="available">
+            <h3>Available Now</h3>
+            <span class="available-btn btn btn-large">購入する</span>
+            {/block:IfStore01Name}
+            {block:IfStore02Name}
+              <div class="available-dropdown">
+                <ul>
+                  <li>
+                    <a href="{text:Store01 URL}" target="_blank">{text:Store01 Name}</a>
+                  </li>
+                  <li>
+                    <a href="{text:Store02 URL}" target="_blank">{text:Store02 Name}</a>
+                  </li>
+                  {/block:IfStore02Name}
+                  {block:IfStore03Name}
+                    <li>
+                      <a href="{text:Store03 URL}" target="_blank">{text:Store03 Name}</a>
+                    </li>
+                  {/block:IfStore03Name}
+                  {block:IfStore04Name}
+                    <li>
+                      <a href="{text:Store04 URL}" target="_blank">{text:Store04 Name}</a>
+                    </li>
+                  {/block:IfStore04Name}
+                  {block:IfStore02Name}
+                </ul>
+              </div>
+            {/block:IfStore02Name}
+          {block:IfStore01Name}
+          </div>
+        {/block:IfStore01Name}
+
+        <ul class="social-buttons">
+          {block:IfEnableTweetButton}
+          <li class="social-button">
+            <a href="https://twitter.com/share" class="twitter-share-button" data-lang="ja">ツイート</a>
+          </li>
+          {/block:IfEnableTweetButton}
+          {block:IfEnableFacebookButton}
+          <li class="social-button">
+            <div class="fb-like" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false"></div>
+          </li>
+          {/block:IfEnableFacebookButton}
+          {block:IfEnableBookmarkButton}
+          <li class="social-button">
+            <a href="http://b.hatena.ne.jp/entry/" class="hatena-bookmark-button" data-hatena-bookmark-layout="standard-balloon" title="このエントリーをはてなブックマークに追加"><img src="http://b.st-hatena.com/images/entry-button/button-only.gif" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a>
+          </li>
+          {/block:IfEnableBookmarkButton}
+          {block:IfEnablePlus1Button}
+          <li class="social-button">
+            <div class="g-plusone" data-size="medium"></div>
+          </li>
+          {/block:IfEnablePlus1Button}
+        </ul>
+
+      </div>
+    </section>
+
+    <section id="tracklist" class="section">
+      <div class="content">
+        <h3>Tracklist</h3>
+        <ol class="list">
+          {block:IfTrack01Title}
+            <li>
+              <span class="number">01</span>
+              <span class="title">{text:Track01 Title}</span>
+              <span class="meta">{text:Track01 Description}</span>
+            </li>
+          {/block:IfTrack01Title}
+          {block:IfTrack02Title}
+            <li>
+              <span class="number">02</span>
+              <span class="title">{text:Track02 Title}</span>
+              <span class="meta">{text:Track02 Description}</span>
+            </li>
+          {/block:IfTrack02Title}
+          {block:IfTrack03Title}
+            <li>
+              <span class="number">03</span>
+              <span class="title">{text:Track03 Title}</span>
+              <span class="meta">{text:Track03 Description}</span>
+            </li>
+          {block:IfTrack03Title}
+          {block:IfTrack04Title}
+            <li>
+              <span class="number">04</span>
+              <span class="title">{text:Track04 Title}</span>
+              <span class="meta">{text:Track04 Description}</span>
+            </li>
+          {/block:IfTrack04Title}
+          {block:IfTrack05Title}
+            <li>
+              <span class="number">05</span>
+              <span class="title">{text:Track05 Title}</span>
+              <span class="meta">{text:Track05 Description}</span>
+            </li>
+          {/block:IfTrack05Title}
+          {block:IfTrack06Title}
+            <li>
+              <span class="number">06</span>
+              <span class="title">{text:Track06 Title}</span>
+              <span class="meta">{text:Track06 Description}</span>
+            </li>
+          {block:IfTrack06Title}
+          {block:IfTrack07Title}
+            <li>
+              <span class="number">07</span>
+              <span class="title">{text:Track07 Title}</span>
+              <span class="meta">{text:Track07 Description}</span>
+            </li>
+          {/block:IfTrack07Title}
+          {block:IfTrack08Title}
+            <li>
+              <span class="number">08</span>
+              <span class="title">{text:Track08 Title}</span>
+              <span class="meta">{text:Track08 Description}</span>
+            </li>
+          {/block:IfTrack08Title}
+          {block:IfTrack09Title}
+            <li>
+              <span class="number">09</span>
+              <span class="title">{text:Track09 Title}</span>
+              <span class="meta">{text:Track09 Description}</span>
+            </li>
+          {block:IfTrack09Title}
+          {block:IfTrack10Title}
+            <li>
+              <span class="number">10</span>
+              <span class="title">{text:Track10 Title}</span>
+              <span class="meta">{text:Track10 Description}</span>
+            </li>
+          {block:IfTrack10Title}
+        </ol>
+      </div>
+    </section>
+
+    {block:IfYoutubeEmbedCode}
+      <section id="youtube" class="section">
+        <div class="content">
+          <h3>Youtube</h3>
+          <div id="youtube-iframe">
+            <iframe width="560" height="315" src="http://www.youtube.com/embed/{text:Youtube Embed Code}" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+      </section>
+    {/block:IfYoutubeEmbedCode}
+
+    {block:IfNicovideoEmbedCode}
+      <section id="nicovideo" class="section">
+        <h3>NIcoNico</h3>
+        <script type="text/javascript" src="http://ext.nicovideo.jp/thumb_watch/{text:Nicovideo Embed Code}"></script>
+      </section>
+    {/block:IfNicovideoEmbedCode}
+
+    {block:IfSoundcloudEmbedCode}
+      <section id="soundcloud" class="section">
+        <div class="content">
+          <h3>Soundcloud</h3>
+          <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F{text:Soundcloud Embed Code}&amp;color=ff6600&amp;auto_play=false&amp;show_artwork=true"></iframe>
+        </div>
+      </section>
+    {/block:IfSoundcloudEmbedCode}
+
+    <section id="staff" class="section">
+      <div class="content">
+        <h3>Staff</h3>
+        <ul class="list">
+          {block:IfStaff01Name}
+            <li>
+              <span class="role">{text:Staff01 Role}</span>
+              <span class="title">{text:Staff01 Name}</span>
+              {block:IfStaff01URL}
+                <span class="website">
+                  <a href="{text:Staff01 URL}" target="_blank">Website</a>
+                </span>
+              {/block:IfStaff01URL}
+            </li>
+          {/block:IfStaff01Name}
+          {block:IfStaff02Name}
+            <li>
+              <span class="role">{text:Staff02 Role}</span>
+              <span class="title">{text:Staff02 Name}</span>
+              {block:IfStaff02URL}
+                <span class="website">
+                  <a href="{text:Staff02 URL}" target="_blank">Website</a>
+                </span>
+              {/block:IfStaff02URL}
+            </li>
+          {/block:IfStaff02Name}
+          {block:IfStaff03Name}
+            <li>
+              <span class="role">{text:Staff03 Role}</span>
+              <span class="title">{text:Staff03 Name}</span>
+              {block:IfStaff03URL}
+                <span class="website">
+                  <a href="{text:Staff03 URL}" target="_blank">Website</a>
+                </span>
+              {/block:IfStaff03URL}
+            </li>
+          {/block:IfStaff03Name}
+          {block:IfStaff04Name}
+            <li>
+              <span class="role">{text:Staff04 Role}</span>
+              <span class="title">{text:Staff04 Name}</span>
+              {block:IfStaff04URL}
+                <span class="website">
+                  <a href="{text:Staff04 URL}" target="_blank">Website</a>
+                </span>
+              {/block:IfStaff04URL}
+            </li>
+          {/block:IfStaff04Name}
+          {block:IfStaff05Name}
+            <li>
+              <span class="role">{text:Staff05 Role}</span>
+              <span class="title">{text:Staff05 Name}</span>
+              {block:IfStaff05URL}
+                <span class="website">
+                  <a href="{text:Staff05 URL}" target="_blank">Website</a>
+                </span>
+              {/block:IfStaff05URL}
+            </li>
+          {/block:IfStaff05Name}
+          {block:IfStaff06Name}
+            <li>
+              <span class="role">{text:Staff06 Role}</span>
+              <span class="title">{text:Staff06 Name}</span>
+              {block:IfStaff06URL}
+                <span class="website">
+                  <a href="{text:Staff06 URL}" target="_blank">Website</a>
+                </span>
+              {/block:IfStaff06URL}
+            </li>
+          {/block:IfStaff06Name}
+          {block:IfStaff07Name}
+            <li>
+              <span class="role">{text:Staff07 Role}</span>
+              <span class="title">{text:Staff07 Name}</span>
+              {block:IfStaff07URL}
+                <span class="website">
+                  <a href="{text:Staff07 URL}" target="_blank">Website</a>
+                </span>
+              {/block:IfStaff07URL}
+            </li>
+          {/block:IfStaff07Name}
+          {block:IfStaff08Name}
+            <li>
+              <span class="role">{text:Staff08 Role}</span>
+              <span class="title">{text:Staff08 Name}</span>
+              {block:IfStaff08URL}
+                <span class="website">
+                  <a href="{text:Staff08 URL}" target="_blank">Website</a>
+                </span>
+              {/block:IfStaff08URL}
+            </li>
+          {/block:IfStaff08Name}
+          {block:IfStaff09Name}
+            <li>
+              <span class="role">{text:Staff09 Role}</span>
+              <span class="title">{text:Staff09 Name}</span>
+              {block:IfStaff09URL}
+                <span class="website">
+                  <a href="{text:Staff09 URL}" target="_blank">Website</a>
+                </span>
+              {/block:IfStaff09URL}
+            </li>
+          {/block:IfStaff09Name}
+          {block:IfStaff10Name}
+            <li>
+              <span class="role">{text:Staff10 Role}</span>
+              <span class="title">{text:Staff10 Name}</span>
+              {block:IfStaff10URL}
+                <span class="website">
+                  <a href="{text:Staff10 URL}" target="_blank">Website</a>
+                </span>
+              {/block:IfStaff10URL}
+            </li>
+          {/block:IfStaff10Name}
+        </ul>
+      </div>
+    </section>
+
+    {block:IfBanner1Image}
+      <section id="banner" class="section">
+        <div class="content">
+          <h3>Banner</h3>
+          <span class="banner-box">
+            <img src="{image:Banner1}" alt="Banner1">
+          </span>
+          <span class="banner-box">
+            <img src="{image:Banner2}" alt="Banner2">
+          </span>
+        </div>
+      </section>
+    {block:IfBanner1Image}
+
+  </div>
+
+  {/block:IndexPage}<!-- END Index -->
+
+  {block:PermalinkPage}<!-- Permalink -->
+    {block:Posts}
+      <div class="section-wrapper">
+        <section class="section">
+          <div class="content">
+            {block:Text}<!-- 固定ページ -->
+              {block:Title}
+                <div class="page-header">
+                  <h2><a href="{Permalink}" class="permalink">{Title}</a></h2>
+                </div>
+              {/block:Title}
+              <div class="entry-content">
+                {Body}
+              </div>
+            {/block:Text}
+          </div>
+        </section>
+      </div>
+    {/block:Posts}
+  {/block:PermalinkPage}<!-- Permalink -->
+
+  <footer id="footer">
+    <div class="content">
+      <p>
+        ©{CopyrightYears} {Title}<br/>
+        {text:Footer Text}
+      </p>
+      <p>
+      <!-- ↓ ここのリンク消さないでほしいっす -->
+        <a href="http://sanographix.github.io/tumblr/tokusetsu2/" target="_blank">Tokusetsu 2</a> theme designed by <a href="http://www.sanographix.net/" target="_blank">SANOGRAPHIX.NET</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="//sanographix.github.io/public/tumblr/tokusetsu2/js/tokusetsu2-js.min.js"></script>
+
+  <!-- Facebook SDK -->
+  <div id="fb-root"></div>
+  <script>
+    (function(d, s) {
+      var js, fjs = d.getElementsByTagName(s)[0], load = function(url, id) {
+        if (d.getElementById(id)) {return;}
+        js = d.createElement(s); js.src = url; js.id = id;
+        fjs.parentNode.insertBefore(js, fjs);
+      };
+      load('//connect.facebook.net/ja_JP/all.js#xfbml=1', 'fbjssdk');
+      load('https://apis.google.com/js/plusone.js', 'gplus1js');
+      load('//b.st-hatena.com/js/bookmark_button.js');
+      load('//platform.twitter.com/widgets.js', 'tweetjs');
+    }(document, 'script'));
+  </script>
+
+</body>
+</html>
