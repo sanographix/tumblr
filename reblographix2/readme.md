@@ -8,13 +8,6 @@ Reblographix 2 は、大量の画像を Reblog する人のための Tumblr テ�
 詳細はこちらの紹介ページをご覧ください。  
 [http://sanographix.github.com/tumblr/reblographix2](http://sanographix.github.com/tumblr/reblographix2)
 
-## Demo
-
-デモページはこちらです
-
-[http://reblographix.tumblr.com/](http://reblographix.tumblr.com/)
-
-
 ## 1. インストールする
 
 * [テーマのhtmlをコピー](https://github.com/sanographix/tumblr/blob/master/reblographix2/reblographix2.html)する
