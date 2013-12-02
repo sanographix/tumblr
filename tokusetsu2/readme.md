@@ -1,6 +1,6 @@
 # Tokusetsu 2
 
-#### A free responsive tumblr template for doujin music artists
+#### Free responsive tumblr template for doujin music artists
 
 Tokusetsu 2 は、同人音楽 CD の特設サイトが簡単に作れる無料 Tumblr テンプレートです。  
 HTML の知識を必要とせず、フォームに情報を入力していくだけで特設サイトが作れます。  
@@ -162,6 +162,9 @@ HTML の知識を必要とせず、フォームに情報を入力していくだ
 
 ## Changelog
 
+### 2.0.1 (2013/11/24)
+
+* header のマスクがリンク切れしてた不具合を修正
 
 ### 2.0.0 (2013/11/18)
 
