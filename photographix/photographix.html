@@ -35,22 +35,6 @@
   <meta property="og:title" content="{block:PostTitle}{PostTitle} - {/block:PostTitle}{Title}" />
   <meta property="og:type" content="article" />
   <meta property="og:url" content="{block:IndexPage}http://{text:Blog Domain}{/block:IndexPage}{block:PermalinkPage}{Permalink}{/block:PermalinkPage}" />
-  <meta property="og:image" content="{PortraitURL-128}" />
-  <!-- Twitter tags -->
-  <meta name="twitter:image" content="{PortraitURL-128}" />
-  <!-- photo だったら og-image はphotoURLにする -->
-  {block:PermalinkPage}
-    {block:Posts}
-      {block:Photo}
-        <meta property="og:image" content="{PhotoURL-400}" />
-      {/block:Photo}
-      {block:Photoset}
-        {block:Photos}
-        <meta property="og:image" content="{PhotoURL-400}" />
-        {/block:Photos}
-      {/block:Photoset}
-    {/block:Posts}
-  {/block:PermalinkPage}
   <meta property="og:site_name" content="{Title}" />
   {block:Description}
     <meta property="og:description" content="{MetaDescription}">
@@ -64,7 +48,7 @@
   {/block:IfOGPFacebookURL}
   <link rel="author" href="{text:Google Author}" />
 
-  <link rel="stylesheet" type="text/css" media="screen" href="//sanographix.github.io/public/tumblr/photographix/css/style.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="http://sanographix.github.io/public/tumblr/photographix/css/style.css" />
   <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
 
   <!--[if lt IE 9]>
@@ -318,10 +302,10 @@
       <div id="pager">
         <!-- パーマリンク -->
         {block:PreviousPost}
-          <a href="{PreviousPost}">Prev</a>
+          <a href="{PreviousPost}" class="btn">Prev Post</a>
         {/block:PreviousPost}
         {block:NextPost}
-          <a href="{NextPost}" class="next" rel="next">Next</a>
+          <a href="{NextPost}" class="next btn" rel="next">Next Post</a>
         {/block:NextPost}
       </div>
     {/block:PermalinkPagination}
@@ -330,10 +314,10 @@
       <div id="pager">
         <!-- ページごと -->
         {block:PreviousPage}
-          <a href="{PreviousPage}">Prev</a>
+          <a href="{PreviousPage}" class="btn">Prev Page</a>
         {/block:PreviousPage}
         {block:NextPage}
-          <a href="{NextPage}" class="next" rel="next">Next</a>
+          <a href="{NextPage}" class="next btn" rel="next">Next Page</a>
         {/block:NextPage}
       </div>
     {/block:Pagination}
