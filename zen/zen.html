@@ -419,28 +419,33 @@ src="{ReblogRootPortraitURL-16}" class="favicon"/> {ReblogRootName}</a>
     </div>
 
     {block:PermalinkPagination}
-      <div id="pager">
+      <div class="pagenation pagenation-permalink">
         <!-- パーマリンク -->
         {block:PreviousPost}
-          <a href="{PreviousPost}">OLDER</a>
+          <a href="{PreviousPost}">Prev</a>
         {/block:PreviousPost}
         {block:NextPost}
-          <a href="{NextPost}" class="next" rel="next">NEWER</a>
+          <a href="{NextPost}" class="next" rel="next">Next</a>
         {/block:NextPost}
       </div>
     {/block:PermalinkPagination}
 
+    <!-- ページごと -->
     {block:Pagination}
-      <div id="pager">
-        <!-- ページごと -->
+      <div class="pagenation pagenation-index">
         {block:PreviousPage}
-          <a href="{PreviousPage}">NEWER</a>
+          <a href="{PreviousPage}">Prev</a>
         {/block:PreviousPage}
+        {block:JumpPagination length="5"}
+          {block:CurrentPage}<span class="current-page">{PageNumber}</span>{/block:CurrentPage}
+          {block:JumpPage}<a class="jump-page" href="{URL}">{PageNumber}</a>{/block:JumpPage}
+        {/block:JumpPagination}
         {block:NextPage}
-          <a href="{NextPage}" class="next" rel="next">OLDER</a>
+          <a href="{NextPage}" class="next" rel="next">Next</a>
         {/block:NextPage}
       </div>
     {/block:Pagination}
+
 
     <footer id="footer">
       <span class="copyright">
