@@ -53,14 +53,18 @@
   <link rel="shortcut icon" href="{Favicon}">
   <link rel="alternate" type="application/rss+xml" href="{RSS}">
   <link rel="apple-touch-icon" href="{PortraitURL-128}">
-  <link rel="canonical" href="{block:IndexPage}http://{text:Blog Domain}{/block:IndexPage}{block:PermalinkPage}{Permalink}{/block:PermalinkPage}"/>
+  {block:IfBlogDomain}
+    <link rel="canonical" href="{block:IndexPage}http://{text:Blog Domain}{/block:IndexPage}{block:PermalinkPage}{Permalink}{/block:PermalinkPage}"/>
+  {/block:IfBlogDomain}
   <link  href="//sanographix.github.io/public/tumblr/zen/2.x/css/style.css" rel="stylesheet" type="text/css" media="screen" charset="utf-8"/>
   <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
 
   <!-- OGP -->
   <meta property="og:title" content="{block:PostTitle}{PostTitle} - {/block:PostTitle}{Title}" />
   <meta property="og:type" content="article" />
-  <meta property="og:url" content="{block:IndexPage}http://{text:Blog Domain}{/block:IndexPage}{block:PermalinkPage}{Permalink}{/block:PermalinkPage}" />
+  {block:IfBlogDomain}
+    <meta property="og:url" content="{block:IndexPage}http://{text:Blog Domain}{/block:IndexPage}{block:PermalinkPage}{Permalink}{/block:PermalinkPage}" />
+  {/block:IfBlogDomain}
   <!-- Twitter tags -->
   <meta name="twitter:image" content="{PortraitURL-128}" />
   <!-- photo だったら og-image は photoURL にする -->
