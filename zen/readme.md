@@ -93,6 +93,10 @@ ZENは、Tumblrで普通に日記を書く用途にこだわったテンプレ�
 * Tumblr か GitHub Pages が落ちていると思われます。しばらく待ってから再度開いてみてください。
 
 ##### Q: Disqusコメントフォームが真っ白なんですけど
+* こういう状態
+
+![](https://31.media.tumblr.com/fe384cb30df6a0291753b25b2d4eb69f/tumblr_inline_my253rnbRm1qaxsyz.png)
+
 * Disqus設定画面で、カラースキームが「for Light Background」になっているか確認してください。まれに「Dark」になっている場合があるようです。
 
 ##### Q: 「ページを作成」のリダイレクトがうまくいかないです
