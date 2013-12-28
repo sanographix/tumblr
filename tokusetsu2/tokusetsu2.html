@@ -155,6 +155,17 @@
 </head>
 <body class="{select:ThemeColor}">
 
+  {block:IfEnableFacebookButton}
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/ja_JP/all.js#xfbml=1";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+  {/block:IfEnableFacebookButton}
+
   <header id="globalheader">
     <div class="globalheader-inner content">
       <h1>
@@ -313,12 +324,21 @@
           {/block:IfEnableFacebookButton}
           {block:IfEnableBookmarkButton}
           <li class="social-button">
-            <a href="http://b.hatena.ne.jp/entry/" class="hatena-bookmark-button" data-hatena-bookmark-layout="standard-balloon" title="このエントリーをはてなブックマークに追加"><img src="http://b.st-hatena.com/images/entry-button/button-only.gif" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a>
+            <a href="http://b.hatena.ne.jp/entry/" class="hatena-bookmark-button" data-hatena-bookmark-layout="standard-balloon" title="このエントリーをはてなブックマークに追加"><img src="http://b.st-hatena.com/images/entry-button/button-only.gif" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="http://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
           </li>
           {/block:IfEnableBookmarkButton}
           {block:IfEnablePlus1Button}
           <li class="social-button">
             <div class="g-plusone" data-size="medium"></div>
+            <script type="text/javascript">
+              window.___gcfg = {lang: 'ja'};
+
+              (function() {
+                var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                po.src = 'https://apis.google.com/js/plusone.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+              })();
+            </script>
           </li>
           {/block:IfEnablePlus1Button}
         </ul>
@@ -602,21 +622,6 @@
   </footer>
 
   <script src="//sanographix.github.io/public/tumblr/tokusetsu2/js/tokusetsu2-js.min.js"></script>
-
-  <!-- Facebook SDK -->
-  <div id="fb-root"></div>
-  <script>
-    (function(d, s) {
-      var js, fjs = d.getElementsByTagName(s)[0], load = function(url, id) {
-        if (d.getElementById(id)) {return;}
-        js = d.createElement(s); js.src = url; js.id = id;
-        fjs.parentNode.insertBefore(js, fjs);
-      };
-      load('//connect.facebook.net/ja_JP/all.js#xfbml=1', 'fbjssdk');
-      load('https://apis.google.com/js/plusone.js', 'gplus1js');
-      load('//b.st-hatena.com/js/bookmark_button.js');
-    }(document, 'script'));
-  </script>
 
 </body>
 </html>
