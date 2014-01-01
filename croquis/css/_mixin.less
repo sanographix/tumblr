@@ -1,0 +1,145 @@
+/*
+LESS Mixins
+*/
+
+/* clear */
+
+.clear {
+    clear: both;
+}
+
+.clearfix {
+    display: block;
+    *zoom: 1;
+    &:after {
+        display: block;
+        visibility: hidden;
+        font-size: 0;
+        height: 0;
+        clear: both;
+        content: ".";
+    }
+}
+
+/* inline-block（IE対応版） */
+
+.inline-block {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+
+/* テキストを画像で置換するときにこの mixin を呼び出すと便利 */
+
+.replace {
+    display: block;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+}
+
+/* ベンダープレフィックスついてる系の */
+
+.box-shadow (@x: 0, @y: 0, @blur: 25px, @color: rgba(0,0,0,.20)) {
+    -moz-box-shadow: @x @y @blur @color;
+    -webkit-box-shadow: @x @y @blur @color;
+    box-shadow: @x @y @blur @color;
+}
+
+.box-shadow-inset (@x: 0, @y: 0, @blur: 25px, @color: rgba(0,0,0,.20)) {
+    -moz-box-shadow: inset @x @y @blur @color;
+    -webkit-box-shadow: inset @x @y @blur @color;
+    box-shadow: inset @x @y @blur @color;
+}
+
+.text-shadow (@x: 0, @y: 0, @blur: 5px, @color: rgba(0,0,0,.20)) {
+    -moz-text-shadow: @x @y @blur @color;
+    -webkit-text-shadow: @x @y @blur @color;
+    text-shadow: @x @y @blur @color;
+}
+
+.border-radius(@topright: 0, @bottomright: 0, @bottomleft: 0, @topleft: 0) {
+    -webkit-border-top-right-radius: @topright;
+    -webkit-border-bottom-right-radius: @bottomright;
+    -webkit-border-bottom-left-radius: @bottomleft;
+    -webkit-border-top-left-radius: @topleft;
+    -moz-border-radius-topright: @topright;
+    -moz-border-radius-bottomright: @bottomright;
+    -moz-border-radius-bottomleft: @bottomleft;
+    -moz-border-radius-topleft: @topleft;
+    border-top-right-radius: @topright;
+    border-bottom-right-radius: @bottomright;
+    border-bottom-left-radius: @bottomleft;
+    border-top-left-radius: @topleft;
+    -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
+}
+
+.border-radius(@radius: 5px) {
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+    border-radius: @radius;
+    -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
+}
+
+.gradient(@color: #F5F5F5, @start: #FFFFFF, @stop: #EEEEEE) {
+    background: @color;
+    background: -webkit-gradient(linear, left top, left bottom, from(@start), to(@stop));
+    background: -ms-linear-gradient(top, @start, @stop);
+    background: -moz-linear-gradient(top, @start 0%, @stop 100%);
+}
+
+.opacity(@opacity: 0.25) {
+    -moz-opacity: @opacity;
+    -khtml-opacity: @opacity;
+    -webkit-opacity: @opacity;
+    opacity: @opacity;
+}
+
+.border-box {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.ellipsis {
+    white-space: nowrap;
+    -webkit-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.transition(@duration:0.2s, @ease:ease-out) {
+    -webkit-transition: all @duration @ease;
+    -moz-transition: all @duration @ease;
+    transition: all @duration @ease;
+}
+
+.transition-duration(@duration: 0.2s) {
+    -moz-transition-duration: @duration;
+    -webkit-transition-duration: @duration;
+    transition-duration: @duration;
+}
+
+.rotation(@deg:5deg){
+    -webkit-transform: rotate(@deg);
+    -moz-transform: rotate(@deg);
+    transform: rotate(@deg);
+}
+
+.scale(@ratio:1.5){
+    -webkit-transform:scale(@ratio);
+    -moz-transform:scale(@ratio);
+    transform:scale(@ratio);
+}
+
+.translate(@x:0, @y:0) {
+    -moz-transform: translate(@x, @y);
+    -webkit-transform: translate(@x, @y);
+    -o-transform: translate(@x, @y);
+    -ms-transform: translate(@x, @y);
+    transform: translate(@x, @y);
+}

@@ -1,0 +1,111 @@
+/*
+    Main CSS
+*/
+
+@import "_normalize.less";
+@import "_mixin.less";
+@import "_variable.less";
+
+/* Common Styles */
+
+// Common
+
+html,
+body {
+    font-family: 'Lato', sans-serif;
+    background: @bg;
+    color: @base;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .15em;
+    font-size: 95%;
+}
+
+a {
+    color: @link;
+
+    &:hover {
+        color: @hover;
+    }
+
+}
+
+::selection,
+::-moz-selection {
+    background: @selection;
+    color:#fff;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-weight: 700;
+    a,a:hover {
+        color: @base;
+        text-decoration: none;
+    }
+}
+
+// ボタン
+
+.btn {
+    .inline-block;
+    text-align: center;
+    padding: 5px 15px 3px;
+    cursor: pointer;
+    line-height: 1.5;
+    font-size: 90%;
+    .border-radius(3px);
+    overflow: hidden;
+    color: @base;
+    background-color: @btn;
+    text-decoration: none;
+    border: 1px solid rgba(0,0,0,.15);
+    &:hover {
+        backgrond-color: @btn-hover;
+        color: @base;
+        text-decoration: none;
+        border: 1px solid rgba(0,0,0,.2);
+    }
+}
+
+.btn-primary {
+    background-color: @btn-primary;
+    color: #fff;
+    border: 1px solid @btn-primary;
+    &:hover {
+        .gradient(@btn-primary,@btn-primary,@btn-primary-hover);
+        color: #fff;
+        border: 1px solid @btn-primary-hover;
+    }
+}
+
+.btn-large {
+    padding: 8px 25px;
+    font-size: 150%;
+    box-sizing: border-box;
+}
+
+/* End Common Styles */
+
+header,
+section {
+    margin: 70px 0;
+}
+
+h1 {
+    font-size: 700%;
+    letter-spacing: .15em;
+    margin: 0;
+}
+
+h2 {
+    font-size: 150%;
+    letter-spacing: .15em;
+    margin: 0;
+}
+
+p {
+    color: @light;
+    font-size: 80%;
+}
+
+@import "_media-queries.less";
