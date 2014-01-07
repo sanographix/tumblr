@@ -34,4 +34,7 @@ module.exports = function(grunt){
 
     });
 
+    // grunt コマンドでなにやるか指定
+    grunt.registerTask('default', ['less:dist','watch']);
+
 };
