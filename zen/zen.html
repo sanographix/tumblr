@@ -53,18 +53,13 @@
   <link rel="shortcut icon" href="{Favicon}">
   <link rel="alternate" type="application/rss+xml" href="{RSS}">
   <link rel="apple-touch-icon" href="{PortraitURL-128}">
-  {block:IfBlogDomain}
-    <link rel="canonical" href="{block:IndexPage}http://{text:Blog Domain}{/block:IndexPage}{block:PermalinkPage}{Permalink}{/block:PermalinkPage}"/>
-  {/block:IfBlogDomain}
+
   <link  href="//sanographix.github.io/public/tumblr/zen/2.x/css/style.css" rel="stylesheet" type="text/css" media="screen" charset="utf-8"/>
   <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
 
   <!-- OGP -->
   <meta property="og:title" content="{block:PostTitle}{PostTitle} - {/block:PostTitle}{Title}" />
   <meta property="og:type" content="article" />
-  {block:IfBlogDomain}
-    <meta property="og:url" content="{block:IndexPage}http://{text:Blog Domain}{/block:IndexPage}{block:PermalinkPage}{Permalink}{/block:PermalinkPage}" />
-  {/block:IfBlogDomain}
   <!-- Twitter tags -->
   <meta name="twitter:image" content="{PortraitURL-128}" />
   <!-- photo だったら og-image は photoURL にする -->
@@ -91,7 +86,19 @@
   {block:IfOGPFacebookURL}
     <meta property="article:author" content="{text:OGP Facebook URL}" />
   {/block:IfOGPFacebookURL}
+  {block:IfGoogleAuthor}
   <link rel="author" href="{text:Google Author}" />
+  {/block:IfGoogleAuthor}
+  {block:IfBlogDomain}
+    {block:IndexPage}
+      <link rel="canonical" href="http://{text:Blog Domain}"/>
+      <meta property="og:url" content="http://{text:Blog Domain}" />
+    {/block:IndexPage}
+  {/block:IfBlogDomain}
+  {block:PermalinkPage}
+    <link rel="canonical" href="{Permalink}"/>
+    <meta property="og:url" content="{Permalink}" />
+  {/block:PermalinkPage}
 
   <!--[if lt IE 9]>
     <script src="//sanographix.github.io/public/tumblr/zen/2.x/js/html5shiv.js"></script>
@@ -338,7 +345,7 @@ src="{ReblogRootPortraitURL-16}" class="favicon"/> {ReblogRootName}</a>
                 </span>
               </div>
             {/block:RebloggedFrom}
-            <div class="meta">
+            <div class="meta meta-footer">
               <span class="meta-elements timeago">
                 <a href="{Permalink}">{TimeAgo}</a>
               </span>
@@ -362,55 +369,55 @@ src="{ReblogRootPortraitURL-16}" class="favicon"/> {ReblogRootName}</a>
             <!-- パーマリンクだけソーシャルボタン出す -->
             {block:PermalinkPage}
 
-                <ul class="like_and_reblog_buttons">
-                  <li>{ReblogButton size="16"}</li>
-                  <li>{LikeButton size="16"}</li>
-                </ul>
+              <ul class="like_and_reblog_buttons">
+                <li>{ReblogButton size="16"}</li>
+                <li>{LikeButton size="16"}</li>
+              </ul>
 
-                <ul class="social-buttons">
-                  {block:IfEnableTweetButton}
-                  <li class="social-button">
-                    <a href="https://twitter.com/share" class="twitter-share-button" data-lang="ja">ツイート</a>
-                  </li>
-                  {/block:IfEnableTweetButton}
-                  {block:IfEnableFacebookButton}
-                  <li class="social-button">
-                    <div class="fb-like" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false"></div>
-                  </li>
-                  {/block:IfEnableFacebookButton}
-                  {block:IfEnablePlus1Button}
-                  <li class="social-button">
-                    <div class="g-plusone" data-size="medium"></div>
-                  </li>
-                  {/block:IfEnablePlus1Button}
-                  {block:IfEnablePocketButton}
-                  <li class="social-button">
-                    <a data-pocket-label="pocket" data-pocket-count="horizontal" class="pocket-btn" data-lang="en"></a>
-                    <script type="text/javascript">!function(d,i){
-                        if(!d.getElementById(i)){
-                        var j=d.createElement("script");j.id=i;j.src="https://widgets.getpocket.com/v1/j/btn.js?v=1";var w=d.getElementById(i);d.body.appendChild(j);
-                        }
-                      }(document,"pocket-btn-js");
-                    </script>
-                  </li>
-                  {/block:IfEnablePocketButton}
-                </ul>
-
-                {block:IfDisqusShortname}
-                  <div id="disqus_thread"></div>
-                  <script type="text/javascript">
-                      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-                      var disqus_shortname = '{text:Disqus Shortname}'; // Required - Replace example with your forum shortname
-                      /* * * DON'T EDIT BELOW THIS LINE * * */
-                      (function() {
-                          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-                          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-                      })();
+              <ul class="social-buttons">
+                {block:IfEnableTweetButton}
+                <li class="social-button">
+                  <a href="https://twitter.com/share" class="twitter-share-button" data-lang="ja">ツイート</a>
+                </li>
+                {/block:IfEnableTweetButton}
+                {block:IfEnableFacebookButton}
+                <li class="social-button">
+                  <div class="fb-like" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false"></div>
+                </li>
+                {/block:IfEnableFacebookButton}
+                {block:IfEnablePlus1Button}
+                <li class="social-button">
+                  <div class="g-plusone" data-size="medium"></div>
+                </li>
+                {/block:IfEnablePlus1Button}
+                {block:IfEnablePocketButton}
+                <li class="social-button">
+                  <a data-pocket-label="pocket" data-pocket-count="horizontal" class="pocket-btn" data-lang="en"></a>
+                  <script type="text/javascript">!function(d,i){
+                      if(!d.getElementById(i)){
+                      var j=d.createElement("script");j.id=i;j.src="https://widgets.getpocket.com/v1/j/btn.js?v=1";var w=d.getElementById(i);d.body.appendChild(j);
+                      }
+                    }(document,"pocket-btn-js");
                   </script>
-                  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-                  <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
-                {/block:IfDisqusShortname}
+                </li>
+                {/block:IfEnablePocketButton}
+              </ul>
+
+              {block:IfDisqusShortname}
+                <div id="disqus_thread"></div>
+                <script type="text/javascript">
+                    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+                    var disqus_shortname = '{text:Disqus Shortname}'; // Required - Replace example with your forum shortname
+                    /* * * DON'T EDIT BELOW THIS LINE * * */
+                    (function() {
+                        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                    })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+              {/block:IfDisqusShortname}
 
             {/block:PermalinkPage}
 
@@ -494,7 +501,7 @@ src="{ReblogRootPortraitURL-16}" class="favicon"/> {ReblogRootName}</a>
           'article.post': {
             uri: '.entry-title a',
             title: 'document.title',
-            container: 'div.meta'
+            container: 'div.meta-footer'
           }
         }
       };

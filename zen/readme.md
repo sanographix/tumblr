@@ -110,6 +110,12 @@ ZENは、Tumblrで普通に日記を書く用途にこだわったテンプレ�
 
 ## Changelog
 
+### 2.1.2 (2014/01/07)
+
+* Reblog 投稿ではてなスターが二重に表示される不具合を修正
+* `Google Author`が設定されてないときは `link rel="author"`を出さないように
+*  meta タグのコード、`Blog Domain`が設定されてないときを考慮してちょっと整理
+
 ### 2.1.1 (2013/12/12)
 
 * `Blog Domain`が設定されてないときは canonical とかの meta タグを出さないように
