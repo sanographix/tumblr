@@ -1,0 +1,10 @@
+{
+    "evil": true,
+    "laxbreak": true,
+    "latedef": true,
+    "node": true,
+    "undef": true,
+    "unused": "vars",
+    "noarg": true,
+    "eqnull": true
+}
