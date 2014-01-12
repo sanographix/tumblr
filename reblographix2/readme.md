@@ -3,7 +3,7 @@
 #### Free responsive tumblr template
 
 Reblographix 2 は、大量の画像を Reblog する人のための Tumblr テーマです。  
-[@sanographix](http://www.sanographix.net)がデザインしています。
+[@sanographix](https://twitter.com/sanographix)がデザインしています。
 
 詳細はこちらの紹介ページをご覧ください。  
 [http://sanographix.github.com/tumblr/reblographix2](http://sanographix.github.com/tumblr/reblographix2)

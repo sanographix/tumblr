@@ -4,7 +4,7 @@
 
 Tokusetsu 2 は、同人音楽 CD の特設サイトが簡単に作れる無料 Tumblr テンプレートです。  
 HTML の知識を必要とせず、フォームに情報を入力していくだけで特設サイトが作れます。  
-[@sanographix](http://www.sanographix.net) が作っています。
+[@sanographix](https://twitter.com/sanographix) が作っています。
 
 ## デモを見る
 

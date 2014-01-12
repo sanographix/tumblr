@@ -6,7 +6,7 @@
 
 llustfolio 2 は、イラストのポートフォリオサイトに特化した無料 Tumblr テンプレートです。  
 Tumblr に画像をアップロードするだけで簡単にポートフォリオサイトが作れます。  
-[@sanographix](http://www.sanographix.net) がデザインしています。
+[@sanographix](https://twitter.com/sanographix) がデザインしています。
 
 ## デモページを見る
 

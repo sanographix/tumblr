@@ -14,7 +14,7 @@ Illustfolio をベースに、新しいデザインと多数の新機能を盛�
 
 llustfolioは、イラストのポートフォリオサイトに特化した無料Tumblrテンプレートです。  
 Tumblrに画像をアップロードするだけで簡単にポートフォリオサイトが作れます。  
-[@sanographix](http://www.sanographix.net)がデザインしています。
+[@sanographix](https://twitter.com/sanographix)がデザインしています。
 
 
 ## Demo

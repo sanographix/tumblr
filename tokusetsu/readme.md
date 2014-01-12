@@ -4,7 +4,7 @@
 
 Tokusetsuは、同人音楽CDの特設サイトが簡単に作れる無料Tumblrテンプレートです。  
 HTMLの知識を必要とせず、フォームに情報を入力していくだけで特設サイトが作れます。  
-[@sanographix](http://www.sanographix.net)がデザインしています。
+[@sanographix](https://twitter.com/sanographix)がデザインしています。
 
 # 設定手順
 

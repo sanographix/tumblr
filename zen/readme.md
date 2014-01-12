@@ -5,7 +5,7 @@
 #### Free responsive tumblr template
 
 ZENは、Tumblrで普通に日記を書く用途にこだわったテンプレートです。  
-[@sanographix](http://www.sanographix.net)がデザインしています。
+[@sanographix](https://twitter.com/sanographix)がデザインしています。
 
 詳細はこちらの紹介ページをご覧ください。  
 <http://sanographix.github.io/tumblr/zen>
