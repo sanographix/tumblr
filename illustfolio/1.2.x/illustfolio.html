@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--
-  Theme: Illustfolio 1.3.0
+  Theme: Illustfolio
   by @sanographix
   http://www.sanographix.net
   (c) 2012-2013 Showkaku Sano [sanographix@gmail.com]
@@ -36,9 +36,7 @@
   {/block:Description}
   <meta name="viewport" content="width=device-width">
   <link rel="alternate" type="application/rss+xml" href="{RSS}"><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <link rel="stylesheet" media="screen" href="http://sanographix.github.io/public/tumblr/illustfolio/1.3.x/css/style.css"  charset="utf-8"/>
-  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css'>
-  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <link rel="stylesheet" media="screen" href="http://sanographix.github.io/public/tumblr/illustfolio/css/style.css"  charset="utf-8"/>
   <link rel="shortcut icon" href="{Favicon}">
 
   <!--[if IE]>
@@ -141,7 +139,7 @@
               {Caption}
             </div>
             <div class="detail">
-              <i class="fa fa-search"></i>View Detail
+              <i class="icon-search"></i>View Detail
             </div>
           </div>
         </a>
@@ -159,7 +157,7 @@
               {Caption}
             </div>
             <div class="detail">
-              <i class="fa fa-search"></i>View Photoset
+              <i class="icon-search"></i>View Photoset
             </div>
           </div>
         </a>
@@ -177,10 +175,10 @@
   <div class="row">
     <div class="span12">
       {block:PreviousPage}
-        <a href="{PreviousPage}"><i class="fa fa-chevron-left"></i>Previous</a>
+        <a href="{PreviousPage}"><i class="icon-chevron-left"></i>Previous</a>
       {/block:PreviousPage}
       {block:NextPage}
-          <a href="{NextPage}" class="next" rel="next">Next<i class="fa fa-chevron-right"></i></a>
+          <a href="{NextPage}" class="next" rel="next">Next<i class="icon-chevron-right"></i></a>
       {/block:NextPage}
     </div>
   </div>
@@ -216,18 +214,18 @@
         <div class="meta">
           {block:Date}
           <div class="date">
-            <i class="fa fa-clock-o"></i>
+            <i class="icon-time"></i>
             {Month} {DayOfMonth}, {Year}
           </div>
           {/block:Date}
           <div class="permalink">
-            <a href="{Permalink}"><i class="fa fa-link"></i>Permalink</a>
+            <a href="{Permalink}"><i class="icon-link"></i>Permalink</a>
           </div>
           {block:HasTags}
           <div class="tags">
             <ul>
               {block:Tags}
-            	<li><a href="{TagURL}"><i class="fa fa-tag"></i>{Tag}</a></li>
+            	<li><a href="{TagURL}"><i class="icon-tag"></i>{Tag}</a></li>
               {/block:Tags}
             </ul>
           </div>
@@ -280,7 +278,7 @@
 
           {block:NoteCount}
           <div class="notecount">
-            <i class="fa fa-retweet"></i>{NoteCount} Notes
+            <i class="icon-retweet"></i>{NoteCount} Notes
           </div>
           {/block:NoteCount}
           {block:PostNotes}
@@ -315,18 +313,18 @@
         <div class="meta">
           {block:Date}
           <div class="date">
-            <i class="fa fa-clock-o"></i>
+            <i class="icon-time"></i>
             {Month} {DayOfMonth}, {Year}
           </div>
           {/block:Date}
           <div class="permalink">
-            <a href="{Permalink}"><i class="fa fa-link"></i>Permalink</a>
+            <a href="{Permalink}"><i class="icon-link"></i>Permalink</a>
           </div>
           {block:HasTags}
           <div class="tags">
             <ul>
               {block:Tags}
-              <li><a href="{TagURL}"><i class="fa fa-tag"></i>{Tag}</a></li>
+              <li><a href="{TagURL}"><i class="icon-tag"></i>{Tag}</a></li>
               {/block:Tags}
             </ul>
           </div>
@@ -379,7 +377,7 @@
 
           {block:NoteCount}
           <div class="notecount">
-            <i class="fa fa-retweet"></i>{NoteCount} Notes
+            <i class="icon-retweet"></i>{NoteCount} Notes
           </div>
           {/block:NoteCount}
           {block:PostNotes}
@@ -417,10 +415,10 @@
   <div class="row">
     <div class="span12">
       {block:PreviousPost}
-        <a href="{PreviousPost}"><i class="fa fa-chevron-left"></i>Previous</a>
+        <a href="{PreviousPost}"><i class="icon-chevron-left"></i>Previous</a>
       {/block:PreviousPost}
       {block:NextPost}
-          <a href="{NextPost}" class="next" rel="next">Next<i class="fa fa-chevron-right"></i></a>
+          <a href="{NextPost}" class="next" rel="next">Next<i class="icon-chevron-right"></i></a>
       {/block:NextPost}
     </div>
   </div>
