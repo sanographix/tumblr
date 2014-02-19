@@ -119,9 +119,22 @@
 </head>
 <body class="{block:IndexPage}page-index{/block:IndexPage}{block:PermalinkPage}page-permalink page-{PostID}{/block:PermalinkPage}">
 
-<style>
-{CustomCSS}
-</style>
+  {block:PermalinkPage}
+    {block:IfEnableFacebookButton}
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/ja_JP/all.js#xfbml=1";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+    {/block:IfEnableFacebookButton}
+  {/block:PermalinkPage}
+
+  <style>
+  {CustomCSS}
+  </style>
 
   <div id="container">
 
@@ -378,6 +391,7 @@ src="{ReblogRootPortraitURL-16}" class="favicon"/> {ReblogRootName}</a>
                 {block:IfEnableTweetButton}
                 <li class="social-button">
                   <a href="https://twitter.com/share" class="twitter-share-button" data-lang="ja">ツイート</a>
+                  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
                 </li>
                 {/block:IfEnableTweetButton}
                 {block:IfEnableFacebookButton}
@@ -388,6 +402,15 @@ src="{ReblogRootPortraitURL-16}" class="favicon"/> {ReblogRootName}</a>
                 {block:IfEnablePlus1Button}
                 <li class="social-button">
                   <div class="g-plusone" data-size="medium"></div>
+                  <script type="text/javascript">
+                    window.___gcfg = {lang: 'ja'};
+
+                    (function() {
+                      var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                      po.src = 'https://apis.google.com/js/plusone.js';
+                      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+                    })();
+                  </script>
                 </li>
                 {/block:IfEnablePlus1Button}
                 {block:IfEnablePocketButton}
@@ -473,22 +496,6 @@ src="{ReblogRootPortraitURL-16}" class="favicon"/> {ReblogRootName}</a>
     <script src="//sanographix.github.io/public/tumblr/zen/2.x/js/prettify.js"></script>
     <script>$(function(){prettyPrint()});</script>
   {/block:IfEnableSyntaxHighlight}
-
-  {block:PermalinkPage}
-    <div id="fb-root"></div>
-    <script>
-      (function(d, s) {
-        var js, fjs = d.getElementsByTagName(s)[0], load = function(url, id) {
-          if (d.getElementById(id)) {return;}
-          js = d.createElement(s); js.src = url; js.id = id;
-          fjs.parentNode.insertBefore(js, fjs);
-        };
-        load('//connect.facebook.net/ja_JP/all.js#xfbml=1', 'fbjssdk');
-        load('https://apis.google.com/js/plusone.js', 'gplus1js');
-        load('//platform.twitter.com/widgets.js', 'tweetjs');
-      }(document, 'script'));
-    </script>
-  {/block:PermalinkPage}
 
   {block:IfEnableHatenaStar}
     <script type="text/javascript" src="http://s.hatena.ne.jp/js/HatenaStar.js"></script>
