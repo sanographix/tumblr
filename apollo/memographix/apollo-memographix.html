@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+
+<!--
+  Theme: Apollo
+  by @sanographix
+  http://www.sanographix.net
+  (c) 2014 Showkaku Sano [sanographix@gmail.com]
+-->
+
+<html lang="ja"
+      xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="http://www.facebook.com/2008/fbml">
+<head>
+
+  <meta name="pocket-site-verification" content="0c49b4250b19b19b5ab299785a662a" />
+
+  <!-- Variables -->
+  <meta name="text:Google Analytics ID" content="" />
+  <meta name="text:OGP Facebook Admin Number" content="" />
+  <meta name="text:OGP Facebook Page URL" content="" />
+  <meta name="text:OGP Facebook URL" content="" />
+  <meta name="text:Hatena Star Token" content="" />
+  <meta name="text:Google Author" content="" />
+  <meta name="text:Blog Domain" content="" />
+
+  <meta name="if:Enable Hatena Star" content="0" />
+  <meta name="if:Enable Facebook Button" content="1" />
+  <meta name="if:Enable Tweet Button" content="1" />
+  <meta name="if:Enable Plus1 Button" content="1" />
+  <meta name="if:Enable Hatenabookmark Button" content="1" />
+  <meta name="if:Enable Pocket Button" content="1" />
+  <meta name="if:Enable Syntax Highlight" content="1" />
+
+  <title>{block:PostSummary}{PostSummary} - {/block:PostSummary}{Title}</title>
+
+  {block:TagPage}
+    <meta name="robots" content="noindex,follow"/>
+  {/block:TagPage}
+  {block:DayPage}
+    <meta name="robots" content="noindex,follow"/>
+  {/block:DayPage}
+
+  <meta charset="UTF-8">
+  {block:Description}
+    <meta name="description" content="{MetaDescription}" />
+  {/block:Description}
+  <meta name="viewport" content="width=device-width">
+  <link rel="shortcut icon" href="{Favicon}">
+  <link rel="alternate" type="application/rss+xml" href="{RSS}">
+  <link rel="apple-touch-icon" href="{PortraitURL-128}">
+
+  <link  href="//sanographix.github.io/public/tumblr/apollo/css/style.css" rel="stylesheet" type="text/css" media="screen" charset="utf-8"/>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+
+  <!-- OGP -->
+  <meta property="og:title" content="{block:PostTitle}{PostTitle} - {/block:PostTitle}{Title}" />
+  <meta property="og:type" content="article" />
+  <!-- Twitter tags -->
+  <meta name="twitter:image" content="{PortraitURL-128}" />
+  <!-- photo だったら og-image は photoURL にする -->
+  {block:PermalinkPage}
+    {block:Posts}
+      {block:Photo}
+        <meta property="og:image" content="{PhotoURL-HighRes}" />
+      {/block:Photo}
+      {block:Photoset}
+        {block:Photos}
+        <meta property="og:image" content="{PhotoURL-HighRes}" />
+        {/block:Photos}
+      {/block:Photoset}
+    {/block:Posts}
+  {/block:PermalinkPage}
+  <meta property="og:site_name" content="{Title}" />
+  {block:Description}
+    <meta property="og:description" content="{MetaDescription}">
+  {/block:Description}
+  <meta property="fb:admins" content="{text:OGP Facebook Admin Number}" />
+  {block:IfOGPFacebookPageURL}
+    <meta property="article:publisher" content="{text:OGP Facebook Page URL}" />
+  {/block:IfOGPFacebookPageURL}
+  {block:IfOGPFacebookURL}
+    <meta property="article:author" content="{text:OGP Facebook URL}" />
+  {/block:IfOGPFacebookURL}
+  {block:IfGoogleAuthor}
+  <link rel="author" href="{text:Google Author}" />
+  {/block:IfGoogleAuthor}
+  {block:IfBlogDomain}
+    {block:IndexPage}
+      <link rel="canonical" href="http://{text:Blog Domain}"/>
+      <meta property="og:url" content="http://{text:Blog Domain}" />
+    {/block:IndexPage}
+  {/block:IfBlogDomain}
+  {block:PermalinkPage}
+    <link rel="canonical" href="{Permalink}"/>
+    <meta property="og:url" content="{Permalink}" />
+  {/block:PermalinkPage}
+
+  <!--[if lt IE 9]>
+    <script src="//sanographix.github.io/public/tumblr/zen/2.x/js/html5shiv.js"></script>
+  <![endif]-->
+
+  <!-- Google Analytics -->
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-10275024-2', 'sanographix.net');
+    ga('send', 'pageview');
+
+  </script>
+
+</head>
+<body class="{block:IndexPage}page-index{/block:IndexPage}{block:PermalinkPage}page-permalink page-{PostID}{/block:PermalinkPage}">
+
+  {block:PermalinkPage}
+    {block:IfEnableFacebookButton}
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/ja_JP/all.js#xfbml=1";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+    {/block:IfEnableFacebookButton}
+  {/block:PermalinkPage}
+
+  <style>
+  {CustomCSS}
+  </style>
+
+  <div id="container">
+
+    <div class="mobile-nav-panel">
+      <i class="icon-reorder icon-large"></i>
+    </div>
+
+    <header id="header" role="banner">
+      <h1 class="blog-title">
+        <a href="/">{Title}</a>
+      </h1>
+
+      <nav class="nav" role="navigation">
+        <ul>
+          {block:HasPages}
+            {block:Pages}
+            <li>
+              <a href="{URL}">{Label}</a>
+            </li>
+            {/block:Pages}
+          {/block:HasPages}
+          <li>
+            <a href="/archive">Archive</a>
+          </li>
+        </ul>
+      </nav>
+     </header>
+
+    <div id="main" class="autopagerize_page_element" role="main">
+
+      {block:TagPage}
+          <h2 class="tagged">Posts tagged "{Tag}"</h2>
+      {/block:TagPage}
+
+      <!-- 投稿 -->
+      {block:Posts}
+        <article class="post {TagsAsClasses} {PostType}">
+
+          <footer class="entry-meta-header" role="contentinfo">
+            {block:Date}
+              <span class="meta-elements date">
+                <a href="{Permalink}">{ShortMonth} {DayOfMonthWithZero}, {Year}</a>
+              </span>
+            {/block:Date}
+            <span class="meta-elements author">
+              by sanographix
+            </span>
+          </footer>
+
+          <!-- post: テキスト -->
+          {block:Text}
+            <header class="entry-header">
+              {block:Title}
+                <h1 class="entry-title"><a href="{Permalink}">{Title}</a></h1>
+              {/block:Title}
+            </header>
+            <div class="entry-content">
+              {Body}
+            </div>
+          {/block:Text}
+
+          <!-- post: 画像 -->
+          {block:Photo}
+            <div class="entry-content">
+              {LinkOpenTag}
+                <img src="{PhotoURL-HighRes}" alt="{PhotoAlt}"/>
+              {LinkCloseTag}
+              {block:Caption}
+                <div class="caption">
+                  {Caption}
+                </div>
+              {/block:Caption}
+            </div>
+          {/block:Photo}
+
+          <!-- post: フォトセット -->
+          {block:Photoset}
+              <div class="entry-content">
+                {Photoset-700}
+                {block:Caption}
+                  <div class="caption">
+                    {Caption}
+                  </div>
+                {/block:Caption}
+              </div>
+          {/block:Photoset}
+
+          <!-- post: 引用 -->
+          {block:Quote}
+            <div class="entry-content {Length}">
+              <blockquote>“{Quote}”</blockquote>
+              {block:Source}
+                <div class="quote-source">
+                  {Source}
+                </div>
+              {/block:Source}
+            </div>
+          {/block:Quote}
+
+          <!-- post: リンク -->
+          {block:Link}
+            <header class="entry-header">
+              <h1 class="entry-title">
+                <a href="{URL}" class="link-url" {Target}>{Name}</a>
+              </h1>
+            </header>
+            <div class="entry-content">
+                {block:Description}
+                  <div class="link-description">{Description}</div>
+                {/block:Description}
+            </div>
+          {/block:Link}
+
+          <!-- post: チャット -->
+          {block:Chat}
+            <div class="entry-content">
+              {block:Title}
+                <h1 class="entry-title"><a href="{Permalink}">{Title}</a></h1>
+              {/block:Title}
+              <ul class="ul-chat">
+                {block:Lines}
+                <li class="{Alt} user_{UserNumber}">
+                {block:Label}
+                <span class="label">{Label}</span>
+                {/block:Label}
+                {Line}
+                </li>
+                {/block:Lines}
+              </ul>
+            </div>
+          {/block:Chat}
+
+          <!-- post: ビデオ -->
+          {block:Video}
+            <div class="entry-content video-iframe">
+              {Video-700}
+              {block:Caption}
+                <div class="caption">
+                  {Caption}
+                </div>
+              {/block:Caption}
+            </div>
+          {/block:Video}
+
+          <!-- post: オーディオ -->
+          {block:Audio}
+            <div class="entry-content">
+              {AudioPlayerBlack}
+              {block:Caption}
+                <div class="caption">
+                  {Caption}
+                </div>
+              {/block:Caption}
+            </div>
+          {/block:Audio}
+
+          <!-- post: Answer -->
+          {block:Answer}
+            <div class="entry-content">
+              <div class="question bubble">
+                {Question}
+              </div>
+              <div class="asker-group">
+                <img src="{AskerPortraitURL-24}" width="24" height="24" class="user-icon" /> {Asker}
+              </div>
+              <hr/>
+              <div class="answer cont">{Answer}</div>
+            </div>
+          {/block:Answer}
+
+          <!-- Content Source -->
+          {block:ContentSource}
+            <div class="cont content_source">
+              <a href="{SourceURL}">
+                {lang:Source}:
+                {block:SourceLogo}
+                  <img src="{BlackLogoURL}" width="{LogoWidth}" height="{LogoHeight}" alt="{SourceTitle}" />
+                {/block:SourceLogo}
+                {block:NoSourceLogo}
+                    {SourceTitle}
+                {/block:NoSourceLogo}
+              </a>
+            </div>
+          {/block:ContentSource}
+
+          <!-- 記事フッタ -->
+          <footer class="entry-footer">
+            <div class="entry-meta-footer">
+              {block:RebloggedFrom}
+                <div class="meta meta-reblog">
+                  <span class="meta-elements rebloggedfrom">
+                    Reblogged from <a href="{ReblogParentURL}"><img
+  src="{ReblogParentPortraitURL-16}" class="favicon"/> {ReblogParentName}</a>
+                   ·
+                    Originally posted by <a href="{ReblogRootURL}"><img
+  src="{ReblogRootPortraitURL-16}" class="favicon"/> {ReblogRootName}</a>
+                  </span>
+                </div>
+              {/block:RebloggedFrom}
+              <div class="meta meta-footer">
+                <span class="meta-elements timeago">
+                  <a href="{Permalink}">{TimeAgo}</a>
+                </span>
+                {block:NoteCount}
+                  &nbsp;&nbsp;·&nbsp;&nbsp;
+                  <span class="meta-elements notecount">
+                    <a href="{Permalink}">{NoteCount} Notes</a>
+                  </span>
+                {/block:NoteCount}
+                {block:HasTags}
+                  &nbsp;&nbsp;·&nbsp;&nbsp;
+                  <span class="meta-elements hastags">
+                    {block:Tags}
+                      <a href="{TagURL}">#{Tag}</a>
+                    {/block:Tags}
+                  </span>
+                {/block:HasTags}
+              </div>
+            </div>
+
+            {block:PermalinkPage}
+            <!-- パーマリンクだけ -->
+
+              <ul class="like_and_reblog_buttons">
+                <li>{ReblogButton size="18"}</li>
+                <li>{LikeButton size="18"}</li>
+              </ul>
+
+              <div class="footer-ad">
+                <style>
+                .memographix { width: 336px; height: 280px; }
+                @media(max-width: 480px) { .memographix { width: 300px; height: 250px; } }
+                </style>
+                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- memographix記事下（レスポンシブ） -->
+                <ins class="adsbygoogle memographix"
+                     style="display:inline-block"
+                     data-ad-client="ca-pub-7746351817364448"
+                     data-ad-slot="6764763817"></ins>
+                <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+              </div>
+
+              <div class="social-buttons">
+                <span class="social-buttons-line1">
+                  {block:IfEnableTweetButton}
+                    <a href="https://twitter.com/share" class="twitter-share-button" data-lang="ja" data-count="vertical">ツイート</a>
+                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                  {/block:IfEnableTweetButton}
+                  {block:IfEnableFacebookButton}
+                    <div class="fb-like" data-layout="box_count" data-action="like" data-show-faces="false" data-share="false"></div>
+                  {/block:IfEnableFacebookButton}
+                  {block:IfEnableHatenabookmarkButton}
+                    <a href="http://b.hatena.ne.jp/entry/" class="hatena-bookmark-button" data-hatena-bookmark-layout="vertical-balloon" data-hatena-bookmark-lang="ja" title="このエントリーをはてなブックマークに追加"><img src="http://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="http://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+                  {/block:IfEnableHatenabookmarkButton}
+                </span>
+                <span class="social-buttons-line2">
+                  {block:IfEnablePlus1Button}
+                    <div class="g-plusone" data-size="tall"></div>
+                    <script type="text/javascript">
+                      window.___gcfg = {lang: 'ja'};
+                      (function() {
+                        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                        po.src = 'https://apis.google.com/js/plusone.js';
+                        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+                      })();
+                    </script>
+                  {/block:IfEnablePlus1Button}
+                  {block:IfEnablePocketButton}
+                    <a data-pocket-label="pocket" data-pocket-count="vertical" class="pocket-btn" data-lang="en"></a>
+                    <script type="text/javascript">!function(d,i){
+                        if(!d.getElementById(i)){
+                        var j=d.createElement("script");j.id=i;j.src="https://widgets.getpocket.com/v1/j/btn.js?v=1";var w=d.getElementById(i);d.body.appendChild(j);
+                        }
+                      }(document,"pocket-btn-js");
+                    </script>
+                  {/block:IfEnablePocketButton}
+                </span>
+              </div>
+
+              <div id="recent">
+                <h2>Recent Posts</h2>
+                <span class="loading">Loading...</span>
+              </div>
+
+            {/block:PermalinkPage}
+
+
+            {block:IndexPage}
+              {block:Post1}
+                <div class="footer-ad">
+                <style>
+                .memographix { width: 336px; height: 280px; }
+                @media(max-width: 480px) { .memographix { width: 300px; height: 250px; } }
+                </style>
+                  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                  <!-- memographixトップ（レスポンシブ） -->
+                  <ins class="adsbygoogle memographix"
+                       style="display:inline-block"
+                       data-ad-client="ca-pub-7746351817364448"
+                       data-ad-slot="5148429810"></ins>
+                  <script>
+                  (adsbygoogle = window.adsbygoogle || []).push({});
+                  </script>
+                </div>
+              {/block:Post1}
+            {/block:IndexPage}
+
+            {block:PostNotes}
+              <h3 class="notecount-header">{NoteCount} Notes</h3>
+              <div class="notecontainer">{PostNotes}</div>
+            {/block:PostNotes}
+          </footer>
+        </article>
+
+        {block:IndexPage}
+          <hr class="article-devider">
+        {/block:IndexPage}
+
+      {/block:Posts}
+
+      <!-- パーマリンクのページャ -->
+      {block:PermalinkPagination}
+        <div class="pagenation pagenation-permalink">
+          {block:NextPost}
+            <a href="{NextPost}" class="next" rel="next">Newer Post</a>
+          {/block:NextPost}
+          {block:PreviousPost}
+            <a href="{PreviousPost}">Older Post</a>
+          {/block:PreviousPost}
+        </div>
+      {/block:PermalinkPagination}
+
+      <!-- ページごとのページャ -->
+      {block:Pagination}
+        <div class="pagenation pagenation-index">
+          {block:PreviousPage}
+            <a href="{PreviousPage}">Prev</a>
+          {/block:PreviousPage}
+          {block:JumpPagination length="5"}
+            {block:CurrentPage}<span class="current-page">{PageNumber}</span>{/block:CurrentPage}
+            {block:JumpPage}<a class="jump-page" href="{URL}">{PageNumber}</a>{/block:JumpPage}
+          {/block:JumpPagination}
+          {block:NextPage}
+            <a href="{NextPage}" class="next" rel="next">Next</a>
+          {/block:NextPage}
+        </div>
+      {/block:Pagination}
+
+    </div>
+
+    <!-- sidebar -->
+    <aside class="sidebar">
+    </aside>
+
+    <footer id="footer">
+      <h1 class="footer-blog-title">
+        <a href="/">{Title}</a>
+      </h1>
+      <span class="copyright">
+        Copyright(C) {CopyrightYears} WWW.SANOGRAPHIX.NET<br/>
+        MEMOGRAPHIX は佐野章核の個人的な日記サイトです。
+      </span>
+    </footer>
+
+  </div>
+
+  <script src="//sanographix.github.io/public/tumblr/apollo/js/apollo-js.min.js"></script>
+  {block:IfEnableSyntaxHighlight}
+    <script src="//sanographix.github.io/public/tumblr/apollo/js/prettify.js"></script>
+    <script>$(function(){prettyPrint()});</script>
+  {/block:IfEnableSyntaxHighlight}
+
+  <!-- 最近の記事 -->
+  <script src="http://memo.sanographix.net/api/read/json?callback=tumblr&amp;num=8" type="text/javascript"></script>
+
+  {block:IfEnableHatenaStar}
+    <script type="text/javascript" src="http://s.hatena.ne.jp/js/HatenaStar.js"></script>
+    <script type="text/javascript">
+      Hatena.Star.Token = '{text:Hatena Star Token}';
+    </script>
+    <script type="text/javascript">
+      Hatena.Star.SiteConfig = {
+        entryNodes: {
+          'article.post': {
+            uri: '.entry-title a',
+            title: 'document.title',
+            container: 'div.meta-footer'
+          }
+        }
+      };
+    </script>
+    <script type="text/javascript">
+      Hatena.Star.EntryLoader.headerTagAndClassName = ['div','meta-footer'];
+    </script>
+  {/block:IfEnableHatenaStar}
+
+</body>
+</html>
