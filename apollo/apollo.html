@@ -11,9 +11,6 @@
 <head>
   <meta charset="UTF-8">
 
-  <!-- MMGR -->
-  <meta name="pocket-site-verification" content="0c49b4250b19b19b5ab299785a662a" />
-
   <!-- Variables -->
   <meta name="text:Hatena Star Token" content="" />
   <meta name="text:Google Author" content="" />
@@ -89,17 +86,6 @@
   <!--[if lt IE 9]>
     <script src="//sanographix.github.io/public/tumblr/apollo/js/html5shiv.js"></script>
   <![endif]-->
-
-  <!-- MMGR -->
-  <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-    ga('create', 'UA-10275024-2', 'sanographix.net');
-    ga('send', 'pageview');
-  </script>
 
 </head>
 <body class="{block:IndexPage}page-index{/block:IndexPage}{block:PermalinkPage}page-permalink page-{PostID}{/block:PermalinkPage}">
@@ -214,9 +200,9 @@
             <div class="entry-content {Length}">
               <blockquote>“{Quote}”</blockquote>
               {block:Source}
-                <div class="quote-source">
+                <p class="quote-source">
                   {Source}
-                </div>
+                </p>
               {/block:Source}
             </div>
           {/block:Quote}
@@ -349,23 +335,6 @@
                 <li>{LikeButton size="18"}</li>
               </ul>
 
-              <!-- MMGR -->
-              <div class="footer-ad">
-                <style>
-                .memographix { width: 336px; height: 280px; }
-                @media(max-width: 480px) { .memographix { width: 300px; height: 250px; } }
-                </style>
-                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                <!-- memographix記事下（レスポンシブ） -->
-                <ins class="adsbygoogle memographix"
-                     style="display:inline-block"
-                     data-ad-client="ca-pub-7746351817364448"
-                     data-ad-slot="6764763817"></ins>
-                <script>
-                (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
-              </div>
-
               <div class="social-buttons">
                 <span class="social-buttons-line1">
                   {block:IfEnableTweetButton}
@@ -414,39 +383,10 @@
 
             {/block:PermalinkPage}
 
-            <!-- MMGR -->
-            {block:IndexPage}
-              {block:Post1}
-                <div class="footer-ad">
-                <style>
-                .memographix { width: 336px; height: 280px; }
-                @media(max-width: 480px) { .memographix { width: 300px; height: 250px; } }
-                </style>
-                  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                  <!-- memographixトップ（レスポンシブ） -->
-                  <ins class="adsbygoogle memographix"
-                       style="display:inline-block"
-                       data-ad-client="ca-pub-7746351817364448"
-                       data-ad-slot="5148429810"></ins>
-                  <script>
-                  (adsbygoogle = window.adsbygoogle || []).push({});
-                  </script>
-                </div>
-              {/block:Post1}
-            {/block:IndexPage}
-
             {block:PostNotes}
               <h3 class="notecount-header">{NoteCount} Notes</h3>
               <div class="notecontainer">{PostNotes}</div>
             {/block:PostNotes}
-
-            <!-- MMGR -->
-            {block:PermalinkPage}
-              <div class="likebox-container">
-                <div class="fb-like-box" data-href="http://www.facebook.com/sanographix.net" data-width="740" data-height="270" data-show-faces="true" data-stream="false" data-border-color="#ddd" data-header="false"></div>
-              </div>
-            {/block:PermalinkPage}
-
           </footer>
         </article>
 
