@@ -2,7 +2,7 @@
 
 #### Free responsive tumblr template
 
-Apollo は、心穏やかに日記を書きたい人のための無料Tumblrテンプレートです。  
+Apollo は、穏やかに日記を書きたい人のための無料Tumblrテンプレートです。  
 [@sanographix](https://twitter.com/sanographix)がデザインしています。
 
 詳細はこちらの紹介ページをご覧ください。  
