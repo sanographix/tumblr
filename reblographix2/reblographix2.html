@@ -469,16 +469,18 @@
                 </div>
               {/block:ContentSource}
 
-              <div class="meta buttons">
-                <div class="btn-group">
-                  <span class="btn">
-                    {LikeButton}
-                  </span>
-                  <span class="btn">
-                    {ReblogButton}
-                  </span>
+              {block:Date}
+                <div class="meta buttons">
+                  <div class="btn-group">
+                    <span class="btn">
+                      {LikeButton}
+                    </span>
+                    <span class="btn">
+                      {ReblogButton}
+                    </span>
+                  </div>
                 </div>
-              </div>
+              {/block:Date}
 
               <div class="meta timeago">
                 {TimeAgo}
