@@ -344,10 +344,12 @@
             {block:PermalinkPage}
             <!-- パーマリンクだけ -->
 
-              <ul class="like_and_reblog_buttons">
-                <li>{ReblogButton size="18"}</li>
-                <li>{LikeButton size="18"}</li>
-              </ul>
+              {block:Date}
+                <ul class="like_and_reblog_buttons">
+                  <li>{ReblogButton size="18"}</li>
+                  <li>{LikeButton size="18"}</li>
+                </ul>
+              {/block:Date}
 
               <!-- MMGR -->
               <div class="footer-ad">

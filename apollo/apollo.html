@@ -332,10 +332,12 @@
             {block:PermalinkPage}
             <!-- パーマリンクだけ -->
 
-              <ul class="like_and_reblog_buttons">
-                <li>{ReblogButton size="18"}</li>
-                <li>{LikeButton size="18"}</li>
-              </ul>
+              {block:Date}
+                <ul class="like_and_reblog_buttons">
+                  <li>{ReblogButton size="18"}</li>
+                  <li>{LikeButton size="18"}</li>
+                </ul>
+              {/block:Date}
 
               <div class="social-buttons">
                 <span class="social-buttons-line1">

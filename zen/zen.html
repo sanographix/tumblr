@@ -382,10 +382,12 @@ src="{ReblogRootPortraitURL-16}" class="favicon"/> {ReblogRootName}</a>
             <!-- パーマリンクだけソーシャルボタン出す -->
             {block:PermalinkPage}
 
-              <ul class="like_and_reblog_buttons">
-                <li>{ReblogButton size="16"}</li>
-                <li>{LikeButton size="16"}</li>
-              </ul>
+              {block:Date}
+                <ul class="like_and_reblog_buttons">
+                  <li>{ReblogButton size="18"}</li>
+                  <li>{LikeButton size="18"}</li>
+                </ul>
+              {/block:Date}
 
               <ul class="social-buttons">
                 {block:IfEnableTweetButton}
