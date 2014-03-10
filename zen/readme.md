@@ -1,7 +1,5 @@
 # ZEN 2.0
 
-(<a href="https://github.com/sanographix/tumblr/blob/master/zen/readme.md#zen-is-free-responsive-minimal-tumblr-template">In English</a>)
-
 #### Free responsive tumblr template
 
 ZENは、Tumblrで普通に日記を書く用途にこだわったテンプレートです。  
