@@ -408,11 +408,16 @@
               {block:IfEnableRecentPostModule}
                 {block:IfBlogDomain}
                   <div id="recent">
-                    <h2>Recent Posts</h2>
+                    <h3>Recent Posts</h3>
                     <span class="loading">Loading...</span>
                   </div>
                 {/block:IfBlogDomain}
               {/block:IfEnableRecentPostModule}
+
+              <!-- MMGR -->
+              <div class="likebox-container">
+                <div class="fb-like-box" data-href="http://www.facebook.com/sanographix.net" data-width="740" data-height="270" data-show-faces="true" data-stream="false" data-border-color="#ddd" data-header="false"></div>
+              </div>
 
             {/block:PermalinkPage}
 
@@ -441,13 +446,6 @@
               <h3 class="notecount-header">{NoteCount} Notes</h3>
               <div class="notecontainer">{PostNotes}</div>
             {/block:PostNotes}
-
-            <!-- MMGR -->
-            {block:PermalinkPage}
-              <div class="likebox-container">
-                <div class="fb-like-box" data-href="http://www.facebook.com/sanographix.net" data-width="740" data-height="270" data-show-faces="true" data-stream="false" data-border-color="#ddd" data-header="false"></div>
-              </div>
-            {/block:PermalinkPage}
 
           </footer>
         </article>
