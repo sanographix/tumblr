@@ -440,7 +440,24 @@
                   </script>
                 </div>
               {/block:Post1}
-              {block:Post10}
+              {block:Post4}
+                <div class="footer-ad">
+                  <style>
+                  .memographix { width: 336px; height: 280px; }
+                  @media(max-width: 480px) { .memographix { width: 300px; height: 250px; } }
+                  </style>
+                  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                  <!-- memographixトップ中間（レスポンシブ） -->
+                  <ins class="adsbygoogle memographix"
+                       style="display:inline-block"
+                       data-ad-client="ca-pub-7746351817364448"
+                       data-ad-slot="8303922211"></ins>
+                  <script>
+                  (adsbygoogle = window.adsbygoogle || []).push({});
+                  </script>
+                </div>
+              {/block:Post4}
+              {block:Post7}
                 <div class="footer-ad">
                   <style>
                   .memographix { width: 336px; height: 280px; }
@@ -456,7 +473,7 @@
                   (adsbygoogle = window.adsbygoogle || []).push({});
                   </script>
                 </div>
-              {/block:Post10}
+              {/block:Post7}
             {/block:IndexPage}
 
             {block:PostNotes}
@@ -549,6 +566,13 @@
       Hatena.Star.EntryLoader.headerTagAndClassName = ['div','meta-footer'];
     </script>
   {/block:IfEnableHatenaStar}
+
+  <!-- MMGR -->
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $("a[href^=http]").not("[href*="+location.hostname+"]").attr("target","_blank");
+    });
+  </script>
 
 </body>
 </html>
