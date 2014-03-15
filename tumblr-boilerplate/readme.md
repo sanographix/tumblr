@@ -2,19 +2,21 @@
 
 ### Tumblr のテーマを勢いよく作るためのHTMLテンプレート
 
-Tumblr テーマのいわゆるテンプレです。  
-[ZEN テーマ](http://sanographix.github.com/tumblr/zen/)がベースです。
+Tumblrテーマを制作するときに使える、基本的な構造のHTMLテンプレートです。これにCSSを別途書くだけでとりあえずTumblrテーマが作れます。[ZEN テーマ](http://sanographix.github.com/tumblr/zen/)がベースです。
 
-これにCSS書くだけでテーマ作れると思います、多分
+### 特徴
 
 * 全投稿タイプに対応
 * OGP 設定済
-* AutoPagerize 設定済
-
-なんかおかしかったら連絡ください。
+* Like & Reblog ボタン設置済
+* ソーシャルボタン設置済
 
 
 # Changelog
+
+### 1.1 (2014/03/15)
+
+* Apolloテーマ公開にあわせてApollo準拠のHTMLにした
 
 ### 1.0.1 (2013/7/02)
 
