@@ -16,7 +16,6 @@
   <meta name="text:Hatena Star Token" content="" />
   <meta name="text:Google Author" content="" />
   <meta name="text:Blog Domain" content="" />
-  <meta name="text:Author" content="" />
 
   <meta name="if:Enable Hatena Star" content="1" />
   <meta name="if:Enable Like Button" content="1" />
@@ -31,32 +30,44 @@
   <link rel="apple-touch-icon" href="{PortraitURL-128}">
   <link rel="canonical" href="{Permalink}"/>
 
+  <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+
   <!-- OGP -->
-  <meta property="og:title" content="{block:PostTitle}{PostTitle} - {/block:PostTitle}{Title}" />
+  <meta property="og:title" content="{block:PostSummary}{PostSummary} - {/block:PostSummary}{Title}" />
   <meta property="og:type" content="article" />
-  <meta property="og:url" content="{block:IndexPage}{text:OGP Toppage URL}{/block:IndexPage}{block:PermalinkPage}{Permalink}{/block:PermalinkPage}" />
   <meta property="og:image" content="{PortraitURL-128}" />
   <!-- Twitter tags -->
   <meta name="twitter:image" content="{PortraitURL-128}" />
-  <!-- photo だったら og-image はphotoURLにする -->
+   <!-- photo だったら og-image は photoURL にする -->
   {block:PermalinkPage}
     {block:Posts}
       {block:Photo}
-        <meta property="og:image" content="{PhotoURL-400}" />
+        <meta property="og:image" content="{PhotoURL-HighRes}" />
       {/block:Photo}
       {block:Photoset}
         {block:Photos}
-        <meta property="og:image" content="{PhotoURL-400}" />
+        <meta property="og:image" content="{PhotoURL-HighRes}" />
         {/block:Photos}
       {/block:Photoset}
     {/block:Posts}
   {/block:PermalinkPage}
   <meta property="og:site_name" content="{Title}" />
-  <meta property="og:description" content="{block:Description}{MetaDescription}{/block:Description}">
-  <meta property="fb:admins" content="{text:OGP Facebook Admin Number}" />
-  <link rel="author" href="{text:Google Author}" />
-
-  <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+  {block:Description}
+    <meta property="og:description" content="{MetaDescription}">
+  {/block:Description}
+  {block:IfGoogleAuthor}
+    <link rel="author" href="{text:Google Author}" />
+  {/block:IfGoogleAuthor}
+  {block:IfBlogDomain}
+    {block:IndexPage}
+      <link rel="canonical" href="http://{text:Blog Domain}"/>
+      <meta property="og:url" content="http://{text:Blog Domain}" />
+    {/block:IndexPage}
+  {/block:IfBlogDomain}
+  {block:PermalinkPage}
+    <link rel="canonical" href="{Permalink}"/>
+    <meta property="og:url" content="{Permalink}" />
+  {/block:PermalinkPage}
 
   <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -71,7 +82,7 @@
 
   <div id="container">
 
-    <nav class="nav">
+    <nav class="nav" role="navigation">
       <ul>
         <li>
           <a href="/">Home</a>
@@ -86,9 +97,6 @@
         <li>
           <a href="/archive">Archive</a>
         </li>
-        <li>
-          <a href="{RSS}">RSS</a>
-        </li>
       </ul>
     </nav>
 
@@ -101,29 +109,19 @@
       {/block:Description}
     </header>
 
-    <div id="main" class="autopagerize_page_element">
+    <div id="main" class="autopagerize_page_element" role="main">
 
       {block:TagPage}
-          <h2 class="tagged">Posts tagged "{Tag}"</h2>
+        <h2 class="tagged">Posts tagged "{Tag}"</h2>
       {/block:TagPage}
 
       <!-- 投稿 -->
       {block:Posts}
-        <article class="post {TagsAsClasses}
-        {block:Text}text{/block:Text}
-        {block:Photo}photo{/block:Photo}
-        {block:Photoset}photoset{/block:Photoset}
-        {block:Quote}quote{/block:Quote}
-        {block:Link}link{/block:Link}
-        {block:Chat}chat{/block:Chat}
-        {block:Video}video{/block:Video}
-        {block:Audio}audio{/block:Audio}
-        {block:Answer}answer{/block:Answer}
-        ">
+        <article class="post {TagsAsClasses} {PostType}">
+
           {block:Date}
           <div class="date">
-            {block:NewDayDate}<p><a href="{Permalink}">{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}</a></p>{/block:NewDayDate}
-            {block:SameDayDate}<p><a href="{Permalink}">{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}</a></p>{/block:SameDayDate}
+            <a href="{Permalink}">{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}</a>
           </div>
           {/block:Date}
 
@@ -264,7 +262,7 @@
 
           <!-- 記事フッタ -->
           <footer class="entry-footer">
-            <div class="meta meta-reblog">
+            <div class="meta meta-footer">
               {block:RebloggedFrom}
                 <span class="meta-elements rebloggedfrom">
                   Reblogged from <a href="{ReblogParentURL}"><img
@@ -275,7 +273,7 @@ src="{ReblogRootPortraitURL-16}" class="favicon"/> {ReblogRootName}</a>
                 </span>
               {/block:RebloggedFrom}
             </div>
-            <div class="meta">
+            <div class="meta meta-footer">
               <span class="meta-elements timeago">
                 <a href="{Permalink}">{TimeAgo}</a>
               </span>
@@ -295,13 +293,16 @@ src="{ReblogRootPortraitURL-16}" class="favicon"/> {ReblogRootName}</a>
               {/block:HasTags}
             </div>
 
-            <ul class="like_and_reblog_buttons">
-              <li>{ReblogButton}</li>
-              <li>{LikeButton}</li>
-            </ul>
-
             <!-- パーマリンクだけソーシャルボタン出す -->
             {block:PermalinkPage}
+
+              {block:Date}
+                <ul class="like_and_reblog_buttons">
+                  <li>{ReblogButton}</li>
+                  <li>{LikeButton}</li>
+                </ul>
+              {/block:Date}
+
               <ul class="social-buttons">
                 {block:IfEnableTweetButton}
                 <li class="social-button">
@@ -332,31 +333,39 @@ src="{ReblogRootPortraitURL-16}" class="favicon"/> {ReblogRootName}</a>
             {/block:PermalinkPage}
 
             {block:PostNotes}
+              <h3 class="notecount-header">{NoteCount} Notes</h3>
               <div class="notecontainer">{PostNotes}</div>
             {/block:PostNotes}
           </footer>
+
         </article>
+
       {/block:Posts}
+
     </div>
 
+    <!-- パーマリンクのページャ -->
     {block:PermalinkPagination}
-      <div id="pager">
-        <!-- パーマリンク -->
-        {block:PreviousPost}
-          <a href="{PreviousPost}">Prev</a>
-        {/block:PreviousPost}
+      <div class="pagenation pagenation-permalink">
         {block:NextPost}
-          <a href="{NextPost}" class="next" rel="next">Next</a>
+          <a href="{NextPost}" class="next" rel="next">Newer Post</a>
         {/block:NextPost}
+        {block:PreviousPost}
+          <a href="{PreviousPost}">Older Post</a>
+        {/block:PreviousPost}
       </div>
     {/block:PermalinkPagination}
 
+    <!-- ページごとのページャ -->
     {block:Pagination}
-      <div id="pager">
-        <!-- ページごと -->
+      <div class="pagenation pagenation-index">
         {block:PreviousPage}
           <a href="{PreviousPage}">Prev</a>
         {/block:PreviousPage}
+        {block:JumpPagination length="5"}
+          {block:CurrentPage}<span class="current-page">{PageNumber}</span>{/block:CurrentPage}
+          {block:JumpPage}<a class="jump-page" href="{URL}">{PageNumber}</a>{/block:JumpPage}
+        {/block:JumpPagination}
         {block:NextPage}
           <a href="{NextPage}" class="next" rel="next">Next</a>
         {/block:NextPage}
