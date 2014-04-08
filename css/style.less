@@ -1,139 +1,244 @@
+/*
+    Main CSS
+*/
+
 @import "_normalize.less";
 @import "_mixin.less";
 @import "_variable.less";
-@import "_bootstrap.less";
-@import "_bootstrap-responsive.less";
 @import "_font-awesome.less";
-@import "_font.less";
 
-/*  Primary Styles
-   Author:sanographix
-*/
+/* Common Styles */
 
+// Common
 
-/*common*/
-
-html,body {
-    font-family: 'Helvetica Neue', sans-serif;
+html,
+body {
+    font-family: 'Avenir Next', 'Helvetica Neue', Helvetica, Arial,  Roboto, 'Droid Sans', 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif;
+    background: @bg;
     color: @base;
-    background: @bg-light;
+    -webkit-font-smoothing: antialiased;
 }
 
 a {
     color: @link;
+
     &:hover {
-      color: @hover;
+        color: @hover;
+    }
+
+}
+
+::selection,
+::-moz-selection {
+    background: @selection;
+    color:#fff;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    line-height: 1.1;
+    a,a:hover {
+        color: @base;
+        text-decoration: none;
     }
 }
 
-p {
-    line-height: 1.6;
-}
-
-::selection {
-    background: @selection;
-    color:#666666;
-}
-
-.section {
-    margin-bottom: 30px;
-}
-
-.profile-image {
-    .border-radius(4px);
-    vertical-align: top;
-}
-
-.icon-large {
-    font-size: 30px;
-    text-align: center;
-    line-height: 1;
-    color: #ccc;
-}
-
-.icon-ex-large {
-    font-size: 64px;
-    text-align: center;
-}
-
-/* Faded out hr */
-hr.soften {
-  height: 1px;
-  margin: 40px 0;
-  background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
-  background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
-  background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
-  background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
-  border: 0;
-}
+// ボタン
 
 .btn {
-    .gradient(#fff,#fff,#f5f5f5);
-    color: @link;
+    .inline-block;
+    text-align: center;
+    padding: .6em 1.2em;
+    cursor: pointer;
+    line-height: 1.5;
+    font-size: 90%;
+    .border-radius(3px);
+    overflow: hidden;
+    color: @base;
+    background-color: @btn;
+    text-decoration: none;
+    border: 1px solid rgba(0,0,0,.15);
     &:hover {
-      .gradient(#f5f5f5,#fff,#f0f0f0);
-      color: @hover;
+        background-color: @btn-hover;
+        color: @base;
+        text-decoration: none;
+        border: 1px solid rgba(0,0,0,.2);
+    }
+}
+
+.btn-primary {
+    background-color: @btn-primary;
+    color: #fff;
+    border: 1px solid @btn-primary;
+    &:hover {
+        background-color: @btn-primary-hover;
+        color: #fff;
+        border: 1px solid @btn-primary-hover;
     }
 }
 
 .btn-large {
-    padding: 20px 50px;
-    font-size: 35px;
-    line-height: 35px;
-    font-family: 'RobotoThin';
+    padding: .8em 2em;
+    font-size: 150%;
+    -moz-box-sizing:border-box;
+    box-sizing: border-box;
 }
 
-h1,h2,h3,h4,h5,h6 {
-    line-height: 1.3;
+p {
+    margin: 0 0 1rem 0;
+    line-height: 1.5;
 }
 
+/* End Common Styles */
 
-/* Primary-style */
+.nav {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 300px;
+    padding: 3rem 2rem;
+}
 
-#header {
-    margin: 40px 0;
-    text-align: center;
+.header {
+    margin-bottom: 2rem;
+
     h1 {
-        font-size: 100px;
-        margin: 0;
-        letter-spacing: -2px;
+        font-size: 3.5rem;
+        margin: 0 0 .5rem;
     }
 
     h2 {
-        font-size: 20px;
-        font-weight: 200;
+        font-weight: normal;
         margin: 0;
+        font-size: 1.5rem;
     }
 }
 
-.thumbnail {
-    background: #fff;
+.follow {
+    h4 {
+        font-size: .6rem;
+        letter-spacing: .1em;
+        color: @light;
+        text-transform: uppercase;
+        margin-bottom: .7rem;
+        font-weight: normal;
+    }
+}
+
+.findme {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      margin-bottom: .8rem;
+
+      .fa {
+        margin-right: .3rem;
+        width: .8em;
+      }
+
+      a {
+          color: @base;
+          text-decoration: none;
+          &:hover {
+              color: @link;
+          }
+      }
+    }
+}
+
+
+.container {
+    width: 700px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-left: 27.5%;
+    margin-right: 2.5%;
+}
+
+.entry {
+    margin: 3rem 0;
+
+    a {
+        color: @base;
+        text-decoration: none;
+    }
+
+    &:hover {
+      a {
+          color: @link;
+      }
+    }
+
+    .ss {
+        max-width: 100%;
+        margin-bottom: .3rem;
+        .border-radius(3px);
+        height: 525px;
+        background-color: #fff;
+    }
 
     h3 {
-        font-size: 100%;
-        color: @base;
-        margin: 0 0 5px 0;
-        line-height: 1.3;
+        font-size: 1.5rem;
+        margin: 0 0 .3rem;
+        span {
+            font-weight: normal;
+            font-style: italic;
+            font-size: .9rem;
+            margin-left: .4rem;
+        }
     }
+
     p {
-        font-size: 12px;
         color: @light;
-        margin: 0;
+    }
+}
+
+.rectangle {
+    margin-bottom: 4rem;
+    .clearfix;
+
+    p {
+        font-size: .7rem;
+        letter-spacing: .3em;
+        color: @light;
+        text-transform: uppercase;
+        margin-bottom: .7rem;
+    }
+
+    .left {
+        float: left;
+    }
+
+    .right {
+        float: right;
     }
 }
 
 .social-buttons {
+    list-style: none;
     text-align: center;
+    margin: 0;
+    padding: 0;
     li {
-        .inline-block;
-        padding: 10px;
+        display: inline-block;
+        padding: 10px 5px 10px;
+        height: 20px;
+        vertical-align: top;
     }
 }
 
-#footer {
-    margin: 20px 0;
+.footer {
+    margin: 3rem 0;
+    font-size: .9rem;
     text-align: center;
     color: @light;
+    a {
+      color: @base;
+      text-decoration: none;
+    }
 }
+
 
 @import "_media-queries.less";

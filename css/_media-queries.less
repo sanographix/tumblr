@@ -1,37 +1,165 @@
 /*--------------------------------------------------------------
 
-			Media Queries - Retina Display
+      Media Queries - Retina Display
 
 --------------------------------------------------------------*/
 
-@media only screen and (-webkit-min-device-pixel-ratio : 1.5),only screen and (min-device-pixel-ratio : 1.5) {
+// Retina のデバイス全部に出す
+@media
+(-webkit-min-device-pixel-ratio: 2),
+(            min-resolution: 2dppx) {
 
 }
 
-/* Large desktop */
-@media (min-width: 1200px) {
+// Retina かつ iPad 以上のときに出す
+@media
+(-webkit-min-device-pixel-ratio: 2) and (min-device-width: 768px),
+(            min-resolution: 2dppx) and (min-device-width: 768px) {
 
 }
 
-/* Portrait tablet to landscape and desktop */
-@media (min-width: 768px) and (max-width: 979px) {
+// Retina かつ PC のときだけに出す
+@media
+(-webkit-min-device-pixel-ratio: 2) and (min-device-width: 1025px),
+(            min-resolution: 2dppx) and (min-device-width: 1025px) {
 
 }
 
-/* Landscape phone to portrait tablet */
+
+/*--------------------------------------------------------------
+
+      Media Queries - Tablet
+
+--------------------------------------------------------------*/
+
+@media (min-width: 768px) and (max-width: 1040px) {
+
+.nav {
+    position: static;
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2rem;
+    text-align: center;
+
+    h1 {
+        br {
+          display: none;
+        }
+        .line1 {
+          margin-right: 1rem;
+        }
+    }
+}
+
+.findme {
+    li {
+      display: inline-block;
+      margin-bottom: .8rem;
+      margin-right: 2rem;
+    }
+}
+
+.container {
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.entry {
+    margin-top: 0;
+}
+
+}
+
+
+/*--------------------------------------------------------------
+
+      Media Queries - Small Tablet & Smartphone
+
+--------------------------------------------------------------*/
+
 @media (max-width: 767px) {
 
+.nav {
+    position: static;
+    width: 93.75%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2rem 0;
+    text-align: center;
 
- }
+    h1 {
+        font-size: 3rem;
+    }
 
-/* Landscape phones and down */
-@media (max-width: 480px) {
+    h2 {
+        font-size: 1rem;
+    }
+}
 
-    #header {
-        h1 {
-            font-size: 40px;
+.findme {
+    li {
+        display: inline-block;
+        margin-bottom: .8rem;
+        margin-right: 2rem;
+        &:last-child {
+            margin-right: 0;
         }
     }
 
+    .label {
+        display: none;
+    }
+}
 
- }
+.container {
+    width: 93.75%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.entry {
+    margin-top: 0;
+
+    .ss {
+        height: auto;
+    }
+
+}
+
+.rectangle {
+    margin-bottom: 2rem;
+    text-align: center;
+
+    .left,
+    .right {
+        float: none;
+    }
+
+    .right {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: #ddd;
+      height: 50px;
+    }
+}
+
+.footer {
+    margin-bottom: 70px;
+}
+
+}
+
+
+/*--------------------------------------------------------------
+
+      Media Queries - Smartphone
+
+--------------------------------------------------------------*/
+
+@media (max-width: 480px) {
+
+}
