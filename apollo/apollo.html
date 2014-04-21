@@ -16,7 +16,6 @@
   <!-- Variables -->
   <meta name="text:Hatena Star Token" content="" />
   <meta name="text:Google Author" content="" />
-  <meta name="text:Blog Domain" content="" />
   <meta name="text:Author" content="" />
 
   <meta name="if:Enable Hatena Star" content="1" />
@@ -46,7 +45,7 @@
   <link rel="alternate" type="application/rss+xml" href="{RSS}">
   <link rel="apple-touch-icon" href="{PortraitURL-128}">
 
-  <link  href="//sanographix.github.io/public/tumblr/apollo/css/style.css" rel="stylesheet" type="text/css" media="screen" charset="utf-8"/>
+  <link href="//sanographix.github.io/public/tumblr/apollo/css/style.css" rel="stylesheet" type="text/css" media="screen" charset="utf-8"/>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
 
   <!-- OGP -->
@@ -74,12 +73,10 @@
   {block:IfGoogleAuthor}
     <link rel="author" href="{text:Google Author}" />
   {/block:IfGoogleAuthor}
-  {block:IfBlogDomain}
-    {block:IndexPage}
-      <link rel="canonical" href="http://{text:Blog Domain}"/>
-      <meta property="og:url" content="http://{text:Blog Domain}" />
-    {/block:IndexPage}
-  {/block:IfBlogDomain}
+  {block:IndexPage}
+    <link rel="canonical" href="{BlogURL}"/>
+    <meta property="og:url" content="{BlogURL}" />
+  {/block:IndexPage}
   {block:PermalinkPage}
     <link rel="canonical" href="{Permalink}"/>
     <meta property="og:url" content="{Permalink}" />
@@ -377,12 +374,10 @@
               </div>
 
               {block:IfEnableRecentPostModule}
-                {block:IfBlogDomain}
-                  <div id="recent">
-                    <h2>Recent Posts</h2>
-                    <span class="loading">Loading...</span>
-                  </div>
-                {/block:IfBlogDomain}
+                <div id="recent">
+                  <h3>Recent Posts</h3>
+                  <span class="loading">Loading...</span>
+                </div>
               {/block:IfEnableRecentPostModule}
 
             {/block:PermalinkPage}
@@ -451,10 +446,8 @@
   {/block:IfEnableSyntaxHighlight}
 
   {block:IfEnableRecentPostModule}
-    {block:IfBlogDomain}
-      <!-- 最近の記事 -->
-      <script src="http://{text:Blog Domain}/api/read/json?callback=tumblr&amp;num=8" type="text/javascript"></script>
-    {/block:IfBlogDomain}
+    <!-- 最近の記事 -->
+    <script src="{BlogURL}api/read/json?callback=tumblr&amp;num=8" type="text/javascript"></script>
   {/block:IfEnableRecentPostModule}
 
   {block:IfEnableHatenaStar}

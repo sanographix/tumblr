@@ -22,7 +22,6 @@
   <meta name="text:Hatena Star Token" content="" />
   <meta name="text:Google Author" content="" />
   <meta name="text:Disqus Shortname" content="" />
-  <meta name="text:Blog Domain" content="" />
 
   <meta name="image:Title Logo" content="" />
 
@@ -89,12 +88,10 @@
   {block:IfGoogleAuthor}
   <link rel="author" href="{text:Google Author}" />
   {/block:IfGoogleAuthor}
-  {block:IfBlogDomain}
-    {block:IndexPage}
-      <link rel="canonical" href="http://{text:Blog Domain}"/>
-      <meta property="og:url" content="http://{text:Blog Domain}" />
-    {/block:IndexPage}
-  {/block:IfBlogDomain}
+  {block:IndexPage}
+    <link rel="canonical" href="{BlogURL}"/>
+    <meta property="og:url" content="{BlogURL}" />
+  {/block:IndexPage}
   {block:PermalinkPage}
     <link rel="canonical" href="{Permalink}"/>
     <meta property="og:url" content="{Permalink}" />
