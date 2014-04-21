@@ -298,7 +298,9 @@
     {block:Photoset}
     <article class="post photo">
       <div class="span8">
-        {Photoset}
+        {block:Photos}
+          <img src="{PhotoURL-500}" class="img-photoset"/>
+        {/block:Photos}
       </div>
       <div class="span4">
         {block:Caption}
