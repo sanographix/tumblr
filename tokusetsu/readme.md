@@ -6,6 +6,18 @@ Tokusetsuは、同人音楽CDの特設サイトが簡単に作れる無料Tumblr
 HTMLの知識を必要とせず、フォームに情報を入力していくだけで特設サイトが作れます。  
 [@sanographix](https://twitter.com/sanographix)がデザインしています。
 
+<hr/>
+
+## [おしらせ] Tokusetsu 2 を作りました
+
+Tokusetsu をベースに、新しいデザインと多数の新機能を盛り込んだ [Tokusetsu  2](http://sanographix.github.io/tumblr/tokusetsu2/) を作りました。これから Tokusetsu を使いはじめるなら Tokusetsu 2 をおすすめします。
+
+紹介ページ→ <http://sanographix.github.io/tumblr/tokusetsu2/>
+
+（お知らせ終わり）
+
+<hr/>
+
 # 設定手順
 
 ## 1. インストールする
