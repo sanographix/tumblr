@@ -3,10 +3,9 @@
 #### Simple, Single column theme for Tumblr.
 
 
-## テーマガーデン版をインストール
+## !!Notice!!
 
-* テーマガーデンからインストールできるようになりました。通常はこちらを使ってください
-* <a href="http://www.tumblr.com/theme/35964">http://www.tumblr.com/theme/35964</a>
+* このテーマは **もうサポートしていません** 。どうしても使いたい場合は自己責任で利用してください。
 
 
 ## GitHub版を手動でインストールする

@@ -77,7 +77,7 @@ Apollo は、穏やかに日記を書きたい人のための無料Tumblrテン�
 
 ##### Q: 本当に無料ですか？
 * はい、無料です。
-    * もしこのテーマを気に入っていただけたら、何か寄付していただけると大変嬉しいです!!1（任意です）→ <http://www.amazon.co.jp/registry/wishlist/2QLOE7F0CGUSX>
+    * もしこのテーマを気に入っていただけたら、何か寄付していただけると大変嬉しいです!!1（任意です）  <http://www.amazon.co.jp/registry/wishlist/2QLOE7F0CGUSX>
 
 
 ##### Q: HTML とか CSS を改変してもいいですか？

@@ -129,7 +129,7 @@ Markdown については[こちらの解説記事](http://blog.2310.net/archives
 
 ##### Q: 本当に無料ですか？
 * はい、無料です。
-    * もしこのテーマを気に入っていただけたら、何か寄付していただけると大変嬉しいです!!1（任意です）→ <http://www.amazon.co.jp/registry/wishlist/2QLOE7F0CGUSX>
+    * もしこのテーマを気に入っていただけたら、何か寄付していただけると大変嬉しいです!!1（任意です）  <http://www.amazon.co.jp/registry/wishlist/2QLOE7F0CGUSX>
 
 ##### Q: 商用利用してもいいですか？
 * 問題ありません。どんどん利用してください。ただし Tumblr の利用規約に違反するコンテンツには使えません。
