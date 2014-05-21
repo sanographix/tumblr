@@ -168,12 +168,33 @@ hr.soften {
 
 // getstarted
 
+.layout-center,
 #getstarted,
 #related {
     text-align: center;
     h1 {
         font-size: 400%;
         margin-top: 0;
+    }
+}
+
+// saying
+
+#saying {
+    .row {
+        text-align: left;
+        & > div {
+            margin-bottom: 1.5em;
+        }
+    }
+    blockquote {
+        padding: 0 0 0 1em;
+        margin: 0;
+        p {
+            font-size: 16px;
+            line-height: 1.5em;
+            font-style: italic;
+        }
     }
 }
 

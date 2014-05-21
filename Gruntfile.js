@@ -13,6 +13,7 @@ module.exports = function(grunt){
                 },
                 // コンパイルするファイルの指定。左辺には出力先のCSSファイル、右辺には元となるLessファイルへのパス
                 files : {
+                    "zen/css/style.css" : "zen/css/style.less",
                     "croquis/css/style.css" : "croquis/css/style.less",
                     "css/style.css" : "css/style.less"
                 }
