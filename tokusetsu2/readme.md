@@ -153,7 +153,6 @@ HTML の知識を必要とせず、フォームに情報を入力していくだ
 
 ##### Q: 本当に無料ですか？
 * はい、無料です。
-    * もしこのテーマを気に入っていただけたら、何か寄付していただけると大変嬉しいです!!1（任意です） <http://www.amazon.co.jp/registry/wishlist/2QLOE7F0CGUSX>
 
 ##### Q: 商用利用してもいいですか？
 * 問題ありません。どんどん利用してください。ただし Tumblr の利用規約に違反するコンテンツには使えません。
@@ -162,7 +161,7 @@ HTML の知識を必要とせず、フォームに情報を入力していくだ
 * はい。MIT ライセンスですのでライセンスの範囲内で自由にカスタマイズできます。
     * なお、テーマを改変した場合はサポート対象外とします。
     
-##### Q: エロコンテンツに使っていいですか？
+##### Q: アダルトコンテンツに使っていいですか？
 * 使ってもいいですが Tumblr の設定ページで「NSFW指定」してください。
 
 ##### Q: このテーマを Wordpress に移植していいですか？
@@ -170,6 +169,24 @@ HTML の知識を必要とせず、フォームに情報を入力していくだ
 
 ##### Q: ページが何も表示されないんだけど壊れてる？
 * Tumblr か GitHub Pages が落ちていると思われます。しばらく待ってから再度開いてみてください。
+
+##### Q: 作者に寄付したいです
+
+* もしこのテーマを気に入っていただけたら、何か寄付していただけると大変嬉しいです（任意です）
+    * <http://www.amazon.co.jp/registry/wishlist/2QLOE7F0CGUSX>
+
+
+## Author
+
+#### Showkaku Sano (sanographix)
+
+Graphic designer from Kyoto.
+
+* [http://www.sanographix.net/](http://www.sanographix.net/)
+* [Twitter: @sanographix](https://twitter.com/sanographix)
+* [GitHub: sanographix](https://github.com/sanographix)
+
+本テーマの利用に関するいかなる被害・損害について、作者は一切の責任を負わないものとします。
 
 
 ## Changelog
@@ -193,20 +210,6 @@ HTML の知識を必要とせず、フォームに情報を入力していくだ
 ### 2.0.0 (2013/11/18)
 
 * 公開
-
-
-## Author
-
-#### Showkaku Sano (sanographix)
-
-Graphic designer from Kyoto.
-
-* [http://www.sanographix.net/](http://www.sanographix.net/)
-* [Twitter: @sanographix](https://twitter.com/sanographix)
-* [GitHub: sanographix](https://github.com/sanographix)
-
-本テーマの利用に関するいかなる被害・損害について、作者は一切の責任を負わないものとします。
-
 
 
 ## License

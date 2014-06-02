@@ -129,7 +129,6 @@ Markdown については[こちらの解説記事](http://blog.2310.net/archives
 
 ##### Q: 本当に無料ですか？
 * はい、無料です。
-    * もしこのテーマを気に入っていただけたら、何か寄付していただけると大変嬉しいです!!1（任意です）  <http://www.amazon.co.jp/registry/wishlist/2QLOE7F0CGUSX>
 
 ##### Q: 商用利用してもいいですか？
 * 問題ありません。どんどん利用してください。ただし Tumblr の利用規約に違反するコンテンツには使えません。
@@ -139,7 +138,7 @@ Markdown については[こちらの解説記事](http://blog.2310.net/archives
 * はい。MIT ライセンスですのでライセンスの範囲内で自由にカスタマイズできます。
     * なお、テーマを改変した場合はサポート対象外とします。
     
-##### Q: エロコンテンツに使っていいですか？
+##### Q: アダルトコンテンツに使っていいですか？
 * 使ってもいいですが Tumblr の設定ページで「NSFW指定」してください。
 
 #####  Q: このテーマを Wordpress に移植していいですか？
@@ -169,6 +168,24 @@ Markdown については[こちらの解説記事](http://blog.2310.net/archives
     * この Tumblr テーマは継続的に修正・変更を行っています。そのため、古いバージョンの HTML を使い続けているとスタイル崩れが生じる場合があります
     * それでも直らない場合はお問い合わせください
     * テーマの更新情報は[ブログ](http://memo.sanographix.net/)でお知らせしています。   
+
+##### Q: 作者に寄付したいです
+
+* もしこのテーマを気に入っていただけたら、何か寄付していただけると大変嬉しいです（任意です）
+    * <http://www.amazon.co.jp/registry/wishlist/2QLOE7F0CGUSX>
+    
+
+## Author
+
+#### Showkaku Sano (sanographix)
+
+Graphic designer from Kyoto.
+
+* [http://www.sanographix.net/](http://www.sanographix.net/)
+* [Twitter: @sanographix](https://twitter.com/sanographix)
+* [GitHub: sanographix](https://github.com/sanographix)
+
+本テーマの利用に関するいかなる被害・損害について、作者は一切の責任を負わないものとします。
 
 
 ## Changelog
@@ -214,18 +231,6 @@ Markdown については[こちらの解説記事](http://blog.2310.net/archives
 	* 背景画像変更可
 	* OGP 設定済
 	* ソースコードの大幅な整理
-
-## Author
-
-#### Showkaku Sano (sanographix)
-
-Graphic designer from Kyoto.
-
-* [http://www.sanographix.net/](http://www.sanographix.net/)
-* [Twitter: @sanographix](https://twitter.com/sanographix)
-* [GitHub: sanographix](https://github.com/sanographix)
-
-本テーマの利用に関するいかなる被害・損害について、作者は一切の責任を負わないものとします。
 
 ## License
 

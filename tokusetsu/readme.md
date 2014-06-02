@@ -141,7 +141,6 @@ Tokusetsu をベースに、新しいデザインと多数の新機能を盛り�
 
 ##### Q: 本当に無料ですか？
 * はい、無料です。
-    * もしこのテーマを気に入っていただけたら、何か寄付していただけると大変嬉しいです!!1（任意です） <http://www.amazon.co.jp/registry/wishlist/2QLOE7F0CGUSX>
 
 ##### Q: HTML とか CSS を改変してもいいですか？
 * はい。MIT ライセンスですのでライセンスの範囲内で自由にカスタマイズできます。
@@ -150,6 +149,23 @@ Tokusetsu をベースに、新しいデザインと多数の新機能を盛り�
 ##### Q: このテーマを Wordpress に移植していいですか？
 * はい、歓迎します。
 
+##### Q: 作者に寄付したいです
+
+* もしこのテーマを気に入っていただけたら、何か寄付していただけると大変嬉しいです（任意です）
+    * <http://www.amazon.co.jp/registry/wishlist/2QLOE7F0CGUSX>
+    
+
+## Author
+
+#### Showkaku Sano (sanographix)
+
+Graphic designer from Kyoto.
+
+* [http://www.sanographix.net/](http://www.sanographix.net/)
+* [Twitter: @sanographix](https://twitter.com/sanographix)
+* [GitHub: sanographix](https://github.com/sanographix)
+
+本テーマの利用に関するいかなる被害・損害について、作者は一切の責任を負わないものとします。
 
 
 ## Changelog
@@ -165,18 +181,6 @@ Tokusetsu をベースに、新しいデザインと多数の新機能を盛り�
 
 * 公開
 
-
-## Author
-
-#### Showkaku Sano (sanographix)
-
-Graphic designer from Kyoto.
-
-* [http://www.sanographix.net/](http://www.sanographix.net/)
-* [Twitter: @sanographix](https://twitter.com/sanographix)
-* [GitHub: sanographix](https://github.com/sanographix)
-
-本テーマの利用に関するいかなる被害・損害について、作者は一切の責任を負わないものとします。
 
 
 <hr />

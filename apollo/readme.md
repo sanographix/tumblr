@@ -77,8 +77,6 @@ Apollo は、穏やかに日記を書きたい人のための無料Tumblrテン�
 
 ##### Q: 本当に無料ですか？
 * はい、無料です。
-    * もしこのテーマを気に入っていただけたら、何か寄付していただけると大変嬉しいです!!1（任意です）  <http://www.amazon.co.jp/registry/wishlist/2QLOE7F0CGUSX>
-
 
 ##### Q: HTML とか CSS を改変してもいいですか？
 * はい。MIT ライセンスですのでライセンスの範囲内で自由にカスタマイズできます。
@@ -87,7 +85,7 @@ Apollo は、穏やかに日記を書きたい人のための無料Tumblrテン�
 ##### Q: このテーマを Wordpress に移植していいですか？
 * はい、歓迎します。
 
-##### Q: エロコンテンツに使っていいですか？
+##### Q: アダルトコンテンツに使っていいですか？
 * 使ってもいいですが Tumblr の設定ページで **必ず** 「NSFW指定」してください。
 
 ##### Q: ページが何も表示されない
@@ -111,6 +109,23 @@ Apollo は、穏やかに日記を書きたい人のための無料Tumblrテン�
     * それでも直らない場合はお問い合わせください
     * テーマの更新情報は[ブログ](http://memo.sanographix.net/)でお知らせしています。   
     
+##### Q: 作者に寄付したいです
+
+* もしこのテーマを気に入っていただけたら、何か寄付していただけると大変嬉しいです（任意です）
+    * <http://www.amazon.co.jp/registry/wishlist/2QLOE7F0CGUSX>
+
+
+## Author
+
+#### Showkaku Sano (sanographix)
+
+Graphic designer from Kyoto.
+
+* [http://www.sanographix.net/](http://www.sanographix.net/)
+* [Twitter: @sanographix](https://twitter.com/sanographix)
+* [GitHub: sanographix](https://github.com/sanographix)
+
+本テーマの利用に関するいかなる被害・損害について、作者は一切の責任を負わないものとします。
 
 ## Changelog
 
@@ -158,19 +173,6 @@ Apollo は、穏やかに日記を書きたい人のための無料Tumblrテン�
 ### 1.0.0 (2014/03/05)
 
 * とりあえず公開
-
-
-## Author
-
-#### Showkaku Sano (sanographix)
-
-Graphic designer from Kyoto.
-
-* [http://www.sanographix.net/](http://www.sanographix.net/)
-* [Twitter: @sanographix](https://twitter.com/sanographix)
-* [GitHub: sanographix](https://github.com/sanographix)
-
-本テーマの利用に関するいかなる被害・損害について、作者は一切の責任を負わないものとします。
 
 
 ## License

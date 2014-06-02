@@ -88,7 +88,7 @@ ZENは、Tumblrで普通に日記を書く用途にこだわったテンプレ�
 ##### Q: このテーマを Wordpress に移植していいですか？
 * はい、歓迎します。
 
-##### Q: エロコンテンツに使っていいですか？
+##### Q: アダルトコンテンツに使っていいですか？
 * 使ってもいいですが Tumblr の設定ページで「NSFW指定」してください。
 
 ##### Q: ページが何も表示されない
@@ -96,6 +96,7 @@ ZENは、Tumblrで普通に日記を書く用途にこだわったテンプレ�
 
 ##### Q: Disqusコメントフォームが真っ白なんですけど
 * こういう状態
+
 
 ![](https://31.media.tumblr.com/fe384cb30df6a0291753b25b2d4eb69f/tumblr_inline_my253rnbRm1qaxsyz.png)
 
@@ -112,6 +113,24 @@ ZENは、Tumblrで普通に日記を書く用途にこだわったテンプレ�
     * この Tumblr テーマは継続的に修正・変更を行っています。そのため、古いバージョンの HTML を使い続けているとスタイル崩れが生じる場合があります
     * それでも直らない場合はお問い合わせください
     * テーマの更新情報は[ブログ](http://memo.sanographix.net/)でお知らせしています。   
+
+##### Q: 作者に寄付したいです
+
+* もしこのテーマを気に入っていただけたら、何か寄付していただけると大変嬉しいです（任意です）
+    * <http://www.amazon.co.jp/registry/wishlist/2QLOE7F0CGUSX>
+    
+
+## Author
+
+#### Showkaku Sano (sanographix)
+
+Graphic designer from Kyoto.
+
+* [http://www.sanographix.net/](http://www.sanographix.net/)
+* [Twitter: @sanographix](https://twitter.com/sanographix)
+* [GitHub: sanographix](https://github.com/sanographix)
+
+本テーマの利用に関するいかなる被害・損害について、作者は一切の責任を負わないものとします。
 
 
 ## Changelog
@@ -315,18 +334,6 @@ ZENは、Tumblrで普通に日記を書く用途にこだわったテンプレ�
 
 * 公開
 
-
-## Author
-
-#### Showkaku Sano (sanographix)
-
-Graphic designer from Kyoto.
-
-* [http://www.sanographix.net/](http://www.sanographix.net/)
-* [Twitter: @sanographix](https://twitter.com/sanographix)
-* [GitHub: sanographix](https://github.com/sanographix)
-
-本テーマの利用に関するいかなる被害・損害について、作者は一切の責任を負わないものとします。
 
 
 <hr />
