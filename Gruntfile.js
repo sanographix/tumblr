@@ -15,6 +15,7 @@ module.exports = function(grunt){
                 files : {
                     "zen/css/style.css" : "zen/css/style.less",
                     "apollo/css/style.css" : "apollo/css/style.less",
+                    "tokusetsu2/css/style.css" : "tokusetsu2/css/style.less",
                     "croquis/css/style.css" : "croquis/css/style.less",
                     "css/style.css" : "css/style.less"
                 }
@@ -26,11 +27,7 @@ module.exports = function(grunt){
             less : {
                 // "files"セクションで監視するファイルの条件を指定
                 files : [
-                    "*/*.less",
-                    "*/*/*.less",
-                    "*/*/*/*.less",
-                    "*/*/*/*/*.less",
-                    "*/*/*/*/*/*.less"
+                    "**/*.less"
                 ],
                 // "tasks"セクションで実行するタスクを指定
                 tasks : [
