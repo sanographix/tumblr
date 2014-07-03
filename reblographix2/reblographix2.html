@@ -243,6 +243,10 @@
 
           <!-- post: ビデオ -->
           {block:Video}
+            {block:VideoThumbnail}
+            <div class="photo-thumb" style="background-image:url({VideoThumbnailURL});">
+            </div>
+            {/block:VideoThumbnail}
             <i class="icon-film"></i>
             {block:Caption}
               <div class="post-thumb">
