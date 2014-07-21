@@ -196,6 +196,10 @@ Graphic designer from Kyoto.
 
 ## Changelog
 
+### 2.0.6 (2014/07/22)
+
+* Facebook Like ボタンの位置がずれるのを修正
+
 ### 2.0.5 (2014/07/02)
 
 * ヘッダナビゲーションの固定をやめる
