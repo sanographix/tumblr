@@ -320,7 +320,12 @@
           {/block:IfEnableTweetButton}
           {block:IfEnableFacebookButton}
           <li class="social-button">
-            <div class="fb-like" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false"></div>
+            {block:IndexPage}
+              <div class="fb-like" data-url="{BlogURL}" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false"></div>
+            {/block:IndexPage}
+            {block:PermalinkPage}
+              <div class="fb-like" data-url="{Permalink}" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false"></div>
+            {/block:PermalinkPage}
           </li>
           {/block:IfEnableFacebookButton}
           {block:IfEnableBookmarkButton}
