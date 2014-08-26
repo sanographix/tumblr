@@ -23,7 +23,6 @@
   <meta name="text:Your Google Plus ID" content=""/>
   <meta name="text:Your Pixiv ID" content=""/>
   <meta name="text:Tumblr API Key" content="" />
-  <meta name="text:Blog Domain" content="" />
   <meta name="text:Disqus Shortname" content="" />
 
   <meta name="if:Show Exif" content="1" />
@@ -38,12 +37,19 @@
   <link rel="shortcut icon" href="{Favicon}">
   <link rel="alternate" type="application/rss+xml" href="{RSS}">
   <link rel="apple-touch-icon" href="{PortraitURL-128}">
-  <link rel="canonical" href="{Permalink}"/>
+  {block:IndexPage}
+    <link rel="canonical" href="{BlogURL}"/>
+    <meta property="og:url" content="{BlogURL}" />
+  {/block:IndexPage}
+  {block:PermalinkPage}
+    <link rel="canonical" href="{Permalink}"/>
+    <meta property="og:url" content="{Permalink}" />
+  {/block:PermalinkPage}
+
 
   <!-- OGP -->
   <meta property="og:title" content="{block:PostTitle}{PostTitle} - {/block:PostTitle}{Title}" />
   <meta property="og:type" content="article" />
-  <meta property="og:url" content="{block:IndexPage}http://{text:Blog Domain}{/block:IndexPage}{block:PermalinkPage}{Permalink}{/block:PermalinkPage}" />
   <meta property="og:image" content="{PortraitURL-128}" />
   <!-- Twitter tags -->
   <meta name="twitter:image" content="{PortraitURL-128}" />

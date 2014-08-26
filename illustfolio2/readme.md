@@ -59,7 +59,6 @@ Tumblr の[テーマカスタマイズ画面](http://www.tumblr.com/customize)�
 
 | 設定項目 | 説明 |
 |-------|-----|
-|Blog Domain|あなたのブログドメインを入力してください。（例： illustfolio2.tumblr.com）|
 |Disqus Shortname|記事にコメント欄を設置したい場合は、ここに Disqus Shortname を入力します。|
 |Google Analytics ID|Googleアナリティクスを使いたい場合は、ここにトラッキングIDを入力します。（例： UA-0000000-0）|
 |Tumblr API Key|ステップ2で取得した API キーを入力します。|
@@ -190,6 +189,10 @@ Graphic designer from Kyoto.
 
 ## Changelog
 
+### 2.3.1 (2014/08/27)
+* `Blog Domain`オプションを廃止
+    * ブログURLを取得するテンプレートタグがTumblr側で実装されたため
+    
 ### 2.3.0 (2014/04/16)
 
 * フォトセットをレスポンシブデザイン対応
