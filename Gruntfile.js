@@ -15,6 +15,7 @@ module.exports = function(grunt){
                 files : {
                     "zen/css/style.css" : "zen/css/style.less",
                     "apollo/css/style.css" : "apollo/css/style.less",
+                    "illustfolio/css/style.css" : "illustfolio/css/style.less",
                     "tokusetsu2/css/style.css" : "tokusetsu2/css/style.less",
                     "croquis/css/style.css" : "croquis/css/style.less",
                     "css/style.css" : "css/style.less"
