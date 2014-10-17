@@ -16,9 +16,10 @@
 
 ### テーマガーデン版
 
-- 基本的に<strong>修正しません。</strong>ので使っている途中でスタイルが変わったりしません。
-- [こ↑こ↓](http://www.tumblr.com/themes/by/reblographix)からインストールできます
-
+- Tumblrから直接インストールできるようにしたものです
+- ここからインストールできます
+    - <https://www.tumblr.com/themes/by/sanographix-theme>
+- テーマガーデン版は、Tumblrのテーマガイドラインに適合させるため、GitHub版より仕様を削っています。
 
 ## License
 
