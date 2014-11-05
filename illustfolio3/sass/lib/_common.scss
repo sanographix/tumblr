@@ -1,0 +1,24 @@
+// Common
+
+body {
+    font-family: 'proxima-nova', 'Avenir Next', 'Helvetica Neue', Helvetica, Arial, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif;
+    background: $bg;
+    color: $base;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    color: $link;
+
+    &:hover {
+        color: $hover;
+    }
+
+}
+
+h1,h2,h3,h4,h5,h6 {
+    a,a:hover {
+        color: $base;
+        text-decoration: none;
+    }
+}

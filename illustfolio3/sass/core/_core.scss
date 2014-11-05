@@ -1,0 +1,385 @@
+// Core (Main Style)
+// common
+
+.hlabel {
+    background-color: rgba(255,255,255,.75);
+    line-height: .8em;
+    display: inline-block;
+    padding: .1em .2em;
+    &.nopadding {
+        padding: 0;
+    }
+}
+
+.section {
+    padding: 3em 0;
+
+    &.gray-bg {
+        background-color: $bg-light;
+    }
+
+    &.primary-bg {
+        background-color: $link;
+        color: #fff;
+        h1,h2,h3,h4,h5,h6 {
+            color: #fff;
+        }
+
+    }
+
+    h1,h2,h3,h4,h5,h6 {
+        font-weight: normal;
+        color: $link;
+    }
+
+}
+
+p {
+    line-height: 1.7;
+}
+
+// navbar
+
+.navbar {
+    position: absolute; // スマホだけ, pcはfixedにする（media-queries.scssで）
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    background-color: rgba(255,255,255,.6);
+    -webkit-transition: all .2s;
+    transition: all .2s;
+
+    .container {
+        padding: .8em 0;
+        -webkit-transition: all .2s;
+        transition: all .2s;
+    }
+}
+
+.navbar-box {
+    display: table;
+    width: 100%;
+}
+
+.pull-left,
+.pull-right {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.pull-right {
+    text-align: right;
+}
+
+.navbar-header {
+    vertical-align: middle;
+    display: inline-block;
+    a {
+        color: $base;
+        text-decoration: none;
+    }
+}
+
+.navbar-brand {
+    font-size: 160%;
+    font-weight: normal;
+    display: inline-block;
+    margin-right: .4em;
+}
+
+.nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+
+    li {
+        display: inline-block;
+
+        a {
+            display: inline-block;
+            text-decoration: none;
+            color: $base;
+            -webkit-transition: all .3s;
+            transition: all .3s;
+
+            &:hover {
+                color: $link;
+            }
+        }
+    }
+}
+
+.btn-tw {
+    background-color: yellow;
+    color: #fff;
+}
+
+// header
+
+.header {
+    background: url('../images/header.jpg') no-repeat center top;
+    height: 760px;
+}
+
+.heading-label {
+    display: block;
+    color: $link;
+    letter-spacing: .8em;
+    line-height: 1.5;
+    margin: 0 0 .5em;
+    font-size: 80%;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.hero {
+    padding-top: 200px;
+
+    .heading-label {
+        margin-left: .5em;
+    }
+
+    h1,h2 {
+        color: $link;
+    }
+
+    h1 {
+        margin: 0 0 10px 0;
+        line-height: .8em;
+        font-size: 850%;
+        font-weight: 300;
+    }
+
+    h2 {
+        margin: 0;
+        font-size: 140%;
+        font-weight: normal;
+    }
+
+    .btn-wrapper {
+        margin-top: 1em;
+    }
+
+}
+
+// section
+
+.section-header {
+    text-align: center;
+    margin-bottom: 2em;
+
+    h1 {
+        margin: 0 0 .2em;
+        line-height: 1;
+        font-weight: 100;
+        color: $link;
+        font-size: 300%;
+    }
+
+    h2 {
+        margin: 0;
+        font-weight: 300;
+        color: $link;
+    }
+}
+
+// intro
+
+.intro {
+    overflow: hidden;
+}
+
+// key-features
+
+.key-features {
+    position: relative;
+    min-height: 900px;
+
+    .screenshot {
+        position: absolute;
+        top: 0;
+        left: 520px;
+        width: 630px;
+        box-shadow: 0 30px 30px rgba(0,0,0,.3);
+    }
+
+    .section {
+        padding: 0 0 0 80px;
+        margin-bottom: 3em;
+        position: relative;
+
+        .icon {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+
+        &:first-child {
+            margin-top: 100px;
+        }
+    }
+
+    h3 {
+        color: $link;
+        margin: 0 0 .3em;
+        font-size: 150%;
+    }
+
+    p {
+        font-size: 90%;
+    }
+}
+
+// features
+
+.features {
+    .row {
+        text-align: center;
+    }
+
+    .ss {
+        border-radius: 4px;
+    }
+}
+
+.features-primary {
+    margin-bottom: 1em;
+}
+
+.features-secondary {
+    h4 {
+        margin-top: 0;
+    }
+
+    .span3 {
+        margin-bottom: 1em;
+    }
+}
+
+// getstarted
+
+.getstarted {
+    .btn-wrapper {
+        text-align: center;
+    }
+
+    .section-header h1 {
+        font-size: 400%;
+    }
+}
+
+// gigazineとかshareとか
+
+.footer-aside {
+    text-align: center;
+
+    .section {
+        padding-top: 0;
+    }
+}
+
+// ソーシャルボタン
+.social-share-units {
+    padding: 0;
+    margin: 1em 0;
+    list-style: none;
+
+    li {
+        display: inline-block;
+    }
+
+    .btn {
+        padding: .8em 1.5em;
+        font-size: 100%;
+        line-height: 1;
+        img {
+            vertical-align: middle;
+        }
+    }
+}
+
+// gigazine とか
+
+.ul-featuredon {
+    display: inline-block;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    li {
+        padding: 0 30px;
+        display: inline-block;
+        vertical-align: bottom;
+    }
+    .gigazine,
+    .moongift {
+        opacity: .4;
+        -webkit-transition: all .3s;
+        transition: all .3s;
+        &:hover {
+            opacity: .8;
+        }
+    }
+}
+
+// getmore
+
+.thumbnail {
+    display: block;
+    height: auto;
+    max-width: 100%;
+    padding: 4px;
+    margin-bottom: 20px;
+    line-height: 1.428571429;
+    background-color: #fff;
+    border: 1px solid $border;
+    border-radius: 4px;
+    text-decoration: none;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+
+    &:hover {
+        border-color: $link;
+    }
+
+    & > img {
+        display: block;
+        height: auto;
+        max-width: 100%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .caption {
+        padding: 9px;
+        color: #333;
+        text-align: left;
+    }
+
+    h4 {
+        font-size: 120%;
+        margin: .2em 0;
+        font-weight: normal;
+    }
+
+    p {
+        font-size: 80%;
+        margin: 0;
+        color: $light;
+    }
+}
+
+// footer
+
+.footer {
+    padding: 0 0 1.5em 0;
+    font-size: 90%;
+    text-align: center;
+    color: $light;
+    .container {
+        border-top: 1px solid $border;
+        padding-top: 1.5em;
+    }
+}

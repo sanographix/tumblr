@@ -1,0 +1,17 @@
+{
+  "name": "rin-html-template",
+  "version": "0.1.0",
+  "description": "",
+  "author": "",
+  "license": "",
+  "devDependencies": {
+    "grunt": "~0.4.0",
+    "grunt-contrib-watch": "*",
+    "grunt-contrib-imagemin": "~0.7.1",
+    "grunt-pngmin": "~0.6.1",
+    "grunt-contrib-concat": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-connect": "*",
+    "grunt-contrib-compass": "~0.9.1"
+  }
+}

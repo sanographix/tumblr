@@ -1,0 +1,225 @@
+// Media Queries - Retina Display
+
+// Retina のデバイス全部に出す
+
+@media
+(-webkit-min-device-pixel-ratio: 2),
+(            min-resolution: 2dppx) {
+
+}
+
+// Retina かつ iPad 以上のときに出す
+
+@media
+(-webkit-min-device-pixel-ratio: 2) and (min-device-width: 768px),
+(            min-resolution: 2dppx) and (min-device-width: 768px) {
+
+}
+
+// Retina かつ PC のときだけに出す
+
+@media
+(-webkit-min-device-pixel-ratio: 2) and (min-device-width: 1025px),
+(            min-resolution: 2dppx) and (min-device-width: 1025px) {
+
+}
+
+// Media Queries - Large Display
+
+@media (min-width: 1240px) {
+
+// key-features
+
+.key-features {
+    .screenshot {
+        left: 630px;
+    }
+}
+
+}
+
+// Media Queries - Tablet
+
+@media (min-width: 768px) and (max-width: 1040px) {
+
+.hero h1 {
+    font-size: 650%;
+}
+
+.key-features .screenshot {
+    left: 380px;
+}
+
+}
+
+// navbar固定はスマホではやらない
+@media (min-width: 768px) {
+
+.navbar {
+    position: fixed;
+
+    // ちょっとスクロールしたとき
+    &.fixed {
+        background-color: #fff;
+        box-shadow: (0 0 10px rgba(0,0,0,.3));
+
+        .container {
+          padding: .3em 0 0 0;
+        }
+    }
+}
+
+}
+
+// Media Queries - Small Tablet & Smartphone
+
+@media (max-width: 767px) {
+
+.btn-lg {
+    margin-bottom: .3em;
+}
+
+.navbar-box {
+    display: block;
+}
+
+.pull-left {
+    display: block;
+    text-align: center;
+}
+
+.pull-right {
+    display: none;
+}
+
+.header {
+    height: 450px;
+    background-size: cover;
+}
+
+.hero {
+    padding-top: 200px;
+    text-align: center;
+
+    h1 {
+        font-size: 500%;
+    }
+
+    h2 {
+        font-size: 100%;
+    }
+}
+
+.hlabel {
+    background-color: #fff;
+}
+
+.btn-lg {
+    font-size: 130%;
+}
+
+.section-header {
+    h1 {
+        font-size: 200%;
+    }
+
+    h2 {
+        font-size: 130%;
+    }
+}
+
+.key-features {
+    position: static;
+    margin-left: 0;
+    margin-right: 0;
+
+    .span6 {
+        padding-left: 0;
+        padding-right: 0;
+        display: block;
+        width: auto;
+    }
+
+    .screenshot {
+        position: static;
+        width: 100%;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    }
+
+    .section {
+        &:first-child {
+            margin-top: 2em;
+        }
+    }
+}
+
+.features-primary {
+
+    h3 {
+        margin: .4em 0;
+    }
+
+    .span4 {
+        margin-bottom: 2.5em;
+    }
+}
+
+.social-share-units {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+
+    li {
+        display: table-cell;
+        &:last-child {
+            padding-right: 0;
+        }
+    }
+
+    .btn {
+        width: 100%;
+        font-size: 90%;
+        box-sizing: border-box;
+        padding: 1em 0;
+        border-radius: 0;
+        img {
+            width: 14px;
+            height: 14px;
+        }
+    }
+}
+
+}
+
+// Media Queries - Smartphone
+
+@media (max-width: 480px) {
+
+body {
+    font-size: 90%;
+}
+
+.header {
+    height: 350px;
+}
+
+.hero {
+    padding-top: 160px;
+    h1 {
+        font-size: 370%;
+    }
+}
+
+.btn-lg {
+    width: 100%;
+}
+
+.section-header {
+    h2 {
+        font-size: 110%;
+    }
+}
+
+
+
+}

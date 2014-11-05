@@ -1,0 +1,78 @@
+// buttons
+
+.btn {
+    display: inline-block;
+    text-align: center;
+    padding: .6em 1.2em;
+    cursor: pointer;
+    line-height: 1.5;
+    font-size: 90%;
+    @include border-radius(.5em);
+    overflow: hidden;
+    color: $link;
+    text-decoration: none;
+    border: 1px solid $link;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+    &:hover {
+        border-color: $hover;
+        text-decoration: none;
+    }
+    img {
+        vertical-align: middle;
+    }
+}
+
+.btn-primary {
+    background-color: $btn-primary;
+    color: #fff;
+    border: 1px solid #fff;
+    &:hover {
+        background-color: $btn-primary-hover;
+        color: #fff;
+        border-color: #fff;
+    }
+}
+
+.btn-lg {
+    padding: .6em 2em;
+    font-size: 150%;
+    border-width: 3px;
+    @include box-sizing(border-box);
+    @include border-radius(.5em);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.btn.btn-tw {
+    color: #fff;
+    background-color: $btn-tw;
+    border-color: transparent;
+    @include border-radius(.2em);
+    &:hover {
+        background-color: darken($btn-tw, 8%);
+        color: #fff;
+    }
+}
+
+.btn.btn-fb {
+    color: #fff;
+    background-color: $btn-fb;
+    border-color: transparent;
+    @include border-radius(.2em);
+    &:hover {
+        background-color: darken($btn-fb, 8%);
+        color: #fff;
+    }
+}
+
+.btn.btn-b {
+    color: #fff;
+    background-color: $btn-b;
+    border-color: transparent;
+    @include border-radius(.2em);
+    &:hover {
+        background-color: darken($btn-b, 8%);
+        color: #fff;
+    }
+}
