@@ -6,7 +6,7 @@ llustfolio 3 は、イラストのポートフォリオサイトに特化した�
 
 デモページはこちらです。
 
-<http://illustfolio3-sanographxtheme.tumblr.com/>
+<http://illustfolio3-sanographixtheme.tumblr.com/>
 
 
 ## インストール手順
