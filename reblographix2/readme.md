@@ -1,6 +1,10 @@
 # Reblographix 2
 
-#### Free responsive tumblr template
+## !!Notice!!
+
+* このテーマは **もうサポートしていません** 。どうしても使いたい場合は自己責任で利用してください。
+
+## Free responsive tumblr template
 
 Reblographix 2 は、大量の画像を Reblog する人のための Tumblr テーマです。  
 [@sanographix](https://twitter.com/sanographix)がデザインしています。
@@ -47,7 +51,7 @@ Reblographix 2 は、大量の画像を Reblog する人のための Tumblr テ�
 * HTML を編集する必要はありません。コピペだけで使えます。
 
 ##### Q: 商用利用してもいいですか？
-* 問題ありません。どんどん利用してください。ただし Tumblr の利用規約に違反するコンテンツには使* えません。
+* 問題ありません。どんどん利用してください。ただし Tumblr の利用規約に違反するコンテンツには使えません。
 
 ##### Q: 本当に無料ですか？
 * はい、無料です。
@@ -62,21 +66,11 @@ Reblographix 2 は、大量の画像を Reblog する人のための Tumblr テ�
 ##### Q: ページが何も表示されないんだけど壊れてる？
 * Tumblr か GitHub Pages が落ちていると思われます。しばらく待ってから再度開いてみてください。
 
-##### Q: なんか見た目が崩れてます / 画像の端が切れて表示されます
-
-* 最新バージョンのテーマ HTML を再度 Tumblr に適用してみてください。
-    * この Tumblr テーマは継続的に修正・変更を行っています。そのため、古いバージョンの HTML を使い続けているとスタイル崩れが生じる場合があります
-    * それでも直らない場合はお問い合わせください
-    * テーマの更新情報は[ブログ](http://memo.sanographix.net/)でお知らせしています。   
-
 ##### Q: 作者に寄付したいです
 
 * もしこのテーマを気に入っていただけたら、何か寄付していただけると大変嬉しいです（任意です）
     * <http://www.amazon.co.jp/registry/wishlist/2QLOE7F0CGUSX>
 
-##### Q: 上記以外の質問
-
-* [メールフォーム](http://www.sanographix.net/contact/)よりお問い合わせください。なお、HTML/CSS/JSのカスタマイズについてのサポートは行っていません。
 
 ## Author
 
