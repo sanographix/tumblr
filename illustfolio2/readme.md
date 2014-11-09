@@ -8,6 +8,18 @@ llustfolio 2 は、イラストのポートフォリオサイトに特化した�
 Tumblr に画像をアップロードするだけで簡単にポートフォリオサイトが作れます。  
 [@sanographix](https://twitter.com/sanographix) がデザインしています。
 
+<hr/>
+
+## [おしらせ] Illustfolio 3 を作りました
+
+Illustfolio をベースに、新しいデザインと多数の新機能を盛り込んだ [Illustfolio 3](http://sanographix.github.io/tumblr/illustfolio3/) を作りました。これから Illustfolio を使いはじめるなら Illustfolio 3 をおすすめします。
+
+紹介ページ→ <http://sanographix.github.io/tumblr/illustfolio3/>
+
+（お知らせ終わり）
+
+<hr/>
+
 ## デモページを見る
 
 デモページはこちらです。
