@@ -259,6 +259,35 @@ p {
     }
 }
 
+// 導入事例
+.case {
+    .span4 {
+        margin-bottom: 2em;
+        text-align: center;
+
+        a {
+            color: $base;
+
+            img {
+                -webkit-transition: all .2s;
+                transition: all .2s;
+            }
+
+            &:hover {
+                color: $hover;
+                img {
+                    box-shadow: 0 5px 10px rgba(0,0,0,.3);
+                }
+            }
+        }
+
+        span {
+            display: inline-block;
+            padding-top: .5em;
+        }
+    }
+}
+
 // getstarted
 
 .getstarted {
