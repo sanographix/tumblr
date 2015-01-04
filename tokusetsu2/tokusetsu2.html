@@ -99,7 +99,6 @@
   <meta name="if:Enable Bookmark Button" content="1"/>
   <meta name="if:Enable Plus1 Button" content="1"/>
 
-  <meta name="text:Blog Domain" content="" />
   <meta name="image:Main Image" content="//sanographix.github.io/public/tumblr/tokusetsu2/images/header-template.jpg"/>
   <meta name="image:Jacket" content=""/>
   <meta name="image:Banner1" content=""/>
@@ -122,7 +121,6 @@
   {block:IfMainImageImage}
     <meta property="og:image" content="{image:Main Image}" />
   {/block:IfMainImageImage}
-  <meta property="og:url" content="{block:IndexPage}http://{text:Blog Domain}{/block:IndexPage}{block:PermalinkPage}{Permalink}{/block:PermalinkPage}" />
   <meta property="og:site_name" content="{Title}" />
   {block:Description}
     <meta property="og:description" content="{MetaDescription}">
@@ -131,7 +129,14 @@
   <link rel="stylesheet" href="//sanographix.github.io/public/tumblr/tokusetsu2/css/style.css" />
   <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,700,300italic' rel='stylesheet' type='text/css'>
   <link rel="shortcut icon" href="{Favicon}">
-  <link rel="canonical" href="{block:IndexPage}http://{text:Blog Domain}{/block:IndexPage}{block:PermalinkPage}{Permalink}{/block:PermalinkPage}"/>
+  {block:IndexPage}
+    <link rel="canonical" href="{BlogURL}"/>
+    <meta property="og:url" content="{BlogURL}" />
+  {/block:IndexPage}
+  {block:PermalinkPage}
+    <link rel="canonical" href="{Permalink}"/>
+    <meta property="og:url" content="{Permalink}" />
+  {/block:PermalinkPage}
 
   <!--[if lt IE 9]>
     <script src="//sanographix.github.io/public/tumblr/tokusetsu2/js/html5shiv.js"></script>

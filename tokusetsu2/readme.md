@@ -63,8 +63,6 @@ HTML の知識を必要とせず、フォームに情報を入力していくだ
 | Enable Tweet Button | ツイートボタンを表示します。 | |
 | Enable Bookmark Button | はてなブックマークボタンを表示します。 | |
 | Enable Plus1 Button | Google+「+1」ボタンを表示します。| |
-| Blog Domain | 設定するブログのドメイン（URL から http:// を抜いたやつ）を入力してください。 | tokusetsu2.tumblr.com |
-
 
 | 設定項目 | 説明 | 設定例 |
 |-------|-----|-----|
@@ -196,6 +194,10 @@ Graphic designer from Kyoto.
 
 
 ## Changelog
+
+### 2.0.8 (2015/01/04)
+
+* 設定項目`Blog Domain`を省略した
 
 ### 2.0.7 (2014/08/05)
 
