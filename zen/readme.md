@@ -120,7 +120,7 @@ ZENは、Tumblrで普通に日記を書く用途にこだわったテンプレ�
 
 ##### Q: 上記以外の質問
 
-[メールフォーム](http://www.sanographix.net/contact/)よりお問い合わせください。なお、HTML/CSS/JSのカスタマイズについてのサポートは行っていません。    
+* [メールフォーム](http://www.sanographix.net/contact/)よりお問い合わせください。なお、HTML/CSS/JSのカスタマイズについてのサポートは行っていません。    
 
 ## Author
 
