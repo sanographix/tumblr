@@ -117,7 +117,10 @@ ZENは、Tumblrで普通に日記を書く用途にこだわったテンプレ�
 
 * もしこのテーマを気に入っていただけたら、何か寄付していただけると大変嬉しいです（任意です）
     * <http://www.amazon.co.jp/registry/wishlist/2QLOE7F0CGUSX>
-    
+
+##### Q: 上記以外の質問
+
+* [メールフォーム](http://www.sanographix.net/contact/)よりお問い合わせください。なお、HTML/CSS/JSのカスタマイズについてのサポートは行っていません。    
 
 ## Author
 
