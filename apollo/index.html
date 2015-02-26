@@ -87,12 +87,27 @@
   }(document, 'script', 'facebook-jssdk'));</script>
 
   <nav class="navbar navbar-default" role="navigation">
-    <div class="navbar-inner">
+    <div class="navbar-inner container">
       <div class="navbar-header">
         <a class="navbar-brand" href="/">Apollo</a>
       </div>
       <div class="nav navbar-nav navbar-right">
-      <a href="http://sanographix.github.io/tumblr/"><span class="themes">Tumblr Themes</span> by sanographix</a>
+        <ul class="navbar-ul">
+          <li id="socialarea_twitter">
+            <a href="https://twitter.com/share?text=Apollo - 穏やかに日記を書きたい人のためのTumblrテーマ&url=http://sanographix.github.io/tumblr/apollo/" class="btn btn-tw" onClick="ga('send', 'event', 'share-twitter', 'Click', 'navbar');">
+              <img src="http://static.tumblr.com/xlsgtjb/mmZndl3sh/twitter.svg" width="14px">
+              <span class="label">Tweet</span>
+              <span class="count" style="font-weight:bold;"></span>
+            </a>
+          </li>
+          <li id="socialarea_facebook">
+            <a href="http://www.facebook.com/sharer.php?u=http://sanographix.github.io/tumblr/apollo/" class="btn btn-fb" onClick="ga('send', 'event', 'share-facebook', 'Click', 'navbar');">
+              <img src="http://static.tumblr.com/xlsgtjb/dB1ndl3rn/facebook.svg" width="14px">
+              <span class="label">Share</span>
+              <span class="count" style="font-weight:bold;"></span>
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
   </nav>
@@ -466,6 +481,46 @@
 
   <script type="text/javascript" src="//use.typekit.net/nqb4sxc.js"></script>
   <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script>
+    // Facebookの反応（いいねとシェアの数）を取得
+    function get_social_count_facebook(url, counterId) {
+      $.ajax({
+        url:'https://graph.facebook.com/',
+        dataType:'jsonp',
+        data:{
+          id:url
+        },
+        success:function(res){
+          $('#' + counterId + ' .count').text( res.shares || 0 );
+        },
+        error:function(){
+          $('#' + counterId + ' .count').text('');
+        }
+      });
+    }
+    // Twitterの反応（ツイートやリツイート数）を取得
+    function get_social_count_twitter(url, counterId) {
+      $.ajax({
+        url:'http://urls.api.twitter.com/1/urls/count.json',
+        dataType:'jsonp',
+        data:{
+          url:url
+        },
+        success:function(res){
+          $('#' + counterId + ' .count').text( res.count || 0 );
+        },
+        error:function(){
+          $('#' + counterId + ' .count').text('');
+        }
+      });
+    }
+    $(function(){
+      get_social_count_facebook( "location.href", "socialarea_facebook");
+      get_social_count_twitter( "location.href", "socialarea_twitter");
+    });
+  </script>
 
 </body>
 </html>

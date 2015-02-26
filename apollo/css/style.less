@@ -11,6 +11,10 @@
 
 // Common
 
+html {
+    margin-top: 55px;
+}
+
 html,
 body {
     font-family: 'futura-pt', 'Futura', 'Helvetica Neue', 'Helvetica', 'Arial', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
@@ -84,6 +88,40 @@ h1,h2,h3,h4,h5,h6 {
     border-width: 2px;
 }
 
+.btn.btn-tw {
+    color: #fff;
+    background-color: @btn-tw;
+    border-color: transparent;
+    border-radius: .3em;
+    &:hover {
+        background-color: darken(@btn-tw, 8%);
+        color: #fff;
+    }
+}
+
+.btn.btn-fb {
+    color: #fff;
+    background-color: @btn-fb;
+    border-color: transparent;
+    border-radius: .3em;
+    &:hover {
+        background-color: darken(@btn-fb, 8%);
+        color: #fff;
+    }
+}
+
+.btn.btn-b {
+    color: #fff;
+    background-color: @btn-b;
+    border-color: transparent;
+    border-radius: .3em;
+    &:hover {
+        background-color: darken(@btn-b, 8%);
+        color: #fff;
+    }
+}
+
+
 /* End Common Styles */
 
 // section
@@ -123,6 +161,12 @@ h1,h2,h3,h4,h5,h6 {
     background-color: #fff;
     .clearfix;
     padding: .5em 0;
+    position: fixed; // 固定
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    box-shadow: 0 0 5px rgba(0,0,0,.15);
 
     a {
         color: @base;
@@ -131,8 +175,6 @@ h1,h2,h3,h4,h5,h6 {
     }
 
     .navbar-inner {
-        margin-left: 1em;
-        margin-right: 1em;
     }
 
     .navbar-header {
@@ -144,6 +186,21 @@ h1,h2,h3,h4,h5,h6 {
     .navbar-right {
         float: right;
         font-size: 90%;
+    }
+}
+
+.navbar-ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+
+    li {
+        display: inline-block;
+
+        a {
+            display: inline-block;
+        }
     }
 }
 
