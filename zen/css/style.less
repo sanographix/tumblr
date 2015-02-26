@@ -1,6 +1,10 @@
 @import "_bootstrap.min.less";
 @import "_font-awesome.min.less";
+@import "_variable.less";
 
+html {
+    margin-top: 50px; //ヘッダ固定
+}
 
 body {
     font-family: 'proxima-nova','Helvetica Neue',sans-serif;
@@ -44,11 +48,62 @@ hr.soften {
     display: none;
 }
 
+.clearfix {
+    display: block;
+    *zoom: 1;
+    &:after {
+        display: block;
+        visibility: hidden;
+        font-size: 0;
+        height: 0;
+        clear: both;
+        content: ".";
+    }
+}
+
 // header
 
-.navbar {
-    margin-bottom: 0;
+.header-nav {
+    padding: 10px 0;
     background: #fff;
+    position: fixed; // 固定
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    box-shadow: 0 0 5px rgba(0,0,0,.15);
+    .clearfix;
+
+    .brand {
+        display: inline-block;
+        color: #777;
+        font-size: 18px;
+        padding: 5px 15px;
+    }
+
+    .header-nav-left {
+        float: left;
+    }
+
+    .header-nav-right {
+        float: right;
+    }
+
+}
+
+.navbar-ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+
+    li {
+        display: inline-block;
+
+        a {
+            display: inline-block;
+        }
+    }
 }
 
 #header {
@@ -113,6 +168,39 @@ hr.soften {
     background-color: #74c1b2;
     &:hover {
         background-color: #5aa798;
+    }
+}
+
+.btn.btn-tw {
+    color: #fff !important;
+    background-color: @btn-tw;
+    border-color: transparent;
+    border-radius: .2em;
+    &:hover {
+        background-color: darken(@btn-tw, 8%) !important;
+        color: #fff;
+    }
+}
+
+.btn.btn-fb {
+    color: #fff !important;
+    background-color: @btn-fb;
+    border-color: transparent;
+    border-radius: .2em;
+    &:hover {
+        background-color: darken(@btn-fb, 8%) !important;
+        color: #fff;
+    }
+}
+
+.btn.btn-b {
+    color: #fff !important;
+    background-color: @btn-b;
+    border-color: transparent;
+    border-radius: .2em;
+    &:hover {
+        background-color: darken(@btn-b, 8%) !important;
+        color: #fff;
     }
 }
 
