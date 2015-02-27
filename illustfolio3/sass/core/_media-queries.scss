@@ -79,16 +79,8 @@
     margin-bottom: .3em;
 }
 
-.navbar-box {
-    display: block;
-}
-
-.pull-left {
-    display: block;
-    text-align: center;
-}
-
-.pull-right {
+.pull-left small,
+.pull-right .label{
     display: none;
 }
 

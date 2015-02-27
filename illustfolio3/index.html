@@ -74,16 +74,18 @@
         </div>
         <div class="pull-right">
           <ul class="nav">
-            <li>
+            <li id="socialarea_twitter">
               <a href="https://twitter.com/share?text=Illustfolio 3 - イラストポートフォリオサイトを一瞬で作れるTumblrテーマ pic.twitter.com/isJeISI9Ur&url=http://sanographix.github.io/tumblr/illustfolio3/" class="btn btn-tw" onClick="ga('send', 'event', 'share-twitter', 'Click', 'navbar');">
                 <img src="http://static.tumblr.com/xlsgtjb/mmZndl3sh/twitter.svg" width="14px">
-                Tweet
+                <span class="label">Tweet</span>
+                <span class="count"></span>
               </a>
             </li>
-            <li>
+            <li id="socialarea_facebook">
               <a href="http://www.facebook.com/sharer.php?u=http://sanographix.github.io/tumblr/illustfolio3/" class="btn btn-fb" onClick="ga('send', 'event', 'share-facebook', 'Click', 'navbar');">
                 <img src="http://static.tumblr.com/xlsgtjb/dB1ndl3rn/facebook.svg" width="14px">
-                Share
+                <span class="label">Share</span>
+                <span class="count"></span>
               </a>
             </li>
           </ul>
@@ -430,6 +432,46 @@
     js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&appId=547137951989818&version=v2.0";
     fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'facebook-jssdk'));</script>
+
+  <script>
+    // Facebookの反応（いいねとシェアの数）を取得
+    function get_social_count_facebook(url, counterId) {
+      $.ajax({
+        url:'https://graph.facebook.com/',
+        dataType:'jsonp',
+        data:{
+          id:url
+        },
+        success:function(res){
+          $('#' + counterId + ' .count').text( res.shares || 0 );
+        },
+        error:function(){
+          $('#' + counterId + ' .count').text('');
+        }
+      });
+    }
+    // Twitterの反応（ツイートやリツイート数）を取得
+    function get_social_count_twitter(url, counterId) {
+      $.ajax({
+        url:'http://urls.api.twitter.com/1/urls/count.json',
+        dataType:'jsonp',
+        data:{
+          url:url
+        },
+        success:function(res){
+          $('#' + counterId + ' .count').text( res.count || 0 );
+        },
+        error:function(){
+          $('#' + counterId + ' .count').text('');
+        }
+      });
+    }
+    $(function(){
+      get_social_count_facebook( location.href, "socialarea_facebook");
+      get_social_count_twitter( location.href, "socialarea_twitter");
+    });
+  </script>
+
 
 </body>
 </html>
