@@ -68,15 +68,96 @@ a {
     }
 }
 
+.btn.btn-tw {
+    color: #fff !important;
+    background-color: @btn-tw;
+    border-color: transparent;
+    border-radius: .2em;
+    &:hover {
+        background-color: darken(@btn-tw, 8%) !important;
+        color: #fff;
+    }
+}
+
+.btn.btn-fb {
+    color: #fff !important;
+    background-color: @btn-fb;
+    border-color: transparent;
+    border-radius: .2em;
+    &:hover {
+        background-color: darken(@btn-fb, 8%) !important;
+        color: #fff;
+    }
+}
+
+.btn.btn-b {
+    color: #fff !important;
+    background-color: @btn-b;
+    border-color: transparent;
+    border-radius: .2em;
+    &:hover {
+        background-color: darken(@btn-b, 8%) !important;
+        color: #fff;
+    }
+}
+
+
+.clearfix {
+    display: block;
+    *zoom: 1;
+    &:after {
+        display: block;
+        visibility: hidden;
+        font-size: 0;
+        height: 0;
+        clear: both;
+        content: ".";
+    }
+}
+
 // header
 
-.navbar-default {
-    background-color: @red-darkest;
-    border-width: 0;
-    border-radius: 0;
-    margin-bottom: 0;
-    a {
-        color: #fff !important;
+// header
+
+.header-nav {
+    padding: 10px 0;
+    background: @red-darkest;
+    position: fixed; // 固定
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    .clearfix;
+
+    .brand {
+        display: inline-block;
+        color: #fff;
+        font-size: 18px;
+        padding: 5px 15px 5px 0;
+    }
+
+    .header-nav-left {
+        float: left;
+    }
+
+    .header-nav-right {
+        float: right;
+    }
+
+}
+
+.navbar-ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+
+    li {
+        display: inline-block;
+
+        a {
+            display: inline-block;
+        }
     }
 }
 
