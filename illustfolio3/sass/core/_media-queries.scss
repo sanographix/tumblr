@@ -52,24 +52,6 @@
 
 }
 
-// navbar固定はスマホではやらない
-@media (min-width: 768px) {
-
-.navbar {
-    position: fixed;
-
-    // ちょっとスクロールしたとき
-    &.fixed {
-        background-color: #fff;
-        box-shadow: (0 0 10px rgba(0,0,0,.3));
-
-        .container {
-          padding: .3em 0 0 0;
-        }
-    }
-}
-
-}
 
 // Media Queries - Small Tablet & Smartphone
 
