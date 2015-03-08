@@ -90,13 +90,17 @@ p {
 
 /* End Common Styles */
 
+.container {
+    width: 1000px;
+    margin: 3em auto;
+    position: relative;
+}
+
 .nav {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    width: 300px;
-    padding: 3rem 2rem;
+    position: fixed;
+    top: auto;
+    left: auto;
+    width: 260px;
 
     > aside {
         margin-bottom: 1em;
@@ -156,22 +160,12 @@ p {
     }
 }
 
-// share button
-.share {
-
-}
-
-
-.container {
-    width: 700px;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    margin-left: 27.5%;
-    margin-right: 2.5%;
+.main {
+    padding-left: 272px;
 }
 
 .entry {
-    margin: 3rem 0;
+    margin-bottom: 3em;
 
     a {
         color: @base;
@@ -185,10 +179,10 @@ p {
     }
 
     .ss {
-        max-width: 100%;
+        width: 100%;
+        height: auto;
         margin-bottom: .3rem;
         .border-radius(3px);
-        height: 525px;
         background-color: #fff;
     }
 
@@ -209,23 +203,12 @@ p {
 }
 
 .rectangle {
-    margin-bottom: 4rem;
-    .clearfix;
-
     p {
         font-size: .7rem;
         letter-spacing: .3em;
         color: @light;
         text-transform: uppercase;
         margin-bottom: .7rem;
-    }
-
-    .left {
-        float: left;
-    }
-
-    .right {
-        float: right;
     }
 }
 
