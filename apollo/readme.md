@@ -43,7 +43,7 @@ Apollo は、穏やかに日記を書きたい人のための無料Tumblrテン�
 
 | 設定項目 | 説明 |
 |-------|-----|-----|
-| Google Author | ここに自分のGoogle+プロフィールURLを入力することで、Google検索結果に著者情報を表示させることができます。（例：`https://plus.google.com/109963703491503474788`）詳しい情報は[Googleのヘルプ](http://support.google.com/webmasters/bin/answer.py?hl=ja&answer=1408986)を参照してください。 |
+| Google Author | 自分のGoogle+プロフィールURLを入力します。 |
 | Hatena Star Token | ここにはてなスターのトークンを入力すると、スターが押されたときにはてなの「あなたへのお知らせ」に通知が届くようになります。詳しい設定方法は[はてなスターのヘルプ](http://d.hatena.ne.jp/hatenastar/20070707/1184453490)を参照してください。 |
 | Author | 自分の名前を入力します。著者名として記事に表示されます。 |
 | Enable Recent Post Module | 記事パーマリンクに最新記事一覧を表示します。 |
