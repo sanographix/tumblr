@@ -1,12 +1,33 @@
 # ZEN 2.0
 
-#### Free responsive tumblr template
+#####  A ultra-simple and zen-style tumblr theme
 
-ZENは、Tumblrで普通に日記を書く用途にこだわったテンプレートです。  
-[@sanographix](https://twitter.com/sanographix)がデザインしています。
+ZENは、Tumblrで普通に日記を書く用途にこだわったテンプレートです。[@sanographix](https://twitter.com/sanographix)がデザインしています。詳細は[こちらの紹介ページ](http://sanographix.github.io/tumblr/zen)をご覧ください。  
 
-詳細はこちらの紹介ページをご覧ください。  
-<http://sanographix.github.io/tumblr/zen>
+## インストールする
+
+ZENには2種類のバージョンがあり、それぞれインストール方法が異なります。
+
+1. tumblrのテーマガーデンから自動でインストールする（推奨）
+    - こちらからインストールしてください: <https://www.tumblr.com/theme/38954>
+2. GitHubから手動でインストールする
+    - インストール方法は後述します
+
+## 機能の違いについて
+
+テーマガーデン版, GitHub版の違いは下記の通りです。テーマガーデン版は海外ユーザー対応している関係で、国内向け機能を一部削減しています。
+
+|/|テーマガーデン|GitHub|
+|---|---|---|
+|テーマの自動更新|○|×|
+|はてなスター|×|○|
+|はてなブックマークボタン|×|○|
+
+<hr>
+
+## GitHub版 Readme
+
+ここから先は、GitHub版ZENのReadmeです。
 
 ## Demo
 

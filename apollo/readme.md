@@ -2,11 +2,33 @@
 
 #### Free responsive tumblr template
 
-Apollo は、穏やかに日記を書きたい人のための無料Tumblrテンプレートです。  
-[@sanographix](https://twitter.com/sanographix)がデザインしています。
+Apollo は、穏やかに日記を書きたい人のための無料Tumblrテンプレートです。[@sanographix](https://twitter.com/sanographix)がデザインしています。詳細は[こちらの紹介ページ](http://sanographix.github.io/tumblr/apollo)をご覧ください。
 
-詳細はこちらの紹介ページをご覧ください。  
-<http://sanographix.github.io/tumblr/apollo>
+## インストールする
+
+Apolloには2種類のバージョンがあり、それぞれインストール方法が異なります。
+
+1. tumblrのテーマガーデンから自動でインストールする（推奨）
+    - こちらからインストールしてください: <https://www.tumblr.com/theme/38889>
+2. GitHubから手動でインストールする
+    - インストール方法は後述します
+
+## 機能の違いについて
+
+テーマガーデン版, GitHub版の違いは下記の通りです。テーマガーデン版はTumblrの審査に通す関係で、実験的機能を削減しています。また、海外ユーザー対応している関係で、国内向け機能を一部削減しています。
+
+|/|テーマガーデン|GitHub|
+|---|---|---|
+|テーマの自動更新|○|×|
+|はてなスター|×|○|
+|はてなブックマークボタン|×|○|
+|テキスト投稿の記事下に最新記事一覧|×|○|
+
+<hr>
+
+## GitHub版 Readme
+
+ここから先は、GitHub版ZENのReadmeです。
 
 ## Demo
 
