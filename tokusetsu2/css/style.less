@@ -243,12 +243,17 @@ a {
         &:first-child {
             margin-top: 20px;
         }
+        &.last-child {
+            margin-bottom: 20px;
+        }
         img {
             position: absolute;
             top: 0;
             left: -70px;
             width: 50px;
         }
+    }
+    .demopage {
     }
 }
 
@@ -291,11 +296,43 @@ a {
     }
 }
 
+// case
+.case {
+    .case-row {
+        margin-top: 2em;
+    }
+    .row > div {
+        margin-bottom: 2em;
+        text-align: center;
+        a {
+            color: @base;
+            img {
+                -webkit-transition: all .2s;
+                transition: all .2s;
+            }
+            &:hover {
+                color: @red-hover;
+                img {
+                    box-shadow: 0 5px 10px rgba(0,0,0,.3);
+                }
+            }
+        }
+        span {
+            display: inline-block;
+            padding-top: .5em;
+            line-height: 1.5;
+            height: 3.5em;
+        }
+    }
+}
+
+
 // getstart
 
 #getstarted,
 #getmorethemes,
-#saying {
+#saying,
+#case {
     text-align: center;
     h2 {
         font-weight: 200;
@@ -348,7 +385,7 @@ div.likebox-container .fb_iframe_widget span{
 
 .ad {
     text-align: center;
-    margin: 2em 0 0;
+    margin: 1em 0 0;
 }
 
 #footer {
