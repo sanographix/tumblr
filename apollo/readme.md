@@ -28,7 +28,7 @@ Apolloには2種類のバージョンがあり、それぞれインストール�
 
 ## GitHub版 Readme
 
-ここから先は、GitHub版ZENのReadmeです。
+ここから先は、GitHub版ApolloのReadmeです。
 
 ## Demo
 
