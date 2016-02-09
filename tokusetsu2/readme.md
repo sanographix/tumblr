@@ -1,5 +1,7 @@
 # Tokusetsu 2
 
+- <http://sanographix.github.io/tumblr/tokusetsu2/>
+
 #### Free responsive tumblr template for doujin music artists
 
 Tokusetsu 2 は、同人音楽 CD の特設サイトが簡単に作れる無料 Tumblr テンプレートです。  

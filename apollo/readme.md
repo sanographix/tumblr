@@ -1,8 +1,14 @@
 #Apollo
 
+- <http://sanographix.github.io/tumblr/apollo/>
+
 #### Free responsive tumblr template
 
 Apollo は、穏やかに日記を書きたい人のための無料Tumblrテンプレートです。[@sanographix](https://twitter.com/sanographix)がデザインしています。詳細は[こちらの紹介ページ](http://sanographix.github.io/tumblr/apollo)をご覧ください。
+
+## Install
+
+- <https://www.tumblr.com/theme/38889>
 
 ## インストールする
 

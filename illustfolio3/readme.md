@@ -1,6 +1,12 @@
 # Illustfolio 3
 
+- <http://sanographix.github.io/tumblr/illustfolio3/>
+
 llustfolio 3 は、イラストのポートフォリオサイトに特化した無料 Tumblr テーマです。 
+
+# Install
+
+- <https://www.tumblr.com/theme/39341>
 
 ## デモページを見る
 

@@ -1,8 +1,14 @@
 # ZEN 2.0
 
+- <http://sanographix.github.io/tumblr/zen>
+
 #####  A ultra-simple and zen-style tumblr theme
 
 ZENは、Tumblrで普通に日記を書く用途にこだわったテンプレートです。[@sanographix](https://twitter.com/sanographix)がデザインしています。詳細は[こちらの紹介ページ](http://sanographix.github.io/tumblr/zen)をご覧ください。  
+
+## Install
+
+- <https://www.tumblr.com/theme/38954>
 
 ## インストールする
 
