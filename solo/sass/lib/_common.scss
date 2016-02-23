@@ -1,0 +1,51 @@
+// Common
+@font-face {font-family: 'HalisGR-Book';src: url('../fonts/2D219B_6_0.eot');src: url('../fonts/2D219B_6_0.eot?#iefix') format('embedded-opentype'),url('../fonts/2D219B_6_0.woff2') format('woff2'),url('../fonts/2D219B_6_0.woff') format('woff'),url('../fonts/2D219B_6_0.ttf') format('truetype');}
+
+@font-face {font-family: 'HalisGR-Bold';src: url('../fonts/2D219B_4_0.eot');src: url('../fonts/2D219B_4_0.eot?#iefix') format('embedded-opentype'),url('../fonts/2D219B_4_0.woff2') format('woff2'),url('../fonts/2D219B_4_0.woff') format('woff'),url('../fonts/2D219B_4_0.ttf') format('truetype');}
+
+@font-face {font-family: 'carrig-regular';src: url('../fonts/2F80F6_1_0.eot');src: url('../fonts/2F80F6_1_0.eot?#iefix') format('embedded-opentype'),url('../fonts/2F80F6_1_0.woff2') format('woff2'),url('../fonts/2F80F6_1_0.woff') format('woff'),url('../fonts/2F80F6_1_0.ttf') format('truetype');}
+
+body {
+    font-family: 'HalisGR-Book', 'Avenir Next', 'Helvetica Neue','Helvetica','Arial', '游ゴシック', 'YuGothic', 'Yu Gothic','ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック','MS PGothic',sans-serif;
+    background: $bg;
+    color: $base;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    color: $link;
+    transition: all .2s;
+    &:hover {
+        color: $hover;
+    }
+}
+h1,h2,h3,h4,h5,h6 {
+    color: $header;
+    line-height: 1.2;
+    margin: .5em 0;
+    a,a:hover {
+        color: $header;
+        text-decoration: none;
+    }
+}
+.header-en {
+    font-family: 'HalisGR-Bold', 'Avenir Next', 'Helvetica Neue','Helvetica','Arial', sans-serif;
+    font-weight: normal;
+}
+p {
+    line-height: 1.6;
+    font-size: 95%;
+}
+
+// mixin
+@mixin clearfix() {
+    *zoom: 1;
+    &:before,
+    &:after {
+        display: table;
+        content: " ";
+    }
+    &:after {
+        clear: both;
+    }
+}

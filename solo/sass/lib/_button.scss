@@ -1,0 +1,89 @@
+// buttons
+.btn {
+    display: inline-block;
+    text-align: center;
+    padding: .6em 1.2em;
+    cursor: pointer;
+    font-size: 90%;
+    border-radius: .25em;
+    overflow: hidden;
+    color: $base;
+    background-color: $bg-light;
+    text-decoration: none;
+    border: 1px solid transparent;
+    transition: all .2s;
+    &:hover {
+        background-color: $border;
+        text-decoration: none;
+        border-color: transparent;
+        color: #fff;
+    }
+    img {
+        vertical-align: middle;
+    }
+}
+.btn-light {
+    border-color: $light;
+    color: $light;
+    &:hover {
+        background-color: $border;
+        border-color: $border;
+        color: #fff;
+    }
+}
+.btn-primary {
+    background-color: $link;
+    color: #fff;
+    border-color: $link;
+    &:hover {
+        background-color: $hover;
+        color: #fff;
+        border-color: $hover;
+    }
+}
+.btn-large {
+    padding: .7em 2em;
+    font-size: 120%;
+    box-sizing: border-box;
+    border-width: 2px;
+}
+
+.btn.btn-tw {
+    color: #fff;
+    background-color: $btn-tw;
+    border-color: transparent;
+    &:hover {
+        background-color: darken($btn-tw, 8%);
+        color: #fff;
+    }
+    &.btn-ghost {
+        color: $btn-tw;
+        background-color: transparent;
+        border-color: $btn-tw;
+    }
+}
+
+.btn.btn-fb {
+    color: #fff;
+    background-color: $btn-fb;
+    border-color: transparent;
+    &:hover {
+        background-color: darken($btn-fb, 8%);
+        color: #fff;
+    }
+    &.btn-ghost {
+        color: $btn-fb;
+        background-color: transparent;
+        border-color: $btn-fb;
+    }
+}
+
+.btn.btn-b {
+    color: #fff;
+    background-color: $btn-b;
+    border-color: transparent;
+    &:hover {
+        background-color: darken($btn-b, 8%);
+        color: #fff;
+    }
+}

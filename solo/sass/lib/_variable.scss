@@ -1,0 +1,35 @@
+// Color Variables
+
+$bg: #fff; // Background color
+$bg-light: #f2f2f2; // Background color
+
+$base: #4d4d4d; // Base text color
+$header: #222;
+$light: #90a3a3; // Light text color
+
+$border: #bdccd4; // Border color
+
+$link: #3382c5; // Link text color
+$hover: darken($link, 8%); // Link text color(hover)
+
+$btn-tw: #55acee;
+$btn-fb: #3b5998;
+$btn-b: #008fde;
+
+// Media Queries - Breakpoints
+
+$mq-lg: "(min-width: 1240px)"; // Media queries - Large display
+
+$mq-md: "(max-width: 1024px)"; // Media Queries - Tablet
+
+$mq-sm: "(max-width: 767px)"; // Media Queries - Small tablet & smartphone
+
+$mq-xs: "(max-width: 480px)"; // Media Queries - Smartphone
+
+
+// Media Queries - Retina display
+$at2x: "(-webkit-min-device-pixel-ratio: 2),(min-resolution: 2dppx)"; // All retina devices
+
+$at2x-tablet: "(-webkit-min-device-pixel-ratio: 2) and (min-device-width: 768px),(min-resolution: 2dppx) and (min-device-width: 768px)"; // Larger than iPad display
+
+$at2x-pc: "(-webkit-min-device-pixel-ratio: 2) and (min-device-width: 1025px),(min-resolution: 2dppx) and (min-device-width: 1025px)"; // Larger than PC display (1025px)
