@@ -23,6 +23,10 @@
     - ※ただし、Tokusetsu および Tokusetsu 2 の場合は特殊な使い方をしている野良テーマなので、Tumblrに問い合わせてもあまり効果がないと思います
 - 別のテーマでも同様の現象が発生しない場合：
     - 下記のFAQに似た現象がないか探してください。載っていない場合、[メールフォーム](http://www.sanographix.net/contact/)よりお問い合わせください。なお、HTML/CSS/JSのカスタマイズについてのサポートは行っていません。
+    - 各テーマ固有の不具合については、各テーマのReadmeで案内しています。そちらも参照してください。
+         - [Illustfolio 2](https://github.com/sanographix/tumblr/blob/master/illustfolio2/readme.md#困ったときは)
+         - [Apollo](https://github.com/sanographix/tumblr/tree/master/apollo#困ったときは);
+         - [Tokusetsu 2](https://github.com/sanographix/tumblr/tree/master/tokusetsu2#困ったときは);
 
 ### テーマの仕様に関する質問
 
@@ -74,7 +78,7 @@
 * はい。MIT ライセンスですのでライセンスの範囲内で自由にカスタマイズできます。
     * なお、テーマを改変した場合はサポート対象外とします。
 
-##### Q: 作者に寄付したいです
+##### Q: テーマを気に入ったので作者に寄付したいです
 
 * もしこのテーマを気に入っていただけたら、何か寄付していただけると大変嬉しいです（任意です）
     * <http://www.amazon.co.jp/registry/wishlist/2QLOE7F0CGUSX>
@@ -85,7 +89,6 @@
 
 ##### Q: アダルトコンテンツに使っていいですか？
 * 使ってもいいですが、必ず Tumblr の設定ページで「NSFW指定」を行ってください。
-* 当然ですがTumblrの利用規約に反するブログには使えません。
 
 ##### Q: このテーマを（tumblr 以外の）他の CMS に移植していいですか？
 * ライセンスの範囲内で自由に行えます。
