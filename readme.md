@@ -25,8 +25,8 @@
     - 下記のFAQに似た現象がないか探してください。載っていない場合、[メールフォーム](http://www.sanographix.net/contact/)よりお問い合わせください。なお、HTML/CSS/JSのカスタマイズについてのサポートは行っていません。
     - 各テーマ固有の不具合については、各テーマのReadmeで案内しています。そちらも参照してください。
          - [Illustfolio 2](https://github.com/sanographix/tumblr/blob/master/illustfolio2/readme.md#困ったときは)
-         - [Apollo](https://github.com/sanographix/tumblr/tree/master/apollo#困ったときは);
-         - [Tokusetsu 2](https://github.com/sanographix/tumblr/tree/master/tokusetsu2#困ったときは);
+         - [Apollo](https://github.com/sanographix/tumblr/tree/master/apollo#困ったときは)
+         - [Tokusetsu 2](https://github.com/sanographix/tumblr/tree/master/tokusetsu2#困ったときは)
 
 ### テーマの仕様に関する質問
 
