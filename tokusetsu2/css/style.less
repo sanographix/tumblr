@@ -4,7 +4,6 @@
 @import "_mixin.less";
 
 body {
-    padding-top: 55px;
     font-family: 'Source Sans Pro','Helvetica Neue',sans-serif;
     color: @base;
     background: #fff;
@@ -123,10 +122,6 @@ a {
 .header-nav {
     padding: 10px 0;
     background: @red-darkest;
-    position: fixed; // 固定
-    top: 0;
-    left: 0;
-    z-index: 999;
     width: 100%;
     .clearfix;
 
@@ -417,3 +412,46 @@ div.likebox-container .fb_iframe_widget span{
 
 
 @import "_media-queries.less";
+
+// tokusetsu3-banner
+
+.t3-banner {
+    text-align: center;
+    background: rgb(216, 27, 96) url(../images/t3-hero-bg.svg) center center;
+    background-size: calc(380px + 58px) calc(380px + 58px);
+    animation: sqmove-sm 20s linear infinite;
+    padding: 1.5em 0;
+    * {
+        color: #fff;
+    }
+    .t3-banner-inner {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .t3-banner-h2 {
+        font-size: 110%;
+        margin-bottom: .5em;
+    }
+    .btn {
+        background-color: transparent;
+        border: 2px solid #fff;
+    }
+}
+
+@keyframes sqmove-sm {
+    0% {
+        background-position: center calc(380px + 58px);
+    }
+    100% {
+        background-position: center 0;
+    }
+}
+
+@keyframes sqmove-md {
+    0% {
+        background-position: center calc(500px + 58px);
+    }
+    100% {
+        background-position: center 0;
+    }
+}
