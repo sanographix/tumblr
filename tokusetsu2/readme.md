@@ -8,6 +8,19 @@ Tokusetsu 2 は、同人音楽 CD の特設サイトが簡単に作れる無料 
 HTML の知識を必要とせず、フォームに情報を入力していくだけで特設サイトが作れます。  
 [@sanographix](https://twitter.com/sanographix) が作っています。
 
+
+<hr/>
+
+## [おしらせ] Tokusetsu 3 を作りました
+
+新しいデザインと多数の新機能を盛り込んだ [Tokusetsu 3](https://sanographix.github.io/tokusetsu3/) を作りました。これから Tokusetsu を使いはじめるなら Tokusetsu 3 をおすすめします。
+
+紹介ページ→ <https://sanographix.github.io/tokusetsu3/>
+
+（お知らせ終わり）
+
+<hr/>
+
 ## デモを見る
 
 デモページはこちらです。
