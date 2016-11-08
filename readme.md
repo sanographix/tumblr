@@ -29,7 +29,7 @@
          - [Tokusetsu 2](https://github.com/sanographix/tumblr/tree/master/tokusetsu2#困ったときは)
          - [Tokusetsu 3](https://sanographix.github.io/tokusetsu3/docs/faq.html)
          - [Illustfolio 4](https://sanographix.github.io/illustfolio4/docs/#faq)
-- **テーマのHTML/CSSを改変している場合、**。その改変をしない状態でも同様の現象が発生するか確認してください。
+- **テーマのHTML/CSSを改変している場合、**その改変をしない状態でも同様の現象が発生するか確認してください。
 
 ### テーマの仕様に関する質問
 
