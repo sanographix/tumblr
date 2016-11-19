@@ -84,7 +84,7 @@
 ##### Q: テーマを気に入ったので作者に寄付したいです
 
 * もしこのテーマを気に入っていただけたら、何か寄付していただけると大変嬉しいです（任意です）
-    * <http://www.amazon.co.jp/registry/wishlist/2QLOE7F0CGUSX>
+    * <https://www.amazon.co.jp/registry/wishlist/2QLOE7F0CGUSX?sort=priority>
 
 ##### Q: 上記以外の質問
 
