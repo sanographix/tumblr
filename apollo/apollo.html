@@ -25,6 +25,7 @@
   <meta name="if:Enable Hatena Bookmark Button" content="1" />
   <meta name="if:Enable Pocket Button" content="1" />
   <meta name="if:Enable Syntax Highlight" content="0" />
+  <meta name="if:Enable MathJax" content="0" />
   <meta name="if:Enable Recent Post Module" content="1" />
 
   <title>{block:PostSummary}{PostSummary} - {/block:PostSummary}{Title}</title>
@@ -85,6 +86,16 @@
   <!--[if lt IE 9]>
     <script src="//sanographix.github.io/public/tumblr/apollo/js/html5shiv.js"></script>
   <![endif]-->
+
+  {block:IfEnableMathJax}
+  <!-- MathJax -->
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {inlineMath: [['$','$']]}
+    });
+  </script>
+  <script src='//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+  {/block:IfEnableMathJax}
 
 </head>
 <body class="{block:IndexPage}page-index{/block:IndexPage}{block:PermalinkPage}page-permalink page-{PostID}{/block:PermalinkPage}">

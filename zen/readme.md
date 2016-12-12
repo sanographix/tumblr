@@ -4,7 +4,7 @@
 
 #####  A ultra-simple and zen-style tumblr theme
 
-ZENは、Tumblrで普通に日記を書く用途にこだわったテンプレートです。[@sanographix](https://twitter.com/sanographix)がデザインしています。詳細は[こちらの紹介ページ](http://sanographix.github.io/tumblr/zen)をご覧ください。  
+ZENは、Tumblrで普通に日記を書く用途にこだわったテンプレートです。[@sanographix](https://twitter.com/sanographix)がデザインしています。詳細は[こちらの紹介ページ](http://sanographix.github.io/tumblr/zen)をご覧ください。
 
 ## Install
 
@@ -81,6 +81,7 @@ ZENには2種類のバージョンがあり、それぞれインストール方�
 | OGP Facebook Page URL | Facebook ページ持ってる人はここに Facebook ページの URL を入力してください。ブログ記事が Fb にシェアされたときに「いいね！」ボタンを表示できるみたいです。[詳しくは Fb 開発ブログ参照。](https://developers.facebook.com/blog/post/2013/06/19/platform-updates--new-open-graph-tags-for-media-publishers-and-more/)これか後述の`OGP Facebook URL`の**どちらか**を入力してください。 |
 | OGP Facebook URL | Facebook アカウント持ってる人はここに Facebook の URL を入力してください。ブログ記事が Fb にシェアされたときに「フィードを購読」ボタンを表示できるみたいです。[詳しくは Fb 開発ブログ参照。](https://developers.facebook.com/blog/post/2013/06/19/platform-updates--new-open-graph-tags-for-media-publishers-and-more/)これか先述の`OGP Facebook Page URL`の**どちらか**を入力してください。 |
 | Enable Syntax Highlight | シンタックスハイライトを有効にします。 |
+| Enable MathJax | MathJax による LaTeX コマンドを有効にします。 |
 | Disqus Shortname | 記事にコメント欄を設置したい場合は、ここに Disqus Shortname を入力します。 |
 
 
@@ -271,7 +272,7 @@ Graphic designer from Kyoto.
 * リブログ元のユーザのアイコンを表示するように / 最初に投稿した人も表示するようにした
 * Disqus 対応
 * リストを入れ子にしたときのマージン調整
- 
+
 ### 1.0.9 (2013/3/16)
 
 * twilog で「ソースを貼り付け」したときにスタイルをあてるようにした
