@@ -20,7 +20,7 @@
     - デフォルトテーマ（Optica）で確認するのがベターです
 - 別のテーマでも同様の現象が発生する場合：
     - Tumblr側の仕様の可能性が高いです。Tumblr側のサポートに問い合わせてください。
-    - ※ただし、Tokusetsu および Tokusetsu 2 の場合は特殊な使い方をしている野良テーマなので、Tumblrに問い合わせてもあまり効果がないと思います
+    - ※ただし、Tokusetsu シリーズは特殊な使い方をしている野良テーマなので、Tumblrに問い合わせてもあまり効果がないと思います
 - 別のテーマでも同様の現象が発生しない場合：
     - 下記のFAQに似た現象がないか探してください。載っていない場合、[メールフォーム](http://www.sanographix.net/contact/)よりお問い合わせください。なお、HTML/CSS/JSのカスタマイズについてのサポートは行っていません。
     - 各テーマ固有の不具合については、各テーマのReadmeで案内しています。そちらも参照してください。
@@ -30,6 +30,8 @@
          - [Tokusetsu 3](https://sanographix.github.io/tokusetsu3/docs/faq.html)
          - [Illustfolio 4](https://sanographix.github.io/illustfolio4/docs/#faq)
 - **テーマのHTML/CSSを改変している場合、**その改変をしない状態でも同様の現象が発生するか確認してください。
+
+以下は、各テーマ共通のFAQです。
 
 ### テーマの仕様に関する質問
 
