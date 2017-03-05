@@ -30,6 +30,9 @@
          - [Tokusetsu 3](https://sanographix.github.io/tokusetsu3/docs/faq.html)
          - [Illustfolio 4](https://sanographix.github.io/illustfolio4/docs/#faq)
 - **テーマのHTML/CSSを改変している場合、**その改変をしない状態でも同様の現象が発生するか確認してください。
+- テーマに関係のない基本的なTumblrの使い方は、Tumblr側のヘルプを参照してください。
+    - <https://www.tumblr.com/help>
+
 
 以下は、各テーマ共通のFAQです。
 
