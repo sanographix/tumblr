@@ -29,10 +29,12 @@
          - [Tokusetsu 2](https://github.com/sanographix/tumblr/tree/master/tokusetsu2#困ったときは)
          - [Tokusetsu 3](https://sanographix.github.io/tokusetsu3/docs/faq.html)
          - [Illustfolio 4](https://sanographix.github.io/illustfolio4/docs/#faq)
-- **テーマのHTML/CSSを改変している場合、**その改変をしない状態でも同様の現象が発生するか確認してください。
-- テーマに関係のない基本的なTumblrの使い方は、Tumblr側のヘルプを参照してください。
-    - <https://www.tumblr.com/help>
-
+- **テーマのHTML/CSSを改変している場合** 、その改変をしない状態でも同様の現象が発生するか確認してください。
+- 改変をしない状態で同様の現象が発生する場合：
+    - 下記のFAQに似た現象がないか探してください。載っていない場合、[メールフォーム](http://www.sanographix.net/contact/)よりお問い合わせください。
+- 改変をしない状態で同様の現象が発生しない場合：
+    - テーマの改変が不具合の原因です。テーマ改変による不具合はサポートしていません。
+- テーマに関係のない基本的なTumblrの使い方は、[Tumblr側のヘルプ](https://www.tumblr.com/help)を参照してください。
 
 以下は、各テーマ共通のFAQです。
 
