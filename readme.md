@@ -32,7 +32,8 @@
          - [Illustfolio 4](https://sanographix.github.io/illustfolio4/docs/#faq)
 - **テーマのHTML/CSSを改変している場合** 、その改変をしない状態でも同様の現象が発生するか確認してください。
 - 改変をしない状態で同様の現象が発生する場合：
-    - 下記のFAQに似た現象がないか探してください。載っていない場合、[メールフォーム](http://www.sanographix.net/contact/)よりお問い合わせください。
+    - 下記の「テーマの仕様に関する質問」「テーマの利用全般に関する質問」に似た現象がないか探してください。
+    - 載っていない場合、[メールフォーム](http://www.sanographix.net/contact/)よりお問い合わせください。
 - 改変をしない状態で同様の現象が発生しない場合：
     - テーマの改変が不具合の原因です。テーマ改変による不具合はサポートしていません。
 - テーマに関係のない基本的なTumblrの使い方は、[Tumblr側のヘルプ](https://www.tumblr.com/help)を参照してください。
@@ -111,7 +112,8 @@
 * ライセンスの範囲内で自由に行えます。
 
 # Author
-####Showkaku Sano (sanographix)
+
+#### Showkaku Sano (sanographix)
 
 Graphic designer from Kyoto.
 
