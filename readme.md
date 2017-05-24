@@ -81,6 +81,18 @@
 
 * Tumblrの仕様です。Tumblr側の設定で無効にできます（2017年4月現在）。
 
+#### Q: サポートするブラウザは何ですか
+
+* 各テーマのReadmeやドキュメントで明示しない限り、対応ブラウザは下記の通りです。このほかのブラウザはサポートしません。
+
+```
+IE11, Edge
+Win / Mac 版 Chrome, Firefox, Opera 各最新版
+Mac 版 Safari 最新版
+iOS Safari 最新版
+Chrome for Android 最新版
+```
+
 #### Q: 古いブラウザで表示できません
 
 * [Tumblr公式サイト](https://www.tumblr.com/) が正しく閲覧できるか確認してください。表示できない場合Tumblrに問題があるので、Tumblr側に問い合わせてください。
