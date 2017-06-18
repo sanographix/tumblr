@@ -1,12 +1,22 @@
 {
-  "name": "sanographix.github.com",
-  "version": "0.1.0",
-  "description": "",
-  "author": "",
-  "license": "",
+  "name": "rin",
+  "version": "4.0.0",
+  "description": "A Lean HTML & SASS Boilerplate",
+  "author": "sanographix",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sanographix/rin"
+  },
   "devDependencies": {
-    "grunt": "~0.4.0",
-    "grunt-contrib-less": "*",
-    "grunt-contrib-watch": "*"
+    "browser-sync": "^2.14.2",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-imagemin": "^3.0.3",
+    "imagemin-pngquant": "^5.0.0",
+    "gulp-pleeease": "^2.0.2",
+    "gulp-plumber": "^1.1.0",
+    "gulp-sass": "^2.3.2",
+    "gulp-uglify": "^2.0.0"
   }
 }
