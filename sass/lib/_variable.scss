@@ -1,15 +1,17 @@
 // Color Variables
 
 $bg: #fff; // Background color
+$bg-light: #f5f7f9; // Background color
 
 $base: #444; // Base text color
-$light: #999; // Light text color
+$light: #90a4ae; // Light text color
 
 $link: #37aed5; // Link text color
 $hover: darken($link,8%); // Link text color(hover)
 
-$border: #ddd; // Border color
+$border: #dde8ec; // Border color
 
+$radius: .3em;
 
 // Media Queries - Breakpoints
 
