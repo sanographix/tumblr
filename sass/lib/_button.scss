@@ -1,0 +1,47 @@
+// buttons
+.btn {
+    display: inline-block;
+    text-align: center;
+    padding: .6em 1.2em;
+    cursor: pointer;
+    line-height: 1.5;
+    font-size: 90%;
+    border-radius: .25em;
+    overflow: hidden;
+    color: $link;
+    background-color: transparent;
+    text-decoration: none;
+    border: 1px solid $link;
+    transition: all .2s;
+    &:hover {
+        background-color: $link;
+        color: #fff;
+        text-decoration: none;
+        border-color: $link;
+    }
+}
+.btn-light {
+    border-color: $light;
+    color: $base;
+    &:hover {
+        background-color: $base;
+        border-color: $base;
+        color: #fff;
+    }
+}
+.btn-primary {
+    background-color: $link;
+    color: #fff;
+    border-color: $link;
+    &:hover {
+        background-color: $hover;
+        color: #fff;
+        border-color: $hover;
+    }
+}
+.btn-large {
+    padding: .7em 2em;
+    font-size: 120%;
+    box-sizing: border-box;
+    border-width: 2px;
+}

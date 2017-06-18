@@ -1,0 +1,228 @@
+// Core (Main Style)
+.header {
+    text-align: center;
+    margin: 3em auto 2em;
+    @media #{$mq-sm} {
+        margin: 5em auto 2em;
+    }
+    .header-title {
+        font-size: 2rem;
+        margin: 0;
+        @media #{$mq-sm} {
+            font-size: 3rem;
+        }
+    }
+    .header-subtitle {
+        font-size: .9rem;
+        margin: 0;
+        @media #{$mq-sm} {
+            font-size: 1rem;
+        }
+    }
+    hr {
+        margin: 2em auto;
+        width: 4rem;
+        border: 0;
+        height: .3em;
+        background: $border;
+    }
+}
+
+// share
+.shareBtns {
+    display: flex;
+    justify-content: center;
+    margin: 2em auto;
+}
+.btn-tw,
+.btn-fb,
+.btn-b {
+    display: inline-block;
+    border-radius: 50%;
+    margin-left: 1em;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:first-child {
+        margin-left: 0;
+    }
+    svg {
+        width: 16px;
+        height: 16px;
+    }
+}
+.btn-b svg {
+    width: 20px;
+    height: 20px;
+}
+.btn-tw {
+    background-color: $btn-tw;
+    &:hover {
+        background-color: darken($btn-tw, 10%);
+    }
+}
+.btn-fb {
+    background-color: $btn-fb;
+    &:hover {
+        background-color: darken($btn-fb, 10%);
+    }
+}
+.btn-b {
+    background-color: $btn-b;
+    &:hover {
+        background-color: darken($btn-b, 10%);
+    }
+}
+
+
+// theme list
+.theme-list-header {
+    text-align: center;
+    margin-bottom: 2em;
+    @media #{$mq-sm} {
+        margin-bottom: 3em;
+    }
+    h1 {
+        margin: 0;
+        font-size: 1.6rem;
+    }
+    p {
+        font-size: .9rem;
+        color: $light;
+    }
+}
+
+.badge {
+    font-size: .7rem;
+    color: $link;
+    border: 1px solid $link;
+    display: inline-block;
+    border-radius: $radius;
+    padding: .2em .4em;
+    vertical-align: middle;
+}
+
+.theme-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    // PCのとき広告は3番目に置く
+    .theme-list-item {
+        margin-bottom: 2em;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        @media #{$mq-sm} {
+            margin-bottom: 3em;
+            &:nth-child(1) {
+                order: -3;
+            }
+            &:nth-child(2) {
+                order: -1;
+            }
+            &:nth-child(3) {
+                order: -2;
+            }
+        }
+    }
+    .theme-list-a {
+        display: block;
+        color: $base;
+        text-decoration: none;
+        &:hover {
+            color: $hover;
+            .ss-wrapper {
+                box-shadow: 0 .5em 1em rgba(0,0,0,.2);
+            }
+        }
+    }
+    .ss-wrapper {
+        border: 1px solid $border;
+        border-radius: $radius;
+        position: relative;
+        background-color: $bg-light;
+        transition: box-shadow .2s;
+        padding-top: 10px;
+        @media #{$mq-sm} {
+            padding-top: 15px;
+        }
+        &:before {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 1px;
+            background-color: $border;
+            position: absolute;
+            left: 0;
+            top: 10px;
+            @media #{$mq-sm} {
+                top: 15px;
+            }
+        }
+        &:after {
+            content: "・・・";
+            display: flex;
+            align-items: center;
+            position: absolute;
+            color: lighten($light,20%);
+            font-size: 10px;
+            top: 0;
+            left: .5em;
+            height: 10px;
+            @media #{$mq-sm} {
+                height: 15px;
+            }
+        }
+    }
+    .ss {
+        max-width: 100%;
+        display: block;
+        border-bottom-left-radius: $radius;
+        border-bottom-right-radius: $radius;
+    }
+    .theme-list-item {
+        @media #{$mq-sm} {
+            flex-basis: calc(50% - 1.5em);
+        }
+    }
+    .theme-title {
+        font-size: 1.3rem;
+        margin: .5em 0 .3em;
+    }
+    p {
+        font-size: .8rem;
+        color: $light;
+    }
+
+    .theme-list-ad {
+        flex-basis: 100%;
+    }
+    .adsbygoogle {
+        width: 300px;
+        height: 250px;
+        margin: auto;
+        @media (min-width: 370px) {
+            width: 336px;
+            height: 280px;
+        }
+        @media (min-width: 768px) {
+            width: 728px;
+            height: 90px;
+        }
+    }
+}
+
+.footer {
+    text-align: center;
+    font-size: .8rem;
+    color: $light;
+    margin: 2em auto;
+    a {
+        color: $light;
+    }
+}
