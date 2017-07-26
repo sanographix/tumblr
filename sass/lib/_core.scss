@@ -111,6 +111,10 @@
     margin: 0;
     padding: 0;
     list-style: none;
+    flex-direction: column;
+    @media #{$mq-sm} {
+        flex-direction: row;
+    }
     // PCのとき広告は3番目に置く
     .theme-list-item {
         margin-bottom: 2em;
