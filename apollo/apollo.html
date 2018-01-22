@@ -144,7 +144,7 @@
           <footer class="entry-meta-header" role="contentinfo">
             {block:Date}
               <span class="meta-elements date">
-                <a href="{Permalink}">{ShortMonth} {DayOfMonthWithZero}, {Year}</a>
+                <a href="{Permalink}"><time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}">{ShortMonth} {DayOfMonthWithZero}, {Year}</time></a>
               </span>
             {/block:Date}
             {block:IfAuthor}

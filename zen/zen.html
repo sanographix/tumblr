@@ -199,8 +199,8 @@
         ">
           {block:Date}
           <div class="date">
-            {block:NewDayDate}<p><a href="{Permalink}">{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}</a></p>{/block:NewDayDate}
-            {block:SameDayDate}<p><a href="{Permalink}">{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}</a></p>{/block:SameDayDate}
+            {block:NewDayDate}<p><a href="{Permalink}"><time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}">{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}</time></a></p>{/block:NewDayDate}
+            {block:SameDayDate}<p><a href="{Permalink}"><time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}">{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}</time></a></p>{/block:SameDayDate}
           </div>
           {/block:Date}
 
