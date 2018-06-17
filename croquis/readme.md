@@ -29,7 +29,7 @@ Croquis は、Tumblrで気軽に落描きを投稿しやすいテンプレート
 下記の設定がカスタマイズできます。
 
 | 設定項目 | 説明 |
-|-------|-----|-----|
+|-------|-----|
 | Enable Facebook Button | 記事パーマリンクに Facebook の Like ボタンを表示します。 |
 | Enable Plus1 Button | 記事パーマリンクに Google +1 ボタンを表示します。 |
 | Enable Tweet Button | 記事パーマリンクにツイートボタンを表示します。 |
