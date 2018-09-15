@@ -4,8 +4,8 @@
 
 #### Free responsive tumblr theme for illustrators
 
-llustfolio 2 は、イラストのポートフォリオサイトに特化した無料 Tumblr テンプレートです。  
-Tumblr に画像をアップロードするだけで簡単にポートフォリオサイトが作れます。  
+llustfolio 2 は、イラストのポートフォリオサイトに特化した無料 Tumblr テンプレートです。
+Tumblr に画像をアップロードするだけで簡単にポートフォリオサイトが作れます。
 [@sanographix](https://twitter.com/sanographix) がデザインしています。
 
 <hr/>
@@ -61,7 +61,7 @@ Tumblr の[テーマカスタマイズ画面](http://www.tumblr.com/customize)�
 1. [API キー登録ページ](http://www.tumblr.com/oauth/apps)へ行き、「アプリを登録する」を押します。
 2. 下図のように「Application name」「Administrative contact email」「Default callback URL」のフォームを埋めて「Register」を押します。
 3. OAuth Consumer Key: ○○ と書いてある文字列をメモします。
- 
+
 <img src="http://static.tumblr.com/xlsgtjb/BoXmo0i85/apikey-register.png" width="300px">
 
 
@@ -110,7 +110,7 @@ Tumblrは画像投稿にタイトルを設定できません。そこで、キ�
 #### Markdownモード
 
 	## 画像のタイトル
-	
+
 	画像のキャプション画像のキャプション画像のキャプション…
 
 Markdown については[こちらの解説記事](http://blog.2310.net/archives/6)が詳しいです。
@@ -125,7 +125,7 @@ Markdown については[こちらの解説記事](http://blog.2310.net/archives
 
 ## Special Thanks
 
-デモページは[火曜さん](http://twitter.com/kayou_bi)のイラストを使用させていただきました。ありがとうございます！  
+デモページは[火曜さん](http://twitter.com/kayou_bi)のイラストを使用させていただきました。ありがとうございます！
 [http://www.pixiv.net/member_illust.php?id=62835](http://www.pixiv.net/member_illust.php?id=62835)
 
 
@@ -143,18 +143,27 @@ Markdown については[こちらの解説記事](http://blog.2310.net/archives
 ### このテーマのよくある質問
 
 ##### Q: Video とか Link 投稿だと index ページでタイトルもサムネイルも出ません
+
 * 仕様です。Tumblr テーマの仕様上の制限によって表示できません。
 
-##### Q: パーマリンクに他の記事のサムネイルが出るって聞きましたけど出ません
-* オプションの`Tumblr API Key`が未入力ではありませんか？ 上記手順の「ステップ2: APIキーの取得」を行ってください。 
+##### Q: パーマリンクに他の記事のサムネイルを表示する機能が正しく動きません
+
+* オプションの`Tumblr API Key`が未入力ではありませんか？ 上記手順の「ステップ2: APIキーの取得」を行ってください。
+
+##### Q: 「常にブログをSSLで処理する」を有効にするとタグが表示されなくなります
+
+* 問題を認識していますが、対応時期は未定です。Illustfolio 2に限らず、私が作成した古いテーマではSSLがオンのとき一部機能が正しく動かないことがあります。
 
 ##### Q: Disqusコメントフォームが真っ白です
+
 * Disqus設定画面で、カラースキームが「for Light Background」になっているか確認してください。まれに「Dark」になっている場合があるようです。
 
 ##### Q: フォトセットの投稿がスライドショーに表示されません
+
 * 仕様です。
 
-##### Q: スライドショーの画像がなんか荒いです
+##### Q: スライドショーの画像が粗いような気がします
+
 * 画像の解像度が足りないと思われます。横 1180px 以上の画像を投稿されることをおすすめします。
 
 ##### Q: スライドショーの画像のトリミング位置は指定できないんですか？
@@ -181,7 +190,7 @@ Graphic designer from Kyoto.
 ### 2.3.1 (2014/08/27)
 * `Blog Domain`オプションを廃止
     * ブログURLを取得するテンプレートタグがTumblr側で実装されたため
-    
+
 ### 2.3.0 (2014/04/16)
 
 * フォトセットをレスポンシブデザイン対応

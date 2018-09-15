@@ -1,9 +1,13 @@
 ## Illustfolio
 
+## 【⛔ Notice】 このテーマはサポートしていません
+
+* このテーマは **もうサポートしていません** 。どうしても使いたい場合は自己責任でご利用ください。
+
 #### Free responsive tumblr theme for illustrators
 
-llustfolioは、イラストのポートフォリオサイトに特化した無料Tumblrテンプレートです。  
-Tumblrに画像をアップロードするだけで簡単にポートフォリオサイトが作れます。  
+llustfolioは、イラストのポートフォリオサイトに特化した無料Tumblrテンプレートです。
+Tumblrに画像をアップロードするだけで簡単にポートフォリオサイトが作れます。
 [@sanographix](https://twitter.com/sanographix)がデザインしています。
 
 <hr/>
@@ -99,7 +103,7 @@ Tumblrは画像投稿にタイトルを設定できません。そこで、キ�
 
 ## Special Thanks
 
-デモページは[火曜さん](http://twitter.com/kayou_bi)のイラストを使用させていただきました。ありがとうございます！  
+デモページは[火曜さん](http://twitter.com/kayou_bi)のイラストを使用させていただきました。ありがとうございます！
 [http://www.pixiv.net/member_illust.php?id=62835](http://www.pixiv.net/member_illust.php?id=62835)
 
 
