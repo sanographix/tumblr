@@ -2,7 +2,6 @@ module.exports = function(grunt){
     grunt.loadNpmTasks('grunt-contrib-compass');
     grunt.loadNpmTasks("grunt-contrib-watch");
     grunt.loadNpmTasks('grunt-contrib-imagemin');
-    grunt.loadNpmTasks('grunt-pngmin');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-connect');
@@ -34,21 +33,6 @@ module.exports = function(grunt){
                     dest: '<%= paths.imgdist %>'
                 }]
             }
-        },
-
-        // pngmin
-        pngmin: {
-          compile: {
-            options: {
-              ext: '.png'
-            },
-            files: [{
-              expand: true,
-              cwd: '<%= paths.img %>',
-              src: '**/*.png',
-              dest: '<%= paths.imgdist %>'
-            }]
-          }
         },
 
         // js-concat
