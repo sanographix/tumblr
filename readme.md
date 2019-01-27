@@ -14,7 +14,7 @@
 
 ## 不具合かな？ と思ったら
 
-サポート情報は下記URLに移動しました。
+**サポート情報は下記URLに移動しました。**
 
 - <https://sanographix.gitbook.io/themes-support/>
 
