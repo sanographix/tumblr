@@ -73,6 +73,139 @@
 </head>
 <body>
 
+  <script>
+    window.onload = function() {
+      var popup = document.getElementById('js-popup');
+      if(!popup) return;
+      popup.classList.add('is-show');
+
+      var blackBg = document.getElementById('js-black-bg');
+      var closeBtn = document.getElementById('js-close-btn');
+
+      closePopUp(blackBg);
+      closePopUp(closeBtn);
+
+      function closePopUp(elem) {
+        if(!elem) return;
+        elem.addEventListener('click', function() {
+          popup.classList.remove('is-show');
+        })
+      }
+    }
+  </script>
+
+  <style>
+    .popup {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 9999;
+      opacity: 0;
+      visibility: hidden;
+      transition: .6s;
+    }
+    .popup.is-show {
+      opacity: 1;
+      visibility: visible;
+    }
+    .popup-inner {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%,-50%);
+      width: 90%;
+      max-width: 600px;
+      background-color: #fff;
+      z-index: 2;
+      border-radius: 8px;
+      overflow: hidden;
+      text-align: center;
+      font-family: 'Avenir Next', 'Helvetica Neue', Helvetica, Arial, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif;
+    }
+    .popup-inner img {
+      width: 100%;
+    }
+    .close-btn {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 50px;
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+      cursor: pointer;
+    }
+    .close-btn i {
+      font-size: 20px;
+      color: #333;
+    }
+    .black-background {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,.8);
+      z-index: 1;
+      cursor: pointer;
+    }
+    .popup-thumb {
+      display: block;
+    }
+    .popup-content {
+      padding: 16px 16px 20px;
+    }
+    .popup-label {
+      display: inline-block;
+      padding-bottom: .3em;
+      margin-bottom: .8em;
+      letter-spacing: .4em;
+      font-size: 11px;
+      border-bottom: 1px solid #191A1C;
+    }
+    .popup-label:before {
+      content: '';
+      width: .4em;
+      display: inline-block;
+    }
+    .popup-title {
+      font-size: 22px;
+      color: #191A1C;
+      margin-bottom: .8em;
+    }
+    .popup-btn {
+      display: inline-block;
+      padding: .75rem 1.2rem;
+      font-size: 15px;
+      color: #fff;
+      background-color: #191A1C;
+      border: 1px solid #191A1C;
+      text-decoration: none;
+      letter-spacing: .1em;
+    }
+    .popup-btn:hover {
+      color: #191A1C;
+      background: transparent;
+      text-decoration: none;
+    }
+  </style>
+
+  <div class="popup" id="js-popup">
+    <div class="popup-inner">
+      <div class="close-btn" id="js-close-btn"></div>
+      <a href="https://sanographix.github.io/illustfolio4/"  target="_blank" rel="noopener"><img src="images/popup-image-illustfolio4.jpg" alt="Illustfolio 4" class="popup-thumb"></a>
+      <div class="popup-content">
+        <div class="popup-label">NEW VERSION</div>
+        <div class="popup-title">Illustfolio 4 が登場</div>
+        <a href="https://sanographix.github.io/illustfolio4/"  target="_blank" rel="noopener" class="popup-btn">詳細を見る</a>
+      </div>
+    </div>
+    <div class="black-background" id="js-black-bg"></div>
+  </div>
+
+
   <div id="fb-root"></div>
   <script>(function(d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0];
@@ -82,7 +215,75 @@
     fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'facebook-jssdk'));</script>
 
+  <style>
+    .i4-banner {
+      text-align: center;
+      background: #aaa url(images/i4-hero-bg.jpg) center center;
+      background-size: cover;
+      padding: 1.5em 0;
+      position: relative;
+    }
+    .i4-banner * {
+      color: #fff;
+      font-weight: normal;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+    }
+    .i4-banner .section-mask {
+      position: absolute;
+      background-color: rgba(0,0,0,0.7);
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    .i4-banner-inner {
+      margin-left: 10px;
+      margin-right: 10px;
+      position: relative;
+      z-index: 2;
+      font-family: 'Avenir Next', 'Helvetica Neue', Helvetica, Arial, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif;
+    }
+    .i4-banner-badge {
+      font-size: .8rem;
+      display: inline-block;
+      border: 1px solid #fff;
+      padding: .3em .5em;
+    }
+    .i4-banner-h1 {
+      margin: .3em 0;
+      font-size: 28px;
+      font-family: 'Avenir Next', 'Helvetica Neue', Helvetica, Arial, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif;
+    }
+    .i4-banner-h2 {
+      font-size: .9rem;
+    }
+    .i4-cta {
+        display: inline-block;
+        padding: .75rem 1.2rem;
+        font-size: 15px;
+        background: #fff;
+        color: #191A1C;
+        text-decoration: none;
+        letter-spacing: .1em;
+      }
+      .i4-cta:hover {
+        text-decoration: none;
+        color: #191A1C;
+      }
+  </style>
 
+  <div class="i4-banner">
+    <div class="section-mask"></div>
+    <div class="i4-banner-inner">
+      <span class="i4-banner-badge">新バージョン</span>
+      <h1 class="i4-banner-h1">Illustfolio 4</h1>
+      <h2 class="i4-banner-h2">Available Now</h2>
+      <a href="https://sanographix.github.io/illustfolio4" target="_blank" rel="noopener" class="i4-cta">Illustfolio 4 を見る</a>
+    </div>
+  </div>
+
+<!--
   <div class="illustfolio3-container">
     <div id="illustfolio3-header">
       <span class="badge">NEW</span>
@@ -91,6 +292,7 @@
       <a href="//sanographix.github.io/tumblr/illustfolio3" target="_blank" class="btn btn-large btn-primary" onClick="ga('send', 'event', 'goto-illustfolio3', 'Click', 'header');">Illustfolio 3 を見る</a>
     </div>
   </div>
+-->
 
 <div class="navbar">
   <div class="navbar-inner jumbo">
@@ -227,7 +429,6 @@
       <img src="http://sanographix.github.io/tumblr/images/c84banner-pre-tumblr.gif">
     </a>
   </div>
-  -->
 
   <div class="illustfolio3-container">
     <div id="illustfolio3-footer">
@@ -237,6 +438,7 @@
       <a href="//sanographix.github.io/tumblr/illustfolio3" target="_blank" class="btn btn-large btn-primary" onClick="ga('send', 'event', 'goto-illustfolio3', 'Click', 'footer');">Illustfolio 3 を見る</a>
     </div>
   </div>
+  -->
 
   <!--more-->
   <hr class="soften">
