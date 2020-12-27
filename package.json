@@ -16,7 +16,7 @@
     "imagemin-pngquant": "^5.0.0",
     "gulp-pleeease": "^2.0.2",
     "gulp-plumber": "^1.1.0",
-    "gulp-sass": "^3.1.0",
+    "gulp-sass": "^2.3.2",
     "gulp-uglify": "^2.0.0"
   }
 }
