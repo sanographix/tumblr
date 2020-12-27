@@ -1,1 +1,1 @@
-!function(){for(var t=document.querySelectorAll("a"),e=0;e<t.length;e++)t[e].host!==location.host&&(t[e].setAttribute("target","_blank"),t[e].setAttribute("rel","noopener noreferrer"))}();
+!function(){for(var t=document.querySelectorAll("a"),e=0;e<t.length;e++)t[e].host!==location.host&&"sanographix.net"!==t[e].host&&"text.sanographix.net"!==t[e].host&&(t[e].setAttribute("target","_blank"),t[e].setAttribute("rel","noopener noreferrer"))}();
