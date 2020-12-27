@@ -1,31 +1,36 @@
 // Core (Main Style)
 .header {
-    text-align: center;
-    margin: 3em auto 2em;
-    @media #{$mq-sm} {
-        margin: 5em auto 2em;
+    padding: 3rem 0 0;
+    @media #{$mq-md} {
+        padding: 5rem 0 0;
     }
     .header-title {
-        font-size: 2rem;
         margin: 0;
-        @media #{$mq-sm} {
-            font-size: 3rem;
+        font-size: 2.25rem;
+        letter-spacing: .025em;
+        font-weight: 500;
+        line-height: 1;
+        @media #{$mq-md} {
+            font-size: 3.5rem;
         }
     }
     .header-subtitle {
         font-size: .9rem;
-        margin: 0;
+        letter-spacing: .025em;
         @media #{$mq-sm} {
             font-size: 1rem;
         }
     }
-    hr {
-        margin: 2em auto;
-        width: 4rem;
-        border: 0;
-        height: .3em;
-        background: $border;
+    .lead {
+        margin: 2rem 0 0;
+        font-size: 1.5rem;
+        line-height: 1.4;
+        font-weight: 500;
+        @media #{$mq-md} {
+            font-size: 1.8rem;
+        }
     }
+
 }
 
 // share
@@ -78,22 +83,6 @@
 
 
 // theme list
-.theme-list-header {
-    text-align: center;
-    margin-bottom: 2em;
-    @media #{$mq-sm} {
-        margin-bottom: 3em;
-    }
-    h1 {
-        margin: 0;
-        font-size: 1.6rem;
-    }
-    p {
-        font-size: .9rem;
-        color: $light;
-    }
-}
-
 .badge {
     font-size: .7rem;
     color: $link;
@@ -105,10 +94,13 @@
 }
 
 .theme-list {
+    margin: 3rem auto;
+    @media #{$mq-lg} {
+        margin: 5rem auto;
+    }
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin: 0;
     padding: 0;
     list-style: none;
     flex-direction: column;

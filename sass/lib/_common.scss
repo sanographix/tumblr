@@ -1,23 +1,15 @@
 // Common
-@font-face {
-    font-family: 'Geomanist';
-    src: url('../fonts/geomanist-regular-webfont.woff2') format('woff2'),
-         url('../fonts/geomanist-regular-webfont.woff') format('woff');
-    font-weight: 400;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Geomanist';
-    src: url('../fonts/geomanist-bold-webfont.woff2') format('woff2'),
-         url('../fonts/geomanist-bold-webfont.woff') format('woff');
-    font-weight: 700;
-    font-style: normal;
-}
 
 body {
-    font-family: 'Geomanist', -apple-system, BlinkMacSystemFont, Helvetica, 'Segoe UI', Arial, sans-serif;
+    font-family: 'TTHoves', -apple-system, BlinkMacSystemFont, Helvetica, 'Segoe UI', Arial, sans-serif;
     background: $bg;
     color: $base;
+    // ヘッダ固定
+    margin-top: 56px;
+    @media #{$mq-md} {
+        margin-top: 88px;
+    }
+
 }
 a {
     color: $link;

@@ -1,19 +1,9 @@
 // grid
 .l-container {
-    width: auto;
-    margin-left: 10px;
-    margin-right: 10px;
-    @media #{$mq-sm} {
-        width: 728px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    @media #{$mq-md} {
-        width: 940px;
-    }
-    @media #{$mq-lg} {
-        width: 1140px;
-    }
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1380px;
 }
 .l-row {
     @include clearfix();
