@@ -103,7 +103,6 @@
     justify-content: space-between;
     padding: 0;
     list-style: none;
-    flex-direction: column;
     @media #{$mq-sm} {
         flex-direction: row;
     }
