@@ -176,6 +176,7 @@
     }
     .ss {
         max-width: 100%;
+        height: auto;
         display: block;
         border-bottom-left-radius: $radius;
         border-bottom-right-radius: $radius;
@@ -212,12 +213,88 @@
     }
 }
 
-.footer {
-    text-align: center;
-    font-size: .8rem;
-    color: $light;
-    margin: 2em auto;
-    a {
-        color: $light;
+.l-footer {
+    background: $bg-light;
+    padding: 3rem 0;
+    margin-top: 5rem;
+}
+.l-footer-inner {
+    @media #{$mq-md} {
+        display: flex;
     }
+    a {
+        color: $base;
+        text-decoration: none;
+    }
+}
+.footer-brand {
+    @media #{$mq-md} {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.footer-logo {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    line-height: 1.25;
+    @media #{$mq-md} {
+        margin-bottom: auto;
+    }
+}
+.footer-social {
+    padding: 0;
+    margin: 0 0;
+    list-style: none;
+    line-height: 0;
+    li {
+        display: inline-block;
+        margin-left: .5em;
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+    .follow-button {
+        display: inline-block;
+        text-decoration: none;
+        padding: 8px;
+        border-radius: 6px;
+        svg {
+            width: 24px;
+            height: 24px;
+            display: block;
+            path,
+            circle {
+                fill: $base;
+            }
+        }
+        &:hover {
+            background: $bg-light;
+        }
+    }
+}
+.footer-menu {
+    margin-top: 1.5rem;
+    @media #{$mq-md} {
+        margin-top: 0;
+    }
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        letter-spacing: .025em;
+        line-height: 1.75;
+    }
+    li {
+        margin-bottom: .5rem;
+    }
+    a {
+        text-decoration: none;
+    }
+}
+.copyright {
+    margin: 1.5rem 0 0;
+    font-size: .8rem;
 }
