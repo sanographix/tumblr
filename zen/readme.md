@@ -4,7 +4,7 @@
 
 #####  A ultra-simple and zen-style tumblr theme
 
-ZENは、Tumblrで普通に日記を書く用途にこだわったテンプレートです。[@sanographix](https://twitter.com/sanographix)がデザインしています。詳細は[こちらの紹介ページ](http://sanographix.github.io/tumblr/zen)をご覧ください。  
+ZENは、Tumblrで普通に日記を書く用途にこだわったテンプレートです。[@sanographix](https://twitter.com/sanographix)がデザインしています。詳細は[こちらの紹介ページ](http://sanographix.github.io/tumblr/zen)をご覧ください。
 
 ## Install
 
@@ -28,6 +28,9 @@ ZENには2種類のバージョンがあり、それぞれインストール方�
 |テーマの自動更新|○|×|
 |はてなスター|×|○|
 |はてなブックマークボタン|×|○|
+|Google Analytics|△(*)|○|
+
+*: オプションで設定できませんが、ご自身でトラッキングコードを貼り付けることで設置できます
 
 <hr>
 
@@ -271,7 +274,7 @@ Graphic designer from Kyoto.
 * リブログ元のユーザのアイコンを表示するように / 最初に投稿した人も表示するようにした
 * Disqus 対応
 * リストを入れ子にしたときのマージン調整
- 
+
 ### 1.0.9 (2013/3/16)
 
 * twilog で「ソースを貼り付け」したときにスタイルをあてるようにした
