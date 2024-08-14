@@ -1,10 +1,12 @@
-## Illustfolio
+# Illustfolio
 
-## 【⛔ Notice】 このテーマはサポートしていません
+## ⛔ このテーマはサポートしていません
 
-* このテーマは **もうサポートしていません** 。どうしても使いたい場合は自己責任でご利用ください。
+**このテーマはサポートを終了しました。どうしても使いたい場合、自己責任でご利用ください。**
 
-#### Free responsive tumblr theme for illustrators
+**This theme is no longer supported. If you still want to use it, please do so at your own risk.**
+
+<hr />
 
 llustfolioは、イラストのポートフォリオサイトに特化した無料Tumblrテンプレートです。
 Tumblrに画像をアップロードするだけで簡単にポートフォリオサイトが作れます。
