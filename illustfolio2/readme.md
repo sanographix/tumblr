@@ -2,7 +2,13 @@
 
 # Illustfolio 2
 
-#### Free responsive tumblr theme for illustrators
+## ⛔ このテーマはサポートしていません
+
+**このテーマはサポートを終了しました。どうしても使いたい場合、自己責任でご利用ください。**
+
+**This theme is no longer supported. If you still want to use it, please do so at your own risk.**
+
+<hr/>
 
 llustfolio 2 は、イラストのポートフォリオサイトに特化した無料 Tumblr テンプレートです。
 Tumblr に画像をアップロードするだけで簡単にポートフォリオサイトが作れます。
