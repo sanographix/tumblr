@@ -929,6 +929,11 @@ h1 a, h1 a:hover, h2 a, h2 a:hover, h3 a, h3 a:hover, h4 a, h4 a:hover, h5 a, h5
     padding-top: 15px;
   }
 }
+.theme-list .ss-wrapper img {
+  aspect-ratio: 1200/900;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
 .theme-list .ss-wrapper:before {
   content: "";
   display: block;

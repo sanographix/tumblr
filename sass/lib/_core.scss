@@ -146,6 +146,10 @@
         @media #{$mq-sm} {
             padding-top: 15px;
         }
+        img {
+            aspect-ratio: 1200 / 900;
+            object-fit: cover;
+        }
         &:before {
             content: "";
             display: block;
