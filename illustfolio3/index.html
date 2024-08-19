@@ -66,24 +66,59 @@
 </head>
 <body>
 
+  <nav class="navbar" role="navigation" style="border-bottom: 1px solid rgba(0, 0, 0, 0.08);">
+    <div class="container">
+      <div class="navbar-box">
+        <div class="pull-left">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="http://sanographix.github.io/tumblr/illustfolio3">Illustfolio 3</a>
+            <a href="http://sanographix.github.io/tumblr/">
+              <small>Tumblr Theme by sanographix</small>
+            </a>
+          </div>
+        </div>
+        <div class="pull-right">
+          <ul class="nav">
+            <li id="socialarea_twitter">
+              <a href="https://twitter.com/share?text=Illustfolio 3 - イラストポートフォリオサイトを一瞬で作れるTumblrテーマ&url=http://sanographix.github.io/tumblr/illustfolio3/&related=sanographix" class="btn btn-tw" onClick="ga('send', 'event', 'share-twitter', 'Click', 'navbar');">
+                <img src="http://static.tumblr.com/xlsgtjb/mmZndl3sh/twitter.svg" width="14px">
+                <span class="label">Tweet</span>
+              </a>
+            </li>
+            <li id="socialarea_facebook">
+              <a href="http://www.facebook.com/sharer.php?u=http://sanographix.github.io/tumblr/illustfolio3/" class="btn btn-fb" onClick="ga('send', 'event', 'share-facebook', 'Click', 'navbar');">
+                <img src="http://static.tumblr.com/xlsgtjb/dB1ndl3rn/facebook.svg" width="14px">
+                <span class="label">Share</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
   <div class="illustfolioNavbar">
-    <nav>
+    <nav class="illustfolioNavbarNav">
       <a href="https://sanographix.github.io/tumblr/illustfolio3/" class="illustfolioNavbarLink is-selected">Illustfolio 3</a>
       <a href="https://sanographix.github.io/illustfolio4/" class="illustfolioNavbarLink">Illustfolio 4</a>
       <a href="https://illustfolio-lumina.sanographix.net/ja/" class="illustfolioNavbarLink"><span class="new">New</span>Illustfolio Lumina</a>
     </nav>
+    <a href="https://illustfolio-lumina.sanographix.net/ja/" class="illustfolioNavbarAnnouncement" target="_blank">
+      <div>あなたのイラストがもっと輝く🌠</div><div>「Illustfolio Lumina」が新登場。</div>
+      <div><div class="banner-button">詳細を見る</div></div>
+    </a>
   </div>
   <style>
     .illustfolioNavbar {
-      background-color: #fff;
       position: sticky;
-      padding: 16px 0;
       top: 0;
       z-index: 49;
-      box-shadow: 0px 1px 0 rgba(0, 0, 0, 0.08);
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica,Arial, sans-serif;
     }
-    .illustfolioNavbar nav {
+    .illustfolioNavbarNav {
+      background-color: #fff;
+      padding: 16px 0;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.08);
       display: flex;
       justify-content: center;
       gap: 8px;
@@ -120,39 +155,42 @@
       border-radius: 100px;
       margin-right: .4em;
     }
+    .illustfolioNavbarAnnouncement {
+      background: linear-gradient(-45deg, #bbc8ff, #ffe3d2);
+      color: #384f77;
+      text-align: center;
+      justify-content: center;
+      height: 64px;
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+    }
+    @media (min-width: 992px) {
+      .illustfolioNavbarAnnouncement {
+        flex-direction: row;
+        align-items: center;
+      }
+    }
+    .banner-button {
+      display: none;
+      border-radius: 1000px;
+      background-color: #fff;
+      font-size: 15px;
+      padding: 8px 16px;
+    }
+    @media (min-width: 992px) {
+      .banner-button {
+        margin-left: 8px;
+        display: inline-block;
+      }
+    }
   </style>
+
+
+
   <header class="header">
 
-    <nav class="navbar" role="navigation">
-      <div class="container">
-        <div class="navbar-box">
-          <div class="pull-left">
-            <div class="navbar-header">
-              <a class="navbar-brand" href="http://sanographix.github.io/tumblr/illustfolio3">Illustfolio 3</a>
-              <a href="http://sanographix.github.io/tumblr/">
-                <small>Tumblr Theme by sanographix</small>
-              </a>
-            </div>
-          </div>
-          <div class="pull-right">
-            <ul class="nav">
-              <li id="socialarea_twitter">
-                <a href="https://twitter.com/share?text=Illustfolio 3 - イラストポートフォリオサイトを一瞬で作れるTumblrテーマ&url=http://sanographix.github.io/tumblr/illustfolio3/&related=sanographix" class="btn btn-tw" onClick="ga('send', 'event', 'share-twitter', 'Click', 'navbar');">
-                  <img src="http://static.tumblr.com/xlsgtjb/mmZndl3sh/twitter.svg" width="14px">
-                  <span class="label">Tweet</span>
-                </a>
-              </li>
-              <li id="socialarea_facebook">
-                <a href="http://www.facebook.com/sharer.php?u=http://sanographix.github.io/tumblr/illustfolio3/" class="btn btn-fb" onClick="ga('send', 'event', 'share-facebook', 'Click', 'navbar');">
-                  <img src="http://static.tumblr.com/xlsgtjb/dB1ndl3rn/facebook.svg" width="14px">
-                  <span class="label">Share</span>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </nav>
+
 
 
     <div class="container hero">
