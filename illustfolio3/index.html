@@ -66,175 +66,61 @@
 </head>
 <body>
 
-
-  <script>
-    window.onload = function() {
-      var popup = document.getElementById('js-popup');
-      if(!popup) return;
-      popup.classList.add('is-show');
-
-      var blackBg = document.getElementById('js-black-bg');
-      var closeBtn = document.getElementById('js-close-btn');
-
-      closePopUp(blackBg);
-      closePopUp(closeBtn);
-
-      function closePopUp(elem) {
-        if(!elem) return;
-        elem.addEventListener('click', function() {
-          popup.classList.remove('is-show');
-        })
-      }
-    }
-  </script>
-
+  <div class="illustfolioNavbar">
+    <nav>
+      <a href="https://sanographix.github.io/tumblr/illustfolio3/" class="illustfolioNavbarLink is-selected">Illustfolio 3</a>
+      <a href="https://sanographix.github.io/illustfolio4/" class="illustfolioNavbarLink">Illustfolio 4</a>
+      <a href="https://illustfolio-lumina.sanographix.net/ja/" class="illustfolioNavbarLink"><span class="new">New</span>Illustfolio Lumina</a>
+    </nav>
+  </div>
   <style>
-    .popup {
-      position: fixed;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 9999;
-      opacity: 0;
-      visibility: hidden;
-      transition: .6s;
-    }
-    .popup.is-show {
-      opacity: 1;
-      visibility: visible;
-    }
-    .popup-inner {
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%,-50%);
-      width: 90%;
-      max-width: 600px;
+    .illustfolioNavbar {
       background-color: #fff;
-      z-index: 2;
-      border-radius: 8px;
-      overflow: hidden;
-      text-align: center;
-    }
-    .popup-inner img {
-      width: 100%;
-    }
-    .close-btn {
-      position: absolute;
-      right: 0;
+      position: sticky;
+      padding: 16px 0;
       top: 0;
-      width: 50px;
-      height: 50px;
-      line-height: 50px;
-      text-align: center;
-      cursor: pointer;
+      z-index: 49;
+      box-shadow: 0px 1px 0 rgba(0, 0, 0, 0.08);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica,Arial, sans-serif;
     }
-    .close-btn i {
-      font-size: 20px;
-      color: #333;
-    }
-    .black-background {
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0,0,0,.8);
-      z-index: 1;
-      cursor: pointer;
-    }
-    .popup-thumb {
-      display: block;
-    }
-    .popup-content {
-      padding: 16px 16px 20px;
-    }
-    .popup-label {
-      display: inline-block;
-      padding-bottom: .3em;
-      margin-bottom: .8em;
-      letter-spacing: .4em;
-      font-size: 11px;
-      border-bottom: 1px solid #191A1C;
-    }
-    .popup-label:before {
-      content: '';
-      width: .4em;
-      display: inline-block;
-    }
-    .popup-title {
-      font-size: 22px;
-      font-weight: bold;
-      color: #191A1C;
-      margin-bottom: .8em;
-    }
-    .popup-btn {
-      display: inline-block;
-      padding: .75rem 1.2rem;
-      font-size: 15px;
-      color: #fff;
-      background-color: #191A1C;
-      border: 1px solid #191A1C;
-      text-decoration: none;
-      letter-spacing: .1em;
-    }
-    .popup-btn:hover {
-      color: #191A1C;
-      background: transparent;
-    }
-  </style>
-
-  <div class="popup" id="js-popup">
-    <div class="popup-inner">
-      <div class="close-btn" id="js-close-btn"></div>
-      <a href="https://sanographix.github.io/illustfolio4/"  target="_blank" rel="noopener"><img src="dist/images/popup-image-illustfolio4.jpg" alt="Illustfolio 4" class="popup-thumb"></a>
-      <div class="popup-content">
-        <div class="popup-label">NEW VERSION</div>
-        <div class="popup-title">Illustfolio 4 が登場</div>
-        <a href="https://sanographix.github.io/illustfolio4/"  target="_blank" rel="noopener" class="popup-btn">詳細を見る</a>
-      </div>
-    </div>
-    <div class="black-background" id="js-black-bg"></div>
-  </div>
-
-
-  <div class="i4-banner">
-    <div class="section-mask"></div>
-    <div class="i4-banner-inner">
-      <span class="i4-banner-badge">新バージョン</span>
-      <h1 class="i4-banner-h1">Illustfolio 4</h1>
-      <h2 class="i4-banner-h2">Available Now</h2>
-      <a href="//sanographix.github.io/illustfolio4" target="_blank" class="btn btn-large btn-primary">Illustfolio 4 を見る</a>
-    </div>
-  </div>
-
-  <a class="announcementBar" href="https://illustfolio10th.sanographix.net/" target="_blank" rel="noopener">
-    <div>Illustfolioは10周年！</div><div>特設サイトを見てみよう。 #illustfolio10th</div>
-  </a>
-  <style>
-    .announcementBar {
+    .illustfolioNavbar nav {
       display: flex;
-      flex-direction: column;
       justify-content: center;
-      text-align: center;
-      background-color: #e1dbff;
-      color: #27128f;
-      padding: 10px;
-      font-size: 16px;
+      gap: 8px;
+    }
+    .illustfolioNavbarLink {
+      color: inherit;
+      font-size: 15px;
+      display: inline-block;
+      padding: 4px 8px;
       line-height: 1.4;
+      text-align: center;
+      color: #888;
+      position: relative;
       text-decoration: none;
     }
-    .announcementBar:hover {
-      text-decoration: none;
-      background-color: #d2c6ff;
-      color: #27128f;
+    .illustfolioNavbarLink:hover {
+      color: #111;
     }
-    @media (min-width: 768px) { .announcementBar {
-      flex-direction: row;
-    }}
+    .illustfolioNavbarLink.is-selected {
+      color: #111;
+      box-shadow: 0px 2px 0 rgba(0, 0, 0, 0.75);
+    }
+    .illustfolioNavbarLink .new {
+      position: absolute;
+      bottom: 75%;
+      right: -10%;
+      display: inline-block;
+      padding: 4px 6px;
+      font-size: 11px;
+      text-transform: uppercase;
+      background: linear-gradient(-45deg, #7986ff,#ff9d7c);
+      color: #fff;
+      line-height: 1;
+      border-radius: 100px;
+      margin-right: .4em;
+    }
   </style>
-
   <header class="header">
 
     <nav class="navbar" role="navigation">
@@ -403,16 +289,6 @@
 
     </div>
   </section>
-
-  <div class="i4-banner">
-    <div class="section-mask"></div>
-    <div class="i4-banner-inner">
-      <span class="i4-banner-badge">新バージョン</span>
-      <h1 class="i4-banner-h1">Illustfolio 4</h1>
-      <h2 class="i4-banner-h2">Available Now</h2>
-      <a href="//sanographix.github.io/illustfolio4" target="_blank" class="btn btn-large btn-primary">Illustfolio 4 を見る</a>
-    </div>
-  </div>
 
   <section id="case" class="section case">
     <div class="container">
