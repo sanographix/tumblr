@@ -4,6 +4,11 @@
 @import "_bootstrap.less";
 @import "_bootstrap-responsive.less";
 @import "_font-awesome.less";
+@import "_illustfolio4-banner.less";
+@import "_popup.less";
+@import "_illustfolioNavbar.less";
+@import "_announcementBar.less";
+@import "_compare.less";
 
 /*  Primary Styles
    Author:sanographix
@@ -62,6 +67,13 @@ hr.soften {
 h1,h2 {
     line-height: 1.1;
     color: @heading;
+    a {
+        color: inherit;
+        border-bottom: 1px solid @heading;
+        &:hover {
+            text-decoration: none;
+        }
+    }
 }
 
 h3,h4,h5 {
@@ -138,14 +150,17 @@ h3,h4,h5 {
 
 .navbar-inner {
     background: #fff;
-    .box-shadow(0,0,8px,rgba(0,0,0,.2));
+    box-shadow: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
     .border-radius(0);
 }
 
 // header
 
 .header-wrapper {
-    background: url('../images/header-bg.jpg') repeat center -20px;
+    background: url('../../images/header-bg.jpg') repeat center -20px;
     text-align: center;
     padding-bottom: 200px;
     box-shadow:0 -8px 8px -8px rgba(0,0,0,.2) inset;
@@ -408,7 +423,7 @@ h3,h4,h5 {
 // getstarted {
 
 .getstarted-wrapper {
-    background: url('../images/header-bg.jpg') repeat center -20px;
+    background: url('../../images/header-bg.jpg') repeat center -20px;
     text-align: center;
     box-shadow:0 -8px 8px -8px rgba(0,0,0,.2) inset;
     border-bottom: 1px solid #d4d4d4;
@@ -462,14 +477,29 @@ h3,h4,h5 {
         text-align: left;
         margin-top: 20px;
 
-        h3 {
-            font-size: 14px;
+        h4 {
+            font-size: 18px;
             color: @base;
-            margin: 0 0 5px 0;
+            margin: 5px 0;
             line-height: 1.3;
+            display: inline-flex;
+            align-items: center;
         }
+        .new {
+            display: inline-block;
+            padding: 4px 6px;
+            font-size: 11px;
+            font-weight: bold;
+            text-transform: uppercase;
+            background: linear-gradient(-45deg, #7986ff, #ff9d7c);
+            color: #fff;
+            line-height: 1;
+            border-radius: 100px;
+            margin-right: 0.4em;
+        }
+
         p {
-            font-size: 12px;
+            font-size: 14px;
             color: @light;
             margin: 0;
         }
@@ -519,7 +549,7 @@ div.likebox_container .fb_iframe_widget span{
 // illustfolio 3 の告知
 
 .illustfolio3-container {
-    background: url(../images/header-bg-illustfolio3.jpg) no-repeat center top;
+    background: url(../../images/header-bg-illustfolio3.jpg) no-repeat center top;
     background-size: cover;
 }
 

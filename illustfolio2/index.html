@@ -17,7 +17,7 @@
   <meta name="twitter:site" content="@sanographix">
   <meta name="twitter:image:src" content="http://sanographix.github.io/tumblr/illustfolio2/images/screenshot-top.png">
 
-  <link rel="stylesheet" media="screen" href="css/style.css" />
+  <link rel="stylesheet" media="screen" href="dist/css/style.css" />
   <link rel="shortcut icon" href="images/favicon.ico">
   <link rel="canonical" href="http://sanographix.github.io/tumblr/illustfolio2/" />
 
@@ -70,7 +70,7 @@
 </head>
 <body>
 
-  <script>
+  <!-- <script>
     window.onload = function() {
       var popup = document.getElementById('js-popup');
       if(!popup) return;
@@ -90,103 +90,6 @@
       }
     }
   </script>
-  <style>
-    .popup {
-      position: fixed;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 10000;
-      opacity: 0;
-      visibility: hidden;
-      transition: .6s;
-    }
-    .popup.is-show {
-      opacity: 1;
-      visibility: visible;
-    }
-    .popup-inner {
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%,-50%);
-      width: 90%;
-      max-width: 600px;
-      background-color: #fff;
-      z-index: 2;
-      border-radius: 8px;
-      overflow: hidden;
-      text-align: center;
-      font-family: 'Avenir Next', 'Helvetica Neue', Helvetica, Arial, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif;
-    }
-    .popup-inner img {
-      width: 100%;
-    }
-    .close-btn {
-      position: absolute;
-      right: 0;
-      top: 0;
-      width: 50px;
-      height: 50px;
-      line-height: 50px;
-      text-align: center;
-      cursor: pointer;
-    }
-    .close-btn i {
-      font-size: 20px;
-      color: #333;
-    }
-    .black-background {
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0,0,0,.8);
-      z-index: 1;
-      cursor: pointer;
-    }
-    .popup-thumb {
-      display: block;
-    }
-    .popup-content {
-      padding: 16px 16px 20px;
-    }
-    .popup-label {
-      display: inline-block;
-      padding-bottom: .3em;
-      margin-bottom: .8em;
-      letter-spacing: .4em;
-      font-size: 11px;
-      border-bottom: 1px solid #191A1C;
-    }
-    .popup-label:before {
-      content: '';
-      width: .4em;
-      display: inline-block;
-    }
-    .popup-title {
-      font-size: 22px;
-      color: #191A1C;
-      margin-bottom: .8em;
-    }
-    .popup-btn {
-      display: inline-block;
-      padding: .75rem 1.2rem;
-      font-size: 15px;
-      color: #fff;
-      background-color: #191A1C;
-      border: 1px solid #191A1C;
-      text-decoration: none;
-      letter-spacing: .1em;
-    }
-    .popup-btn:hover {
-      color: #191A1C;
-      background: transparent;
-      text-decoration: none;
-    }
-  </style>
 
   <div class="popup" id="js-popup">
     <div class="popup-inner">
@@ -199,7 +102,7 @@
       </div>
     </div>
     <div class="black-background" id="js-black-bg"></div>
-  </div>
+  </div> -->
 
   <div id="fb-root"></div>
   <script>(function(d, s, id) {
@@ -210,65 +113,8 @@
     fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'facebook-jssdk'));</script>
 
-  <style>
-    .i4-banner {
-      text-align: center;
-      background: #aaa url(images/i4-hero-bg.jpg) center center;
-      background-size: cover;
-      padding: 1.5em 0;
-      position: relative;
-    }
-    .i4-banner * {
-      color: #fff;
-      font-weight: normal;
-      text-transform: uppercase;
-      letter-spacing: .1em;
-    }
-    .i4-banner .section-mask {
-      position: absolute;
-      background-color: rgba(0,0,0,0.7);
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-    }
-    .i4-banner-inner {
-      margin-left: 10px;
-      margin-right: 10px;
-      position: relative;
-      z-index: 2;
-      font-family: 'Avenir Next', 'Helvetica Neue', Helvetica, Arial, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif;
-    }
-    .i4-banner-badge {
-      font-size: .8rem;
-      display: inline-block;
-      border: 1px solid #fff;
-      padding: .3em .5em;
-    }
-    .i4-banner-h1 {
-      margin: .3em 0;
-      font-size: 28px;
-      font-family: 'Avenir Next', 'Helvetica Neue', Helvetica, Arial, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif;
-    }
-    .i4-banner-h2 {
-      font-size: .9rem;
-    }
-    .i4-cta {
-        display: inline-block;
-        padding: .75rem 1.2rem;
-        font-size: 15px;
-        background: #fff;
-        color: #191A1C;
-        text-decoration: none;
-        letter-spacing: .1em;
-      }
-      .i4-cta:hover {
-        text-decoration: none;
-        color: #191A1C;
-      }
-  </style>
 
-  <div class="i4-banner">
+  <!-- <div class="i4-banner">
     <div class="section-mask"></div>
     <div class="i4-banner-inner">
       <span class="i4-banner-badge">新バージョン</span>
@@ -276,7 +122,7 @@
       <h2 class="i4-banner-h2">Available Now</h2>
       <a href="https://sanographix.github.io/illustfolio4" target="_blank" rel="noopener" class="i4-cta">Illustfolio 4 を見る</a>
     </div>
-  </div>
+  </div> -->
 
   <!--
   <div class="illustfolio3-container">
@@ -289,7 +135,6 @@
   </div>
   -->
 
-
   <div class="navbar">
     <div class="navbar-inner">
       <div class="container">
@@ -301,31 +146,17 @@
     </div>
   </div>
 
-  <a class="announcementBar" href="https://illustfolio10th.sanographix.net/" target="_blank" rel="noopener">
-    <div>Illustfolioは10周年！</div><div>特設サイトを見てみよう。 #illustfolio10th</div>
-  </a>
-  <style>
-    .announcementBar {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      text-align: center;
-      background-color: #e1dbff;
-      color: #27128f;
-      padding: 10px;
-      font-size: 16px;
-      line-height: 1.4;
-      text-decoration: none;
-    }
-    .announcementBar:hover {
-      text-decoration: none;
-      background-color: #d2c6ff;
-      color: #27128f;
-    }
-    @media (min-width: 768px) { .announcementBar {
-      flex-direction: row;
-    }}
-  </style>
+  <div class="illustfolioNavbar">
+    <nav class="illustfolioNavbarNav">
+      <a href="https://sanographix.github.io/tumblr/illustfolio3/" class="illustfolioNavbarLink">Illustfolio 3</a>
+      <a href="https://sanographix.github.io/illustfolio4/" class="illustfolioNavbarLink">Illustfolio 4</a>
+      <a href="https://illustfolio-lumina.sanographix.net/ja/" class="illustfolioNavbarLink"><span class="new">New</span>Illustfolio Lumina</a>
+    </nav>
+    <a href="https://illustfolio-lumina.sanographix.net/ja/" class="illustfolioNavbarAnnouncement" target="_blank">
+      <div>あなたのイラストがもっと輝く🌠</div><div>新バージョン「Illustfolio Lumina」が登場。</div>
+      <div><div class="banner-button">詳細を見る</div></div>
+    </a>
+  </div>
 
   <div class="header-wrapper">
     <header class="container" id="header">
@@ -498,7 +329,135 @@
   </div>
 
   <div class="color-bg">
-    <div id="table" class="container">
+
+    <div class="container section">
+      <h1>Illustfolioを比較</h1>
+
+      <div class="compare-table">
+        <div class="compare-header">
+          <img src="images/compare_illustfolio2.webp" class="compare-thumb" width="300" height="300" alt="Illustfolio 2">
+          <div>
+            <h2 class="compare-header-heading">Illustfolio 2</h2>
+            <p>シンプルなポートフォリオを手軽に作成</p>
+          </div>
+          <div class="compare-detail-current">現在見ているテーマ</div>
+        </div>
+        <div class="compare-header">
+          <a href="https://illustfolio-lumina.sanographix.net/ja/">
+            <img src="images/compare_illustfolioLumina.webp" class="compare-thumb" width="300"  height="300" alt="Illustfolio Lumina">
+          </a>
+          <div>
+            <h2 class="compare-header-heading">Illustfolio Lumina</h2>
+            <p>シンプルで、クライアントにしっかり伝わるサイト作成が叶う</p>
+          </div>
+          <div>
+            <a href="https://illustfolio-lumina.sanographix.net/ja/" class="compare-detail-btn">詳しく見る</a>
+          </div>
+        </div>
+        <div class="compare-divider"></div>
+        <div class="compare-divider"></div>
+        <div>
+          <img src="images/compare_cover.svg" class="compare-icon" width="40" height="40" alt="">
+          <ul>
+            <li>カバー画像</li>
+            <li>スライドショー</li>
+          </ul>
+        </div>
+        <div>
+          <img src="images/compare_cover.svg" class="compare-icon" width="40" height="40" alt="">
+          <ul>
+            <li>自己紹介と隣り合うカバー画像</li>
+            <li>スライドショー（近日実装）</li>
+          </ul>
+        </div>
+        <div>
+          <img src="images/compare_gallery.svg" class="compare-icon" width="40" height="40" alt="">
+          <ul>
+            <li>サムネイルをトリミングする</li>
+            <li class="na">—</li>
+            <li class="na">—</li>
+          </ul>
+        </div>
+        <div>
+          <img src="images/compare_gallery.svg" class="compare-icon" width="40" height="40" alt="">
+          <ul>
+            <li>サムネイルをトリミングする・しないを選択可</li>
+            <li>無限スクロール</li>
+            <li>角を丸めるか選択可</li>
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <li class="na">—</li>
+          </ul>
+        </div>
+        <div>
+          <img src="images/compare_profile.svg" class="compare-icon" width="40" height="40" alt="">
+          <ul>
+            <li>ページ上部に自己紹介</li>
+            <li>7種類のSNSアイコンに対応</li>
+            <li>自己紹介下に問い合わせボタン設置</li>
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <li class="na">—</li>
+          </ul>
+        </div>
+        <div>
+          <img src="images/compare_color.svg" class="compare-icon" width="40" height="40" alt="">
+          <ul>
+            <li>ヘッダ背景色の変更</li>
+            <li>タイトル色・強調文字色の変更</li>
+          </ul>
+        </div>
+        <div>
+          <img src="images/compare_tag.svg" class="compare-icon" width="40" height="40" alt="">
+          <ul>
+            <li>すべてのタグを一覧表示</li>
+          </ul>
+        </div>
+        <div>
+          <img src="images/compare_tag.svg" class="compare-icon" width="40" height="40" alt="">
+          <ul>
+            <li>任意のタグを選んでナビゲーションを作成</li>
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <li class="na">—</li>
+          </ul>
+        </div>
+        <div>
+          <img src="images/compare_font.svg" class="compare-icon" width="40" height="40" alt="">
+          <ul>
+            <li>フォントの変更</li>
+            <li>1,000種類以上のフォントを簡単に適用</li>
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <li class="na">—</li>
+          </ul>
+        </div>
+        <div>
+          <img src="images/compare_speed.svg" class="compare-icon" width="40" height="40" alt="">
+          <ul>
+            <li>Tumblr新投稿フォーマット（NPF）対応</li>
+          </ul>
+        </div>
+        <div class="compare-divider"></div>
+        <div class="compare-divider"></div>
+        <div class="compare-footer">
+          <div class="compare-detail-current">現在見ているテーマ</div>
+        </div>
+        <div class="compare-footer">
+          <a href="https://illustfolio-lumina.sanographix.net/ja/" class="compare-detail-btn">詳しく見る</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div id="table" class="container">
       <div id="compare" class="section">
         <h1>Illustfolio 1 との機能比較</h1>
         <table class="table">
@@ -573,7 +532,8 @@
           </tbody>
         </table>
       </div>
-    </div>
+    </div> -->
+
   </div>
 
   <div class="white-bg">
@@ -683,50 +643,43 @@
 
   <!--more-->
   <div class="container section" id="related">
-    <h1>Get more themes</h1>
+    <h1>Made by <a href="https://x.com/sanographix">sanographix</a></h1>
     <ul class="thumbnails">
 
-      <li class="span3">
-        <a href="http://sanographix.github.com/tumblr/illustfolio3/" class="thumbnail">
-          <img src="http://sanographix.github.com/tumblr/images/theme-thumb-illustfolio3.jpg">
+      <li class="span4">
+        <a href="https://illustfolio-lumina.sanographix.net/ja/" class="thumbnail">
+          <img src="images/others-illustfolio-lumina.webp">
           <div class="caption">
-            <h3>
-            <span style="color:#37aed5; border: 1px solid #37aed5; border-radius: .2em; font-size: 11px; padding: .2em .5em; vertical-align: middle; font-weight: normal;">NEW!</span>
-            Illustfolio 3</h3>
-            <p>イラストポートフォリオサイトが更に一瞬で作れるTumblrテーマ</p>
+            <h4>
+              <span class="new">New</span>
+              Illustfolio Lumina
+            </h4>
+            <p>イラストレーターのための、新しいポートフォリオ</p>
           </div>
         </a>
       </li>
-
-      <li class="span3">
-        <a href="http://sanographix.github.com/tumblr/apollo/" class="thumbnail">
-          <img src="http://sanographix.github.com/tumblr/images/theme-thumb-apollo.jpg">
+      <li class="span4">
+        <a href="https://tokusetsu4.sanographix.net/" class="thumbnail">
+          <img src="images/others-tokusetsu4.webp">
           <div class="caption">
-            <h3>Apollo</h3>
-            <p>穏やかに日記を書きたい人のためのTumblrテーマ</p>
+            <h4>Tokusetsu 4</h4>
+            <p>同人音楽サイトを最速で作る方法</p>
           </div>
         </a>
       </li>
-      <li class="span3">
-        <a href="http://sanographix.github.com/tumblr/tokusetsu2/" class="thumbnail">
-          <img src="http://sanographix.github.com/tumblr/images/theme-thumb-tokusetsu2.jpg">
+      <li class="span4">
+        <a href="https://azusa3.sanographix.net/" class="thumbnail">
+          <img src="images/others-azusa.webp">
           <div class="caption">
-            <h3>Tokusetsu 2</h3>
-            <p>同人音楽CDの特設サイトがもっと一瞬で作れるTumblrテーマ</p>
-          </div>
-        </a>
-      </li>
-      <li class="span3">
-        <a href="http://sanographix.github.io/tumblr/zen/" class="thumbnail">
-          <img src="http://sanographix.github.io/tumblr/images/theme-thumb-zen.jpg">
-          <div class="caption">
-            <h3>ZEN 2.0</h3>
-            <p>普通に日記を書く用途にこだわったTumblrテーマ</p>
+            <h4>Azusa 3</h4>
+            <p>スライドのテンプレート探しを終わらせよう</p>
           </div>
         </a>
       </li>
     </ul>
-    <a href="http://sanographix.github.io/tumblr/" class="btn">Get more themes</a>
+    <div style="text-align: center">
+      <a href="https://sanographix.net/works/" class="btn btn-default">View More</a>
+    </div>
   </div>
 
   <!-- c85
@@ -741,9 +694,6 @@
   </div>
   -->
 
-  <div class="container likebox_container">
-    <div class="fb-like-box section" data-href="http://www.facebook.com/sanographix.net" data-width="960" data-height="270" data-show-faces="true" data-stream="false" data-border-color="#ddd" data-header="false"></div>
-  </div>
 
   <!--フッタ-->
   <footer id="footer" class="color-bg">
