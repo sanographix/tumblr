@@ -1,37 +1,37 @@
-![](http://sanographix.github.io/tumblr/illustfolio2/images/screenshot-mini.png)
-
 # Illustfolio 2
 
 ## ⛔ このテーマはサポートしていません
 
-**このテーマはサポートを終了しました。どうしても使いたい場合、自己責任でご利用ください。**
+**このテーマはサポートを終了しました。以下の表にある後継テーマからお選びください。それでも本テーマを使いたい場合、自己責任でご利用ください。**
 
 **This theme is no longer supported. If you still want to use it, please do so at your own risk.**
 
-<hr/>
+## 後継テーマ
+
+||[Illustfolio Lumina](https://illustfolio-lumina.sanographix.net/ja/)|[Illustfolio 4](https://sanographix.github.io/illustfolio4/)|[Illustfolio 3](https://sanographix.github.io/tumblr/illustfolio3/)|
+|-|-|-|-|
+||シンプルで、クライアントにも伝わりやすい|シンプルなギャラリー|シンプルなギャラリー|
+|自己紹介欄|ページ上部|ページ下部|ページ中部|
+|自己紹介下に問い合わせボタン設置|✅|—|—|
+|タグ表示|任意のタグを選んでナビゲーションを作成|すべてのタグを一覧表示|すべてのタグを一覧表示|
+|無限スクロール|✅|—|✅|
+|フォントの変更|✅|✅|—|
+|ヘッダ背景色の変更|✅|—|✅|
+|タイトル文字色の変更|✅|—|—|
+|強調文字色の変更|✅|✅|—|
+|サムネイル表示方法|トリミングする・しないを選択可|トリミングする|トリミングしない|
+|サムネイルの角を丸める|✅|—|—|
+|Tumblr新投稿フォーマット（NPF）対応|✅|△（部分的）|—|
+|対応するSNSアイコン|7種類|4種類|4種類|
+
+## 概要
 
 llustfolio 2 は、イラストのポートフォリオサイトに特化した無料 Tumblr テンプレートです。
 Tumblr に画像をアップロードするだけで簡単にポートフォリオサイトが作れます。
 [@sanographix](https://twitter.com/sanographix) がデザインしています。
 
-<hr/>
 
-## [おしらせ] Illustfolio 3 を作りました
-
-Illustfolio をベースに、新しいデザインと多数の新機能を盛り込んだ [Illustfolio 3](http://sanographix.github.io/tumblr/illustfolio3/) を作りました。これから Illustfolio を使いはじめるなら Illustfolio 3 をおすすめします。
-
-紹介ページ→ <http://sanographix.github.io/tumblr/illustfolio3/>
-
-（お知らせ終わり）
-
-<hr/>
-
-## デモページを見る
-
-デモページはこちらです。
-
-[http://illustfolio2.tumblr.com/](http://illustfolio2.tumblr.com/)
-
+デモページ: [http://illustfolio2.tumblr.com/](http://illustfolio2.tumblr.com/)
 
 ## インストール手順
 

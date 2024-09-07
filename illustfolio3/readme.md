@@ -1,18 +1,31 @@
-# Illustfolio 3
+# [Illustfolio 3](http://sanographix.github.io/tumblr/illustfolio3/)
 
-- <http://sanographix.github.io/tumblr/illustfolio3/>
+llustfolio 3 は、イラストのポートフォリオサイトに特化した無料 Tumblr テーマです。Tumblrに画像をアップロードするだけで簡単にポートフォリオサイトが作れます。
+[@sanographix](https://twitter.com/sanographix)がデザインしています。
 
-llustfolio 3 は、イラストのポートフォリオサイトに特化した無料 Tumblr テーマです。 
+デモページ: <http://illustfolio3-sanographixtheme.tumblr.com/>
+
+# Illustfolio テーマラインナップ
+
+||[Illustfolio Lumina](https://illustfolio-lumina.sanographix.net/ja/)|[Illustfolio 4](https://sanographix.github.io/illustfolio4/)|[Illustfolio 3](https://sanographix.github.io/tumblr/illustfolio3/)|
+|-|-|-|-|
+||シンプルで、クライアントにも伝わりやすい|シンプルなギャラリー|シンプルなギャラリー|
+|自己紹介欄|ページ上部|ページ下部|ページ中部|
+|自己紹介下に問い合わせボタン設置|✅|—|—|
+|タグ表示|任意のタグを選んでナビゲーションを作成|すべてのタグを一覧表示|すべてのタグを一覧表示|
+|無限スクロール|✅|—|✅|
+|フォントの変更|✅|✅|—|
+|ヘッダ背景色の変更|✅|—|✅|
+|タイトル文字色の変更|✅|—|—|
+|強調文字色の変更|✅|✅|—|
+|サムネイル表示方法|トリミングする・しないを選択可|トリミングする|トリミングしない|
+|サムネイルの角を丸める|✅|—|—|
+|Tumblr新投稿フォーマット（NPF）対応|✅|△（部分的）|—|
+|対応するSNSアイコン|7種類|4種類|4種類|
 
 # Install
 
 - <https://www.tumblr.com/theme/39341>
-
-## デモページを見る
-
-デモページはこちらです。
-
-<http://illustfolio3-sanographixtheme.tumblr.com/>
 
 
 ## インストール手順
@@ -78,7 +91,7 @@ Tumblrは画像投稿にタイトルを設定できません。そこで、キ�
 #### Markdownモード
 
 	## 画像のタイトル
-	
+
 	画像のキャプション画像のキャプション画像のキャプション…
 
 
@@ -143,7 +156,7 @@ Graphic designer from Kyoto.
 * 公開
 * 2.x からの変更点
 	* 新しくなったデザイン
-	* 無限スクロール	
+	* 無限スクロール
 	* ヘッダ画像の表示
 	* アクセントカラー変更可
 	* 自分のソーシャルアカウントへのリンク
