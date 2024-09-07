@@ -1,0 +1,72 @@
+.compare-table {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 300px));
+    justify-content: center;
+    gap: 44px 24px;
+    @media (min-width: 768px) {
+        gap: 44px;
+    }
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        text-align: center;
+        display: grid;
+        gap: 8px;
+        font-size: 15px;
+    }
+    .na {
+        color: @light;
+    }
+}
+.compare-header {
+    text-align: center;
+    display: grid;
+    gap: 16px;
+    margin-bottom: -16px;
+    .compare-header-heading {
+        font-size: 20px;
+        font-weight: bold;
+        margin: 0;
+    }
+    p {
+        margin: 0;
+        font-size: 13px;
+    }
+}
+.compare-detail-current {
+    font-size: 14px;
+    color: @light;
+}
+.compare-detail-btn {
+    background-color: @link;
+    color: #fff;
+    display: inline-block;
+    padding: 8px 24px;
+    border-radius: 1000px;
+    line-height: 1.2;
+    text-decoration: none;
+    transition: all .3s;
+    &:hover {
+        background-color: @hover;
+        color: #fff;
+        text-decoration: none;
+    }
+}
+.compare-thumb {
+    display: block;
+    height: auto;
+    width: 100%;
+}
+.compare-icon {
+    display: block;
+    margin: auto auto 8px;
+}
+.compare-divider {
+    height: 1px;
+    background-color: @border;
+}
+.compare-footer {
+    text-align: center;
+    margin-top: -24px;
+}

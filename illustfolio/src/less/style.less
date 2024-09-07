@@ -4,7 +4,8 @@
 @import "_bootstrap.less";
 @import "_bootstrap-responsive.less";
 @import "_font-awesome.less";
-
+@import "_illustfolioNavbar.less";
+@import "_compare.less";
 
 /*  Primary Styles
    Author:sanographix
@@ -14,11 +15,11 @@
 /* フォント */
 @font-face {
     font-family: 'SourceSansProSemiboldItalic';
-    src: url('../fonts/SourceSansPro-SemiboldIt-webfont.eot');
-    src: url('../fonts/SourceSansPro-SemiboldIt-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/SourceSansPro-SemiboldIt-webfont.woff') format('woff'),
-         url('../fonts/SourceSansPro-SemiboldIt-webfont.ttf') format('truetype'),
-         url('../fonts/SourceSansPro-SemiboldIt-webfont.svg#SourceSansProSemiboldItalic') format('svg');
+    src: url('../../fonts/SourceSansPro-SemiboldIt-webfont.eot');
+    src: url('../../fonts/SourceSansPro-SemiboldIt-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../../fonts/SourceSansPro-SemiboldIt-webfont.woff') format('woff'),
+         url('../../fonts/SourceSansPro-SemiboldIt-webfont.ttf') format('truetype'),
+         url('../../fonts/SourceSansPro-SemiboldIt-webfont.svg#SourceSansProSemiboldItalic') format('svg');
     font-weight: normal;
     font-style: normal;
 
@@ -26,11 +27,11 @@
 
 @font-face {
     font-family: 'SourceSansProItalic';
-    src: url('../fonts/SourceSansPro-It-webfont.eot');
-    src: url('../fonts/SourceSansPro-It-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/SourceSansPro-It-webfont.woff') format('woff'),
-         url('../fonts/SourceSansPro-It-webfont.ttf') format('truetype'),
-         url('../fonts/SourceSansPro-It-webfont.svg#SourceSansProItalic') format('svg');
+    src: url('../../fonts/SourceSansPro-It-webfont.eot');
+    src: url('../../fonts/SourceSansPro-It-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../../fonts/SourceSansPro-It-webfont.woff') format('woff'),
+         url('../../fonts/SourceSansPro-It-webfont.ttf') format('truetype'),
+         url('../../fonts/SourceSansPro-It-webfont.svg#SourceSansProItalic') format('svg');
     font-weight: normal;
     font-style: normal;
 
@@ -259,16 +260,30 @@ body {
         text-align: left;
         margin-top: 20px;
 
-        h3 {
-            font-size: 14px;
+        h4 {
+            font-size: 18px;
             color: @base;
-            margin: 0 0 5px 0;
+            margin: 5px 0;
             line-height: 1.3;
+            display: inline-flex;
+            align-items: center;
         }
         p {
             font-size: 12px;
             color: @light;
             margin: 0;
+        }
+        .new {
+            display: inline-block;
+            padding: 4px 6px;
+            font-size: 11px;
+            font-weight: bold;
+            text-transform: uppercase;
+            background: linear-gradient(-45deg, #7986ff, #ff9d7c);
+            color: #fff;
+            line-height: 1;
+            border-radius: 100px;
+            margin-right: 0.4em;
         }
     }
 }

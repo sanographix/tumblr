@@ -1,4 +1,4 @@
-# Illustfolio 2
+# Illustfolio 1
 
 ## Initial Setup
 
