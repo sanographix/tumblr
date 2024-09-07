@@ -7,7 +7,7 @@
     cursor: pointer;
     line-height: 1.5;
     font-size: 90%;
-    @include border-radius(.5em);
+    border-radius: .5em;
     overflow: hidden;
     color: $link;
     text-decoration: none;
@@ -38,8 +38,8 @@
     padding: .6em 2em;
     font-size: 150%;
     border-width: 3px;
-    @include box-sizing(border-box);
-    @include border-radius(.5em);
+    box-sizing: border-box;
+    border-radius: .5em;
     font-weight: bold;
     text-transform: uppercase;
 }
@@ -48,7 +48,7 @@
     color: #fff;
     background-color: $btn-tw;
     border-color: transparent;
-    @include border-radius(.2em);
+    border-radius: .2em;
     &:hover {
         background-color: darken($btn-tw, 8%);
         color: #fff;
@@ -59,7 +59,7 @@
     color: #fff;
     background-color: $btn-fb;
     border-color: transparent;
-    @include border-radius(.2em);
+    border-radius: .2em;
     &:hover {
         background-color: darken($btn-fb, 8%);
         color: #fff;
@@ -70,7 +70,7 @@
     color: #fff;
     background-color: $btn-b;
     border-color: transparent;
-    @include border-radius(.2em);
+    border-radius: .2em;
     &:hover {
         background-color: darken($btn-b, 8%);
         color: #fff;

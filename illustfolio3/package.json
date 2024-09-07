@@ -1,16 +1,20 @@
 {
-  "name": "rin-html-template",
-  "version": "0.1.0",
-  "description": "",
-  "author": "",
-  "license": "",
+  "name": "your-project",
+  "version": "1.0.0",
+  "scripts": {
+    "sass": "sass --watch src/scss:dist/css",
+    "imagemin": "imagemin images/* --out-dir=dist/images",
+    "concat": "cat src/js/libs/*.js > dist/js/scripts.js",
+    "uglify": "uglifyjs dist/js/scripts.js -o dist/js/scripts.min.js",
+    "serve": "browser-sync start --server --files 'dist/css/*.css, *.html, dist/js/*.js'",
+    "watch": "npm-run-all --parallel sass imagemin concat uglify serve",
+    "build": "npm-run-all sass imagemin concat uglify"
+  },
   "devDependencies": {
-    "grunt": "~0.4.0",
-    "grunt-contrib-watch": "*",
-    "grunt-contrib-imagemin": "~0.7.1",
-    "grunt-contrib-concat": "*",
-    "grunt-contrib-uglify": "*",
-    "grunt-contrib-connect": "*",
-    "grunt-contrib-compass": "~0.9.1"
+    "sass": "^1.56.0",
+    "browser-sync": "^2.27.10",
+    "imagemin-cli": "^7.0.0",
+    "uglify-js": "^3.14.5",
+    "npm-run-all": "^4.1.5"
   }
 }
