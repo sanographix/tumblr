@@ -172,6 +172,10 @@ p {
         font-weight: 100;
         color: $link;
         font-size: 300%;
+        a {
+            color: inherit;
+            border-bottom: 1px solid $link;
+        }
     }
 
     h2 {
@@ -388,6 +392,20 @@ p {
         font-size: 120%;
         margin: .2em 0;
         font-weight: normal;
+        display: inline-flex;
+        align-items: center;
+    }
+    .new {
+        display: inline-block;
+        padding: 4px 6px;
+        font-size: 11px;
+        font-weight: bold;
+        text-transform: uppercase;
+        background: linear-gradient(-45deg, #7986ff, #ff9d7c);
+        color: #fff;
+        line-height: 1;
+        border-radius: 100px;
+        margin-right: 0.4em;
     }
 
     p {
