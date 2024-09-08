@@ -7,6 +7,7 @@
     text-align: center;
 }
 .section-header {
+    margin-bottom: 2em;
     h1,h2 {
         font-size: 300%;
         margin: 0 0 .1em;
@@ -24,7 +25,6 @@
             font-size: 100%;
         }
     }
-    margin-bottom: 2em;
 }
 .section-gray {
     background-color: $bg-light;
@@ -199,6 +199,9 @@ br.touch {
         left: 50%;
         margin-left: -400px;
         width: 800px;
+        text-align: center;
+        opacity: 0;
+        transition: all .4s;
         @media #{$mq-md} {
             width: 650px;
             margin-left: -325px;
@@ -211,9 +214,6 @@ br.touch {
             width: 300px;
             margin-left: -150px;
         }
-        text-align: center;
-        opacity: 0;
-        transition: all .4s;
         &.is-active {
             opacity: 1;
             top: 0;
@@ -260,7 +260,7 @@ br.touch {
     &:hover {
         border-color: $link;
     }
-    & > img {
+    img {
         display: block;
         height: auto;
         max-width: 100%;
@@ -272,10 +272,24 @@ br.touch {
         color: #333;
         text-align: left;
     }
+    .new {
+        display: inline-block;
+        padding: 4px 6px;
+        font-size: 11px;
+        font-weight: bold;
+        text-transform: uppercase;
+        background: linear-gradient(-45deg, #7986ff, #ff9d7c);
+        color: #fff;
+        line-height: 1;
+        border-radius: 100px;
+        margin-right: 0.4em;
+    }
     h4 {
         font-size: 120%;
         margin: .2em 0;
         font-weight: normal;
+        display: inline-flex;
+        align-items: center;
     }
     p {
         font-size: 80%;

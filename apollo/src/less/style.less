@@ -1,0 +1,502 @@
+/*
+    Main CSS
+*/
+
+@import "_normalize.less";
+@import "_font-awesome.less";
+@import "_mixin.less";
+@import "_variable.less";
+
+/* Common Styles */
+
+// Common
+
+html {
+    margin-top: 55px; //ヘッダ固定
+}
+
+html,
+body {
+    font-family: 'futura-pt', 'Futura', 'Helvetica Neue', 'Helvetica', 'Arial', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+    background: @bg;
+    color: @base;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    color: @link;
+    text-decoration: none;
+
+    &:hover {
+        color: @hover;
+    }
+
+}
+
+::selection,
+::-moz-selection {
+    background: @selection;
+    color:#fff;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    a,a:hover {
+        color: @base;
+        text-decoration: none;
+    }
+}
+
+// ボタン
+
+.btn {
+    .inline-block;
+    text-align: center;
+    padding: 5px 15px;
+    cursor: pointer;
+    line-height: 1.5;
+    font-size: 90%;
+    .border-radius(3px);
+    overflow: hidden;
+    color: @base;
+    background-color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 1px solid rgba(0,0,0,.15);
+    &:hover {
+        color: @base;
+        text-decoration: none;
+        border-color: rgba(0,0,0,.3);
+    }
+}
+
+.btn-primary {
+    background-color: transparent;
+    color: @link;
+    border: 1px solid @link;
+    &:hover {
+        color: @hover;
+        border-color: @hover;
+    }
+}
+
+.btn-lg {
+    padding: .8em 2em;
+    font-size: 120%;
+    letter-spacing: .2em;
+    .border-radius(10px);
+    box-sizing: border-box;
+    border-width: 2px;
+}
+
+.btn.btn-tw {
+    color: #fff;
+    background-color: @btn-tw;
+    border-color: transparent;
+    border-radius: .3em;
+    &:hover {
+        background-color: darken(@btn-tw, 8%);
+        color: #fff;
+    }
+}
+
+.btn.btn-fb {
+    color: #fff;
+    background-color: @btn-fb;
+    border-color: transparent;
+    border-radius: .3em;
+    &:hover {
+        background-color: darken(@btn-fb, 8%);
+        color: #fff;
+    }
+}
+
+.btn.btn-b {
+    color: #fff;
+    background-color: @btn-b;
+    border-color: transparent;
+    border-radius: .3em;
+    &:hover {
+        background-color: darken(@btn-b, 8%);
+        color: #fff;
+    }
+}
+
+
+/* End Common Styles */
+
+// section
+
+.container {
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+
+    p {
+        line-height: 1.6em;
+    }
+
+}
+
+.section {
+    padding: 3em 0;
+    text-align: center;
+
+    h2 {
+        text-transform: uppercase;
+        letter-spacing: .2em;
+        text-indent: .2em; // 中央揃え
+        font-weight: normal;
+        font-size: 300%;
+        margin: 0 0 .4em;
+    }
+
+    img {
+        max-width: 100%;
+    }
+}
+
+// navbar
+
+.navbar {
+    background-color: #fff;
+    .clearfix;
+    padding: .5em 0;
+    position: fixed; // 固定
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    box-shadow: 0 0 5px rgba(0,0,0,.15);
+
+    a {
+        color: @base;
+        display: inline-block;
+        padding: 10px 15px;
+    }
+
+    .navbar-inner {
+    }
+
+    .navbar-header {
+        float: left;
+        text-transform: uppercase;
+        letter-spacing: .3em;
+    }
+
+    .navbar-right {
+        float: right;
+        font-size: 90%;
+    }
+}
+
+.navbar-ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+
+    li {
+        display: inline-block;
+
+        a {
+            display: inline-block;
+        }
+    }
+}
+
+// header
+
+#header {
+    background: @dark url('../../images/header.jpg') no-repeat center top;
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    padding: 4em 0;
+
+    a {
+        color: #fff;
+    }
+
+    p {
+        margin: 0;
+        color: rgba(255,255,255,.7);
+        font-size: 90%;
+    }
+
+    .header-line1 {
+        text-transform: uppercase;
+        letter-spacing: .3em;
+        text-indent: .15em; // 中央揃え
+        font-size: 90%;
+    }
+
+    h1 {
+        text-transform: uppercase;
+        letter-spacing: .6em;
+        text-indent: .3em; // 中央揃え
+        font-weight: normal;
+        font-size: 500%;
+        margin: .1em 0;
+    }
+
+    h2 {
+        text-transform: uppercase;
+        letter-spacing: .3em;
+        text-indent: .15em; // 中央揃え
+        font-weight: normal;
+        font-size: 130%;
+        margin: 0;
+    }
+
+    .btn {
+        background-color: rgba(255,255,255,.7);
+        border: none;
+        color: #007c8a;
+    }
+
+}
+
+
+.btn-wrapper {
+    margin: 1.5em;
+}
+
+
+#social-button-section {
+    background: #d1dce0;
+    padding: 20px 0;
+}
+
+.social-buttons {
+    list-style: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    li {
+        display: inline-block;
+        padding: 10px 5px 10px;
+        height: 20px;
+        vertical-align: top;
+    }
+}
+
+.ad-header {
+    text-align: center;
+    margin: 0 0 2em;
+}
+
+// intro
+
+.introduction {
+    background-color: #f2f2f2;
+
+
+    h3 {
+        font-weight: normal;
+        font-size: 130%;
+        margin: 0 0 .2em;
+    }
+}
+
+// grid
+
+.row {
+    margin-left: -20px;
+    .clearfix;
+}
+
+[class*=span] {
+    float: left;
+    min-height: 1px;
+    margin-left: 20px;
+}
+
+.span3 {
+    width: 220px;
+}
+
+.span4 {
+    width: 300px;
+}
+
+.span6 {
+    width: 470px;
+}
+
+// features
+
+.features {
+
+    .features-content {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .icon-large {
+        color: #c8d6da;
+    }
+
+    p {
+        margin-bottom: 3em;
+    }
+
+    h3 {
+        font-size: 90%;
+        font-weight: normal;
+    }
+}
+
+// saying
+
+#saying {
+    .row {
+        text-align: left;
+    }
+    blockquote {
+        margin: 0;
+        padding: 0 0 0 10px;
+        border-left: 4px solid #ddd;
+        font-style: italic;
+    }
+}
+
+// getstarted
+
+.getstarted {
+    background-color: @dark;
+    color: #fff;
+    background: @dark url('../../images/header.jpg') no-repeat center top;
+    background-size: cover;
+
+
+    .btn {
+        background-color: rgba(255,255,255,.7);
+        border: none;
+        color: #007c8a;
+    }
+
+    p a {
+        color: #fff;
+    }
+
+}
+
+// hatenablog
+
+.for-hatenablog {
+    background-color: @dark;
+    color: #fff;
+    background: @dark url('../../images/bg-hatenablog.jpg') no-repeat center top;
+    background-size: cover;
+
+
+    .btn {
+        background-color: rgba(255,255,255,.7);
+        border: none;
+        color: #007c8a;
+    }
+
+}
+
+// getmore
+
+.thumbnail {
+    display: inline-block;
+    display: block;
+    height: auto;
+    max-width: 100%;
+    padding: 4px;
+    margin-bottom: 20px;
+    line-height: 1.428571429;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+
+    &:hover {
+        border-color: @link;
+    }
+
+    img {
+        display: block;
+        height: auto;
+        max-width: 100%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .new {
+        display: inline-block;
+        padding: 4px 6px;
+        font-size: 11px;
+        font-weight: bold;
+        text-transform: uppercase;
+        background: linear-gradient(-45deg, #7986ff, #ff9d7c);
+        color: #fff;
+        line-height: 1;
+        border-radius: 100px;
+        margin-right: 0.4em;
+    }
+    .caption {
+        padding: 9px;
+        color: #333;
+        text-align: left;
+    }
+
+    h4 {
+        font-size: 120%;
+        margin: .2em 0;
+        font-weight: normal;
+        display: inline-flex;
+        align-items: center;
+    }
+
+    p {
+        font-size: 80%;
+        margin: 0;
+        color: @light;
+    }
+}
+
+// footer
+
+.ad {
+    text-align: center;
+}
+
+.ad-footer {
+    margin-bottom: 1em;
+}
+
+.follow-button {
+    text-align: center;
+    margin: 1.5em 0;
+    .follow-tw,
+    .follow-google {
+        display: inline-block;
+        padding: .5em 0;
+    }
+
+    .follow-tw {
+        margin-right: 1em;
+    }
+}
+
+div.likebox-container .fbcomments,
+div.likebox-container .fb_iframe_widget,
+div.likebox-container .fb_iframe_widget[style],
+div.likebox-container .fb_iframe_widget iframe[style],
+div.likebox-container .fbcomments iframe[style],
+div.likebox-container .fb_iframe_widget span{
+    width: 100% !important;
+}
+
+
+#footer {
+    background-color: #f7f8fb;
+    text-align: center;
+    font-size: 90%;
+    border-top: 1px solid #eaeaea;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+@import "_media-queries.less";

@@ -1,22 +1,21 @@
 {
-  "name": "rin",
-  "version": "4.0.0",
-  "description": "A Lean HTML & SASS Boilerplate",
-  "author": "sanographix",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/sanographix/rin"
+  "name": "your-project",
+  "version": "1.0.0",
+  "scripts": {
+    "sass": "sass --watch src/sass:build/css",
+    "imagemin": "imagemin images/* --out-dir=build/images",
+    "concat": "cat src/js/*.js > build/js/scripts.js",
+    "uglify": "uglifyjs build/js/scripts.js -o build/js/scripts.min.js",
+    "serve": "browser-sync start --server --files 'build/css/*.css, *.html, build/js/*.js'",
+    "watch": "npm-run-all --parallel sass imagemin concat uglify serve",
+    "build": "npm-run-all sass imagemin concat uglify"
   },
   "devDependencies": {
-    "browser-sync": "~2.0.1",
-    "gulp": "^3.8.11",
-    "gulp-concat": "~2.4.3",
-    "gulp-ejs": "^1.1.1",
-    "gulp-imagemin": "~2.2.0",
-    "gulp-pleeease": "~1.2.0",
-    "gulp-plumber": "^1.0.1",
-    "gulp-sass": "~1.3.3",
-    "gulp-uglify": "~1.1.0"
+    "sass": "^1.56.0",
+    "browser-sync": "^2.27.10",
+    "imagemin-cli": "^7.0.0",
+    "uglify-js": "^3.14.5",
+    "npm-run-all": "^4.1.5",
+    "chokidar-cli": "^3.0.0"
   }
 }

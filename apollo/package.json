@@ -1,0 +1,17 @@
+{
+  "name": "your-project",
+  "version": "1.0.0",
+  "scripts": {
+    "less": "less-watch-compiler src/less dist/css",
+    "serve": "browser-sync start --server --files 'dist/css/*.css, *.html, *.js'",
+    "watch:less": "chokidar 'src/less/**/*.less' -c 'npm run less'",
+    "start": "npm-run-all --parallel watch:less serve"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.27.10",
+    "less": "^4.1.2",
+    "less-watch-compiler": "^1.16.3",
+    "npm-run-all": "^4.1.5",
+    "chokidar-cli": "^3.0.0"
+  }
+}
