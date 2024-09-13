@@ -960,7 +960,7 @@ p {
 
 .trusted {
   padding-block: 52px;
-  background-image: url(../../../dist/images/trusted_bg.jpg);
+  background-image: url("../images/trusted_bg.jpg");
   background-repeat: repeat;
   background-position: 0 0;
   background-size: 640px 460px;
