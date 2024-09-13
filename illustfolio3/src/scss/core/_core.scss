@@ -257,6 +257,33 @@ p {
     }
 }
 
+// Illustfolioが選ばれる理由
+.trusted {
+    padding-block: 52px;
+    background-image: url(../../../dist/images/trusted_bg.jpg);
+    background-repeat: repeat;
+    background-position: 0 0;
+    background-size: 640px 460px;
+    animation: moveBackground 30s linear infinite;
+    .trusted-inner {
+        text-align: center;
+        max-width: 720px;
+        margin: auto;
+        background-color: #fffffff2;
+        padding: 32px;
+        border-radius: 16px;
+    }
+}
+
+@keyframes moveBackground {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: -640px 0;
+    }
+}
+
 // 導入事例
 .case {
     .span4 {

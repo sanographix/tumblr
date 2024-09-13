@@ -958,6 +958,31 @@ p {
   margin-bottom: 1em;
 }
 
+.trusted {
+  padding-block: 52px;
+  background-image: url(../../../dist/images/trusted_bg.jpg);
+  background-repeat: repeat;
+  background-position: 0 0;
+  background-size: 640px 460px;
+  animation: moveBackground 30s linear infinite;
+}
+.trusted .trusted-inner {
+  text-align: center;
+  max-width: 720px;
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.9490196078);
+  padding: 32px;
+  border-radius: 16px;
+}
+
+@keyframes moveBackground {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -640px 0;
+  }
+}
 .case .span4 {
   margin-bottom: 2em;
   text-align: center;
