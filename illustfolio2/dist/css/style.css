@@ -8279,43 +8279,64 @@ ul.icons-ul > li .icon-li {
     flex-direction: row;
   }
 }
+.compare-section-header {
+  text-align: center;
+}
 .compare-table {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 300px));
-  justify-content: center;
-  gap: 44px 24px;
+  max-width: 780px;
+  margin-inline: auto;
+  table-layout: fixed;
+  border: none;
+  border-collapse: collapse;
+  width: 100%;
 }
-@media (min-width: 768px) {
-  .compare-table {
-    gap: 44px;
-  }
+.compare-table h3 {
+  margin: 12px 0 4px;
 }
-.compare-table ul {
+.compare-table th,
+.compare-table td {
+  text-align: center;
+  padding: 16px 8px;
+  border: none;
+}
+.compare-table th {
+  font-weight: normal;
+  vertical-align: top;
+  border-bottom: 2px solid #eaeaea;
+}
+.compare-table td {
+  font-size: 14px;
+  border-top: 1px solid #eaeaea;
+}
+.compare-table .cellHeader {
+  font-weight: bold;
+}
+.compare-table .compare-thumb {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+.compare-table .small {
+  font-size: 13px;
   margin: 0;
-  padding: 0;
-  list-style: none;
+}
+.compare-table .has-checked {
+  color: #63b874;
+}
+.compare-table-header {
   text-align: center;
   display: grid;
   gap: 8px;
-  font-size: 15px;
 }
-.compare-table .na {
-  color: #aaa;
-}
-.compare-header {
-  text-align: center;
-  display: grid;
-  gap: 16px;
-  margin-bottom: -16px;
-}
-.compare-header .compare-header-heading {
-  font-size: 20px;
+.compare-table-header .compare-header-heading {
+  font-size: 16px;
   font-weight: bold;
   margin: 0;
+  letter-spacing: normal;
 }
-.compare-header p {
+.compare-table-header p {
   margin: 0;
-  font-size: 13px;
+  font-size: 14px;
 }
 .compare-detail-current {
   font-size: 14px;
@@ -8336,22 +8357,9 @@ ul.icons-ul > li .icon-li {
   color: #fff;
   text-decoration: none;
 }
-.compare-thumb {
-  display: block;
-  height: auto;
-  width: 100%;
-}
-.compare-icon {
-  display: block;
-  margin: auto auto 8px;
-}
-.compare-divider {
-  height: 1px;
-  background-color: #eaeaea;
-}
-.compare-footer {
+.compare-table-note {
+  margin-top: 32px;
   text-align: center;
-  margin-top: -24px;
 }
 /*  Primary Styles
    Author:sanographix
