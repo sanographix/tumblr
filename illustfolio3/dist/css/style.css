@@ -755,6 +755,42 @@ h1 a, h1 a:hover, h2 a, h2 a:hover, h3 a, h3 a:hover, h4 a, h4 a:hover, h5 a, h5
   text-align: center;
 }
 
+.section-tips {
+  display: grid;
+  gap: 32px;
+}
+.section-tips .section-header {
+  margin: 0;
+}
+
+.tips-articles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 24px;
+}
+.tips-articles .tips-item a {
+  display: grid;
+  gap: 8px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.tips-articles .tips-item a:hover img {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+.tips-articles .tips-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+}
+.tips-articles .tips-item h4 {
+  font-size: 17px;
+  margin: 0;
+  letter-spacing: initial;
+  line-height: 1.5;
+  color: initial;
+}
+
 .hlabel {
   background-color: rgba(255, 255, 255, 0.75);
   line-height: 0.8em;

@@ -7373,6 +7373,40 @@ ul.icons li .icon-large:before {
   margin-top: 32px;
   text-align: center;
 }
+.section-tips {
+  display: grid;
+  gap: 32px;
+}
+.section-tips .section-header {
+  margin: 0;
+}
+.tips-articles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 24px;
+}
+.tips-articles .tips-item a {
+  display: grid;
+  gap: 8px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.tips-articles .tips-item a:hover img {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+.tips-articles .tips-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+}
+.tips-articles .tips-item h4 {
+  font-size: 17px;
+  margin: 0;
+  letter-spacing: initial;
+  line-height: 1.5;
+  color: initial;
+}
 /*  Primary Styles
    Author:sanographix
 */
