@@ -104,7 +104,7 @@
       <a href="https://illustfolio-lumina.sanographix.net/ja/" class="illustfolioNavbarLink"><span class="new">New</span>Illustfolio Lumina</a>
     </nav>
     <a href="https://illustfolio-lumina.sanographix.net/ja/" class="illustfolioNavbarAnnouncement" target="_blank">
-      <div><strong>New Portfolio Template🌟</strong></div><div>新しいポートフォリオテンプレート、公開中 →</div>
+      <div><strong>New Release🌟</strong></div><div>進化したIllustfolio Lumina、公開中 →</div>
       <div><div class="banner-button">詳しく見る</div></div>
     </a>
   </div>
@@ -127,7 +127,7 @@
           バージョン3.0は、今までで最も大きなアップデートです。より簡単・より快適に使えるようにしました。
         </p>
         <div class="btn-wrapper">
-          <a href="#getstarted" class="btn btn-lg btn-primary" onClick="ga('send', 'event', 'illustfolio3-install', 'Click', 'header');">Install Illustfolio 3</a>
+          <a href="https://www.tumblr.com/theme/39341" class="btn btn-lg btn-primary js-install-btn" onClick="ga('send', 'event', 'illustfolio3-install', 'Click', 'header');">Install Illustfolio 3</a>
         </div>
 
         <div class="ad">
@@ -479,7 +479,7 @@
         <small>インストール後の設定はReadmeをお読みください。</small>
       </div>
       <div class="btn-wrapper">
-        <a href="https://www.tumblr.com/theme/39341" class="btn btn-lg btn-primary" onClick="ga('send', 'event', 'illustfolio3-install', 'Click', 'footer');">Install Illustfolio 3</a>
+        <a href="https://www.tumblr.com/theme/39341" class="btn btn-lg btn-primary js-install-btn" onClick="ga('send', 'event', 'illustfolio3-install', 'Click', 'footer');">Install Illustfolio 3</a>
         <a href="https://github.com/sanographix/tumblr/blob/master/illustfolio3/readme.md" class="btn btn-lg btn-primary" onClick="ga('send', 'event', 'illustfolio3-readme', 'Click', 'footer');">Readme</a>
       </div>
     </div>
@@ -493,19 +493,19 @@
       <div class="tips-articles">
         <div class="tips-item">
           <a href="https://illustfolio-lumina.sanographix.net/ja/articles/how-to-choose-portfolio-service/" target="_blank" rel="noopener">
-            <img src="images/articles/how-to-choose-portfolio-service/og-image.webp">
+            <img src="dist/images/articles/how-to-choose-portfolio-service/og-image.webp">
             <h4>失敗しないポートフォリオサービスの選び方、教えます！ 重視すべき10のチェックポイント</h4>
           </a>
         </div>
         <div class="tips-item">
           <a href="https://illustfolio-lumina.sanographix.net/ja/articles/why-templates-look-professional/" target="_blank" rel="noopener">
-            <img src="images/articles/why-templates-look-professional/og-image.webp">
+            <img src="dist/images/articles/why-templates-look-professional/og-image.webp">
             <h4>テンプレートで作っただけなのに、デキる人感が出る理由</h4>
           </a>
         </div>
         <div class="tips-item">
           <a href="https://illustfolio-lumina.sanographix.net/ja/articles/when-to-create-a-portfolio/" target="_blank" rel="noopener">
-            <img src="images/articles/when-to-create-a-portfolio/og-image.webp">
+            <img src="dist/images/articles/when-to-create-a-portfolio/og-image.webp">
             <h4>ポートフォリオって、いつ作るべき？ 迷ってるあなたに贈る5つのタイミング</h4>
           </a>
         </div>
@@ -622,6 +622,19 @@
     </div>
   </footer>
 
+
+  <!-- Installボタンを押したときに出る、作者からのメッセージ（位置はJSでボタンの下に移動する） -->
+  <div class="cta-panel" id="ctaPanel">
+    <div class="cta-panel-text">
+      <p>👋 こんにちは！ 作者のsanographixです。</p>
+      <p>実は、Illustfolio 3の後継として「Illustfolio Lumina」を新しく開発しました。</p>
+      <p>Illustfolio 3を選んでいただけるのは本当にありがたいのですが、できればLuminaもチェックしていただけると嬉しいです。</p>
+    </div>
+    <div class="cta-panel-actions">
+      <a href="https://illustfolio-lumina.sanographix.net/ja/" class="cta-panel-btn cta-panel-btn-primary" onClick="ga('send', 'event', 'illustfolio3-lumina-panel', 'Click', 'lumina');">Illustfolio Luminaを見てみる</a>
+      <a href="https://www.tumblr.com/theme/39341" class="cta-panel-btn cta-panel-btn-secondary" onClick="ga('send', 'event', 'illustfolio3-lumina-panel', 'Click', 'skip');">いいえ、Illustfolio 3を使います</a>
+    </div>
+  </div>
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <script src="dist/js/scripts.min.js"></script>

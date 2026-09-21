@@ -1,0 +1,80 @@
+// CTA Panel（Installボタンを押したときに出る、作者からのメッセージ）
+
+// パネルの基準位置にするため、ボタンの親を relative にする
+.btn-wrapper {
+    position: relative;
+}
+
+.cta-panel {
+    display: none;
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 340px;
+    max-width: calc(100vw - 2em);
+    padding: 2em 1.5em;
+    box-sizing: border-box;
+    background: $bg;
+    color: $base;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, .3);
+    z-index: 9000;
+    &.is-active {
+        display: block;
+    }
+}
+
+.cta-panel-text {
+    margin-bottom: 1.25em;
+    font-size: .95rem;
+    line-height: 1.7;
+    text-align: left;
+    p {
+        margin: 0 0 .5em;
+    }
+}
+
+.cta-panel-actions {
+    display: flex;
+    flex-direction: column;
+    gap: .75em;
+}
+
+.cta-panel-btn {
+    display: block;
+    width: 100%;
+    padding: .85em 1.5em;
+    box-sizing: border-box;
+    border-radius: 6px;
+    font-size: .95rem;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: opacity .2s;
+    &:hover {
+        opacity: .85;
+        text-decoration: none;
+    }
+}
+
+// Luminaへ誘導するメインボタン
+.cta-panel-btn-primary {
+    background-color: $btn-primary;
+    color: #fff;
+    border: 1px solid $btn-primary;
+    &:hover {
+        color: #fff;
+    }
+}
+
+// Illustfolio 3 のインストールに進むサブボタン
+.cta-panel-btn-secondary {
+    background-color: $bg;
+    color: $base;
+    border: 1px solid $border;
+    &:hover {
+        color: $base;
+    }
+}
