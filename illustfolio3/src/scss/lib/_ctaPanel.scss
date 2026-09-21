@@ -3,17 +3,23 @@
 // パネルの基準位置にするため、ボタンの親を relative にする
 .btn-wrapper {
     position: relative;
+    .cta-button {
+        margin-bottom: 0;
+        @media (max-width: 767px) {
+            max-width: 340px;
+        }
+    }
 }
 
 .cta-panel {
     display: none;
     position: absolute;
-    top: calc(100% + 8px);
+    top: 100%;
     left: 50%;
     transform: translateX(-50%);
     width: 340px;
     max-width: calc(100vw - 2em);
-    padding: 2em 1.5em;
+    padding: 1.5em;
     box-sizing: border-box;
     background: $bg;
     color: $base;

@@ -758,16 +758,24 @@ h1 a, h1 a:hover, h2 a, h2 a:hover, h3 a, h3 a:hover, h4 a, h4 a:hover, h5 a, h5
 .btn-wrapper {
   position: relative;
 }
+.btn-wrapper .cta-button {
+  margin-bottom: 0;
+}
+@media (max-width: 767px) {
+  .btn-wrapper .cta-button {
+    max-width: 340px;
+  }
+}
 
 .cta-panel {
   display: none;
   position: absolute;
-  top: calc(100% + 8px);
+  top: 100%;
   left: 50%;
   transform: translateX(-50%);
   width: 340px;
   max-width: calc(100vw - 2em);
-  padding: 2em 1.5em;
+  padding: 1.5em;
   box-sizing: border-box;
   background: #fff;
   color: #4d4d4d;
