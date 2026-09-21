@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "sass": "sass --watch src/scss:dist/css",
-    "imagemin": "imagemin images/* --out-dir=dist/images",
+    "imagemin": "imagemin images/*.* --out-dir=dist/images && cp -R images/articles dist/images/",
     "concat": "cat src/js/libs/*.js > dist/js/scripts.js",
     "uglify": "uglifyjs dist/js/scripts.js -o dist/js/scripts.min.js",
     "serve": "browser-sync start --server --files 'dist/css/*.css, *.html, dist/js/*.js'",
