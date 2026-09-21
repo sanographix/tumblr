@@ -755,6 +755,82 @@ h1 a, h1 a:hover, h2 a, h2 a:hover, h3 a, h3 a:hover, h4 a, h4 a:hover, h5 a, h5
   text-align: center;
 }
 
+.btn-wrapper {
+  position: relative;
+}
+
+.cta-panel {
+  display: none;
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 340px;
+  max-width: calc(100vw - 2em);
+  padding: 2em 1.5em;
+  box-sizing: border-box;
+  background: #fff;
+  color: #4d4d4d;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  z-index: 9000;
+}
+.cta-panel.is-active {
+  display: block;
+}
+
+.cta-panel-text {
+  margin-bottom: 1.25em;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  text-align: left;
+}
+.cta-panel-text p {
+  margin: 0 0 0.5em;
+}
+
+.cta-panel-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75em;
+}
+
+.cta-panel-btn {
+  display: block;
+  width: 100%;
+  padding: 0.85em 1.5em;
+  box-sizing: border-box;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+.cta-panel-btn:hover {
+  opacity: 0.85;
+  text-decoration: none;
+}
+
+.cta-panel-btn-primary {
+  background-color: #A77DC2;
+  color: #fff;
+  border: 1px solid #A77DC2;
+}
+.cta-panel-btn-primary:hover {
+  color: #fff;
+}
+
+.cta-panel-btn-secondary {
+  background-color: #fff;
+  color: #4d4d4d;
+  border: 1px solid #e0e0e0;
+}
+.cta-panel-btn-secondary:hover {
+  color: #4d4d4d;
+}
+
 .section-tips {
   display: grid;
   gap: 32px;
